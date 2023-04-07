@@ -6,6 +6,7 @@
 --black: #010101;
 --black-alt: #202123;
 --accent: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+--nav-accent: #fbb034
 }
 
 .icon-gradient {

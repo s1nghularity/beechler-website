@@ -1,76 +1,51 @@
 /* Import theme.css */
 @import url("/src/styles/theme.css");
 
-
-@keyframes topLineToX {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(5px) rotate(0);
-  }
-  100% {
-    transform: translateY(5px) rotate(45deg);
-  }
+.navbar-toggler {
+  border: none;
 }
 
-@keyframes bottomLineToX {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(-5px) rotate(0);
-  }
-  100% {
-    transform: translateY(-5px) rotate(-45deg);
-  }
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  transition: transform 0.5s ease-in-out;
 }
 
-@keyframes xToTopLine {
-  0% {
-    transform: translateY(5px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(5px) rotate(0);
-  }
-  100% {
-    transform: translateY(0) rotate(0);
-  }
+.navbar-toggler .top-bar {
+  transform-origin: top left;
+  background-color: var(--nav-accent);
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+
 }
 
-@keyframes xToBottomLine {
-  0% {
-    transform: translateY(-5px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(-5px) rotate(0);
-  }
-  100% {
-    transform: translateY(0) rotate(0);
-  }
+.navbar-toggler .middle-bar {
+  background-color: var(--nav-accent);
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+
 }
 
-.toggler-open .line-1 {
-  animation: topLineToX 0.4s forwards;
+.navbar-toggler .bottom-bar {
+  transform-origin: bottom left;
+  background-color: var(--nav-accent);
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  
 }
 
-.toggler-open .line-3 {
-  animation: bottomLineToX 0.4s forwards;
+.navbar-toggler .icon-bar.top-bar.toggled {
+  transform: translateY(50%) translateY(-4px) rotate(45deg);
 }
 
-.toggler-closed .line-1 {
-  animation: xToTopLine 0.4s forwards;
-  animation-fill-mode: both;
+.navbar-toggler .icon-bar.middle-bar.toggled {
+  opacity: 0;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
 }
 
-.toggler-closed .line-3 {
-  animation: xToBottomLine 0.4s forwards;
-  animation-fill-mode: both;
-}
-
-.line-1,
-.line-3 {
-  transform-origin: center;
+.navbar-toggler .icon-bar.bottom-bar.toggled {
+  transform: translateY(-50%) translateY(1px) rotate(-45deg);
 }
 
 
@@ -78,13 +53,17 @@
 .navbar {
   background-color: var(--black);
   font-family: "Big Shoulders Text", sans-serif;
+}
 
+.navbar-brand {
+  padding-left: .5rem;
 }
 
 .nav-link {
   color: var(--white) !important;
   font-size: 1.5rem;
   font-weight: 900;
+  padding-left: .5rem;
 }
 
 .nav-link:hover {
@@ -129,5 +108,20 @@ transition: height 0.3s ease;
 height: 100vh;
 }
 
+@media (max-width: 62em) {
+  .desktop-collapse {
+    display: none;
+  }
+
+  .mobile-collapse {
+    display: block;
+  }
+}
+
+@media (min-width: 62.01em) {
+  .mobile-collapse {
+    display: none;
+  }
+}
 
 

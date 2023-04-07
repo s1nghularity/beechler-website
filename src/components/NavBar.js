@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, NavbarToggle } from "react-bootstrap";
 import { useState } from "react";
 
 import "../styles/NavBar.css";
@@ -7,7 +7,8 @@ import logo from "../assets/img/logo.png";
 import { NavbarBrand } from "react-bootstrap";
 
 function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  console.log('expanded', expanded);
 
   const DropdownToggle = ({ children, ...props }) => (
     <>
@@ -25,103 +26,26 @@ function NavBar() {
     </>
   );
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-    const togglerIcon = document.querySelector('.navbar-toggler.toggler-icon');
-    if (isOpen) {
-      togglerIcon.classList.remove('toggler-open');
-    } else {
-      togglerIcon.classList.add('toggler-closed');
-      togglerIcon.classList.remove('toggler-transform-x');
-    }
-  };
-  
-
-  const GradientDefs = () => (
-    <defs>
-      <linearGradient id="nav-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
-        <stop stopColor="#fbb034" offset="0%" />
-        <stop stopColor="#ffdd00" offset="74%" />
-      </linearGradient>
-    </defs>
-  );
-
   return (
-    <Navbar expand="lg" fixed="top">
-      <NavbarBrand href="/#/">
-        <img src={logo} alt="Logo" width="100" height="50" />
-      </NavbarBrand>
+      <Navbar expanded={expanded} expand="lg">
+        <NavbarBrand href="/#/">
+          <img src={logo} alt="Logo" width="100" height="50" />
+        </NavbarBrand>
+    
+        <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        onClick={(e) => {
+          console.log('onClick', expanded);
+          setExpanded(expanded ? false : 'true');
+          const spanElements = e.currentTarget.querySelectorAll('.icon-bar');
+          spanElements.forEach(span => span.classList.toggle('toggled'));
+        }}>
+          
+          <span className="icon-bar top-bar" ></span>
+          <span className="icon-bar middle-bar" ></span>
+          <span className="icon-bar bottom-bar"></span>
 
-      <div
-        className={`navbar-toggler toggler-icon ${
-          isOpen ? "toggler-open" : ""
-        }`}
-        onClick={toggle}
-      >
-        {isOpen ? (
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <GradientDefs />
-            <path
-              d="M18 6L6 18"
-              stroke="url(#nav-gradient)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M6 6L18 18"
-              stroke="url(#nav-gradient)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-
-          ) : (
-
-          <svg
-            className={`${isOpen ? "toggler-open" : ""}`}
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <GradientDefs />
-            <rect
-              className="line line-1"
-              x="4"
-              y="6"
-              width="16"
-              height="2"
-              fill="url(#nav-gradient)"
-            />
-            <rect
-              className="line line-2"
-              x="4"
-              y="11"
-              width="16"
-              height="2"
-              fill="url(#nav-gradient)"
-            />
-            <rect
-              className="line line-3"
-              x="4"
-              y="16"
-              width="16"
-              height="2"
-              fill="url(#nav-gradient)"
-            />
-          </svg>
-        
-        )}
-      </div>
+        </Navbar.Toggle>
 
       <Navbar.Collapse id="basic-navbar-nav" className={`desktop-collapse`}>
         {/* Desktop nav links */}
@@ -175,7 +99,7 @@ function NavBar() {
       </Navbar.Collapse>
       <Navbar.Collapse
         id="basic-navbar-nav"
-        className={`mobile-collapse ${isOpen ? "show" : ""}`}
+        className={`mobile-collapse ${expanded ? "show" : ""}`}
       >
         {/* Mobile nav links */}
         <Nav className="mr-auto d-lg-none">
