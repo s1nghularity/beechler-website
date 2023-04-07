@@ -14,16 +14,6 @@
   }
 }
 
-@keyframes middleLineToX {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
 @keyframes bottomLineToX {
   0% {
     transform: translateY(0) rotate(0);
@@ -48,16 +38,6 @@
   }
 }
 
-@keyframes xToMiddleLine {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 @keyframes xToBottomLine {
   0% {
     transform: translateY(-5px) rotate(-45deg);
@@ -70,22 +50,8 @@
   }
 }
 
-@keyframes xToHamburger {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-}
-
 .toggler-open .line-1 {
   animation: topLineToX 0.4s forwards;
-}
-
-.toggler-open .line-2 {
-  animation: middleLineToX 0.4s forwards;
 }
 
 .toggler-open .line-3 {
@@ -97,29 +63,16 @@
   animation-fill-mode: both;
 }
 
-.toggler-closed .line-2 {
-  animation: xToMiddleLine 0.4s forwards;
-  animation-fill-mode: both;
-}
-
 .toggler-closed .line-3 {
   animation: xToBottomLine 0.4s forwards;
   animation-fill-mode: both;
 }
 
-.toggler-closed .line-1,
-.toggler-closed .line-3 {
+.line-1,
+.line-3 {
   transform-origin: center;
 }
 
-.toggler-closed.toggler-transform-x .line-1,
-.toggler-closed.toggler-transform-x .line-3 {
-  animation: xToHamburger 0.4s forwards;
-}
-
-.toggler-closed.toggler-transform-x .line-2 {
-  opacity: 1;
-}
 
 /* Navbar */
 .navbar {
