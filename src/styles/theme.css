@@ -1,0 +1,31 @@
+/* Color Palette */
+:root {
+--grey: #2a3132;
+--grey-alt: #343541;
+--white: #fdfdfe;
+--black: #010101;
+--black-alt: #202123;
+--accent: #f2994a;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Big Shoulders Text';
+  src: url('/src/assets/fonts/BigShouldersText-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Big Shoulders Text';
+  src: url('/src/assets/fonts/BigShouldersText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Big Shoulders Text';
+  src: url('/src/assets/fonts/BigShouldersText-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
