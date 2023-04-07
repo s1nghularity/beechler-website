@@ -1,47 +1,180 @@
 /* Import theme.css */
 @import url("/src/styles/theme.css");
 
+
+@keyframes topLineToX {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(5px) rotate(0);
+  }
+  100% {
+    transform: translateY(5px) rotate(45deg);
+  }
+}
+
+@keyframes middleLineToX {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes bottomLineToX {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0);
+  }
+  100% {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}
+
+@keyframes xToTopLine {
+  0% {
+    transform: translateY(5px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes xToMiddleLine {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes xToBottomLine {
+  0% {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes xToHamburger {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+.toggler-open .line-1 {
+  animation: topLineToX 0.4s forwards;
+}
+
+.toggler-open .line-2 {
+  animation: middleLineToX 0.4s forwards;
+}
+
+.toggler-open .line-3 {
+  animation: bottomLineToX 0.4s forwards;
+}
+
+.toggler-closed .line-1 {
+  animation: xToTopLine 0.4s forwards;
+  animation-fill-mode: both;
+}
+
+.toggler-closed .line-2 {
+  animation: xToMiddleLine 0.4s forwards;
+  animation-fill-mode: both;
+}
+
+.toggler-closed .line-3 {
+  animation: xToBottomLine 0.4s forwards;
+  animation-fill-mode: both;
+}
+
+.toggler-closed .line-1,
+.toggler-closed .line-3 {
+  transform-origin: center;
+}
+
+.toggler-closed.toggler-transform-x .line-1,
+.toggler-closed.toggler-transform-x .line-3 {
+  animation: xToHamburger 0.4s forwards;
+}
+
+.toggler-closed.toggler-transform-x .line-2 {
+  opacity: 1;
+}
+
 /* Navbar */
 .navbar {
   background-color: var(--black);
-  font-family: 'Big Shoulders Text', sans-serif;
+  font-family: "Big Shoulders Text", sans-serif;
+
 }
 
 .nav-link {
-  color: var(--white)!important;
+  color: var(--white) !important;
   font-size: 1.5rem;
+  font-weight: 900;
 }
 
 .nav-link:hover {
-  color: var(--accent)!important;
+  background-image: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 .nav-dropdown a {
   color: white!important;
 }
 
-.nav-dropdown a:hover {
-  color: var(--accent)!important;
-}
 
 .dropdown-menu {
-  background-color: var(--black-alt);
-  transition: all 0.3s ease !important;
-
-
+background-color: var(--black-alt);
+transition: all 0.3s ease !important;
 }
 
 .dropdown-item {
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 100;
+color: var(--white);
+font-size: 1.5rem;
+font-weight: 400;
 }
 
 .dropdown-item:hover {
-  color: var(--accent);
+background-color: var(--grey);
+}
+
+a.dropdown-item:hover {
+color: var(--white) !important;
 }
 
 .dropdown-toggle::after {
-  display: none;
+display: none;
 }
+
+/* Mobile menu */
+
+.mobile-collapse.show {
+transition: height 0.3s ease;
+height: 100vh;
+}
+
+
 

@@ -5,7 +5,13 @@
 --white: #fdfdfe;
 --black: #010101;
 --black-alt: #202123;
---accent: #f2994a;
+--accent: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+}
+
+.icon-gradient {
+  background-image: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Fonts */
