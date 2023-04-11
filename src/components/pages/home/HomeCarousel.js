@@ -1,38 +1,120 @@
-import React from 'react';
+import React from "react";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import styles from "./Home.module.css"; 
+
+import HomeTrio from "../../../components/pages/home/HomeTrio.js";
+import tonalex from "../../../assets/img/home/carousel-tonalex.jpg";
+import mouthpiece from "../../../assets/img/home/carousel-mouth.jpg";
+import artist2 from "../../../assets/img/home/carousel-artist2.jpg";
+import artist from "../../../assets/img/home/carousel-artist.jpg";
+import dealer from "../../../assets/img/home/carousel-dealer.jpg";
+
 
 function HomeCarousel() {
-  return (
-    <div>
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-            <div className="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src="https://www.beechler.com/wp-content/uploads/2020/10/2020-10-01-Home-Page-Slider-1.jpg" className="d-block w-100" alt="..." />
-                
-                </div>
-                <div className="carousel-item">
-                    <img src="https://www.beechler.com/wp-content/uploads/2020/10/2020-10-01-Home-Page-Slider-2.jpg" className="d-block w-100" alt="..." />
-                </div>
-                <div className="carousel-item">
-                    <img src="https://www.beechler.com/wp-content/uploads/2020/10/2020-10-01-Home-Page-Slider-3.jpg" className="d-block w-100" alt="..." />
-                </div>
-            </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-            </button>
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        centerMode: true,
+        centerPadding: "10px",
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        beforeChange: (current, next) => {
+          const selectedElement = document.querySelector(`.${styles.selected}`);
+          if (selectedElement) {
+            selectedElement.classList.remove(styles.selected);
+          }
+          const nextSelectedElement = document.querySelector(
+            `.slick-slide[data-index="${next}"]`
+          );
+          if (nextSelectedElement) {
+            nextSelectedElement.classList.add(styles.selected);
+          }
+        },
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              initialSlide: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
+    
+    return (
+    <div className={styles.carouselContainer}>
+     <Slider {...settings} className={`${styles.customCarousel} ${styles.homeCarousel}`}>
+
+        <div>
+            <img src={tonalex} alt="Mouthpieces" />
+            <p className={styles.carouselCaption}>
+            Mouthpieces Tonalex
+            </p>
         </div>
+
+
+
+        <div>
+            <img src={mouthpiece} alt="Mouthpieces" />
+            <p className={styles.carouselCaption}>
+            Mouthpieces 1
+            </p>
+        </div>
+
+
+
+        <div>
+            <img src={artist} alt="Artists" />
+            <p className={styles.carouselCaption}>
+            Artists
+            </p>
+        </div>
+
+
+
+        <div>
+            <img src={dealer} alt="Artists" />
+            <p className={styles.carouselCaption}>
+            Dealers
+            </p>
+        </div>
+
+    
+
+        <div>
+            <img src={artist2} alt="Tip Openings" />
+            <p className={styles.carouselCaption}>
+            Tip Openings
+            </p>
+        </div>
+
+    </Slider>
+    <HomeTrio />
     </div>
-        
-    )
-}
+    );
+    }
 
 export default HomeCarousel;

@@ -11,7 +11,7 @@ import HomeCarousel from '../home/HomeCarousel.js';
 
 function HomePage() {
     return (
-    <>
+    <div>
         <HomeCarousel />
         {/* <HomeHorizontalElement />
         <HomeOurCategories />
@@ -21,7 +21,7 @@ function HomePage() {
         <HomeDealers />
         <HomeTestimonials />
         <HomeFullWidthImage /> */}
-    </>
+    </div>
     );
 }
 
