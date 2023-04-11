@@ -20,9 +20,9 @@ function NavBar() {
       >
         {children}
       </span>{" "}
-      <a {...props} style={{ textDecoration: "none" }}>
-        &#x25be;
-      </a>
+      <button {...props} style={{ textDecoration: "none" }} className="dropdown-toggle">
+       <div className="dropdown-caret"> &#x25be; </div>
+      </button>
     </>
   );
 
@@ -92,9 +92,9 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
           </NavDropdown>
-          <Nav.Link href="#link">Dealers</Nav.Link>
-          <Nav.Link href="#link">Artists</Nav.Link>
-          <Nav.Link href="#link">About</Nav.Link>
+          <Nav.Link href="/dealers">Dealers</Nav.Link>
+          <Nav.Link href="/artists">Artists</Nav.Link>
+          <Nav.Link href="/about">About</Nav.Link>
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse
@@ -145,9 +145,9 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
           </NavDropdown>
-          <Nav.Link href="#link">Dealers</Nav.Link>
-          <Nav.Link href="#link">Artists</Nav.Link>
-          <Nav.Link href="#link">About</Nav.Link>
+          <Nav.Link href="/dealers">Dealers</Nav.Link>
+          <Nav.Link href="/artists">Artists</Nav.Link>
+          <Nav.Link href="/about">About</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
