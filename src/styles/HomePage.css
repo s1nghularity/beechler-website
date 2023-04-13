@@ -1,0 +1,140 @@
+@import url("/src/styles/theme.css");
+
+.swiper {
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 300px;
+  height: 20rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 1s, box-shadow 1s;
+}
+
+.swiper-slide-active img {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 60px !important;
+  height: 60px !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50% !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px !important;
+  font-weight: bold !important;
+  background-image: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.swiper-button-next::after  {
+  padding-right: .01rem;
+}
+
+.swiper-button-next {
+  right: 11rem !important;
+}
+
+.swiper-button-prev {
+  left: 11rem !important;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  .swiper-slide {
+    width: 100% !important;
+    height: 15rem !important;
+  }
+  
+}
+
+
+
+
+/*TRIO OF HIGHLIGHTS*/
+
+.homeTrioContainer {
+  background-color: var(--black);
+  padding: 2rem 0;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.trioCard {
+  background-color: var(--grey-alt);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.trioCard:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.homeTrioIcon {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.homeTrioText {
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+/* Media queries for different breakpoints */
+@media (min-width: 43em) {
+  .trioCard {
+    padding: 1rem 2rem;
+  }
+
+  .homeTrioIcon {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+
+  .trioCard:not(:last-child) {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 62em) {
+}
+
+@media (min-width: 82em) {
+}

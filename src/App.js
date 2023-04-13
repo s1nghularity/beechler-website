@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import './styles/theme.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import HomePage from './components/pages/home/HomePage.js';
 import NavBar  from './components/NavBar.js';
 
