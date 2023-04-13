@@ -1,6 +1,12 @@
-import React from "react";
-import "../../../styles/HomePage.css";
 
+import React, { useState, useEffect } from "react";
+import "../../../styles/HomePage.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay }  from "swiper";
+
+import "../../../styles/HomePage.css";
 import HomeTrio from "../../../components/pages/home/HomeTrio.js";
 import tonalex from "../../../assets/img/home/carousel-tonalex.jpg";
 import mouthpiece from "../../../assets/img/home/carousel-mouth.jpg";
@@ -9,20 +15,21 @@ import artist from "../../../assets/img/home/carousel-artist.jpg";
 import dealer from "../../../assets/img/home/carousel-dealer.jpg";
 
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+
 
 const HomeCarousel = () => {
-  const [slidesPerView, setSlidesPerView] = React.useState(1.9);
+  const [slidesPerView, setSlidesPerView] = useState(1.9);
+  const [spaceBetween, setSpaceBetween] = useState(100);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
-      const breakpoint = 767;
-      if (window.innerWidth <= breakpoint) {
-        setSlidesPerView(1.2);
+      if (window.innerWidth <= 688) {
+        setSlidesPerView(1.1825);
+        setSpaceBetween(50);
+      } else if (window.innerWidth <= 991) {
+        setSlidesPerView(1.9);
+      } else if (window.innerWidth <= 1311) {
+        setSlidesPerView(1.9);
       } else {
         setSlidesPerView(1.9);
       }
@@ -38,25 +45,22 @@ const HomeCarousel = () => {
 
   return (
     <div>
-      <div>
-        <Swiper
-          className="home-carousel"
-          slidesPerView={slidesPerView}
-          spaceBetween={100}
-          centeredSlides={true}
-          centeredSlidesBounds={true}
-          loop={true}
-          speed={1500}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-        >
+    <div className="swiper-container">
+      <Swiper
+        className="home-carousel"
+        slidesPerView={slidesPerView}
+        spaceBetween={spaceBetween}
+        centeredSlides={true}
+        centeredSlidesBounds={true}
+        loop={true}
+        speed={1250}
+        autoplay={{
+          delay: 7000,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation, Autoplay]}
+      >
           <SwiperSlide>
             <img src={tonalex} alt="Mouthpieces" />
             <p>Mouthpieces Tonalex</p>
@@ -79,6 +83,7 @@ const HomeCarousel = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+
       <HomeTrio />
     </div>
   );
