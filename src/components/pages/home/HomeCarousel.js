@@ -16,14 +16,15 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 const HomeCarousel = () => {
-  const [slidesPerView, setSlidesPerView] = React.useState(1.7);
+  const [slidesPerView, setSlidesPerView] = React.useState(1.9);
 
   React.useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 767) {
-        setSlidesPerView(1.3);
+      const breakpoint = 767;
+      if (window.innerWidth <= breakpoint) {
+        setSlidesPerView(1.2);
       } else {
-        setSlidesPerView(1.7);
+        setSlidesPerView(1.9);
       }
     };
 
@@ -39,8 +40,9 @@ const HomeCarousel = () => {
     <div>
       <div>
         <Swiper
+          className="home-carousel"
           slidesPerView={slidesPerView}
-          spaceBetween={75}
+          spaceBetween={100}
           centeredSlides={true}
           centeredSlidesBounds={true}
           loop={true}
