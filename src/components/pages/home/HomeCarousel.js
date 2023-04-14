@@ -19,19 +19,18 @@ import dealer from "../../../assets/img/home/carousel-dealer.jpg";
 
 const HomeCarousel = () => {
   const [slidesPerView, setSlidesPerView] = useState(1.9);
-  const [spaceBetween, setSpaceBetween] = useState(100);
+  const [spaceBetween, setSpaceBetween] = useState(90);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 688) {
-        setSlidesPerView(1.1825);
+      if (window.innerWidth <= 767) {
+
+        setSlidesPerView(1.1875);
         setSpaceBetween(50);
-      } else if (window.innerWidth <= 991) {
-        setSlidesPerView(1.9);
-      } else if (window.innerWidth <= 1311) {
+      } else if (window.innerWidth <= 1366) {
         setSlidesPerView(1.9);
       } else {
-        setSlidesPerView(1.9);
+        setSlidesPerView(3.0);
       }
     };
 
@@ -44,6 +43,7 @@ const HomeCarousel = () => {
   }, []);
 
   return (
+
     <div>
     <div className="swiper-container">
       <Swiper

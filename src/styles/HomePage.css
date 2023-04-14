@@ -31,17 +31,22 @@
 
 .swiper-slide-active img {
   transform: scale(1.1);
-  box-shadow: 0 0 35px rgb(255, 255, 255, 0.25);
+  box-shadow: 0 0 35px rgb(255, 255, 255, 0.15);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 60px !important;
-  height: 60px !important;
+  width: 50px !important;
+  height: 50px !important;
   background: rgba(0, 0, 0, 0.5) !important;
   border-radius: 50% !important;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #343541b3 !important;
 }
 
 .swiper-button-next {
@@ -51,8 +56,6 @@
 .swiper-button-prev {
   left: 16rem !important;
 }
-
-
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -64,8 +67,8 @@
 }
 
 div.swiper-button-next::after {
-  padding-right: .15rem;
-  margin-left: .15rem;
+  padding-right: 0.15rem;
+  margin-left: 0.15rem;
 }
 
 .swiper:hover .swiper-button-next,
@@ -73,10 +76,9 @@ div.swiper-button-next::after {
   opacity: 1;
 }
 
-div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-  display: none;
+.swiper-pagination-horizontal {
+  display: none !important;
 }
-
 
 @media (max-width: 767px) {
   .swiper-slide {
@@ -94,9 +96,15 @@ div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swip
   }
 }
 
+@media (min-width: 1600px) {
+  .swiper-button-next {
+    right: 41rem !important;
+  }
 
-
-
+  .swiper-button-prev {
+    left: 41rem !important;
+  }
+}
 
 /*TRIO OF HIGHLIGHTS*/
 
@@ -108,46 +116,40 @@ div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swip
 }
 
 .trioCard {
-  background-color: var(--grey-alt);
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
   display: flex;
   align-items: center;
-}
-
-.trioCard:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.homeTrioIcon {
-  font-size: 2.5rem;
+.trioCard:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.hexagon {
+  width: 80px;
+  height: 92px;
+  background-color: var(--grey-alt);
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border-radius: 10px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 0.5rem;
+}
+
+
+.homeTrioIcon .icon-gradient {
+  font-size: 2.5rem;
+}
+
+.icon-gradient {
+  mask: url(#icon-mask);
+  -webkit-mask: url(#icon-mask);
+  background: linear-gradient(to bottom right, #fbb034, #ffdd00);
 }
 
 .homeTrioText {
   color: var(--white);
-  margin-top: 1rem;
 }
 
-/* Media queries for different breakpoints */
-@media (min-width: 43em) {
-  .trioCard {
-    padding: 1rem 2rem;
-  }
-
-  .homeTrioIcon {
-    font-size: 3rem;
-    margin-right: 1rem;
-  }
-
-  .trioCard:not(:last-child) {
-    margin-right: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 62em) {
-}
-
-@media (min-width: 82em) {
-}
