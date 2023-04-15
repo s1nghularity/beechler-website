@@ -9,11 +9,6 @@
 --nav-accent: #fbb034
 }
 
-.icon-gradient {
-  background-image: var(--accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* Fonts */
 @font-face {

@@ -17,18 +17,18 @@
 
 .navbar-toggler .top-bar {
   transform-origin: top left;
-  background-color: var(--nav-accent);
+  background-color: #fbb034;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
 }
 
 .navbar-toggler .middle-bar {
-  background-color: var(--nav-accent);
+  background-color: #fbb034;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
 }
 
 .navbar-toggler .bottom-bar {
   transform-origin: bottom left;
-  background-color: var(--nav-accent);
+  background-color: #fbb034;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
 }
 

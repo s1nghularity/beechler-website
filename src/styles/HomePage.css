@@ -108,26 +108,18 @@ div.swiper-button-next::after {
 
 /*TRIO OF HIGHLIGHTS*/
 
-.homeTrioContainer {
+.hilightContainer {
   background-color: var(--black);
-  padding: 2rem 0;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
+  width: 100% !important;
+  padding-left: 4rem;
+  padding-right: 4rem;
 
-.trioCard {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
 
-.trioCard:not(:last-child) {
-  margin-right: 1rem;
 }
 
 .hexagon {
-  width: 80px;
-  height: 92px;
+  width: 3.5em;
+  height: 4.25em;
   background-color: var(--grey-alt);
   position: relative;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -135,21 +127,23 @@ div.swiper-button-next::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0.5rem;
+  margin-right: .5rem;
 }
 
-
-.homeTrioIcon .icon-gradient {
-  font-size: 2.5rem;
+.hilightCard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: nowrap;
+  margin-left: 4rem;
+  margin-right: 4rem; 
 }
 
-.icon-gradient {
-  mask: url(#icon-mask);
-  -webkit-mask: url(#icon-mask);
-  background: linear-gradient(to bottom right, #fbb034, #ffdd00);
-}
-
-.homeTrioText {
+.hilight-text {
+  font-family: 'Big Shoulders Text';
+  font-size: 1.25rem;
   color: var(--white);
+  padding-top: 1rem;
+  font-weight: 100;
 }
 
