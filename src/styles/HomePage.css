@@ -106,6 +106,15 @@ div.swiper-button-next::after {
   }
 }
 
+
+
+
+
+
+
+
+
+
 /*TRIO OF HIGHLIGHTS*/
 
 .hilightContainer {
@@ -113,37 +122,44 @@ div.swiper-button-next::after {
   width: 100% !important;
   padding-left: 4rem;
   padding-right: 4rem;
-
-
-}
-
-.hexagon {
-  width: 3.5em;
-  height: 4.25em;
-  background-color: var(--grey-alt);
-  position: relative;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  border-radius: 10px !important;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-right: .5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .hilightCard {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  flex-wrap: nowrap;
-  margin-left: 4rem;
-  margin-right: 4rem; 
+  margin-bottom: 6rem !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: 3rem;
 }
+
+.hexagon-container {
+  position: relative;
+  width: 80px;
+  height: 66.6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotate(90deg);
+}
+
+.hexagon-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
 
 .hilight-text {
-  font-family: 'Big Shoulders Text';
-  font-size: 1.25rem;
+  font-family: "Big Shoulders Text";
+  font-size: 1.50rem;
   color: var(--white);
-  padding-top: 1rem;
   font-weight: 100;
+  
 }
-

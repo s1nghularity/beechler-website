@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeCarousel from '../home/HomeCarousel.js';
+import HomeTrio from '../home/HomeTrio.js';
 // import HomeHorizontalElement from './HomeHorizontalElement';
 // import HomeOurCategories from './HomeOurCategories';
 // import HomeAboutBeechler from './HomeAboutBeechler';
@@ -13,6 +14,7 @@ function HomePage() {
     return (
     <div>
         <HomeCarousel />
+        <HomeTrio />
         {/* <HomeHorizontalElement />
         <HomeOurCategories />
         <HomeAboutBeechler />
