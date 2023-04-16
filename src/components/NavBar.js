@@ -5,6 +5,8 @@ import "../styles/NavBar.css";
 import "../styles/theme.css";
 import logo from "../assets/img/logo.png";
 import { NavbarBrand } from "react-bootstrap";
+import USA from '../assets/img/home/american-flag.svg'
+
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
@@ -96,7 +98,20 @@ function NavBar() {
           <Nav.Link href="/artists">Artists</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
         </Nav>
+      
+      <div>  
+        <p>
+          Made in the USA
+        </p>
+        <img src={USA} alt="USA" width="30" height="20" />
+      </div>
+      
       </Navbar.Collapse>
+
+
+
+
+
       <Navbar.Collapse
         id="basic-navbar-nav"
         className={`mobile-collapse ${expanded ? "show" : ""}`}
@@ -148,7 +163,18 @@ function NavBar() {
           <Nav.Link href="/dealers">Dealers</Nav.Link>
           <Nav.Link href="/artists">Artists</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
+
+          <div>  
+        <p>
+          Made in the USA
+        </p>
+        <img src={USA} alt="USA" width="30" height="20" />
+      </div>
+
         </Nav>
+
+        
+        
       </Navbar.Collapse>
     </Navbar>
   );

@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import StarIcon from "@mui/icons-material/Star";
 import CrownIcon from "@mui/icons-material/MilitaryTech";
 import HistoryIcon from "@mui/icons-material/History";
 import GlobeIcon from "@mui/icons-material/Public";
-
-// Import your hexagon image
 import hexagon from "../../../assets/img/home/hexagon.png";
-
 import "../../../styles/HomePage.css";
-import "../../../styles/theme.css"; // Import your theme.css
+import "../../../styles/theme.css";
 
 const GradientIcon = ({ icon: Icon }) => {
   return (
@@ -23,7 +22,7 @@ const GradientIcon = ({ icon: Icon }) => {
           y2="0%"
         >
           <stop stopColor="#fbb034" offset="0%" />
-          <stop stopColor="#ffdd00" offset="74%" />
+          <stop stopColor="#ffdd00" offset="75%" />
         </linearGradient>
       </svg>
       <Icon sx={{ fill: "url(#accent-gradient)" }} style={{ fontSize: 40 }} />
@@ -31,11 +30,13 @@ const GradientIcon = ({ icon: Icon }) => {
   );
 };
 
-
 const CustomHexagon = ({ icon: Icon, text }) => {
   return (
     <div className="hilightCard">
-      <div className="hexagon-container" style={{ backgroundImage: `url(${hexagon})` }}>
+      <div
+        className="hexagon-container"
+        style={{ backgroundImage: `url(${hexagon})` }}
+      >
         <div className="hexagon-inner">
           <GradientIcon icon={Icon} className="hilightIcon" />
         </div>
@@ -46,20 +47,58 @@ const CustomHexagon = ({ icon: Icon, text }) => {
 };
 
 function HomeTrio() {
+  const [isMobile, setIsMobile] = useState(false);
   const traits = [
     { icon: StarIcon, text: "Musicians Choice" },
-    { icon: CrownIcon, text: "Unrivaled Handmade Quality" },
+    { icon: CrownIcon, text: "Unrivaled Quality" },
     { icon: HistoryIcon, text: "Industry Veteran" },
     { icon: GlobeIcon, text: "Internationally Adored" },
   ];
 
+  const updateWindowDimensions = () => {
+    setIsMobile(window.innerWidth <= 767);
+  };
+
+  useEffect(() => {
+    updateWindowDimensions();
+    window.addEventListener("resize", updateWindowDimensions);
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
+
+  const renderDesktop = () => (
+    <div className="d-flex justify-content-center">
+      {traits.map((trait, index) => (
+        <CustomHexagon key={index} icon={trait.icon} text={trait.text} />
+      ))}
+    </div>
+  );
+
+  const renderMobile = () => (
+    <Carousel
+      showThumbs={false}
+      showStatus={false}
+      showIndicators={false}
+      showArrows={false}
+      emulateTouch={true}
+      infiniteLoop={false}
+      centerMode={true}
+      centerSlidePercentage={105}
+    >
+      <div className="carousel-slide">
+        <CustomHexagon icon={traits[0].icon} text={traits[0].text} />
+        <CustomHexagon icon={traits[1].icon} text={traits[1].text} />
+      </div>
+      <div className="carousel-slide">
+        <CustomHexagon icon={traits[2].icon} text={traits[2].text} />
+        <CustomHexagon icon={traits[3].icon} text={traits[3].text} />
+      </div>
+    </Carousel>
+  );
+  
+
   return (
     <Container fluid className="hilightContainer">
-      <div className="d-flex justify-content-center">
-        {traits.map((trait, index) => (
-          <CustomHexagon key={index} icon={trait.icon} text={trait.text} />
-        ))}
-      </div>
+      {isMobile ? renderMobile() : renderDesktop()}
     </Container>
   );
 }
