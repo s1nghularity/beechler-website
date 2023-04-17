@@ -33,39 +33,39 @@ function HomeCategories() {
   return (
     <div className="home-categories">
       <h2>Our Categories</h2>
-      <div className="categories-grid">
-        {categories.map((category, index) => (
-          <div key={index} className="category">
-            <img src={category.image} alt={category.name} />
-            <p>{category.name}</p>
-          </div>
-        ))}
-      </div>
-
-        <div className='usa-container'>
+      <div className="container">
+     
+        <div className="categories-grid">
+          {categories.map((category, index) => (
+            <div key={index} className="category">
+              <img src={category.image} alt={category.name} />
+              <p>{category.name}</p>
+            </div>
+          ))}
+        </div>
+        <div className="row usa-container">
           <div className="made-in-usa">
             <img
               className="beechler-logo"
               src={beechlerLogo}
               alt="Beechler Logo"
             />
-            
-            <p> 
-            +      
-            </p>
-            
+
+            <p>+</p>
+
             <img className="arb-logo" src={arbLogo} alt="ARB Logo" />
 
             <p>
               Made in
-              <br/>  
+              <br />
               <img className="usa-flag" src={USA} alt="Made in the USA" />
-              <br/>
+              <br />
               since 1942
             </p>
           </div>
         </div>
-
+      </div>
+      
     </div>
   );
 }

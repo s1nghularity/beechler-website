@@ -2,6 +2,7 @@ import React from 'react';
 import HomeCarousel from '../home/HomeCarousel.js';
 import HomeTrio from '../home/HomeTrio.js';
 import HomeCategories from '../home/HomeCategories.js';
+import HomeAbout from '../home/HomeAbout.js';
 // import HomeAboutBeechler from './HomeAboutBeechler';
 // import HomeProductHighlights from './HomeProductHighlights';
 // import HomeArtists from './HomeArtists';
@@ -15,8 +16,9 @@ function HomePage() {
         <HomeCarousel />
         <HomeTrio />
         <HomeCategories />
+
+        <HomeAbout/>
         {/* 
-        <HomeAboutBeechler />
         <HomeProductHighlights />
         <HomeArtists />
         <HomeDealers />
