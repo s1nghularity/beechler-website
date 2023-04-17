@@ -1,0 +1,83 @@
+@import url("/src/styles/theme.css");
+
+
+/*TRIO OF HIGHLIGHTS*/
+
+.hilightContainer {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .hilightCard {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: 7rem;
+  }
+  
+  .hexagon-container {
+    position: relative;
+    width: 80px;
+    height: 66.6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(90deg);
+  }
+  
+  .hexagon-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  
+  .hilight-text {
+    font-family: "Big Shoulders Text";
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 100;
+    transform: scaleY(0.8);
+  }
+  
+  @media (max-width: 767px) {
+    .hilightCard {
+      display: inline-flex;
+      margin-top: 3rem !important;
+      margin-bottom: 3rem !important;
+      flex-direction: row;
+      margin-left: 1rem !important;
+      margin-right: 0rem !important;
+      padding-right: 0rem !important;
+    }
+  
+    .hexagon-container {
+      width: 60px;
+      height: 50px;
+    }
+  
+    .hexagon-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg) scale(0.75);
+    }
+  
+    .hilight-text {
+      font-size: 1.25rem;
+    }
+  
+    .carousel-slide {
+      display: flex;
+      justify-content: center;
+      padding-right: 1rem !important;
+    }
+
+  }
+  

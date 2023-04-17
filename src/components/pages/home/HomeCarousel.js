@@ -1,18 +1,17 @@
 
 import React, { useState, useEffect } from "react";
-import "../../../styles/HomePage.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay }  from "swiper";
-
-import "../../../styles/HomePage.css";
-import HomeTrio from "../../../components/pages/home/HomeTrio.js";
 import tonalex from "../../../assets/img/home/carousel-tonalex.jpg";
 import mouthpiece from "../../../assets/img/home/carousel-mouth.jpg";
 import artist2 from "../../../assets/img/home/carousel-artist2.jpg";
 import artist from "../../../assets/img/home/carousel-artist.jpg";
 import dealer from "../../../assets/img/home/carousel-dealer.jpg";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "../../../styles/theme.css";
+import "../../../styles/HomeCarousel.css";
 
 
 

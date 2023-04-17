@@ -3,7 +3,8 @@ import { useState } from "react";
 
 import "../styles/NavBar.css";
 import "../styles/theme.css";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/home/beechler-logo-t.png";
+
 import { NavbarBrand } from "react-bootstrap";
 import USA from '../assets/img/home/american-flag.svg'
 

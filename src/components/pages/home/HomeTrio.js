@@ -7,7 +7,7 @@ import CrownIcon from "@mui/icons-material/MilitaryTech";
 import HistoryIcon from "@mui/icons-material/History";
 import GlobeIcon from "@mui/icons-material/Public";
 import hexagon from "../../../assets/img/home/hexagon.png";
-import "../../../styles/HomePage.css";
+import "../../../styles/HomeTrio.css";
 import "../../../styles/theme.css";
 
 const GradientIcon = ({ icon: Icon }) => {

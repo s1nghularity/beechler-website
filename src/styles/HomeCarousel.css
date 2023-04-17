@@ -1,0 +1,107 @@
+@import url("/src/styles/theme.css");
+
+.swiper-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  border-radius: 20px !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 20px !important;
+  transition: transform 1.25s, box-shadow 1s;
+}
+
+.swiper-slide-active img {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px rgb(255, 255, 255, 0.15);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px !important;
+  height: 50px !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50% !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #343541b3 !important;
+}
+
+.swiper-button-next {
+  right: 16rem !important;
+}
+
+.swiper-button-prev {
+  left: 16rem !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+  font-weight: bold !important;
+  background-image: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.swiper-button-next::after {
+  padding-right: 0.15rem;
+  margin-left: 0.15rem;
+}
+
+.swiper:hover .swiper-button-next,
+.swiper:hover .swiper-button-prev {
+  opacity: 1;
+}
+
+.swiper-pagination-horizontal {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: 20rem !important;
+    height: 20vh !important;
+  }
+
+  .swiper-slide img {
+    height: 20vh !important;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .swiper-button-next {
+    right: 41rem !important;
+  }
+
+  .swiper-button-prev {
+    left: 41rem !important;
+  }
+}

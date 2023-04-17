@@ -1,8 +1,7 @@
 import React from 'react';
 import HomeCarousel from '../home/HomeCarousel.js';
 import HomeTrio from '../home/HomeTrio.js';
-// import HomeHorizontalElement from './HomeHorizontalElement';
-// import HomeOurCategories from './HomeOurCategories';
+import HomeCategories from '../home/HomeCategories.js';
 // import HomeAboutBeechler from './HomeAboutBeechler';
 // import HomeProductHighlights from './HomeProductHighlights';
 // import HomeArtists from './HomeArtists';
@@ -15,8 +14,8 @@ function HomePage() {
     <div>
         <HomeCarousel />
         <HomeTrio />
-        {/* <HomeHorizontalElement />
-        <HomeOurCategories />
+        <HomeCategories />
+        {/* 
         <HomeAboutBeechler />
         <HomeProductHighlights />
         <HomeArtists />

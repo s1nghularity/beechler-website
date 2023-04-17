@@ -1,0 +1,151 @@
+.home-categories {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fdfdfe;
+  font-family: "Big Shoulders Text", sans-serif;
+  color: #010101;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.home-categories h2 {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+div.category p {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logos img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.beechler-logo {
+  height: 55px !important;
+  width: 110px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.category::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  width: 93%;
+  padding-bottom: 1px;
+  height: 0.5px;
+  background: linear-gradient(315deg, #fbaf3459 0%, #ffdd0055 74%);
+}
+
+.category img {
+  max-width: 150px;
+  max-height: 150px;
+  padding-left: -2rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+  justify-content: center;
+}
+
+.categories-grid::after {
+  content: "";
+  flex: 1;
+}
+
+.watermark-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 30px;
+  opacity: 0.5;
+}
+
+.usa-container {
+  padding-bottom: 5rem;
+}
+
+.made-in-usa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  background-color: #343541;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.made-in-usa img {
+  height: 40px;
+}
+
+.made-in-usa p {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white; /* Add this line to change the text color to white */
+}
+
+@media (min-width: 576px) {
+  .home-categories {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .usa-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .made-in-usa {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-categories {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .usa-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .made-in-usa {
+    width: 40%;
+  }
+}
