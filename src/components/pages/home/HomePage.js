@@ -16,8 +16,8 @@ function HomePage() {
         <HomeCarousel />
         <HomeTrio />
         <HomeCategories />
-
         <HomeAbout/>
+        
         {/* 
         <HomeProductHighlights />
         <HomeArtists />

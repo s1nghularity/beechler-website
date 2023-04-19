@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 import HomePage from './components/pages/home/HomePage.js';

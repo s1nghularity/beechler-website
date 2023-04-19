@@ -1,63 +1,120 @@
-.home-about div {
-    background: var(--grey);
-    color: var(--white);
-    width: 4rem;
+.home-about {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: var(--black);
+}
 
-  }
-  
-  .home-about .carousel-item {
-    position: relative;
-  }
-  
-  .home-about .carousel-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .home-about .carousel-item img {
-    object-fit: cover;
-  }
-  
-  .home-about .carousel-caption {
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%)!important;
+.home-about-row {
+  height: 75vh;
+}
 
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .home-about .carousel-caption h3 {
-    font-family: 'Big Shoulders Text', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--white);
-  }
-  
-  .home-about .carousel-caption p {
-    font-family: 'Big Shoulders Text', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-    color: var(--white);
-  }
-  
-  @media (max-width: 768px) {
-    .home-about .carousel-caption {
-      padding: 1rem;
+/* Left Side About Section */
+.home-about-left {
+  height: 100%;
+  background-color: var(--black);
+  font-family: "Big Shoulders Text", sans-serif;
+  padding-top: 0.5rem;
+}
+
+.home-about-left h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  background: var(--accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+div.col-md-4.home-about-left p.about-main-text {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+div.col-md-4.home-about-left p.about-supplemental-text {
+  font-size: 1.75rem;
+  font-weight: 100;
+  line-height: 2.5rem;
+  color: var(--white);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Right Side of About Section */
+
+div .home-about-right {
+
+}
+
+div .carousel-wrapper {
+  margin-left: 3rem;
+}
+
+div .slide {
+  padding: 0 1rem;
+
+}
+
+div .slide.selected {
+  opacity: 1 ;
+  padding: 0 1rem;
+}
+
+
+button.control-arrow.control-prev,
+button.control-arrow.control-next {
+  display: none;
+}
+
+.slide img {
+  height: 40rem;
+  width: 50rem;
+  object-fit: cover;
+  position: relative;
+  border-radius: 35px;
+}
+
+.about-section-tag {
+  font-family: "Big Shoulders Text", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  background: var(--accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeInMoveRight 7.5s ease infinite;
+  animation-delay: inherit;
+}
+
+.about-section-tag.fadeInMoveRight {
+  animation: fadeInMoveRight 7.5s ease infinite;
+}
+
+
+  @keyframes fadeInMoveRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
     }
-  
-    .home-about .carousel-caption h3 {
-      font-size: 2rem;
+    50% {
+      opacity: 1;
+      transform: translateX(0);
     }
-  
-    .home-about .carousel-caption p {
-      font-size: 1rem;
+    100% {
+      opacity: 0;
+      transform: translateX(50px);
     }
   }
   
