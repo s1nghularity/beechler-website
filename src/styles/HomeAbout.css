@@ -50,24 +50,18 @@ div.col-md-4.home-about-left p.about-supplemental-text {
 
 /* Right Side of About Section */
 
-div .home-about-right {
-
-}
-
 div .carousel-wrapper {
   margin-left: 3rem;
 }
 
 div .slide {
   padding: 0 1rem;
-
 }
 
 div .slide.selected {
-  opacity: 1 ;
+  opacity: 1;
   padding: 0 1rem;
 }
-
 
 button.control-arrow.control-prev,
 button.control-arrow.control-next {
@@ -80,6 +74,12 @@ button.control-arrow.control-next {
   object-fit: cover;
   position: relative;
   border-radius: 35px;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.slide.selected img {
+  opacity: 1;
 }
 
 .about-section-tag {
@@ -93,28 +93,79 @@ button.control-arrow.control-next {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
   animation: fadeInMoveRight 7.5s ease infinite;
   animation-delay: inherit;
+  opacity: 0;
+  transition: opacity 1s ease 3s, transform 1s ease 3s;
 }
 
 .about-section-tag.fadeInMoveRight {
-  animation: fadeInMoveRight 7.5s ease infinite;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0) translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
+.slide:not(.selected) .about-section-tag {
+  animation: none;
+}
 
-  @keyframes fadeInMoveRight {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    50% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(50px);
-    }
+.slide.selected .about-section-tag {
+  animation: fadeInMoveRight 8s ease infinite;
+}
+
+@keyframes fadeInMoveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-  
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+@media (max-width: 767px) {
+  .home-about-row {
+    height: 120vh;
+    
+  }
+
+  div .home-about-right {
+    margin-top: 1rem;
+    margin-left: -3rem;
+    margin-bottom: 2rem;
+  }
+
+  div .carousel-wrapper {
+    margin-left: -4rem;
+    width: 30rem;
+  }
+
+  div .slide {
+    padding: 0 !important;
+    transition: opacity 2s ease !important;
+  }
+
+  div .slide.selected {
+    padding: 0 !important;
+    opacity: 1;
+    transition: opacity 2s ease !important;
+  }
+
+  .slide img {
+    height: auto;
+    width: 25rem !important;
+    transition: opacity 2s ease !important;
+  }
+
+  .about-section-tag {
+    font-size: 1.5rem;
+    top: 60%;
+    right: 2rem;
+  }
+}

@@ -8,18 +8,17 @@ import "../../../styles/HomeAbout.css";
 function HomeAbout () {
 
   function handleSlideChange(index) {
-    console.log('Slide changed to:', index);
-    const slides = document.querySelectorAll('.slide');
+    console.log("Slide changed to:", index);
+    const slides = document.querySelectorAll(".slide");
     slides.forEach((slide, i) => {
-      const caption = slide.querySelector('.about-section-tag');
+      const caption = slide.querySelector(".about-section-tag");
+      if (caption) {
       if (i === index) {
-        caption.classList.add('fadeInMoveRight');
-        setTimeout(() => {
-          caption.classList.remove('fadeInMoveRight');
-        }, 4000 + 1000);
+        caption.classList.add("fadeInMoveRight");
       } else {
-        caption.classList.remove('fadeInMoveRight');
+        caption.classList.remove("fadeInMoveRight");
       }
+    }
     });
   }
 
@@ -48,16 +47,16 @@ function HomeAbout () {
 
         <div className="col-md-8 home-about-right">
         <div className="carousel-wrapper">
-          <Carousel animationEffect="Custom" cssClass="fadeInMoveRight"
-              showThumbs={false}
-              showStatus={false}
-              showIndicators={false}
-              infiniteLoop
-              autoPlay
-              interval={7000}
-              transitionTime={4000}
-              onTransitionEnd={handleSlideChange}
-              onChange={handleSlideChange}
+          <Carousel 
+            cssClass="fadeInMoveRight"
+            showThumbs={false}
+            showStatus={false}
+            showIndicators={false}
+            infiniteLoop
+            autoPlay
+            interval={8000}
+            transitionTime={2000}
+            onChange={handleSlideChange}
               
           >
             <div className="slide">
