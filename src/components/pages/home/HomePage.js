@@ -3,7 +3,8 @@ import HomeCarousel from '../home/HomeCarousel.js';
 import HomeTrio from '../home/HomeTrio.js';
 import HomeCategories from '../home/HomeCategories.js';
 import HomeAbout from '../home/HomeAbout.js';
-// import HomeAboutBeechler from './HomeAboutBeechler';
+import HomeArtistCard from '../home/HomeArtistCard.js';
+import HomeArtistDealer from '../home/HomeArtistDealer';
 // import HomeProductHighlights from './HomeProductHighlights';
 // import HomeArtists from './HomeArtists';
 // import HomeDealers from './HomeDealers';
@@ -17,9 +18,10 @@ function HomePage() {
         <HomeTrio />
         <HomeCategories />
         <HomeAbout/>
+        <HomeArtistCard />
+        {/* <HomeArtistDealer /> */}
         
         {/* 
-        <HomeProductHighlights />
         <HomeArtists />
         <HomeDealers />
         <HomeTestimonials />

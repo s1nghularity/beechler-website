@@ -1,0 +1,53 @@
+div .artist-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 9rem;
+  margin-bottom: 2rem;
+}
+
+.artist-card {
+  position: relative;
+  width: 100%;
+  padding-bottom: 3rem;
+  background-color: var(--foreground);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+overflow: show;
+  align-items: center;
+}
+
+.artist-image {
+  width: 100%; /* Increase the size of the image */
+  height: auto;
+  z-index: 2;
+}
+
+.svg-background {
+  position: absolute;
+  left: 4rem;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.svg-background img {
+  width: 125%; /* Increase the size of the SVG */
+  height: auto;
+}
+
+.svg-background h3 {
+  font-family: "Big Shoulders Text";
+  margin-top: 1rem;
+}
