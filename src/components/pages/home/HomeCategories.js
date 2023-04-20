@@ -1,9 +1,7 @@
 import React from "react";
 import "../../../styles/HomeCategories.css";
 import USA from "../../../assets/img/home/american-flag.svg";
-import beechlerLogo from "../../../assets/img/home/beechler-logo-t.png";
-import arbLogo from "../../../assets/img/home/arb-logo-t.png";
-
+import beechlerArb from "../../../assets/img/home/beechler-arb.png";
 // Import the images
 import c13 from "../../../assets/img/home/categories/arb-custom-metal-C13.png";
 import a83 from "../../../assets/img/home/categories/arb-metal-A83.png";
@@ -31,10 +29,12 @@ const categories = [
 
 function HomeCategories() {
   return (
+    
     <div className="home-categories">
-      <h2>Our Categories</h2>
-      <div className="container">
-     
+      <h2>Our Categories</h2> 
+    <div className="container">
+
+
         <div className="categories-grid">
           {categories.map((category, index) => (
             <div key={index} className="category">
@@ -43,18 +43,17 @@ function HomeCategories() {
             </div>
           ))}
         </div>
+
+        <div className="beechler-arb-logo">
+          <img
+            className="beechler-arb-logo"
+            src={beechlerArb}
+            alt="beechler-arb logo"
+          />
+        </div>
+
         <div className="row usa-container">
           <div className="made-in-usa">
-            <img
-              className="beechler-logo"
-              src={beechlerLogo}
-              alt="Beechler Logo"
-            />
-
-            <p>+</p>
-
-            <img className="arb-logo" src={arbLogo} alt="ARB Logo" />
-
             <p>
               Made in
               <br />
@@ -62,10 +61,11 @@ function HomeCategories() {
               <br />
               since 1942
             </p>
-          </div>
+          </div>          
         </div>
-      </div>
-      
+
+
+    </div>
     </div>
   );
 }

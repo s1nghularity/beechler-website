@@ -32,9 +32,9 @@ function HomeArtistCard () {
     <div className="artist-cards-container">
 
         <div className="artist-card">
-            <div class="image-container">
+            <div className="image-container">
                 <img className="artist-image" src={alexhan} alt="Alex Han" />
-                <div class="svg-background">
+                <div className="svg-background">
                 <img src={yellowBlob1} alt="Alex Han blob" />
                 <h3>Alex Han</h3>
                 </div>
@@ -42,9 +42,9 @@ function HomeArtistCard () {
         </div>
 
         <div className="artist-card">
-            <div class="image-container">
+            <div className="image-container">
                 <img className="artist-image" src={anthony} alt="Anthony Terry" />
-                <div class="svg-background">
+                <div className="svg-background">
                     <img src={orangeBlob1} alt="Anthony Terry blob" />
                     <h3>Anthony Terry</h3>
                 </div>
@@ -52,15 +52,17 @@ function HomeArtistCard () {
         </div>
 
         <div className="artist-card">
-            <div class="image-container">
+            <div className="image-container">
                 <img className="artist-image" src={caryg} alt="Cary Simms" />
-                <div class="svg-background">
+                <div className="svg-background">
                     <img src={yellowBlob2} alt="Cary Simms blob" />
                     <h3>Cary Simms</h3>
                 </div>
             </div>
         </div>
-
+        <span>
+        <h2 className="artist-card-header">Featured Artists</h2>
+        </span>
 
     </div>
   );

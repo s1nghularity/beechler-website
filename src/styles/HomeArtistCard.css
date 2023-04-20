@@ -1,3 +1,5 @@
+ 
+
 div .artist-cards-container {
   display: flex;
   justify-content: center;
@@ -6,6 +8,18 @@ div .artist-cards-container {
   flex-direction: row;
   margin-top: 9rem;
   margin-bottom: 2rem;
+}
+
+.artist-card-header {
+  font-family: "Big Shoulders Text";
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  z-index: 2;
+  background-color: #ffdd00
 }
 
 .artist-card {
@@ -49,5 +63,29 @@ overflow: show;
 
 .svg-background h3 {
   font-family: "Big Shoulders Text";
-  margin-top: 1rem;
+  margin-top: .5rem;
+  font-size: 2.5rem;
+  color: var(--accent);
+  -webkit-background-clip: text;
+
+}
+
+/*media query for the artist card so SVGs and images are aligned, each card takes up device width and is in a column not row*/
+@media (max-width: 768px) {
+  .artist-cards-container {
+    flex-direction: column!important;
+    margin-top: 40rem!important;
+  }
+  .svg-background {
+    left: 0;
+    width: 100%;
+  }
+  .svg-background img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .artist-card {
+    width: 100%;
+  }
 }

@@ -23,23 +23,6 @@ div.category p {
   margin-bottom: 0;
 }
 
-.logos {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.logos img {
-  max-height: 100px;
-  max-width: 100px;
-}
-
-.beechler-logo {
-  height: 55px !important;
-  width: 110px;
-}
-
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,6 +38,18 @@ div.category p {
   position: relative;
 }
 
+.category img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.category p {
+  margin-left: 2rem ;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
 .category::after {
   content: "";
   position: absolute;
@@ -62,14 +57,10 @@ div.category p {
   width: 93%;
   padding-bottom: 1px;
   height: 0.5px;
-  background: linear-gradient(315deg, #fbaf3459 0%, #ffdd0055 74%);
+  background: linear-gradient(315deg, #fbaf3459 0%, #ffdd0091 74%);
 }
 
-.category img {
-  max-width: 150px;
-  max-height: 150px;
-  padding-left: -2rem;
-}
+
 
 .categories-grid {
   display: grid;
@@ -83,12 +74,16 @@ div.category p {
   flex: 1;
 }
 
-.watermark-logo {
+div.category:nth-child(8) > img:nth-child(1) {
+  margin-left: -2rem;
+}
+
+.beechler-arb-logo {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  height: 30px;
-  opacity: 0.5;
+  margin-top: -5rem;
+  margin-left: 18rem;
+  height: 200px;
+  width: 400px;
 }
 
 .usa-container {
@@ -118,7 +113,7 @@ div.category p {
   color: white; /* Add this line to change the text color to white */
 }
 
-@media (min-width: 576px) {
+@media (max-width: 688px) {
   .home-categories {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -130,7 +125,17 @@ div.category p {
   }
 
   .made-in-usa {
-    width: 80%;
+    width: 60%;
+    padding: 0 0 0 0;
+  }
+
+  .beechler-arb-logo {
+    position: relative;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 300px;
   }
 }
 

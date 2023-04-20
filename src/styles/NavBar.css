@@ -1,49 +1,8 @@
 /* Import theme.css */
 @import url("/src/styles/theme.css");
 
-.navbar-toggler {
-  border: none;
-}
 
-.navbar-toggler .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  transition: transform 0.5s ease-in-out;
-}
 
-.navbar-toggler .top-bar {
-  transform-origin: top left;
-  background-color: #fbb034;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
-}
-
-.navbar-toggler .middle-bar {
-  background-color: #fbb034;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
-}
-
-.navbar-toggler .bottom-bar {
-  transform-origin: bottom left;
-  background-color: #fbb034;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
-}
-
-.navbar-toggler .icon-bar.top-bar.toggled {
-  transform: translateY(50%) translateY(-4px) rotate(45deg);
-}
-
-.navbar-toggler .icon-bar.middle-bar.toggled {
-  opacity: 0;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
-}
-
-.navbar-toggler .icon-bar.bottom-bar.toggled {
-  transform: translateY(-50%) translateY(1px) rotate(-45deg);
-}
 
 /* Navbar */
 .navbar {
@@ -68,6 +27,8 @@
   -webkit-text-fill-color: transparent;
 }
 
+
+/* Dropdown */
 .nav-dropdown a {
   color: white !important;
 }
@@ -137,6 +98,51 @@ button.dropdown-toggle::after {
 .mobile-collapse.show {
   transition: height 0.3s ease;
   height: 100vh;
+}
+
+/*Mobile Toggle Button*/
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.navbar-toggler .top-bar {
+  transform-origin: top left;
+  background-color: #fbb034;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.navbar-toggler .middle-bar {
+  background-color: #fbb034;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.navbar-toggler .bottom-bar {
+  transform-origin: bottom left;
+  background-color: #fbb034;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.navbar-toggler .icon-bar.top-bar.toggled {
+  transform: translateY(50%) translateY(-4px) rotate(45deg);
+}
+
+.navbar-toggler .icon-bar.middle-bar.toggled {
+  opacity: 0;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.navbar-toggler .icon-bar.bottom-bar.toggled {
+  transform: translateY(-50%) translateY(1px) rotate(-45deg);
 }
 
 @media (max-width: 62em) {
