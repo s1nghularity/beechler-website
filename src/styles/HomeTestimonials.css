@@ -1,0 +1,44 @@
+.home-testimonials {
+    background-color: var(--grey);
+    color: var(--white);
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding:0;
+  }
+  
+  .home-testimonials blockquote {
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .home-testimonials footer {
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem!important;
+  }
+  
+  .testimonial-card {
+    background-color: #000;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+  }
+    
+  
+  .testimonial-card footer {
+    font-family: 'Big Shoulders Text', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .testimonial-card .stars {
+    display: flex;
+    justify-content: center;
+    margin-top: -.5rem!important;
+  }
+  
