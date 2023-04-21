@@ -5,6 +5,7 @@ import HomeCategories from '../home/HomeCategories.js';
 import HomeAbout from '../home/HomeAbout.js';
 import HomeArtistCard from '../home/HomeArtistCard.js';
 import HomeDealerCard from '../home/HomeDealerCard.js';
+
 // import HomeProductHighlights from './HomeProductHighlights';
 // import HomeArtists from './HomeArtists';
 // import HomeDealers from './HomeDealers';
@@ -19,7 +20,7 @@ function HomePage() {
         <HomeCategories />
         <HomeAbout/>
         <HomeArtistCard />
-        {/* <HomeDealerCard /> */}
+        <HomeDealerCard />
         
         {/* 
         <HomeArtists />

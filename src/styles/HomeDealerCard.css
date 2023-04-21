@@ -1,7 +1,48 @@
+.home-dealer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--grey);
+    color: var(--white);
+    font-family: 'Big Shoulders Text', sans-serif;
+  }
 
-
-
-@media (max-width: 767px) {
-
-}
-
+  
+  .home-dealer-card h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 2rem;
+  }
+  
+  .home-dealer-card .geo {
+    fill: #333; /* fallback color for unsupported browsers */
+    fill: var(--accent);
+    stroke: var(--white);
+    stroke-width: 0.75;
+    outline: none;
+  }
+  
+  .home-dealer-card .geo:hover {
+    fill: var(--nav-accent);
+  }
+  
+  .home-dealer-card .default-geo {
+    fill: var(--grey);
+    stroke: var(--white);
+    stroke-width: 0.75;
+    outline: none;
+  }
+  
+  .home-dealer-card .dealers-tooltip {
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--black);
+    z-index: 10;
+    font-family: 'Big Shoulders Text', sans-serif;
+  }
+  
