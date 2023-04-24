@@ -65,7 +65,7 @@
   
   /* Products page styles */
   .products-page {
-    margin: 2rem;
+    margin-top: -1rem;
     background-color: var(--black);
     color: var(--white);
     padding: 1rem;

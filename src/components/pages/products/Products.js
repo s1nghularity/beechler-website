@@ -1,3 +1,6 @@
+import '../../../styles/ProductsPage.css';
+
+
 export const products = [
 
     //BEECHLER WHITE DIAMOND//
