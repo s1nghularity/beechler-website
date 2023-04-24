@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, NavbarToggle } from "react-bootstrap";
 import { useState } from "react";
 
@@ -18,7 +19,7 @@ function NavBar() {
       <span
         onClick={(e) => {
           e.stopPropagation();
-          window.location.href = props.href;
+          window.location.href = props.to;
         }}
       >
         {children}
@@ -31,7 +32,7 @@ function NavBar() {
 
   return (
       <Navbar expanded={expanded} expand="lg">
-        <NavbarBrand href="/#/">
+        <NavbarBrand href="/">
           <img src={logo} alt="Logo" width="100" height="50" />
         </NavbarBrand>
     
@@ -54,7 +55,7 @@ function NavBar() {
         {/* Desktop nav links */}
         <Nav className="mr-auto d-none d-lg-flex">
           <NavDropdown
-            title={<DropdownToggle href="/products">Products</DropdownToggle>}
+            title={<DropdownToggle as ={Link} to="/products">Products</DropdownToggle>}
             id="basic-nav-dropdown"
             className="nav-dropdown"
           >
