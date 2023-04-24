@@ -4,7 +4,7 @@ import '../../../styles/ProductsPage.css';
 
 const ProductsPageList = ({ products }) => {
   return (
-    <Row>
+    <Row className='products-page'>
       {products.map((product) => (
         <Col md={4} className="mb-4" key={product.id}>
           <Card className="h-100 border-0 shadow-sm rounded">

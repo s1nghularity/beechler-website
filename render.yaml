@@ -1,7 +1,7 @@
 services:
   - type: web
     name: beechler-website
-    env: static
+    env: SPA
     buildCommand: npm run build
     staticPublishPath: build
     routes:
