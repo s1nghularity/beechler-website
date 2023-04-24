@@ -2,7 +2,7 @@ services:
   - type: web
     name: beechler-website
     env: static
-    buildCommand: npm build
+    buildCommand: npm run build
     staticPublishPath: ./build
     routes:
       - type: rewrite
