@@ -13,17 +13,17 @@ export const products = [
     {
       category: "Beechler White Diamond",
       id: "B10",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Alto", 
       bore: "Small",
       price: 182.76,
-      tipOpening: Array.from({ length: 7 }, (_, i) => i + 4), // Saxaphoneophone: Tip Openings from 4-10
+      tipOpening: Array.from({ length: 7 }, (_, i) => i + 4), // Saxophoneophone: Tip Openings from 4-10
       facing: ["Standard", "Medium", "Long"],
     },
     {
       category: "Beechler White Diamond",
       id: "B11",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Alto",
       bore: "Medium",
       price: 182.76,
@@ -33,7 +33,7 @@ export const products = [
     {
       category: "Beechler White Diamond",
       id: "B12",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Alto",
       bore: "Large",
       price: 182.76,
@@ -43,7 +43,7 @@ export const products = [
     {
       category: "Beechler White Diamond",
       id: "B14",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Tenor",
       bore: "Medium",
       price: 182.76,
@@ -53,7 +53,7 @@ export const products = [
     {
       category: "Beechler White Diamond",
       id: "B16",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Baritone",
       bore: null,
       price: 231.56,
@@ -76,7 +76,7 @@ export const products = [
     {
       category: "Beechler Tonalex",
       id: "B18",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Alto",
       bore: "Large",
       price: 189.17,
@@ -86,7 +86,7 @@ export const products = [
     {
       category: "Beechler Tonalex",
       id: "B20",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Alto",
       bore: "Small",
       price: 189.17,
@@ -96,7 +96,7 @@ export const products = [
     {
       category: "Beechler Tonalex",
       id: "B21",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Alto",
       bore: "Medium",
       price: 189.17,
@@ -106,7 +106,7 @@ export const products = [
     {
       category: "Beechler Tonalex",
       id: "B19",
-      instrument: "Saxaphone",
+      instrument: "Saxophone",
       subtype: "Tenor",
       bore: "Medium",
       price: 189.17,
@@ -121,6 +121,6 @@ export const products = [
 
 
 
-    
+
   ];
   
