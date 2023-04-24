@@ -23,7 +23,7 @@ const ProductsPageList = ({ products }) => {
                 <img
                   src={product.image}
                   alt={product.category}
-                  style={{ height: '150px', objectFit: 'contain' }}
+                  style={{ height: '250px', objectFit: 'contain' }}
                 />
                 <span className='product-id'>{product.id}</span>
               </div>
