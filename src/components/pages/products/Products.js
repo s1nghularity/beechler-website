@@ -1,5 +1,15 @@
 import '../../../styles/ProductsPage.css';
 
+import wdAlto from '../../../assets/img/products/white-diamond/white-diamond-alto.png';
+import wdTenor from '../../../assets/img/products/white-diamond/white-diamond-tenor.png';
+import wdBaritone from '../../../assets/img/products/white-diamond/white-diamond-baritone.png';
+import wdClarinet from '../../../assets/img/products/white-diamond/white-diamond-clarinet.png';
+
+import taAlto from '../../../assets/img/products/tonalex/tonalex-alto.png';
+import taTenor from '../../../assets/img/products/tonalex/tonalex-tenor.png';
+import taClarinet from '../../../assets/img/products/tonalex/tonalex-clarinet.png';
+
+
 
 export const products = [
 
@@ -12,6 +22,7 @@ export const products = [
       price: 199.38,
       tipOpening: Array.from({ length: 12 }, (_, i) => i + 1), // Clarinet: Tip Openings up to 12
       facing: ["Standard", "Medium", "Long"],
+      image: wdClarinet,
     },
     {
       category: "Beechler White Diamond",
@@ -22,6 +33,7 @@ export const products = [
       price: 182.76,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4), // Saxophoneophone: Tip Openings from 4-10
       facing: ["Standard", "Medium", "Long"],
+      image: wdAlto,
     },
     {
       category: "Beechler White Diamond",
@@ -32,6 +44,7 @@ export const products = [
       price: 182.76,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
+      image: wdAlto,
     },
     {
       category: "Beechler White Diamond",
@@ -42,6 +55,7 @@ export const products = [
       price: 182.76,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
+      image: wdAlto,
     },
     {
       category: "Beechler White Diamond",
@@ -52,6 +66,7 @@ export const products = [
       price: 182.76,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
+      image: wdTenor,
     },
     {
       category: "Beechler White Diamond",
@@ -63,9 +78,10 @@ export const products = [
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
       extras: ["Cap", "Ligature"],
+      image: wdBaritone,
     },
 
-    //BEECHLER WHITE DIAMOND//
+    //BEECHLER TONALEX//
     {
       category: "Beechler Tonalex",
       id: "B17",
@@ -75,6 +91,7 @@ export const products = [
       price: 210.54,
       tipOpening: Array.from({ length: 12 }, (_, i) => i + 1),
       facing: ["Standard", "Medium", "Long"],
+      image: taClarinet,
     },
     {
       category: "Beechler Tonalex",
@@ -85,6 +102,7 @@ export const products = [
       price: 189.17,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
+      image: taAlto,
     },
     {
       category: "Beechler Tonalex",
@@ -95,6 +113,7 @@ export const products = [
       price: 189.17,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
+      image: taAlto,
     },
     {
       category: "Beechler Tonalex",
@@ -105,6 +124,7 @@ export const products = [
       price: 189.17,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
+      image: taAlto,
     },
     {
       category: "Beechler Tonalex",
@@ -115,6 +135,7 @@ export const products = [
       price: 189.17,
       tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
       facing: ["Standard", "Medium", "Long"],
+      image: taTenor,
     },
 
 
