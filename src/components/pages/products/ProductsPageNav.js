@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import '../../../styles/ProductsPage.css';
 
 const ProductsPageNav = ({ handleCategorySelect, handleInstrumentSelect, handleSubtypeSelect}) => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className='products-nav' bg="light" expand="lg">
       <Navbar.Brand href="#">Categories</Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarToggler" />
       <Navbar.Collapse id="navbarToggler">
@@ -50,10 +51,10 @@ const ProductsPageNav = ({ handleCategorySelect, handleInstrumentSelect, handleS
           
           <NavDropdown title="Instrument" id="navInstrument">
             <NavDropdown.Item onClick={() => handleInstrumentSelect('Saxophone')}>
-              Saxophone
+            <i className="fas fa-saxophone"></i> Saxophone
             </NavDropdown.Item>
             <NavDropdown.Item onClick={() => handleInstrumentSelect('Clarinet')}>
-              Clarinet
+            <i className="fas fa-clarinet"></i>Clarinet
             </NavDropdown.Item>
           </NavDropdown>
 
