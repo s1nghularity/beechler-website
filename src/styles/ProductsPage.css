@@ -32,13 +32,12 @@
   }
   
   .product-card img {
-    width: 100%;
+    max-width: 100%;
     display: block;
     background-color: none;
     padding: 1rem;
     box-sizing: border-box;
     object-fit: contain;
-    height: 100%;
   }
   
   .product-image {
@@ -100,7 +99,6 @@
     border-radius: 3px;
     font-weight: bold;
   }
-  
 
   /* Icon styles */
 .height-icon,
@@ -111,14 +109,27 @@
   margin-right: 0.25rem;
 }
 
-.height-icon {
-  color: #3f51b5; /* Change the color of the icon as you desire */
+/* Category title styles */
+.category-title {
+  font-family: 'Big Shoulders Text', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.adjust-icon {
-  color: #f44336; /* Change the color of the icon as you desire */
-}
+/* Instrument icon styles */
+.instrument-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
-.brightness1-icon {
-  color: #4caf50; /* Change the color of the icon as you desire */
-}
+  .bore-specification {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  
