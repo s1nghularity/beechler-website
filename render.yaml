@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: beechler-website
+    env: static
+    buildCommand: npm build
+    staticPublishPath: ./build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
