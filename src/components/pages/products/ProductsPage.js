@@ -1,8 +1,8 @@
 // ProductsPage.js
 import React, { useState } from 'react';
 import ProductsPageNav from '../products/ProductsPageNav.js'
-import ProductsPageList from '../products/ProductsPageList.js';
-import { products } from '../products/Products.js';
+import ProductsGrid from '../products/ProductsGrid.js';
+import { products } from './ProductsData.js';
 import '../../../styles/ProductsPage.css';
 
 const ProductsPage = () => {
@@ -36,7 +36,7 @@ const ProductsPage = () => {
         handleInstrumentSelect={handleInstrumentSelect}
         handleSubtypeSelect={handleSubtypeSelect}
       />
-      <ProductsPageList products={filteredProducts} />
+      <ProductsGrid products={filteredProducts} />
     </div>
   );
 };
