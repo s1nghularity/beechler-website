@@ -1,10 +1,15 @@
 @import url("/src/styles/theme.css");
 
+/* Variables */
+:root {
+  --font-family-big-shoulders: 'Big Shoulders Text', sans-serif;
+}
+
 /* Navbar styles */
 .products-nav {
   margin-bottom: 1rem;
-  font-family: 'Big Shoulders Text', sans-serif;
-  background-color: var(--grey-alt)!important;
+  font-family: var(--font-family-big-shoulders);
+  background-color: var(--grey)!important;
 }
 
 .navbar a {
@@ -16,120 +21,77 @@
   color: var(--nav-accent);
 }
 
-/* Product list styles */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    margin-bottom: 2rem;
-    align-items: flex-start;
-  }
-  
-  div.card-body {
-    background-color: black;
-    border-radius: 5px;
-    font-family: 'Big Shoulders Text', sans-serif;
-  }
-  
-  .product-card img {
-    max-width: 100%;
-    display: block;
-    background-color: none;
-    padding: 1rem;
-    box-sizing: border-box;
-    object-fit: contain;
-  }
-  
-  .product-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-.product-card h3 {
-  font-family: 'Big Shoulders Text', sans-serif;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.product-card p {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: var(--black-alt);
-}
-
-.product-card hr {
-  border: none;
-  height: 1px;
-  background-color: var(--grey-alt);
-  margin: 1rem 0;
-}
-
 /* Products page styles */
 .products-page {
   margin-top: -1rem;
   background-color: var(--black);
   color: var(--white);
   padding: 1rem;
-  border-radius: 0.25rem;
 }
 
-.card-info {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.card-info .price {
-  margin-top: auto;
-  align-self: flex-end;
-}
-
-.image-container {
-  position: relative;
-}
-  .product-id {
-    position: absolute;
-    top: 160px;
-    left: 10px;
-    background-color: rgba(229, 172, 0, 0.8);
-    padding: 5px;
-    border-radius: 3px;
-    font-weight: bold;
-  }
-
-  /* Icon styles */
-.height-icon,
-.adjust-icon,
-.brightness1-icon {
-  font-size: 1.2rem;
-  vertical-align: middle;
-  margin-right: 0.25rem;
-}
-
-/* Category title styles */
 .category-title {
-  font-family: 'Big Shoulders Text', sans-serif;
+  font-family: var(--font-family-big-shoulders);
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-/* Instrument icon styles */
-.instrument-icon {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    background-repeat: no-repeat;
-    background-size: contain;
+/* Product card styles */
+
+.product-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .product-card {
+    height: 100%;
+  }
+  
+  .product-image {
+    position: relative;
+    height: 75%;
+  }
+  
+  .product-image img {
+    width: 100%;
+    object-fit: cover;
   }
 
-  .bore-specification {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0.5rem;
-  }
-  
-  
+.product-id {
+  background-color: rgba(229, 172, 0, 0.8);
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.product-details {
+    flex: 1;
+    background-color: black;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instrument-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.bore-specification {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.price {
+  text-align: right;
+}
+
+.facing {
+  display: flex;
+  align-items: center;
+}
