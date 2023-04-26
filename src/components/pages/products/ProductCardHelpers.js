@@ -52,89 +52,91 @@ const CustomChip = ({ subtype, ...rest }) => (
   <StyledChip subtype={subtype} avatar={<Avatar />} {...rest} />
 );
 
-const ProductDescription = ({ product }) => {
-  const { bore, facing, instrument, price } = product;
+const ProductHeader = ({ product }) => (
+  <Row className="header-section">
+    <Col xs="auto">
+      <div className="product-id">{product.id}</div>
+    </Col>
+    <Col xs="auto">
+      <img
+        className="instrument-icon"
+        src={product.instrument === "Saxophone" ? saxIcon : clarinetIcon}
+        alt={product.instrument}
+      />
+    </Col>
+    <Col xs="auto">
+      {product.subtype && (
+        <CustomChip
+          className="subtype-chip"
+          variant="outlined"
+          size="small"
+          label={product.subtype}
+          avatar={<Avatar>{product.subtype[0]}</Avatar>}
+          style={{
+            borderColor: getChipColor(product.subtype),
+            color: getChipColor(product.subtype),
+          }}
+        />
+      )}
+    </Col>
+  </Row>
+);
 
-  return (
-    <Card className="product-description">
-      <Card.Body>
-        <Row className="header-section">
-          <Col>
-            <div className="product-id">{product.id}</div>
-          </Col>
-          <Col>
-            <img
-              className="instrument-icon"
-              src={instrument === "Saxophone" ? saxIcon : clarinetIcon}
-              alt={instrument}
+const FacingSection = ({ facing }) => (
+  <Col className="facing">
+    <p className="facing-text">Facings</p>
+    <div className="facing-angles">
+      {facing.map((facingValue, index) => (
+        <span className="facing-angles" key={index}>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d={getProductSpecs("facingCurve", facingValue)}
+              fill="none"
+              stroke="gold"
+              strokeWidth="3"
             />
-          </Col>
-          <Col>
-            {product.subtype && (
-              <CustomChip
-                variant="outlined"
-                size="small"
-                label={product.subtype}
-                avatar={<Avatar>{product.subtype[0]}</Avatar>}
-                style={{
-                  borderColor: getChipColor(product.subtype),
-                  color: getChipColor(product.subtype),
-                }}
-              />
-            )}
-          </Col>
-        </Row>
+          </svg>
+        </span>
+      ))}
+    </div>
+  </Col>
+);
 
-        <Row className="product-info-row">
-          <Col className="facing">
-            Facings:{" "}
-            {facing.map((facingValue, index) => (
-              <span key={index}>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d={getProductSpecs("facingCurve", facingValue)}
-                    fill="none"
-                    stroke="gold"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </span>
-            ))}
-          </Col>
+const BoreSection = ({ bore }) => (
+  <Col className="bore-specification">
+    {bore} Bore{" "}
+    <span
+      className="bore-circle"
+      style={{
+        width: getProductSpecs("boreSize", bore),
+        height: getProductSpecs("boreSize", bore),
+        backgroundColor: "burlywood",
+      }}
+    />
+  </Col>
+);
+  
+const ProductDescription = ({ product }) => {
+const { bore, facing, price } = product;
+    return (
+            <Card className="product-description">
+                <Card.Body>
+                    <ProductHeader product={product} />
 
-          {bore && (
-            <Col className="bore-specification">
-              {bore} Bore{" "}
-
-
-      
-                <span className="bore-circle"
-                  style={{
-                    width: getProductSpecs("boreSize", bore),
-                    height: getProductSpecs("boreSize", bore),
-                    backgroundColor: "burlywood",
-                  }}
-                />
-     
-              
-            </Col>
-            
-          )}
-          </Row>
-
-
-        <Card.Text className="price mt-auto">USD ${price}</Card.Text>
-      </Card.Body>
-    </Card>
-  );
+                        <Row className="product-info-row">
+                            <FacingSection facing={facing} />
+                            {bore && <BoreSection bore={bore} />}
+                        </Row>
+                    
+                    <Card.Text className="price mt-auto">USD ${price}</Card.Text>
+                </Card.Body>
+            </Card>
+    );
 };
-
-export {
-
-  ProductDescription,
-};
+  
+  export { ProductDescription };
