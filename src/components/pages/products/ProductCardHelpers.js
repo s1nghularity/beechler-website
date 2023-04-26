@@ -53,7 +53,7 @@ const CustomChip = ({ subtype, ...rest }) => (
 );
 
 const ProductDescription = ({ product }) => {
-  const { id, subtype, bore, facing, instrument, price } = product;
+  const { bore, facing, instrument, price } = product;
 
   return (
     <div className="product-description">
@@ -82,6 +82,27 @@ const ProductDescription = ({ product }) => {
         </div>
 
         <div className="product-info-row">
+
+          <div className="facing">
+            Facings:{" "}
+            {facing.map((facingValue, index) => (
+              <svg
+                key={index}
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d={getProductSpecs("facingCurve", facingValue)}
+                  fill="none"
+                  stroke="gold"
+                  strokeWidth="2"
+                />
+              </svg>
+            ))}
+          </div>
+
           {bore && (
             <p className="bore-specification">
               {bore} Bore{" "}
@@ -95,39 +116,18 @@ const ProductDescription = ({ product }) => {
             </p>
           )}
 
-          <div className="facing">
-            Facing:{" "}
-            {facing.map((facingValue, index) => (
-              <svg
-                key={index}
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d={getProductSpecs("facingCurve", facingValue)}
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="2"
-                />
-              </svg>
-            ))}
-          </div>
+
+
         </div>
 
-        <div className="price-box">
           <Card.Text className="price mt-auto">USD ${price}</Card.Text>
-        </div>
+
       </Card.Body>
     </div>
   );
 };
 
 export {
-  getProductSpecs,
-  getChipColor,
-  StyledChip,
-  CustomChip,
+
   ProductDescription,
 };

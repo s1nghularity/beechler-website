@@ -16,18 +16,16 @@ const ProductsGrid = ({ products }) => {
 
   return (
     <Row className="products-page">
-      {Object.entries(productsByCategory).map(
-        ([category, categoryProducts]) => (
-          <>
-            <Col xs={12}>
-              <h2 className="category-title">{category}</h2>
-            </Col>
-            {categoryProducts.map((product) => (
-              <ProductCard product={product} />
-            ))}
-          </>
-        )
-      )}
+      {Object.entries(productsByCategory).map(([category, categoryProducts], categoryIndex) => (
+        <React.Fragment key={`category-${categoryIndex}`}>
+          <Col xs={12}>
+            <h2 className="category-title">{category}</h2>
+          </Col>
+          {categoryProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </React.Fragment>
+      ))}
     </Row>
   );
 };

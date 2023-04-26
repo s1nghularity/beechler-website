@@ -3,10 +3,7 @@ import { Card, Col } from "react-bootstrap";
 import "../../../styles/ProductsPage.css";
 
 import {
-  getProductSpecs,
-  getChipColor,
-  StyledChip,
-  CustomChip,
+
   ProductDescription,
 } from "./ProductCardHelpers";
 
