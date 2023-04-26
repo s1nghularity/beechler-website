@@ -1,5 +1,5 @@
 import { Chip, Avatar } from "@mui/material";
-import { Card } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import { styled } from "@mui/system";
 import saxIcon from "../../../assets/img/products/saxophone.png";
 import clarinetIcon from "../../../assets/img/products/clarinet.png";
@@ -56,74 +56,81 @@ const ProductDescription = ({ product }) => {
   const { bore, facing, instrument, price } = product;
 
   return (
-    <div className="product-description">
+    <Card className="product-description">
       <Card.Body>
-        <div className="header-section">
-          <div className="product-id">{product.id}</div>
-
-          <img
-            className="instrument-icon"
-            src={instrument === "Saxophone" ? saxIcon : clarinetIcon}
-            alt={instrument}
-          />
-
-          {product.subtype && (
-            <CustomChip
-              variant="outlined"
-              size="small"
-              label={product.subtype}
-              avatar={<Avatar>{product.subtype[0]}</Avatar>}
-              style={{
-                borderColor: getChipColor(product.subtype),
-                color: getChipColor(product.subtype),
-              }}
+        <Row className="header-section">
+          <Col>
+            <div className="product-id">{product.id}</div>
+          </Col>
+          <Col>
+            <img
+              className="instrument-icon"
+              src={instrument === "Saxophone" ? saxIcon : clarinetIcon}
+              alt={instrument}
             />
-          )}
-        </div>
-
-        <div className="product-info-row">
-
-          <div className="facing">
-            Facings:{" "}
-            {facing.map((facingValue, index) => (
-              <svg
-                key={index}
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d={getProductSpecs("facingCurve", facingValue)}
-                  fill="none"
-                  stroke="gold"
-                  strokeWidth="2"
-                />
-              </svg>
-            ))}
-          </div>
-
-          {bore && (
-            <p className="bore-specification">
-              {bore} Bore{" "}
-              <span
+          </Col>
+          <Col>
+            {product.subtype && (
+              <CustomChip
+                variant="outlined"
+                size="small"
+                label={product.subtype}
+                avatar={<Avatar>{product.subtype[0]}</Avatar>}
                 style={{
-                  width: getProductSpecs("boreSize", bore),
-                  height: getProductSpecs("boreSize", bore),
-                  backgroundColor: "grey",
+                  borderColor: getChipColor(product.subtype),
+                  color: getChipColor(product.subtype),
                 }}
               />
-            </p>
+            )}
+          </Col>
+        </Row>
+
+        <Row className="product-info-row">
+          <Col className="facing">
+            Facings:{" "}
+            {facing.map((facingValue, index) => (
+              <span key={index}>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d={getProductSpecs("facingCurve", facingValue)}
+                    fill="none"
+                    stroke="gold"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </span>
+            ))}
+          </Col>
+
+          {bore && (
+            <Col className="bore-specification">
+              {bore} Bore{" "}
+
+
+      
+                <span className="bore-circle"
+                  style={{
+                    width: getProductSpecs("boreSize", bore),
+                    height: getProductSpecs("boreSize", bore),
+                    backgroundColor: "burlywood",
+                  }}
+                />
+     
+              
+            </Col>
+            
           )}
+          </Row>
 
 
-
-        </div>
-
-          <Card.Text className="price mt-auto">USD ${price}</Card.Text>
-
+        <Card.Text className="price mt-auto">USD ${price}</Card.Text>
       </Card.Body>
-    </div>
+    </Card>
   );
 };
 

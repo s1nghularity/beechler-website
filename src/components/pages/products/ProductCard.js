@@ -15,7 +15,7 @@ const ProductImage = ({ image }) => (
 
 
 const ProductCard = ({ product }) => (
-  <Col md={4} className="mb-4" key={product.id}>
+  <Col xs={12} md={4} key={product.id}>
     <Card className="product-card">
       <div className="product-card-container">
         <ProductImage image={product.image} id={product.id} />

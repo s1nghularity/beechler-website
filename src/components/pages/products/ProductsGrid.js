@@ -21,9 +21,11 @@ const ProductsGrid = ({ products }) => {
           <Col xs={12}>
             <h2 className="category-title">{category}</h2>
           </Col>
+          <Row className="product-row"> 
           {categoryProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
+          </Row>
         </React.Fragment>
       ))}
     </Row>

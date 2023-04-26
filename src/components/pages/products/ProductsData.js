@@ -9,6 +9,9 @@ import taAlto from "../../../assets/img/products/tonalex/tonalex-alto.png";
 import taTenor from "../../../assets/img/products/tonalex/tonalex-tenor.png";
 import taClarinet from "../../../assets/img/products/tonalex/tonalex-clarinet.png";
 
+const saxTipOpening = "Tip Openings: 4-10";
+const clarinetTipOpening = "Tip Openings 1-12";
+
 export const products = [
   //BEECHLER WHITE DIAMOND//
   {
@@ -17,7 +20,7 @@ export const products = [
     instrument: "Clarinet",
     subtype: 'BB',
     bore: null,
-    tipOpening: Array.from({ length: 12 }, (_, i) => i + 1), // Clarinet: Tip Openings up to 12
+    tipOpening: clarinetTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: wdClarinet,
     price: 199.38,
@@ -28,7 +31,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Small",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4), // Saxophoneophone: Tip Openings from 4-10
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
@@ -39,7 +42,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Medium",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
@@ -50,7 +53,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Large",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
@@ -61,7 +64,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Tenor",
     bore: "Medium",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: wdTenor,
     price: 182.76,
@@ -72,7 +75,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Baritone",
     bore: null,
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     extras: ["Cap", "Ligature"],
     image: wdBaritone,
@@ -86,7 +89,7 @@ export const products = [
     instrument: "Clarinet",
     subtype: "BB",
     bore: null,
-    tipOpening: Array.from({ length: 12 }, (_, i) => i + 1),
+    tipOpening: clarinetTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: taClarinet,
     price: 210.54,
@@ -97,7 +100,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Large",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening, 
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
@@ -108,7 +111,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Small",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
@@ -119,7 +122,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Medium",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
@@ -130,7 +133,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Tenor",
     bore: "Medium",
-    tipOpening: Array.from({ length: 7 }, (_, i) => i + 4),
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: taTenor,
     price: 189.17,
