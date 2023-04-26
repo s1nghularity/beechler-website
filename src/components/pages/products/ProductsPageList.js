@@ -74,11 +74,7 @@ const ProductDescription = ({ product, id }) => (
   <div className="product-description">
     <Card.Body className="d-flex flex-column ">
       <div className="header-section">
-        <img
-          className="instrument-icon"
-          src={product.instrument === "Saxophone" ? saxIcon : clarinetIcon}
-          alt={product.instrument}
-        />
+       
 
         <div className="product-id">{product.id}</div>
 
@@ -138,7 +134,15 @@ const ProductDescription = ({ product, id }) => (
       </div>
 
       <div className="price-box">
-      <Card.Text className="price mt-auto">USD ${product.price}</Card.Text>
+
+      <Card.Text className="price mt-auto">
+      <img
+          className="instrument-icon"
+          src={product.instrument === "Saxophone" ? saxIcon : clarinetIcon}
+          alt={product.instrument}
+        />  
+        
+        USD ${product.price}</Card.Text>
       </div>
 
     </Card.Body>
