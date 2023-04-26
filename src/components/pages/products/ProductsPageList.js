@@ -7,6 +7,32 @@ import saxIcon from "../../../assets/img/products/saxophone.png";
 import clarinetIcon from "../../../assets/img/products/clarinet.png";
 import "../../../styles/ProductsPage.css";
 
+const getBoreSize = (bore) => {
+  let size = 8; // Default bore size (small)
+
+  if (bore === "Medium") {
+    size = 12;
+  } else if (bore === "Large") {
+    size = 16;
+  }
+
+  return size;
+};
+
+const getFacingCurve = (facing) => {
+  switch (facing) {
+    case "Standard":
+      return "M0,20 Q10,0 20,20";
+    case "Medium":
+      return "M0,20 Q10,5 20,20";
+    case "Long":
+      return "M0,20 Q10,10 20,20";
+    default:
+      return "M0,20 Q10,0 20,20";
+  }
+};
+
+
 const getChipColor = (subtype) => {
   switch (subtype) {
     case "BB":
@@ -44,19 +70,17 @@ const ProductImage = ({ image }) => (
   </div>
 );
 
-
 const ProductDescription = ({ product, id }) => (
-  <div className="product-details">
-    <Card.Body className="d-flex flex-column h-100">
-
+  <div className="product-description">
+    <Card.Body className="d-flex flex-column ">
       <div className="header-section">
-        
         <img
           className="instrument-icon"
           src={product.instrument === "Saxophone" ? saxIcon : clarinetIcon}
           alt={product.instrument}
         />
-    <p className="product-id">{product.id}</p>
+
+        <div className="product-id">{product.id}</div>
 
         {product.subtype && (
           <CustomChip
@@ -70,24 +94,60 @@ const ProductDescription = ({ product, id }) => (
             }}
           />
         )}
-      </div>
-      {product.bore && <p className="bore-specification">Bore: {product.bore}</p>}
 
-      <Card.Text className="price mt-auto">Price: {product.price}</Card.Text>
-      <Card.Text>Tip Opening: 1-10</Card.Text>
-      <Card.Text className="facing">
+      </div>
+
+      <div className="product-info-row">
+
+      {product.bore && (
+        <p className="bore-specification">
+          {product.bore} Bore{" "}
+          <span
+            style={{
+              display: "inline-block",
+              width: getBoreSize(product.bore),
+              height: getBoreSize(product.bore),
+              backgroundColor: "grey",
+              borderRadius: "50%",
+              marginRight: "4px",
+            }}
+          />
+        </p>
+      )}
+
+      <div className="facing">
         Facing:{" "}
         {product.facing.map((facing, index) => (
-          <FacingIcon key={index} titleAccess={facing} />
+          <svg
+            key={index}
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d={getFacingCurve(facing)}
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+            />
+          </svg>
         ))}
-      </Card.Text>
+      </div>
+
+      </div>
+
+      <div className="price-box">
+      <Card.Text className="price mt-auto">USD ${product.price}</Card.Text>
+      </div>
+
     </Card.Body>
   </div>
 );
 
 const ProductCard = ({ product }) => (
   <Col md={4} className="mb-4" key={product.id}>
-    <Card className="h-100 border-0 shadow-sm product-card">
+    <Card className=" border-0 shadow-sm product-card">
       <div className="d-flex flex-column product-card-container">
         <ProductImage image={product.image} id={product.id} />
         <ProductDescription product={product} />
@@ -95,7 +155,6 @@ const ProductCard = ({ product }) => (
     </Card>
   </Col>
 );
-
 
 const ProductsPageList = ({ products }) => {
   const productsByCategory = products.reduce((acc, product) => {
@@ -125,5 +184,3 @@ const ProductsPageList = ({ products }) => {
 };
 
 export default ProductsPageList;
-
- 

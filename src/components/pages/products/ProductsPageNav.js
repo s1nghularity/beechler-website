@@ -1,11 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, NavItem } from 'react-bootstrap';
 import '../../../styles/ProductsPage.css';
-
-
-
-const saxIcon = require('../../../assets/img/products/saxophone.png').default;
-const clarinetIcon = require('../../../assets/img/products/clarinet.png').default;
+import saxIcon from "../../../assets/img/products/saxophone.png";
+import clarinetIcon from "../../../assets/img/products/clarinet.png";
 
 
 
@@ -20,11 +17,11 @@ const ProductsPageNav = ({ handleCategorySelect, handleInstrumentSelect, handleS
         <Nav className="mr-auto">
 
         <NavItem title="Instrument" id="navInstrument" onClick={() => handleInstrumentSelect('Saxophone')}>
-          <img className='instrument-icon' src={saxIcon}></img> 
+          <img className='instrument-icon' src={saxIcon} alt='saxophone icon'></img> 
         </NavItem>
         
         <NavItem title="Instrument" id="navInstrument" onClick={() => handleInstrumentSelect('Clarinet')}>
-          <img className='instrument-icon' src={clarinetIcon}></img>
+          <img className='instrument-icon' src={clarinetIcon} alt='clarinet icon'></img>
         </NavItem>
         
 
