@@ -1,9 +1,10 @@
 // ProductsPage.js
-import React, { useState } from 'react';
-import ProductsPageNav from '../products/ProductsPageNav.js'
-import ProductsGrid from '../products/ProductsGrid.js';
-import { products } from './ProductsData.js';
-import '../../../styles/ProductsPage.css';
+import React, { useState } from "react";
+import ProductsPageNav from "../products/ProductsPageNav.js";
+import ProductsGrid from "../products/ProductsGrid.js";
+import { products } from "./ProductsData.js";
+import "../../../styles/ProductsPage.css";
+import { Container, Row, Col } from "react-bootstrap";
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -30,14 +31,28 @@ const ProductsPage = () => {
   );
 
   return (
-    <div>
-      <ProductsPageNav
-        handleCategorySelect={handleCategorySelect}
-        handleInstrumentSelect={handleInstrumentSelect}
-        handleSubtypeSelect={handleSubtypeSelect}
-      />
-      <ProductsGrid products={filteredProducts} />
-    </div>
+    <Container fluid>
+        <Row>
+        
+        <Col>
+          <div className="products-grid">
+            <ProductsGrid products={filteredProducts} />
+          </div>
+        </Col>
+
+
+          <div className="products-container">
+            <ProductsPageNav
+              handleCategorySelect={handleCategorySelect}
+              handleInstrumentSelect={handleInstrumentSelect}
+              handleSubtypeSelect={handleSubtypeSelect}
+              infoContent={selectedCategory}
+            />
+          </div>
+
+
+      </Row>
+    </Container>
   );
 };
 

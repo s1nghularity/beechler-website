@@ -1,17 +1,18 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, NavItem } from 'react-bootstrap';
-import '../../../styles/ProductsPage.css';
+import '../../../styles/ProductsPageNav.css';
 import saxIcon from "../../../assets/img/products/saxophone.png";
 import clarinetIcon from "../../../assets/img/products/clarinet.png";
+import ProductNavInfo from './ProductNavInfo';
 
 
 
 
 
-
-const ProductsPageNav = ({ handleCategorySelect, handleInstrumentSelect, handleSubtypeSelect}) => {
+const ProductsPageNav = ({ handleCategorySelect, handleInstrumentSelect, handleSubtypeSelect, infoContent}) => {
   return (
-    <Navbar className='products-nav' bg="light" expand="lg">
+    <>
+    <Navbar className='products-nav' bg="dark" expand="lg">
       <Navbar.Toggle aria-controls="navbarToggler" />
       <Navbar.Collapse id="navbarToggler">
         <Nav className="mr-auto">
@@ -84,6 +85,8 @@ const ProductsPageNav = ({ handleCategorySelect, handleInstrumentSelect, handleS
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+          <ProductNavInfo infoContent={infoContent} />
+</>
   );
 };
 
