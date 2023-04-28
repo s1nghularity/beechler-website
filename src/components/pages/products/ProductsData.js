@@ -82,11 +82,7 @@ export const products = [
     subtype: "Alto",
     bore: "Large",
     price: 180.5,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
+
   },
 
   {
@@ -98,10 +94,7 @@ export const products = [
     bore: "Medium",
     facing: ["Medium"],
     price: 210.19,
-    tipOpening: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
+
   },
   {
     category: "Beechler Custom",
@@ -121,11 +114,7 @@ export const products = [
     model: "Jazz Model",
     bore: "Medium",
     price: 241.06,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
+    
   },
   {
     category: "Beechler Custom",
