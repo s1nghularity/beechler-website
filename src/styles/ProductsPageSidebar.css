@@ -7,40 +7,45 @@
 
 .products-page-sidebar {
   background-color: var(--black-alt);
-  height: 100%;
-  width: 122.5%;
-  padding-top: 5rem;
   font-family: var(--font-family-big-shoulders);
-  position: relative;
-  margin-left: -3.5rem;
-
- 
+  position: -webkit-sticky;
+  position: sticky !important;
+  top: 0;
 }
-
 
 /* Navbar styles */
 
 
 
-
 .products-navbar {
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  padding-left: 1rem;
+  margin-left: -.5rem!important;
   font-family: var(--font-family-big-shoulders);
   background-color: var(--grey) !important;
   border-radius: 5px;
-  width: 19rem;
+  width: 100%;
 }
 
-div .instrument-nav-sax {
-  margin-left: -0.5rem;
-  padding-right: .75rem;
+.instrument-nav-sax img,
+.instrument-nav-clar img {
+  transition: background-color 0.3s ease;  
+  border-radius: 5px;
 }
 
-div .instrument-nav-clar {
-  margin-left: 0.75rem;
-  padding-right: .75rem;
+.instrument-nav-sax:hover img,
+.instrument-nav-clar:hover img {
+  background-color: darkcyan;
+}
 
+.instrument-nav-sax.selected img,
+.instrument-nav-clar.selected img {
+  background-color:darkcyan;
+}
+
+.instrument-nav-sax, .instrument-nav-clar {
+  margin-left: .5rem;
+  margin-right: 1rem;
 }
 
 .navbar a {
@@ -60,4 +65,3 @@ div .instrument-nav-clar {
   background-color: #f8f9fa;
   margin-right: 1rem;
 }
-

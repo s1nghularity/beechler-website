@@ -7,6 +7,11 @@
   --info-bg: var(--black-alt);
 }
 
+.col-sidebar{
+  background-color: var(--black-alt);
+
+}
+
 /* Products page styles */
 .products-grid {
   display: flex;
@@ -15,6 +20,13 @@
   justify-content: center;
   position: relative;
   padding-right: 2rem;
+}
+
+.products-page {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .category-title {
@@ -60,7 +72,7 @@
 
 .product-description {
   flex: 1;
-  background-color: black;
+  background-color: var(--black);
   border-radius: 0 0 var(--radius) var(--radius);
   padding: 0.5rem;
 }

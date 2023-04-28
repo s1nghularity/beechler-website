@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../../styles/HomeCategories.css";
 import USA from "../../../assets/img/home/american-flag.svg";
 import beechlerArb from "../../../assets/img/home/beechler-arb.png";
@@ -14,17 +15,17 @@ import b21 from "../../../assets/img/home/categories/beechler-tonalex-B21.png";
 import b07 from "../../../assets/img/home/categories/beechler-white-diamond-B07.png";
 
 const categories = [
-  { name: "BEECHLER WHITE DIAMOND", type: "beechler", image: b07 },
-  { name: "BEECHLER TONALEX", type: "beechler", image: b21 },
-  { name: "BEECHLER LEGACY", type: "beechler", image: c88 },
-  { name: "BEECHLER CUSTOM BELLITE", type: "beechler", image: c32 },
-  { name: "BEECHLER BELLITE", type: "beechler", image: b82 },
-  { name: "ARB METAL", type: "arb", image: a83 },
-  { name: "ARB CUSTOM METAL", type: "arb", image: c13 },
-  { name: "BEECHLER & ARB LIGATURES", type: "both", image: l01p },
-  { name: "BEECHLER & ARB CAPS", type: "both", image: t02 },
-  { name: "BEECHLER PEGS", type: "beechler" },
-  { name: "ACCESSORIES", type: "both" },
+  { name: "Beechler White Diamond", type: "beechler", image: b07 },
+  { name: "Beechler Tonalex", type: "beechler", image: b21 },
+  { name: "Beechler Legacy", type: "beechler", image: c88 },
+  { name: "Beechler Custom Bellite", type: "beechler", image: c32 },
+  { name: "Beechler Bellite", type: "beechler", image: b82 },
+  { name: "ARB Metal", type: "arb", image: a83 },
+  { name: "ARB Custom Metal", type: "arb", image: c13 },
+  { name: "Ligatures", type: "both", image: l01p },
+  { name: "Caps", type: "both", image: t02 },
+  { name: "Pegs", type: "beechler" },
+  { name: "Accessories", type: "both" },
 ];
 
 function HomeCategories() {
@@ -35,14 +36,16 @@ function HomeCategories() {
     <div className="container">
 
 
-        <div className="categories-grid">
-          {categories.map((category, index) => (
-            <div key={index} className="category">
-              <img src={category.image} alt={category.name} />
-              <p>{category.name}</p>
-            </div>
-          ))}
-        </div>
+    <div className="categories-grid">
+      {categories.map((category, index) => (
+        <Link key={index} to={`/products?category=${encodeURIComponent(category.name)}`}>
+          <div className="category">
+            <img src={category.image} alt={category.name} />
+            <p>{category.name}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
 
         <div className="beechler-arb-logo">
           <img

@@ -14,22 +14,31 @@ const ProductsGrid = ({ products }) => {
     return acc;
   }, {});
 
+  const hasProducts = products.length > 0;
+
   return (
     <Row className="products-grid">
-      {Object.entries(productsByCategory).map(([category, categoryProducts], categoryIndex) => (
-        <React.Fragment key={`category-${categoryIndex}`}>
-          <Col xs={12}>
-            <h2 className="category-title">{category}</h2>
-          </Col>
-          <Row className="product-row"> 
-          {categoryProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-          </Row>
-        </React.Fragment>
-      ))}
+      {hasProducts ? (
+        Object.entries(productsByCategory).map(([category, categoryProducts], categoryIndex) => (
+          <React.Fragment key={`category-${categoryIndex}`}>
+            <Col xs={12}>
+              <h2 className="category-title">{category}</h2>
+            </Col>
+            <Row className="product-row">
+              {categoryProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </Row>
+          </React.Fragment>
+        ))
+      ) : (
+        <Col xs={12}>
+          <div className="empty-message">No products available for the selected combination of instrument and category.</div>
+        </Col>
+      )}
     </Row>
   );
+  
 };
 
 

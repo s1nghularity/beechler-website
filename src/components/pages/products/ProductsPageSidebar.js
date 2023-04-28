@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Navbar, Nav, NavDropdown, NavItem, Container } from "react-bootstrap";
 import "../../../styles/ProductsPageSidebar.css";
 import saxIcon from "../../../assets/img/products/saxophone.png";
@@ -11,18 +12,28 @@ const ProductsPageSidebar = ({
   handleSubtypeSelect,
   infoContent,
 }) => {
+
+  const [selectedInstrument, setSelectedInstrument] = useState(null);
+
+  const handleInstrumentClick = (instrument) => {
+    handleInstrumentSelect(instrument);
+    setSelectedInstrument(instrument);
+  };
+
+
+
   return (
     <Container className="products-page-sidebar">
       <Navbar className="products-navbar" bg="dark" expand="lg">
         <Navbar.Toggle aria-controls="navbarToggler" />
         <Navbar.Collapse id="navbarToggler">
           <Nav className="mr-auto">
-            <NavItem
-              className= "instrument-nav-sax"
-              title="Instrument"
-              id="navInstrument"
-              onClick={() => handleInstrumentSelect("Saxophone")}
-            >
+          <NavItem
+        className={`instrument-nav-sax ${selectedInstrument === "Saxophone" ? "selected" : ""}`}
+        title="Instrument"
+        id="navInstrument"
+        onClick={() => handleInstrumentClick("Saxophone")}
+      >
               <img
                 className="instrument-icon"
                 src={saxIcon}
@@ -31,11 +42,11 @@ const ProductsPageSidebar = ({
             </NavItem>
 
             <NavItem
-              className= "instrument-nav-clar"
-              title="Instrument"
-              id="navInstrument"
-              onClick={() => handleInstrumentSelect("Clarinet")}
-            >
+        className={`instrument-nav-clar ${selectedInstrument === "Clarinet" ? "selected" : ""}`}
+        title="Instrument"
+        id="navInstrument"
+        onClick={() => handleInstrumentClick("Clarinet")}
+      >
               <img
                 className="instrument-icon"
                 src={clarinetIcon}
