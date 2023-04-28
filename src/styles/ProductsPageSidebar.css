@@ -1,0 +1,57 @@
+@import url("/src/styles/theme.css");
+
+/* Variables */
+:root {
+  --font-family-big-shoulders: "Big Shoulders Text", sans-serif;
+}
+
+.products-page-sidebar {
+  background-color: var(--black-alt);
+  height: 100%;
+  padding-top: 5rem;
+
+  font-family: var(--font-family-big-shoulders);
+ 
+}
+
+div .col-lg-4{
+  padding-left: 0;
+  padding-right: 0;
+  z-index: 4;
+}
+
+/* Navbar styles */
+.products-navbar {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  font-family: var(--font-family-big-shoulders);
+  background-color: var(--grey) !important;
+  border-radius: 5px;
+  width: 20rem;
+}
+
+div .instrument-nav-sax {
+  margin-left: -0.5rem;
+}
+
+div .instrument-nav-clar {
+  margin-left: 0.75rem;
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--nav-accent);
+}
+
+.static-info,
+.dynamic-info {
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+

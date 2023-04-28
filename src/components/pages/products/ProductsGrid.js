@@ -15,7 +15,7 @@ const ProductsGrid = ({ products }) => {
   }, {});
 
   return (
-    <Row className="products-page">
+    <Row className="products-grid">
       {Object.entries(productsByCategory).map(([category, categoryProducts], categoryIndex) => (
         <React.Fragment key={`category-${categoryIndex}`}>
           <Col xs={12}>

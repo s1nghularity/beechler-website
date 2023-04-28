@@ -1,6 +1,6 @@
 // ProductsPage.js
 import React, { useState } from "react";
-import ProductsPageNav from "../products/ProductsPageNav.js";
+import ProductsPageSidebar from "../products/ProductsPageSidebar.js";
 import ProductsGrid from "../products/ProductsGrid.js";
 import { products } from "./ProductsData.js";
 import "../../../styles/ProductsPage.css";
@@ -31,26 +31,20 @@ const ProductsPage = () => {
   );
 
   return (
-    <Container fluid>
-        <Row>
-        
-        <Col>
-          <div className="products-grid">
-            <ProductsGrid products={filteredProducts} />
-          </div>
+    <Container fluid className="products-page">
+      <Row>
+        <Col lg={9}>
+          <ProductsGrid products={filteredProducts} />
         </Col>
-
-
-          <div className="products-container">
-            <ProductsPageNav
-              handleCategorySelect={handleCategorySelect}
-              handleInstrumentSelect={handleInstrumentSelect}
-              handleSubtypeSelect={handleSubtypeSelect}
-              infoContent={selectedCategory}
-            />
-          </div>
-
-
+        <Col lg={3}>
+          <ProductsPageSidebar
+            handleCategorySelect={handleCategorySelect}
+            handleInstrumentSelect={handleInstrumentSelect}
+            handleSubtypeSelect={handleSubtypeSelect}
+            infoContent={selectedCategory}
+            className="products-page-sidebar"
+          />
+        </Col>
       </Row>
     </Container>
   );

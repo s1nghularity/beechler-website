@@ -13,6 +13,350 @@ const saxTipOpening = "Tip Openings: 4-10";
 const clarinetTipOpening = "Tip Openings 1-12";
 
 export const products = [
+
+
+
+
+  {
+    category: "ARB Metal",
+    id: "A81",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    accessories: "Cap & Ligature",
+    price: 498.28,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "ARB Metal",
+    id: "A82",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    accessories: "Cap & Ligature",
+    price: 499.94,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "ARB Metal",
+    id: "A83",
+    instrument: "Saxophone",
+    subtype: "Baritone",
+    accessories: "Cap & Ligature",
+    price: 502.31,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "ARB Custom Metal",
+    id: "C12",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    accessories: "Cap & Ligature",
+    price: 554.09,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "ARB Custom Metal",
+    id: "C13",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    accessories: "Cap & Ligature",
+    price: 552.19,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "ARB Custom Metal",
+    id: "C14",
+    instrument: "Saxophone",
+    subtype: "Baritone",
+    accessories: "Cap & Ligature",
+    price: 533.19,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "ARB Great Neck Originals",
+    id: "A29",
+    instrument: "Clarinet",
+    subtype: "BB",
+    price: 180.50,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "ARB Great Neck Originals",
+    id: "A30",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    bore: "Large",
+    price: 180.50,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    category: "Beechler Custom",
+    id: "C21",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    model: "Custom 'D' Series Model",
+    bore: "Medium",
+    facing: ["Medium"],
+    price: 210.19,
+    tipOpening: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Custom",
+    id: "C22",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    model: "Custom 'Jazz' Model",
+    settings: "Professional",
+    price: 210.19,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Custom",
+    id: "C24",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    model: "Jazz Model",
+    bore: "Medium",
+    price: 241.06,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Custom",
+    id: "C27",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    model: "Dave Pell Model",
+    tipOpenings: "4 to 9",
+    price: 241.06,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Custom",
+    id: "C26",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    model: "110+",
+    price: 241.06,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Bellite",
+    id: "B80",
+    instrument: "Saxophone",
+    subtype: "Soprano",
+    accessories: "Cap & Ligature",
+    price: 439.97,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Bellite",
+    id: "B81",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    accessories: "Cap & Ligature",
+    price: 498.28,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Bellite",
+    id: "B82",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    accessories: "Cap & Ligature",
+    price: 499.94,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Beechler Bellite",
+    id: "B83",
+    instrument: "Saxophone",
+    subtype: "Baritone",
+    accessories: "Cap & Ligature",
+    price: 502.31,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Custom Beechler Bellite",
+    id: "C31",
+    instrument: "Saxophone",
+    subtype: "Soprano",
+    accessories: "Cap & Ligature",
+    price: 451.84,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Custom Beechler Bellite",
+    id: "C32",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    accessories: "Cap & Ligature",
+    price: 554.09,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Custom Beechler Bellite",
+    id: "C33",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    accessories: "Cap & Ligature",
+    price: 552.19,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+  {
+    category: "Custom Beechler Bellite",
+    id: "C34",
+    instrument: "Saxophone",
+    subtype: "Baritone",
+    accessories: "Cap & Ligature",
+    price: 533.19,
+    bore: null,
+    tipOpening: null,
+    facing: null,
+    image: null,
+    ligatureType: null,
+    finish: null,
+
+  },
+
+
+
+
+
   //BEECHLER WHITE DIAMOND//
   {
     category: "Beechler White Diamond",
@@ -24,6 +368,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdClarinet,
     price: 199.38,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler White Diamond",
@@ -35,6 +383,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler White Diamond",
@@ -46,6 +398,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler White Diamond",
@@ -57,6 +413,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler White Diamond",
@@ -68,6 +428,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdTenor,
     price: 182.76,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler White Diamond",
@@ -80,6 +444,10 @@ export const products = [
     extras: ["Cap", "Ligature"],
     image: wdBaritone,
     price: 231.56,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
 
   //BEECHLER TONALEX//
@@ -93,6 +461,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taClarinet,
     price: 210.54,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler Tonalex",
@@ -104,6 +476,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler Tonalex",
@@ -115,6 +491,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler Tonalex",
@@ -126,6 +506,10 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
   {
     category: "Beechler Tonalex",
@@ -137,5 +521,73 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taTenor,
     price: 189.17,
+    accessories: null,
+    ligatureType: null,
+    finish: null,
+
   },
+
+
+  {
+    category: "Ligatures",
+    id: "L01/A",
+    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    finish: "antique",
+    ligatureType: "Ebonite inverted",
+    price: 63.53,
+  },
+  {
+    category: "Ligatures",
+    id: "L01/B",
+    subtype: ["BB", "Soprano", "Alto", "Tenor", "Baritone"],
+    finish: "black powder coat",
+    ligatureType: "Ebonite inverted",
+    price: 63.53,
+  },
+  {
+    category: "Ligatures",
+    id: "L01/P",
+    subtype: ["Alto", "Tenor", "BB"],
+    finish: "red/silver vein",
+    ligatureType: "Prismatic inverted",
+    price: 63.53,
+  },
+  {
+    category: "Ligatures",
+    id: "L50/B",
+    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    finish: "special black",
+    ligatureType: "Metal/Bellite inverted",
+    price: 63.53,
+  },
+  {
+    category: "Ligatures",
+    id: "L50/C",
+    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    finish: "white bronze",
+    ligatureType: "Metal/Bellite inverted",
+    price: 67.69,
+  },
+  {
+    category: "Ligatures",
+    id: "L50/G",
+    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    finish: "gold plated",
+    ligatureType: "Metal/Bellite inverted",
+    price: 73.63,
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
