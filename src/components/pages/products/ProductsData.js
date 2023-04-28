@@ -9,14 +9,10 @@ import taAlto from "../../../assets/img/products/tonalex/tonalex-alto.png";
 import taTenor from "../../../assets/img/products/tonalex/tonalex-tenor.png";
 import taClarinet from "../../../assets/img/products/tonalex/tonalex-clarinet.png";
 
-const saxTipOpening = "Tip Openings: 4-10";
-const clarinetTipOpening = "Tip Openings 1-12";
+const saxTipOpening = true;
+const clarinetTipOpening = true;
 
 export const products = [
-
-
-
-
   {
     category: "ARB Metal",
     id: "A81",
@@ -24,12 +20,6 @@ export const products = [
     subtype: "Alto",
     accessories: "Cap & Ligature",
     price: 498.28,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -39,12 +29,6 @@ export const products = [
     subtype: "Tenor",
     accessories: "Cap & Ligature",
     price: 499.94,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -54,12 +38,6 @@ export const products = [
     subtype: "Baritone",
     accessories: "Cap & Ligature",
     price: 502.31,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -69,12 +47,6 @@ export const products = [
     subtype: "Alto",
     accessories: "Cap & Ligature",
     price: 554.09,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -84,12 +56,6 @@ export const products = [
     subtype: "Tenor",
     accessories: "Cap & Ligature",
     price: 552.19,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -99,12 +65,6 @@ export const products = [
     subtype: "Baritone",
     accessories: "Cap & Ligature",
     price: 533.19,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -112,13 +72,7 @@ export const products = [
     id: "A29",
     instrument: "Clarinet",
     subtype: "BB",
-    price: 180.50,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
+    price: 180.5,
 
   },
   {
@@ -127,33 +81,13 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Large",
-    price: 180.50,
+    price: 180.5,
     tipOpening: null,
     facing: null,
     image: null,
     ligatureType: null,
     finish: null,
-
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   {
     category: "Beechler Custom",
@@ -168,7 +102,6 @@ export const products = [
     image: null,
     ligatureType: null,
     finish: null,
-
   },
   {
     category: "Beechler Custom",
@@ -178,12 +111,6 @@ export const products = [
     model: "Custom 'Jazz' Model",
     settings: "Professional",
     price: 210.19,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -199,7 +126,6 @@ export const products = [
     image: null,
     ligatureType: null,
     finish: null,
-
   },
   {
     category: "Beechler Custom",
@@ -209,12 +135,6 @@ export const products = [
     model: "Dave Pell Model",
     tipOpenings: "4 to 9",
     price: 241.06,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -222,14 +142,8 @@ export const products = [
     id: "C26",
     instrument: "Saxophone",
     subtype: "Tenor",
-    model: "110+",
+    model: "110+ Model",
     price: 241.06,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -239,12 +153,6 @@ export const products = [
     subtype: "Soprano",
     accessories: "Cap & Ligature",
     price: 439.97,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -254,12 +162,6 @@ export const products = [
     subtype: "Alto",
     accessories: "Cap & Ligature",
     price: 498.28,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -269,12 +171,6 @@ export const products = [
     subtype: "Tenor",
     accessories: "Cap & Ligature",
     price: 499.94,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -284,12 +180,6 @@ export const products = [
     subtype: "Baritone",
     accessories: "Cap & Ligature",
     price: 502.31,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -299,12 +189,6 @@ export const products = [
     subtype: "Soprano",
     accessories: "Cap & Ligature",
     price: 451.84,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -314,12 +198,6 @@ export const products = [
     subtype: "Alto",
     accessories: "Cap & Ligature",
     price: 554.09,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -329,12 +207,6 @@ export const products = [
     subtype: "Tenor",
     accessories: "Cap & Ligature",
     price: 552.19,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -344,33 +216,20 @@ export const products = [
     subtype: "Baritone",
     accessories: "Cap & Ligature",
     price: 533.19,
-    bore: null,
-    tipOpening: null,
-    facing: null,
-    image: null,
-    ligatureType: null,
-    finish: null,
 
   },
-
-
-
-
 
   //BEECHLER WHITE DIAMOND//
   {
     category: "Beechler White Diamond",
     id: "B07",
     instrument: "Clarinet",
-    subtype: 'BB',
+    subtype: "BB",
     bore: null,
     tipOpening: clarinetTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: wdClarinet,
     price: 199.38,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -383,9 +242,6 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -398,9 +254,6 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -413,9 +266,6 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -428,9 +278,6 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdTenor,
     price: 182.76,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -444,9 +291,6 @@ export const products = [
     extras: ["Cap", "Ligature"],
     image: wdBaritone,
     price: 231.56,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
 
@@ -461,9 +305,6 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taClarinet,
     price: 210.54,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -472,13 +313,10 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Large",
-    tipOpening: saxTipOpening, 
+    tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -491,9 +329,6 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -506,9 +341,6 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
   {
@@ -521,73 +353,57 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taTenor,
     price: 189.17,
-    accessories: null,
-    ligatureType: null,
-    finish: null,
 
   },
-
 
   {
     category: "Ligatures",
     id: "L01/A",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
-    finish: "antique",
-    ligatureType: "Ebonite inverted",
+    finish: "Antique",
+    ligatureType: "Ebonite Inverted",
     price: 63.53,
   },
   {
     category: "Ligatures",
     id: "L01/B",
+    instrument: null   ,
+
     subtype: ["BB", "Soprano", "Alto", "Tenor", "Baritone"],
-    finish: "black powder coat",
-    ligatureType: "Ebonite inverted",
+    finish: "Black Powder Coat",
+    ligatureType: "Ebonite Inverted",
     price: 63.53,
   },
   {
     category: "Ligatures",
     id: "L01/P",
     subtype: ["Alto", "Tenor", "BB"],
-    finish: "red/silver vein",
-    ligatureType: "Prismatic inverted",
+    finish: "Red & Silver Vein",
+    ligatureType: "Prismatic Inverted",
     price: 63.53,
   },
   {
     category: "Ligatures",
     id: "L50/B",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
-    finish: "special black",
-    ligatureType: "Metal/Bellite inverted",
+    finish: "Special Black",
+    ligatureType: "Metal/Bellite Inverted",
     price: 63.53,
   },
   {
     category: "Ligatures",
     id: "L50/C",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
-    finish: "white bronze",
-    ligatureType: "Metal/Bellite inverted",
+    finish: "White Bronze",
+    ligatureType: "Metal/Bellite Inverted",
     price: 67.69,
   },
   {
     category: "Ligatures",
     id: "L50/G",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
-    finish: "gold plated",
-    ligatureType: "Metal/Bellite inverted",
+    finish: "Gold Plated",
+    ligatureType: "Metal/Bellite Inverted",
     price: 73.63,
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ];

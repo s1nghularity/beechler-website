@@ -9,33 +9,34 @@
   background-color: var(--black-alt);
   height: 100%;
   padding-top: 5rem;
-
   font-family: var(--font-family-big-shoulders);
  
 }
 
-div .col-lg-4{
-  padding-left: 0;
-  padding-right: 0;
-  z-index: 4;
-}
 
 /* Navbar styles */
+
+
+
+
 .products-navbar {
   margin-bottom: 1rem;
   padding-left: 1rem;
   font-family: var(--font-family-big-shoulders);
   background-color: var(--grey) !important;
   border-radius: 5px;
-  width: 20rem;
+  width: 19rem;
 }
 
 div .instrument-nav-sax {
   margin-left: -0.5rem;
+  padding-right: .75rem;
 }
 
 div .instrument-nav-clar {
   margin-left: 0.75rem;
+  padding-right: .75rem;
+
 }
 
 .navbar a {

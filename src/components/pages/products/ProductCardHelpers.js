@@ -54,23 +54,33 @@ const CustomChip = ({ subtype, ...rest }) => (
   <StyledChip subtype={subtype} avatar={<Avatar />} {...rest} />
 );
 
-const ProductHeader = ({ product }) => {
+const ProductIconRow = ({ product }) => {
   const subtypes = Array.isArray(product.subtype)
     ? product.subtype
     : [product.subtype];
 
   return (
-    <Row className="header-section">
+    <Row className="product-icon-row">
       <Col xs="auto">
         <div className="product-id">{product.id}</div>
       </Col>
+      
       <Col xs="auto">
-        <img
-          className="instrument-icon"
-          src={product.instrument === "Saxophone" ? saxIcon : clarinetIcon}
-          alt={product.instrument}
-        />
+        {product.instrument && (
+          <img
+            className="instrument-icon"
+            src={
+              product.instrument === "Saxophone"
+                ? saxIcon
+                : product.instrument === "Clarinet"
+                ? clarinetIcon
+                : null
+            }
+            alt={product.instrument}
+          />
+        )}
       </Col>
+
       <Col xs="auto">
         {subtypes.map((subtypeValue, index) => (
           <CustomChip
@@ -87,10 +97,10 @@ const ProductHeader = ({ product }) => {
           />
         ))}
       </Col>
+
     </Row>
   );
 };
-
 
 const FacingSection = ({ facing }) => (
   <Col className="facing">
@@ -119,7 +129,7 @@ const FacingSection = ({ facing }) => (
 
 const BoreSection = ({ bore }) => (
   <Col className="bore-specification">
-    {bore} Bore{" "}
+    Bore{" "}
     <span
       className="bore-circle"
       style={{
@@ -133,8 +143,7 @@ const BoreSection = ({ bore }) => (
 
 const AccessoriesSection = ({ accessories }) => (
   <Col className="accessories">
-    <p>Accessories</p>
-    <p>{accessories}</p>
+    <p>{accessories} included! </p>
   </Col>
 );
 
@@ -142,8 +151,7 @@ const TipOpeningSection = ({ tipOpening }) => (
   <Col className="tip-openings">
     {tipOpening ? (
       <>
-        <p className="tip-openings-text">Tips Available</p>
-
+        <div className="tip-openings-text">Tips</div>
         <CheckCircleIcon
           className="tip-openings-checkmark"
           style={{ color: "limegreen" }}
@@ -153,34 +161,48 @@ const TipOpeningSection = ({ tipOpening }) => (
   </Col>
 );
 
+const ModelSection = ({ model }) => <Col className="model">{model}</Col>;
 
-const ModelSection = ({ model }) => (
-  <Col className="model">
-    <p>Model</p>
-    <p>{model}</p>
+const LigatureTypeSection = ({ ligatureType }) => (
+  <Col className="ligature-type">
+    <p className="ligature-type-text">{ligatureType}</p>
   </Col>
 );
 
+const FinishSection = ({ finish }) => (
+  <Col className="finish">
+    <p className="finish-text">{finish} Finish</p>
+  </Col>
+);
 
-  
 const ProductDescription = ({ product }) => {
-  const { bore, facing, price, accessories, tipOpening, model } = product;
-
+  const {
+    bore,
+    facing,
+    tipOpening,
+    price,
+    ligatureType,
+    finish,
+    accessories,
+    model,
+  } = product;
   return (
     <Card className="product-description">
-      <Card.Body>
-        <ProductHeader product={product} />
+      <Row className="product-icon-row">
+        <ProductIconRow product={product} />
+      </Row>
 
-        <Row className="product-info-row">
-          {facing && <FacingSection facing={facing} />}
-          {bore && <BoreSection bore={bore} />}
-          {accessories && <AccessoriesSection accessories={accessories} />}
-          {tipOpening && <TipOpeningSection tipOpening={tipOpening} />}
-          {model && <ModelSection model={model} />}
-        </Row>
+      <Row className="product-info-row">
+        {facing && <FacingSection facing={facing} />}
+        {bore && <BoreSection bore={bore} />}
+        {tipOpening && <TipOpeningSection tipOpening={tipOpening} />}
+        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} />}
+        {finish && <FinishSection finish={finish} />}
+        {accessories && <AccessoriesSection accessories={accessories} />}
+        {model && <ModelSection model={model} />}
+      </Row>
 
-        <Card.Text className="price mt-auto">USD ${price}</Card.Text>
-      </Card.Body>
+      <Card.Text className="price mt-auto">USD ${price}</Card.Text>
     </Card>
   );
 };
