@@ -21,6 +21,7 @@ div.category p {
   font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 0;
+  color: var(--white)
 }
 
 .categories-grid {
