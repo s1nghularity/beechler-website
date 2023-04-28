@@ -44,8 +44,6 @@ import arbT01 from "../../../assets/img/products/caps/arb-t01.png";
 import beechlerT01 from "../../../assets/img/products/caps/beechler-t01.png";
 import eboniteT02 from "../../../assets/img/products/caps/ebonite-t02.png";
 
-
-
 const saxTipOpening = true;
 const clarinetTipOpening = true;
 
@@ -426,7 +424,6 @@ export const products = [
     image: ligGold,
   },
 
-
   {
     category: "Caps",
     id: "T01A",
@@ -459,8 +456,4 @@ export const products = [
     image: eboniteT02,
     price: 28.50,
   },
-
-
-
-
 ];
