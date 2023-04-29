@@ -59,7 +59,7 @@ function NavBar() {
 
 
 
-          <Nav.Link href="/dealers">Dealers</Nav.Link>
+          <Nav.Link as={Link} to="/dealers">Dealers</Nav.Link>
           <Nav.Link href="/artists">Artists</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
         </Nav>
