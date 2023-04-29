@@ -7,6 +7,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
+import TipOpenings from "../../../components/pages/tipopenings/TipOpenings.js";
+import "../../../styles/TipOpenings.css"
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -72,6 +74,7 @@ const ProductsPage = () => {
     <Container fluid className="products-page">
       <Row>
         <Col lg={9}>
+
           <ProductsGrid products={previousProducts} />
         </Col>
         <Col lg={3} className="col-sidebar px-lg-0">

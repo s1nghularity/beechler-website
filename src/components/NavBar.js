@@ -55,43 +55,9 @@ function NavBar() {
         {/* Desktop nav links */}
         <Nav className="mr-auto d-none d-lg-flex">
           <Nav.Link as={Link} to="/products">Products</Nav.Link>
+          <Nav.Link as={Link} to="/tip-openings">Tip Openings</Nav.Link>
 
-            <NavDropdown
-              title={
-                <DropdownToggle href="/products/mouthpieces">
-                  Mouthpieces
-                </DropdownToggle>
-              }
-              id="basic-nav-dropdown"
-              className="nav-dropdown"
-            >
-              <NavDropdown.Item href="#action/3.1">
-                Mouthpiece 1
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Mouthpiece 2
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-                Mouthpiece 3
-              </NavDropdown.Item>
-            </NavDropdown>
 
-            <NavDropdown
-              title={
-                <DropdownToggle href="/products/accessories">
-                  Accessories
-                </DropdownToggle>
-              }
-              id="basic-nav-dropdown"
-              className="nav-dropdown"
-            >
-              <NavDropdown.Item href="#action/3.4">
-                Accessory 1
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.5">
-                Accessory 2
-              </NavDropdown.Item>
-            </NavDropdown>
 
           <Nav.Link href="/dealers">Dealers</Nav.Link>
           <Nav.Link href="/artists">Artists</Nav.Link>

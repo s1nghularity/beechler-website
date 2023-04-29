@@ -4,7 +4,7 @@ import { Navbar, Nav, NavDropdown, NavItem, Container } from "react-bootstrap";
 import "../../../styles/ProductsPageSidebar.css";
 import saxIcon from "../../../assets/img/products/saxophone.png";
 import clarinetIcon from "../../../assets/img/products/clarinet.png";
-import ProductNavInfo from "./ProductNavInfo";
+import ProductNavInfo from "./ProductNavInfo.js";
 
 const ProductsPageSidebar = ({
   handleCategorySelect,
@@ -136,6 +136,7 @@ const ProductsPageSidebar = ({
       </Navbar>
 
       <ProductNavInfo infoContent={infoContent} />
+
 
     </Container>
   );

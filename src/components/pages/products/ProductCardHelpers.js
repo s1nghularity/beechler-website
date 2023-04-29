@@ -2,6 +2,7 @@ import { Chip, Avatar } from "@mui/material";
 import { Card, Row, Col } from "react-bootstrap";
 import { styled } from "@mui/system";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import "../../../styles/ProductsPage.css";
 
 import saxIcon from "../../../assets/img/products/saxophone.png";
 import clarinetIcon from "../../../assets/img/products/clarinet.png";
@@ -32,7 +33,7 @@ const getChipColor = (subtype) => {
     case "Alto":
       return "gold";
     case "Tenor":
-      return "greenyellow";
+      return "green";
     case "Baritone":
       return "rebeccapurple";
     default:
