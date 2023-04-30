@@ -18,8 +18,8 @@ const DealersMap = () => {
   const musicIconSvg = icon({ prefix: "fas", iconName: "music" }).html;
 
   const musicalNoteIcon = L.divIcon({
-    html: `<div style="color: var(--nav-accent); font-size: 12px;">${musicIconSvg}</div>`,
-    iconSize: [5, 5],
+    html: `<div style="color: var(--nav-accent); font-size: 1rem;">${musicIconSvg}</div>`,
+    iconSize: [25, 25],
     className: "leaflet-marker-icon",
   });
   const filteredLocations = locationData.filter((location) => {
@@ -33,7 +33,10 @@ const DealersMap = () => {
   return (
     <Container fluid>
       <Row>
-        <Col>
+        <Col lg={3}>
+
+        <h1>Making Music All Over The World</h1>
+
           <InputGroup className="mb-3">
             <InputGroup.Text id="search-addon">Search</InputGroup.Text>
             <FormControl
@@ -45,6 +48,9 @@ const DealersMap = () => {
               onChange={(e) => setSearch(e.target.value)}
             />
           </InputGroup>
+
+
+          
           {filteredLocations.map((location) => (
             <div key={location.name}>
               <strong>{location.name}</strong>
@@ -54,8 +60,9 @@ const DealersMap = () => {
               </p>
             </div>
           ))}
+
         </Col>
-        <Col>
+        <Col lg={9}>
           <MapContainer
             center={[38, -95]}
             zoom={4}
