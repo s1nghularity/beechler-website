@@ -36,16 +36,17 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 30vh;
+  width: 65rem;
+  height: 35rem;
   object-fit: cover;
-  border-radius: 20px !important;
-  transition: transform 1.25s, box-shadow 1s;
+  border-radius: .5rem !important;
+  transition: transform 1.25s,
+  
 }
 
 .swiper-slide-active img {
   transform: scale(1.1);
-  box-shadow: 0 0 35px rgb(255, 255, 255, 0.15);
+
 }
 
 .swiper-button-next,
@@ -64,11 +65,11 @@
 }
 
 .swiper-button-next {
-  right: 16rem !important;
+  right: 11rem !important;
 }
 
 .swiper-button-prev {
-  left: 16rem !important;
+  left: 12rem !important;
 }
 
 .swiper-button-next::after,
@@ -93,6 +94,26 @@ div.swiper-button-next::after {
 .swiper-pagination-horizontal {
   display: none !important;
 }
+
+.carousel-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25px;
+  pointer-events: none;
+  z-index: 2;
+  background-image: linear-gradient(
+    to right,
+    rgba(12, 11, 11, 0.8),
+    rgba(12, 11, 11, 0)
+  );
+}
+
+.carousel-fade-right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
 
 @media (max-width: 767px) {
   .swiper-slide {

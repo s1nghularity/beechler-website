@@ -1,8 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~react-responsive-carousel/lib/styles/carousel.min.css";
 
-@import url('./styles/NavBar.css');
 @import url('./styles/theme.css');
+@import url('./styles/NavBar.css');
 @import url('./styles/HomeCarousel.css');
 @import url('./styles/HomeTrio.css');
 @import url('./styles/HomeAbout.css');

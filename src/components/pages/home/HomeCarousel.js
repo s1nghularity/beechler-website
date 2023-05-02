@@ -2,15 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay }  from "swiper";
-import tonalex from "../../../assets/img/home/carousel-tonalex.jpg";
-import mouthpiece from "../../../assets/img/home/carousel-mouth.jpg";
-import artist2 from "../../../assets/img/home/carousel-artist2.jpg";
-import artist from "../../../assets/img/home/carousel-artist.jpg";
-import dealer from "../../../assets/img/home/carousel-dealer.jpg";
+import tonalex from "../../../assets/img/home/carousel-1.png";
+import mouthpiece from "../../../assets/img/home/carousel-5.png";
+import artist2 from "../../../assets/img/home/carousel-3.png";
+import artist from "../../../assets/img/home/carousel-4.png";
+import dealer from "../../../assets/img/home/carousel-2.png";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "../../../styles/theme.css";
 import "../../../styles/HomeCarousel.css";
 
 
@@ -23,13 +22,14 @@ const HomeCarousel = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 767) {
-
-        setSlidesPerView(1.1875);
-        setSpaceBetween(50);
+        setSlidesPerView(1); // Adjust this value for mobile screens
+        setSpaceBetween(10); // Adjust this value for mobile screens
       } else if (window.innerWidth <= 1366) {
-        setSlidesPerView(1.9);
+        setSlidesPerView(1.3); // Adjust this value for medium screens
+        setSpaceBetween(70); // Adjust this value for medium screens
       } else {
-        setSlidesPerView(3.0);
+        setSlidesPerView(1.5); // Adjust this value for large screens
+        setSpaceBetween(90); // Adjust this value for large screens
       }
     };
 
@@ -44,6 +44,8 @@ const HomeCarousel = () => {
   return (
 
     <div className="stripe-carousel" >
+        <div className="carousel-fade"></div>
+  <div className="carousel-fade carousel-fade-right"></div>
     <div className="swiper-container">
       <Swiper
         className="home-carousel"
@@ -62,23 +64,23 @@ const HomeCarousel = () => {
       >
           <SwiperSlide>
             <img src={tonalex} alt="Mouthpieces" />
-            <p>Mouthpieces Tonalex</p>
+
           </SwiperSlide>
           <SwiperSlide>
             <img src={mouthpiece} alt="Mouthpieces" />
-            <p>Mouthpieces 1</p>
+
           </SwiperSlide>
           <SwiperSlide>
             <img src={artist} alt="Artists" />
-            <p>Artists</p>
+
           </SwiperSlide>
           <SwiperSlide>
             <img src={dealer} alt="Artists" />
-            <p>Dealers</p>
+
           </SwiperSlide>
           <SwiperSlide>
             <img src={artist2} alt="Tip Openings" />
-            <p>Tip Openings</p>
+
           </SwiperSlide>
         </Swiper>
       </div>

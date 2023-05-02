@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import about1 from "../../../assets/img/home/about/about1.jpg";
 import about2 from "../../../assets/img/home/about/about2.jpg";
 import about3 from "../../../assets/img/home/about/about3.jpg";
+import about4 from "../../../assets/img/home/remle-ad-1949.jpg";
 import "../../../styles/HomeAbout.css";
 
 function HomeAbout () {
@@ -31,15 +32,12 @@ function HomeAbout () {
           <div>
             <h2>OUR STORY</h2>
             <p className="about-main-text">
-              Beechler mouthpieces and accessories inspire and enhance the
-              playing experience of professional musicians. Our handcrafted
-              mouthpieces offer infinite choice to suit varying embouchures,
-              reed preferences, and playing styles.
+              Ever since we broke the mold with our sensational chrome-lined
+              Alto Sax mouthpiece, musicians have loved our work.
             </p>
             <p className="about-supplemental-text">
-              Our passion for music and dedication to quality is what makes
-              Beechler stand out. Join the ranks of saxophonists and woodwind
-              players who trust Beechler for their mouthpiece and accessory
+              Join the ranks of saxophonists and woodwind players 
+              who trust Beechler for their mouthpiece and accessory
               needs. Elevate your playing experience today.
             </p>
           </div>
@@ -70,6 +68,10 @@ function HomeAbout () {
             <div className="slide">
               <img src={about3} alt="your alt text" />
               <p className="about-section-tag">Experience the difference.</p>
+            </div>
+            <div className="slide">
+              <img src={about4} alt="your alt text" />
+              <p className="about-section-tag">A firmament of industry.</p>
             </div>
           </Carousel>
         </div>

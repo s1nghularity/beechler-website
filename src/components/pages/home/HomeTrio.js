@@ -6,6 +6,11 @@ import StarIcon from "@mui/icons-material/Star";
 import CrownIcon from "@mui/icons-material/MilitaryTech";
 import HistoryIcon from "@mui/icons-material/History";
 import GlobeIcon from "@mui/icons-material/Public";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+import VolumeDownIcon from "@mui/icons-material/VolumeDown";
+import VolumeOffIcon from "@mui/icons-material/VolumeOff";
+import HeadsetIcon from "@mui/icons-material/Headset";
+import MicIcon from "@mui/icons-material/Mic";
 import hexagon from "../../../assets/img/home/hexagon.png";
 import "../../../styles/HomeTrio.css";
 import "../../../styles/theme.css";
@@ -49,9 +54,9 @@ const CustomHexagon = ({ icon: Icon, text }) => {
 function HomeTrio() {
   const [isMobile, setIsMobile] = useState(false);
   const traits = [
-    { icon: StarIcon, text: "Musicians Choice" },
-    { icon: CrownIcon, text: "Unrivaled Quality" },
-    { icon: HistoryIcon, text: "Industry Veteran" },
+    { icon: StarIcon, text: "Handcrafted Perfection" },
+    { icon: CrownIcon, text: "Industry Veteran" },
+    { icon: VolumeUpIcon, text: "Sensational Sound" },
     { icon: GlobeIcon, text: "Internationally Adored" },
   ];
 

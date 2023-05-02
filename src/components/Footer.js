@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Footer.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import USA from "../assets/img/home/american-flag.svg";
 
 function Footer() {
   return (
@@ -54,6 +55,19 @@ function Footer() {
               <li><a href="/sitemap">Sitemap</a></li>
             </ul>
           </div>
+
+          <div className="row usa-container">
+            <div className="made-in-usa">
+              <p>
+                Made in
+                <br />
+                <img className="usa-flag" src={USA} alt="Made in the USA" />
+                <br />
+                since 1942
+              </p>
+            </div>
+          </div>
+
         </div>
         <div className="footer-bottom">
           <p>Accessibility Statement</p>

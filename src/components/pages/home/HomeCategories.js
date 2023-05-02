@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/HomeCategories.css";
-import USA from "../../../assets/img/home/american-flag.svg";
 import beechlerArb from "../../../assets/img/home/beechler-arb.png";
 // Import the images
 import c13 from "../../../assets/img/home/categories/arb-custom-metal-C13.png";
@@ -31,44 +30,38 @@ const categories = [
 function HomeCategories() {
   return (
     <div className="stripe-categories">
-    <div className="home-categories">
-      <h2>Our Categories</h2>
-      <div className="container">
-        <div className="categories-grid">
-          {categories.map((category, index) => (
-            <Link
-              key={index}
-              to={`/products?category=${encodeURIComponent(category.name)}`}
-            >
-              <div className="category">
-                <img src={category.image} alt={category.name} />
-                <p>{category.name}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div className="beechler-arb-logo">
-          <img
-            className="beechler-arb-logo"
-            src={beechlerArb}
-            alt="beechler-arb logo"
-          />
-        </div>
-
-        <div className="row usa-container">
-          <div className="made-in-usa">
-            <p>
-              Made in
-              <br />
-              <img className="usa-flag" src={USA} alt="Made in the USA" />
-              <br />
-              since 1942
-            </p>
+      <div className="home-categories">
+        <h2>Our Categories</h2>
+        <div className="container">
+          <div className="categories-grid">
+            {categories.map((category, index) => (
+              <Link
+                key={index}
+                to={`/products?category=${encodeURIComponent(category.name)}`}
+              >
+                <div className="category">
+                  <img src={category.image} alt={category.name} />
+                  <p>
+                    <span>{category.name}</span>
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
+
+          <div className="beechler-arb-logo">
+            <img
+              className="beechler-arb-logo"
+              src={beechlerArb}
+              alt="beechler-arb logo"
+            />
+          </div>
+
+
         </div>
+
+        
       </div>
-    </div>
     </div>
   );
 }
