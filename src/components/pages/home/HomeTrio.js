@@ -97,7 +97,7 @@ function HomeTrio() {
   
 
   return (
-    <Container fluid className="hilightContainer">
+    <Container fluid className="hilightContainer stripe-trio">
       {isMobile ? renderMobile() : renderDesktop()}
     </Container>
   );

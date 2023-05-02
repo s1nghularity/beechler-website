@@ -7,6 +7,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
+import ScrollToTop from "../../ScrollToTop.js";
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -50,12 +51,17 @@ const ProductsPage = () => {
   );
 
   useEffect(() => {
-    if (filterApplied && filteredProducts.length === 0) {
-      showToast();
-    } else {
-      setPreviousProducts(filteredProducts);
+    if (filterApplied) {
+      if (filteredProducts.length === 0) {
+        showToast();
+        setFilterApplied(false); // Add this line
+      } else {
+        setPreviousProducts(filteredProducts);
+        setFilterApplied(false); // Add this line
+      }
     }
   }, [filteredProducts, filterApplied]);
+  
 
   const location = useLocation();
 
@@ -74,6 +80,7 @@ const ProductsPage = () => {
         <Col lg={9}>
 
           <ProductsGrid products={previousProducts} />
+          <ScrollToTop />
         </Col>
         <Col lg={3} className="col-sidebar px-lg-0">
           <ProductsPageSidebar

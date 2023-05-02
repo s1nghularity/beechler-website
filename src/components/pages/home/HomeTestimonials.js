@@ -8,7 +8,7 @@ import "../../../styles/HomeTestimonials.css";
 
 const HomeTestimonials = () => {
     return (
-        <Container fluid className="home-testimonials">
+        <Container fluid className="home-testimonials stripe-home-dealer">
           <Row className="justify-content-center align-items-center">
         <Col md={3} className="testimonial-card">
           <blockquote>

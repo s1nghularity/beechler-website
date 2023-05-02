@@ -1,5 +1,19 @@
 @import url("/src/styles/theme.css");
 
+.stripe-carousel {
+  position: relative;
+}
+
+.stripe-carousel:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 200vw;
+  left: -100vw;
+  z-index: -1;
+  background-color: var(--black)!important;
+}
+
 .swiper-container {
   width: 100%;
   display: flex;

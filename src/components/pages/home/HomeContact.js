@@ -18,7 +18,7 @@ function HomeContact() {
   const handleClose = () => setShowModal(false);
 
   return (
-    <div className='contact-container' id='contact'>
+    <div className='contact-container stripe-home-dealer' id='contact'>
       <div className='work-together'>
         <h2>Can't find what you're looking for?</h2>
         <p>Reach out through this contact form!</p>

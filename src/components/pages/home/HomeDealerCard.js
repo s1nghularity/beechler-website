@@ -38,7 +38,7 @@ const HomeDealerCard = () => {
   ];
 
   return (
-    <div className="home-dealer-card">
+    <div className="home-dealer-card stripe-home-dealer">
       <h2>Musician's Choice All Over The World</h2>
       <WorldMap
         color="#faaf33"

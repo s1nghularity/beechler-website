@@ -24,7 +24,7 @@ function HomeAbout () {
 
   
   return (
-    <div className="home-about container-fluid">
+    <div className="home-about container-fluid stripe-home-about">
       <div className="row home-about-row">
 
         <div className="col-md-4 home-about-left">

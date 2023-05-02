@@ -7,6 +7,8 @@ import HomeArtistCard from '../home/HomeArtistCard.js';
 import HomeDealerCard from '../home/HomeDealerCard.js';
 import HomeTestimonials from '../home/HomeTestimonials.js';
 import HomeContact from '../home/HomeContact.js';
+import ScrollToTop from "../../ScrollToTop.js";
+
 
 // import HomeProductHighlights from './HomeProductHighlights';
 // import HomeArtists from './HomeArtists';
@@ -16,7 +18,8 @@ import HomeContact from '../home/HomeContact.js';
 function HomePage() {
     return (
     <div>
-        <HomeCarousel />
+        <ScrollToTop />
+        <HomeCarousel/>
         <HomeTrio />
         <HomeCategories />
         <HomeAbout/>

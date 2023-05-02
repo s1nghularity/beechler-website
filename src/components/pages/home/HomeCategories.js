@@ -30,22 +30,23 @@ const categories = [
 
 function HomeCategories() {
   return (
-    
+    <div className="stripe-categories">
     <div className="home-categories">
-      <h2>Our Categories</h2> 
-    <div className="container">
-
-
-    <div className="categories-grid">
-      {categories.map((category, index) => (
-        <Link key={index} to={`/products?category=${encodeURIComponent(category.name)}`}>
-          <div className="category">
-            <img src={category.image} alt={category.name} />
-            <p>{category.name}</p>
-          </div>
-        </Link>
-      ))}
-    </div>
+      <h2>Our Categories</h2>
+      <div className="container">
+        <div className="categories-grid">
+          {categories.map((category, index) => (
+            <Link
+              key={index}
+              to={`/products?category=${encodeURIComponent(category.name)}`}
+            >
+              <div className="category">
+                <img src={category.image} alt={category.name} />
+                <p>{category.name}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
 
         <div className="beechler-arb-logo">
           <img
@@ -64,10 +65,9 @@ function HomeCategories() {
               <br />
               since 1942
             </p>
-          </div>          
+          </div>
         </div>
-
-
+      </div>
     </div>
     </div>
   );

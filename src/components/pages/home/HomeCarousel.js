@@ -43,7 +43,7 @@ const HomeCarousel = () => {
 
   return (
 
-    <div>
+    <div className="stripe-carousel" >
     <div className="swiper-container">
       <Swiper
         className="home-carousel"
