@@ -15,7 +15,7 @@ function NavBar() {
   const currentPath = location.pathname;
 
   return (
-    <Navbar expanded={expanded} expand="lg" className="stripe">
+    <Navbar expanded={expanded} expand="md" className="stripe">
       <div className="navbar-wrapper">
         <NavbarBrand href="/">
           <img src={logo} alt="Logo" width="100" height="50" />
@@ -75,9 +75,6 @@ function NavBar() {
             </Nav.Link>
           </Nav>
 
-          <p className="usa">
-            Made in the USA <img src={USA} alt="USA" width="30" height="20" />
-          </p>
         </Navbar.Collapse>
 
         {/* Mobile nav links */}
@@ -85,7 +82,7 @@ function NavBar() {
           id="basic-navbar-nav"
           className={`mobile-collapse ${expanded ? "show" : ""}`}
         >
-          <Nav className="mr-auto d-lg-none header-lite">
+          <Nav className="mr-auto d-lg-none super-title">
             <Nav.Link as={Link} to="/products">
               Products
             </Nav.Link>
@@ -102,9 +99,7 @@ function NavBar() {
               About
             </Nav.Link>
 
-            <p className="usa">
-              Made in the USA <img src={USA} alt="USA" width="30" height="20" />
-            </p>
+
           </Nav>
         </Navbar.Collapse>
       </div>

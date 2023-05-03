@@ -52,8 +52,6 @@
   margin-right: auto;
 }
 
-
-
 /* Mobile menu */
 
 .mobile-collapse.show {
@@ -138,13 +136,35 @@
   opacity: 1;
 }
 
-@media (max-width: 62em) {
+.custom-nav-spacing {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+
+/*PHONE OR SMALLER*/
+/* Mobile menu styles (always applied) */
+.mobile-collapse {
+  display: block;
+  width: 100%;
+  background-color: var(--black-alt);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+.mobile-collapse.show {
+  transition: height 0.3s ease;
+  height: 100vh;
+}
+
+/* Mobile styles (up to and including 688px) */
+@media (max-width: 766px) {
   .desktop-collapse {
     display: none;
-  }
-
-  .mobile-collapse {
-    display: block;
   }
 
   .navbar-brand {
@@ -156,11 +176,67 @@
   }
 }
 
-@media (min-width: 62.01em) {
+
+
+
+/*TABLET*/
+@media (min-width: 766px) and (max-width: 992px) {
+  .desktop-collapse {
+    display: flex;
+  }
+
   .mobile-collapse {
     display: none;
   }
+
   .navbar-wrapper {
     display: flex;
+    flex-wrap: nowrap;
+  }
+
+}
+
+/*LAPTOP + DESKTOP*/
+@media (min-width: 993px) and (max-width: 1312px) {
+  .desktop-collapse {
+    display: flex;
+  }
+
+  .mobile-collapse {
+    display: none;
+  }
+
+  .navbar-wrapper {
+    display: flex;
+  }
+
+  .super-title {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .usa {
+    padding-left: 28rem;
+  }
+}
+
+/*ULTRAWIDE*/
+@media (min-width: 1312px) {
+  .desktop-collapse {
+    display: flex;
+  }
+
+  .mobile-collapse {
+    display: none;
+  }
+
+  .navbar-wrapper {
+    display: flex;
+  }
+
+  .usa {
+    padding-left: 28rem;
   }
 }
