@@ -21,13 +21,13 @@ const HomeCarousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 767) {
+      if (window.innerWidth <= "43em") {
         setSlidesPerView(1); // Adjust this value for mobile screens
         setSpaceBetween(10); // Adjust this value for mobile screens
-      } else if (window.innerWidth <= 1366) {
+      } else if (window.innerWidth <= "62em") {
         setSlidesPerView(1.3); // Adjust this value for medium screens
         setSpaceBetween(70); // Adjust this value for medium screens
-      } else {
+      } else if (window.innerWidth <= "82em") {
         setSlidesPerView(1.5); // Adjust this value for large screens
         setSpaceBetween(90); // Adjust this value for large screens
       }

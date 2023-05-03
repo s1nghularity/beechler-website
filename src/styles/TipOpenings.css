@@ -3,6 +3,8 @@
 .tip-openings {
     font-family: "Big Shoulders Text", sans-serif;
     color: var(--white);
+    height: 100%;
+    
   }
   
   .tip-openings table {

@@ -131,7 +131,7 @@ div.swiper-button-next::after {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 82em) {
   .swiper-button-next {
     right: 41rem !important;
   }

@@ -6,6 +6,8 @@ import USA from "../assets/img/home/american-flag.svg";
 
 function Footer() {
   return (
+    <div className="stripe-footer">
+
     <footer className="footer">
       <div className="content-container">
         <div className="footer-content">
@@ -56,7 +58,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="row usa-container">
+          <div className="usa-container">
             <div className="made-in-usa">
               <p>
                 Made in
@@ -75,6 +77,7 @@ function Footer() {
         </div>
       </div>
     </footer>
+    </div>
   );
 }
 

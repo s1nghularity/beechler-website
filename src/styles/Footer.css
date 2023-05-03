@@ -2,12 +2,29 @@
 .footer {
     background-color: var(--black-alt);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 2rem 10rem;
     font-family: "Josefin Sans", sans-serif;
   }
+
+  .stripe-footer {
+    position: relative;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  .stripe-footer:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 200vw;
+    left: -100vw;
+    z-index: -1;
+    background-color: var(--black);
+  }
+  
   
   .content-container {
-    max-width: 1600px;
+    max-width: 82em;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -68,6 +85,9 @@
   
   
   @media (max-width: 62em) {
+    .footer{
+    padding: 2rem 0rem;
+    }
     .footer-content {
       flex-direction: column;
     }
