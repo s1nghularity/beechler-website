@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HomeCarousel from '../home/HomeCarousel.js';
 import HomeTrio from '../home/HomeTrio.js';
 import HomeCategories from '../home/HomeCategories.js';

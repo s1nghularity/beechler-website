@@ -16,8 +16,11 @@ export default function App() {
   return (
     <div className="App">
       <Router>
+
+        <div className="header-container">
         <NavBar />
-        <div className="content-container">
+        </div>
+        
         <div className="main-content">
 
           <Routes>
@@ -27,7 +30,7 @@ export default function App() {
             <Route path="/dealers" element={<DealersPage />} />
           </Routes>
           </div>
-        </div>
+
         <Footer />
       </Router>
     </div>

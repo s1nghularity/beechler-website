@@ -1,13 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavbarBrand } from "react-bootstrap";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/NavBar.css";
 import "../styles/theme.css";
 import logo from "../assets/img/home/beechler-logo-t.png";
-
-import { NavbarBrand } from "react-bootstrap";
-import USA from "../assets/img/home/american-flag.svg";
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
@@ -17,11 +16,7 @@ function NavBar() {
   return (
     <Navbar expanded={expanded} expand="md" className="stripe">
       <div className="navbar-wrapper">
-        <NavbarBrand href="/">
-          <img src={logo} alt="Logo" width="100" height="50" />
-        </NavbarBrand>
-
-        <Navbar.Toggle
+      <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           onClick={(e) => {
             console.log("onClick", expanded);
@@ -29,15 +24,21 @@ function NavBar() {
             const spanElements = e.currentTarget.querySelectorAll(".icon-bar");
             spanElements.forEach((span) => span.classList.toggle("toggled"));
           }}
+          className="navbar-toggler"
         >
           <span className="icon-bar top-bar"></span>
           <span className="icon-bar middle-bar"></span>
           <span className="icon-bar bottom-bar"></span>
-        </Navbar.Toggle>
+      </Navbar.Toggle>
 
-        <Navbar.Collapse id="basic-navbar-nav" className={`desktop-collapse`}>
-          {/* Desktop nav links */}
-          <Nav className="mr-auto d-none d-lg-flex super-title">
+        <NavbarBrand href="/" className="navbar-brand">
+          <img src={logo} alt="Logo" width="100" height="50" />
+        </NavbarBrand>
+
+
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className={`mr-auto super-title ${expanded ? "d-lg-none" : ""}`}>
             <Nav.Link
               as={Link}
               to="/products"
@@ -73,36 +74,44 @@ function NavBar() {
             >
               About
             </Nav.Link>
-          </Nav>
 
-        </Navbar.Collapse>
+            <Nav.Link>
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                onClick={() => {
+                  const scrollToContact = () => {
+                    const contactElement = document.getElementById("contact");
 
-        {/* Mobile nav links */}
-        <Navbar.Collapse
-          id="basic-navbar-nav"
-          className={`mobile-collapse ${expanded ? "show" : ""}`}
-        >
-          <Nav className="mr-auto d-lg-none super-title">
-            <Nav.Link as={Link} to="/products">
-              Products
-            </Nav.Link>
-            <Nav.Link as={Link} to="/tip-openings">
-              Tip Openings
-            </Nav.Link>
-            <Nav.Link as={Link} to="/dealers">
-              Dealers
-            </Nav.Link>
-            <Nav.Link as={Link} to="/artists">
-              Artists
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about">
-              About
-            </Nav.Link>
+                    if (contactElement) {
+                      window.scrollTo({
+                        top: contactElement.offsetTop,
+                        behavior: "smooth",
+                      });
+                    } else {
+                      console.error("Element with ID 'contact' not found");
+                    }
+                  };
 
+                  if (currentPath === "/") {
+                    scrollToContact();
+                  } else {
+                    window.location.href = "/#contact";
+                    window.addEventListener(
+                      "hashchange",
+                      () => {
+                        scrollToContact();
+                      },
+                      { once: true }
+                    );
+                  }
+                }}
+              />
+            </Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
       </div>
+
     </Navbar>
   );
 }

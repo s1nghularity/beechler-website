@@ -11,25 +11,28 @@
 @import url('./styles/ProductsPageSidebar.css');
 @import url('./styles/TipOpenings.css');
 
-.content-container {
-    max-width: 82em; 
-    margin-left: auto;
-    margin-right: auto;
-  }
+.header-container {
+  max-width: 82em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.main-content {
+  max-width: 82em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.footer-container {
+  max-width: 82em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
   
-  .main-content {
-    max-width: 82em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-  
-  .footer-container {
-    max-width: 82em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    object-position: center;
-    
-  }
+}
 
