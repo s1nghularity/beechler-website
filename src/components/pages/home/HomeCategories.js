@@ -30,9 +30,13 @@ const categories = [
 function HomeCategories() {
   return (
     <div className="stripe-categories">
+      
       <div className="home-categories">
+        
         <h2>Our Categories</h2>
+        
         <div className="container">
+
           <div className="categories-grid">
             {categories.map((category, index) => (
               <Link

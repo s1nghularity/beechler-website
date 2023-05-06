@@ -4,13 +4,9 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import StarIcon from "@mui/icons-material/Star";
 import CrownIcon from "@mui/icons-material/MilitaryTech";
-import HistoryIcon from "@mui/icons-material/History";
 import GlobeIcon from "@mui/icons-material/Public";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
-import VolumeDownIcon from "@mui/icons-material/VolumeDown";
-import VolumeOffIcon from "@mui/icons-material/VolumeOff";
-import HeadsetIcon from "@mui/icons-material/Headset";
-import MicIcon from "@mui/icons-material/Mic";
+
 import hexagon from "../../../assets/img/home/hexagon.png";
 import "../../../styles/HomeTrio.css";
 import "../../../styles/theme.css";
@@ -30,7 +26,7 @@ const GradientIcon = ({ icon: Icon }) => {
           <stop stopColor="#ffdd00" offset="75%" />
         </linearGradient>
       </svg>
-      <Icon sx={{ fill: "url(#accent-gradient)" }} style={{ fontSize: 40 }} />
+      <Icon sx={{ fill: "url(#accent-gradient)" }} style={{ fontSize: 30 }} />
     </>
   );
 };
@@ -87,18 +83,16 @@ function HomeTrio() {
       emulateTouch={true}
       infiniteLoop={false}
       centerMode={true}
-      centerSlidePercentage={105}
+      centerSlidePercentage={100}
     >
-      <div className="carousel-slide">
-        <CustomHexagon icon={traits[0].icon} text={traits[0].text} />
-        <CustomHexagon icon={traits[1].icon} text={traits[1].text} />
-      </div>
-      <div className="carousel-slide">
-        <CustomHexagon icon={traits[2].icon} text={traits[2].text} />
-        <CustomHexagon icon={traits[3].icon} text={traits[3].text} />
-      </div>
+      {traits.map((trait, index) => (
+        <div key={index} className="carousel-slide">
+          <CustomHexagon icon={trait.icon} text={trait.text} />
+        </div>
+      ))}
     </Carousel>
   );
+  
   
 
   return (

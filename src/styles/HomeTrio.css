@@ -3,17 +3,22 @@
 /*TRIO OF HIGHLIGHTS*/
 .stripe-trio {
   position: relative;
+
 }
 
 .stripe-trio:before {
   content: "";
   position: absolute;
-  height: 50vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 200vw;
-  left: -100vw;
+  margin-left: -50vw;
   z-index: -1;
   background-color: var(--black);
 }
+
 
 .hilightContainer {
     background-color: var(--black);
@@ -21,31 +26,32 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-left: 4rem;
+    padding-top: 2rem;
   }
   
   .hilightCard {
     display: flex;
     align-items: center;
-    margin-bottom: 6rem !important;
+    margin-bottom: 3rem;
+
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-right: 3rem;
-    margin-top: 2rem;
-    /* background-color: var(--black-alt);
-    padding: 1rem;
-    border-radius: .5rem; */
+    margin-right: 5rem;
+
 
   }
   
   .hexagon-container {
     position: relative;
-    width: 80px;
-    height: 66.6px;
+    width: 60px;
+    height: 56.6px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     transform: rotate(90deg);
+    margin-right: 0.25rem;
   }
   
   .hexagon-inner {
@@ -57,20 +63,26 @@
   
   .hilight-text {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--white);
-    font-weight: 700;
+    font-weight: 300;
   }
   
   @media (max-width: 767px) {
     .hilightCard {
       display: inline-flex;
-      margin-top: 3rem !important;
-      margin-bottom: 3rem !important;
+      margin-bottom: 3rem ;
       flex-direction: row;
-      margin-left: 1rem !important;
-      margin-right: 0rem !important;
-      padding-right: 0rem !important;
+      margin-right: 0rem;
+    }
+
+    .hilightContainer {
+      background-color: var(--black);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding-left: 1rem;
     }
   
     .hexagon-container {
@@ -97,3 +109,9 @@
 
   }
   
+
+  @media (min-width: 767px) and (max-width: 992px) {}
+
+  @media (min-width: 993px) and (max-width: 1312px) {}
+  
+  @media (min-width: 1312px) {}
