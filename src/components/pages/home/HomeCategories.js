@@ -24,8 +24,8 @@ const categories = [
   { name: "ARB Custom Metal", type: "arb", image: c13 },
   { name: "Ligatures", type: "both", image: l01p },
   { name: "Caps", type: "both", image: t02 },
-  { name: "Pegs", type: "beechler" },
-  { name: "Accessories", type: "both" },
+  { name: "Pegs", type: "beechler", image: t02 },
+  { name: "Accessories", type: "both", image: t02 },
   { name: "", type: "both", image: beechlerArb, className:"beechler-arb-logo"},
 ];
 
@@ -49,7 +49,7 @@ function HomeCategories() {
                         <img
                           src={category.image}
                           alt={category.name}
-                          className="category-img"
+                          className={`category-image ${category.className || ""}`}
                         />
                         <div className="category-text">{category.name}</div>
                       </div>
