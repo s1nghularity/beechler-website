@@ -54,10 +54,10 @@ const ProductsPage = () => {
     if (filterApplied) {
       if (filteredProducts.length === 0) {
         showToast();
-        setFilterApplied(false); // Add this line
+        setFilterApplied(false); 
       } else {
         setPreviousProducts(filteredProducts);
-        setFilterApplied(false); // Add this line
+        setFilterApplied(false); 
       }
     }
   }, [filteredProducts, filterApplied]);
@@ -69,9 +69,17 @@ const ProductsPage = () => {
     const searchParams = new URLSearchParams(location.search);
     const categoryParam = searchParams.get("category");
     if (categoryParam) {
-      setSelectedCategory(decodeURIComponent(categoryParam));
+      const decodedCategory = decodeURIComponent(categoryParam);
+      setSelectedCategory(decodedCategory);
+      handleCategorySelect(decodedCategory);
     }
   }, [location.search]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  
 
 
   return (

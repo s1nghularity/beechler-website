@@ -13,9 +13,9 @@
 }
 
 .home-categories {
-  background-color: var(--grey-alt);
+  background-color: whitesmoke;
   font-family: "Josefin Sans", sans-serif;
-  color: #fdfdfe;
+  color: var(--black);
   border-radius: 0.5rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -24,123 +24,101 @@
 }
 
 .home-categories h2 {
-  font-size: 5rem;
-  font-weight: 900;
-  margin-bottom: 3rem;
+  font-family: "Big Shoulders Text", sans-serif;
+
+  font-size: 6rem;
+  font-weight: 500;
+  margin-bottom: 7rem;
   text-align: center;
 }
 
-div.category p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--white);
-  line-height: 2rem;
-  margin-top: 3rem;
+.category-col {
+  margin-bottom: 10rem;
 }
 
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.category-card {
+  background: transparent !important;
+  border: none !important;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+
 }
 
-.categories-grid a {
-  text-decoration: none;
-}
-
-.category {
+.category-card .card-body {
   display: flex;
   align-items: center;
-  padding: 1rem;
-  border-radius: 8px;
-  position: relative;
+  padding: 0;
 }
 
-.category img {
-  max-width: 120px;
-  max-height: 120px;
-  margin-right: 0.5rem;
+.category-card img {
+  width: 8rem;
+  height: 12rem;
+  margin-bottom: 1rem;
   transition: transform 0.3s ease-in-out;
 }
 
-.category img:hover {
+.category-card img:hover {
   transform: scale(1.3);
 }
 
-.category p {
+.category-card .category-text {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: -1rem;
-  white-space: nowrap;
-}
-
-.category p span {
   position: relative;
+  color: var(--black);
+  text-decoration: none !important;
+  height: 4.5rem; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  margin-top: -1rem;
 }
 
-.category p span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
+.category-card:hover .category-text {
+  color: var(--nav-accent);
+}
+
+.category-img {
+  width: 8rem;
+  height: 11.5rem;
+  margin-right: 1rem;
+}
+
+.category-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  color: var(--black);
+  min-height: 4rem;
+}
+.category-link {
+  text-decoration: none !important;
+  display: block;
   width: 100%;
-  height: 0.5px;
-  background: linear-gradient(315deg, #fbaf3459 0%, #ffdd0091 74%);
+  margin-bottom: 1rem;
 }
 
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 5rem;
-  justify-content: center;
-}
-
-.categories-grid::after {
-  content: "";
-  flex: 1;
-}
-
-div.category:nth-child(8) > img:nth-child(1) {
-  margin-left: -2rem;
+.category-line {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.606);
+  margin-top: auto;
 }
 
 .beechler-arb-logo {
-  position: absolute;
-  margin-top: -4.5rem;
-  margin-left: 28.5rem;
-  height: 200px;
-  width: 400px;
+  display: none;
 }
 
-.usa-container {
-  padding-bottom: 5rem;
-  text-align: center;
-}
-
-.made-in-usa img {
-  height: 40px;
-}
-
-.made-in-usa p {
-  padding-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: 200;
-  color: var(--white);
-}
-
-@media (max-width: 688px) {
-  .home-categories {
-    padding-left: 3rem;
-    padding-right: 3rem;
+@media (max-width:375px) {
+  .home-categories h2 {
+    font-size: 4rem; 
+    margin-bottom: 5rem; 
+  }
+  .category-card::before {
+  margin-bottom: auto!important;
   }
 
-  .usa-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .made-in-usa {
-    width: 60%;
-    padding: 0 0 0 0;
+  .category-text {
+    margin-bottom: 0rem;
   }
 
   .beechler-arb-logo {
@@ -153,18 +131,21 @@ div.category:nth-child(8) > img:nth-child(1) {
   }
 }
 
-@media (min-width: 992px) {
-  .home-categories {
-    padding-left: 5rem;
-    padding-right: 5rem;
+@media (max-width: 1312px) {
+
+  .category-line {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.606);
+    margin-top: -.5rem;
   }
 
-  .usa-container {
-    display: flex;
-    justify-content: center;
+
+}
+@media (max-width: 1311px) {
+
+  .category-line {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.606);
+    margin-top: -.5rem;
   }
 
-  .made-in-usa {
-    width: 40%;
-  }
+
 }

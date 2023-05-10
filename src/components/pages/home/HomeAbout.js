@@ -9,7 +9,7 @@ import "../../../styles/HomeAbout.css";
 function HomeAbout () {
 
   function handleSlideChange(index) {
-    console.log("Slide changed to:", index);
+    // console.log("Slide changed to:", index);
     const slides = document.querySelectorAll(".slide");
     slides.forEach((slide, i) => {
       const caption = slide.querySelector(".about-section-tag");
