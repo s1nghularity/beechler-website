@@ -90,7 +90,6 @@
   margin-bottom: 1rem;
 }
 
-
 .category-line {
   border-bottom: 2px solid rgba(128, 128, 128, 0.606);
   margin-top: auto;
@@ -98,16 +97,14 @@
 
 .beechler-arb-logo {
   position: relative;
-  width: 100%!important;
-  height: 100%!important;
-  margin-top: 0rem!important;
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: 0rem !important;
   margin-bottom: -5rem !important;
-  overflow: hidden; 
-  background-image: url("../assets/img/blurry2.png")!important;
+  overflow: hidden;
+  background-image: url("../assets/img/blurry2.png") !important;
   border-radius: 1rem;
 }
-
-
 
 div.category-col:nth-child(12)
   > a:nth-child(1)
@@ -121,16 +118,15 @@ div.category-col:nth-child(12) > a:nth-child(1) > div:nth-child(2) {
   display: none;
 }
 
-@media (max-width: 375px) {
-  
+@media (max-width: 400px) {
   .home-categories {
     background-color: whitesmoke;
-    padding:0rem;
+    padding: 0rem;
     margin: 0rem;
     border-radius: 0;
     align-items: center;
   }
-  
+
   .home-categories h2 {
     font-size: 4rem;
     margin-bottom: 5rem;
@@ -146,43 +142,46 @@ div.category-col:nth-child(12) > a:nth-child(1) > div:nth-child(2) {
     max-width: calc(100% - 0.25rem);
   }
 
-  div.category-col:nth-child(12) > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
-
-  position: relative;
-  width: 100%!important;
-  height: 10rem!important;
-  margin-top: 0rem!important;
-  margin-bottom: -5rem !important;
-  overflow: hidden; 
-  background-image: url("../assets/img/blurry2.png")!important;
-  border-radius: 1rem;
-  
+  div.category-col:nth-child(12)
+    > a:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(1) {
+    position: relative;
+    width: 100% !important;
+    height: 10rem !important;
+    margin-top: 0rem !important;
+    margin-bottom: -5rem !important;
+    overflow: hidden;
+    background-image: url("../assets/img/blurry2.png") !important;
+    border-radius: 1rem;
+  }
+  div.category-col:nth-child(12)
+    > a:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(1):hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+  }
 }
-div.category-col:nth-child(12) > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1):hover {
-  transform: scale(1.3);
-  transition: transform 0.3s ease-in-out;
-}
-
-
-}
-@media (min-width: 376px) and (max-width: 767px) {
+@media (min-width: 401px) and (max-width: 767px) {
   .category-col {
     flex: 0 calc(50% - 0.25rem);
     max-width: calc(50% - 0.25rem);
   }
   .beechler-arb-logo {
     width: 100%;
-    margin-top: 5rem!important;
-    margin-bottom: 0rem!important;
+    margin-top: 5rem !important;
+    margin-bottom: 0rem !important;
     margin-left: 3rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1312px) {
-
   .beechler-arb-logo {
     width: 100%;
-    margin-top: 5rem!important;
-    margin-bottom: 0rem!important;
+    margin-top: 5rem !important;
+    margin-bottom: 0rem !important;
   }
 }
 @media (min-width: 1313px) {
@@ -191,9 +190,7 @@ div.category-col:nth-child(12) > a:nth-child(1) > div:nth-child(1) > div:nth-chi
     margin-top: -0.5rem;
   }
   .beechler-arb-logo {
-    margin-top: 5rem!important;
+    margin-top: 5rem !important;
     margin-bottom: 0;
   }
-
 }
-
