@@ -149,21 +149,22 @@ button.control-arrow.control-next {
 }
 
 @media (max-width: 375px) {
-
   div .carousel-wrapper {
     margin-left: -5rem;
     min-width: 25.5rem;
-    
   }
-  
-
+  div .slide {
+    margin: 0rem;
+    padding: 0rem;
+    width: auto !important;
+    margin-bottom: 1rem !important;
+  }
 
   .about-section-tag {
     font-size: 2.5rem;
     top: 60%;
     line-height: 1;
   }
-
 }
 
 @media (min-width: 376px) and (max-width: 767px) {
@@ -179,7 +180,6 @@ button.control-arrow.control-next {
   div .carousel-wrapper {
     margin-left: -4rem;
     min-width: 47.5rem;
-    
   }
 
   .about-section-tag {
