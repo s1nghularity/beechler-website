@@ -9,7 +9,7 @@
   width: 200vw;
   left: -100vw;
   z-index: -1;
-  background-color: var(--black)
+  background-color: var(--black);
 }
 
 .home-about {
@@ -19,7 +19,7 @@
 }
 
 .home-about-row {
-  padding-top: 2rem ;
+  padding-top: 2rem;
   height: 100%;
 }
 
@@ -32,8 +32,9 @@
 }
 
 .home-about-left h2 {
+  font-family: "Big Shoulders Text", sans-serif;
   font-size: 7rem;
-  font-weight: 900;
+  font-weight: 500;
   background: var(--accent);
   background-clip: text;
   -webkit-background-clip: text;
@@ -41,6 +42,7 @@
 }
 
 div.col-md-4.home-about-left p.about-main-text {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
   color: var(--white);
@@ -48,6 +50,7 @@ div.col-md-4.home-about-left p.about-main-text {
 }
 
 div.col-md-4.home-about-left p.about-supplemental-text {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.75rem;
   font-weight: 100;
   line-height: 2.5rem;
@@ -66,6 +69,7 @@ div.col-md-4.home-about-left p.about-supplemental-text {
 
 div .carousel-wrapper {
   margin-left: 3rem;
+  max-width: calc(100% - 3rem);
 }
 
 div .slide {
@@ -84,10 +88,10 @@ button.control-arrow.control-next {
 
 .slide img {
   height: 40rem;
-  width: 50rem;
+  width: 100%;
   object-fit: cover;
   position: relative;
-  border-radius: 35px;
+  border-radius: 1rem;
   opacity: 0;
   transition: opacity 2s ease;
 }
@@ -97,9 +101,9 @@ button.control-arrow.control-next {
 }
 
 .about-section-tag {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Big Shoulders Text", sans-serif;
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-style: italic;
   background: var(--accent);
   background-clip: text;
@@ -144,42 +148,44 @@ button.control-arrow.control-next {
   }
 }
 
-@media (max-width: 767px) {
-  .home-about-row {
-    height: 120vh;
+@media (max-width: 375px) {
+
+  div .carousel-wrapper {
+    margin-left: -5rem;
+    min-width: 25.5rem;
     
+  }
+  
+
+
+  .about-section-tag {
+    font-size: 2.5rem;
+    top: 60%;
+    line-height: 1;
+  }
+
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
+  .home-about-row {
+    height: auto;
+    margin-bottom: 10rem !important;
   }
 
   div .home-about-right {
-    margin-left: -3rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
   }
 
   div .carousel-wrapper {
     margin-left: -4rem;
-    width: 30rem;
-  }
-
-  div .slide {
-    padding: 0 !important;
-    transition: opacity 2s ease !important;
-  }
-
-  div .slide.selected {
-    padding: 0 !important;
-    opacity: 1;
-    transition: opacity 2s ease !important;
-  }
-
-  .slide img {
-    height: auto;
-    width: 25rem !important;
-    transition: opacity 2s ease !important;
+    min-width: 47.5rem;
+    
   }
 
   .about-section-tag {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     top: 60%;
     right: 2rem;
+    line-height: 1;
   }
 }
