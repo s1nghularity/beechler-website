@@ -64,17 +64,21 @@ overflow: show;
 .svg-background h3 {
   font-family: "Big Shoulders Text";
   margin-top: .5rem;
+  padding-bottom: 10rem;
   font-size: 2.5rem;
   color: var(--accent);
   -webkit-background-clip: text;
 
 }
 
-/*media query for the artist card so SVGs and images are aligned, each card takes up device width and is in a column not row*/
+ div .artist-name{
+  width: 100%;
+ }
+
 @media (max-width: 768px) {
   .artist-cards-container {
     flex-direction: column!important;
-    margin-top: 40rem!important;
+    margin-top: 10rem!important;
   }
   .svg-background {
     left: 0;
@@ -83,9 +87,17 @@ overflow: show;
   .svg-background img {
     width: 100%;
   }
-}
-@media (max-width: 768px) {
   .artist-card {
     width: 100%;
   }
+  
+.svg-background h3 {
+  font-family: "Big Shoulders Text";
+  margin-top: -.5rem;
+  padding-bottom: 10rem;
+  font-size: 2.5rem;
+  color: var(--accent);
+  -webkit-background-clip: text;
+
+}
 }
