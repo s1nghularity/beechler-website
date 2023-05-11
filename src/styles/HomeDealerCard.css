@@ -60,3 +60,16 @@
     font-family: 'Big Shoulders Text', sans-serif;
   }
   
+  @media (max-width: 768px) {
+  
+    .home-dealer-card h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-top: -45rem!important;
+    }
+
+    .home-dealer-card{
+      margin-bottom: -45rem;
+    }
+    
+  } 

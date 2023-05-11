@@ -34,7 +34,6 @@ const HomeDealerCard = () => {
     { country: "TH", value: 1 },
     { country: "NL", value: 1 },
     { country: "US", value: 34 },
-    // more country data...
   ];
 
   return (
