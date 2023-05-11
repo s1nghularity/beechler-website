@@ -31,6 +31,10 @@ function HomeArtistCard () {
   return (
     <div className="artist-cards-container">
 
+        <span>
+            <h2 className="artist-card-header">Featured Artists</h2>
+        </span>
+
         <div className="artist-card">
             <div className="image-container">
                 <img className="artist-image" src={alexhan} alt="Alex Han" />
@@ -38,7 +42,7 @@ function HomeArtistCard () {
                 <img src={yellowBlob1} alt="Alex Han blob" />
            
                 <span className='artist-name'>
-                <h3>Alex Han</h3>
+                    <h3>Alex Han</h3>
                 </span>
 
                 </div>
@@ -64,9 +68,7 @@ function HomeArtistCard () {
                 </div>
             </div>
         </div>
-        <span>
-        <h2 className="artist-card-header">Featured Artists</h2>
-        </span>
+
 
     </div>
   );

@@ -76,6 +76,19 @@ overflow: show;
  }
 
 @media (max-width: 768px) {
+
+  .artist-card-header {
+    font-family: "Big Shoulders Text";
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: right;
+    margin-right: 0rem;
+    margin-top: -10rem;
+    margin-bottom: 8rem;
+    padding-right: 1rem;
+    z-index: 2;
+    background-color: #ffdd00
+  }
   .artist-cards-container {
     flex-direction: column!important;
     margin-top: 10rem!important;
@@ -100,4 +113,6 @@ overflow: show;
   -webkit-background-clip: text;
 
 }
+
+
 }
