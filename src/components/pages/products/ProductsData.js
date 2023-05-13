@@ -108,6 +108,7 @@ export const products = [
     instrument: "Clarinet",
     subtype: "BB",
     price: 180.5,
+    image: arbCustomBaritone,
   },
   {
     category: "ARB Great Neck Originals",
@@ -116,6 +117,7 @@ export const products = [
     subtype: "Alto",
     bore: "Large",
     price: 180.5,
+    image: arbCustomBaritone,
   },
 
   {

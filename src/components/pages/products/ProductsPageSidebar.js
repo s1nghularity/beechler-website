@@ -10,6 +10,7 @@ const ProductsPageSidebar = ({
   handleCategorySelect,
   handleInstrumentSelect,
   handleSubtypeSelect,
+  resetFilters,
   infoContent,
 }) => {
 
@@ -23,7 +24,9 @@ const ProductsPageSidebar = ({
 
 
   return (
+    <div className="stripe-products-page-sidebar">
     <Container className="products-page-sidebar">
+
       <Navbar className="products-navbar" bg="dark" expand="lg">
         <Navbar.Toggle aria-controls="navbarToggler" />
         <Navbar.Collapse id="navbarToggler">
@@ -53,6 +56,13 @@ const ProductsPageSidebar = ({
                 alt="clarinet icon"
               ></img>
             </NavItem>
+
+            <NavItem  onClick={() => resetFilters("null")}>
+              Reset Filters
+
+            </NavItem>
+
+
 
             <NavDropdown title="Categories" id="navbarDropdown">
               <NavDropdown.Item
@@ -139,6 +149,8 @@ const ProductsPageSidebar = ({
 
 
     </Container>
+    </div>
+
   );
 };
 

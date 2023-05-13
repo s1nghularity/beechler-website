@@ -38,7 +38,11 @@ const HomeDealerCard = () => {
 
   return (
     <div className="home-dealer-card stripe-home-dealer">
+      
+      <div className="dealer-title">
       <h2>Musician's Choice All Over The World</h2>
+      </div>
+
       <WorldMap
         color="#faaf33"
         tooltipBgColor="black"

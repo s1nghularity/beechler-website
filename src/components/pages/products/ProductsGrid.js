@@ -17,6 +17,7 @@ const ProductsGrid = ({ products }) => {
   const hasProducts = products.length > 0;
 
   return (
+    <div className="stripe-products-grid">
     <Row className="products-grid">
       {hasProducts ? (
         Object.entries(productsByCategory).map(([category, categoryProducts], categoryIndex) => (
@@ -37,6 +38,7 @@ const ProductsGrid = ({ products }) => {
         </Col>
       )}
     </Row>
+    </div>
   );
   
 };

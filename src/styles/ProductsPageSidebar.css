@@ -7,10 +7,26 @@
 
 .products-page-sidebar {
   background-color: var(--black-alt);
-  font-family: var(--font-family-big-shoulders);
-  position: -webkit-sticky;
+  font-family: Josefin Sans;
+  position: -webkit-sticky!important;
   position: sticky !important;
   top: 0;
+}
+
+.stripe-products-page-sidebar  {
+  position: relative;
+  
+}
+
+.stripe-products-page-sidebar:before {
+  content: "";
+  position: absolute;
+  margin-top: -1rem;
+  height: 1050vh;
+  width: 500vw;
+  left: -100vw;
+  z-index: -1;
+  background-color: var(--black-alt) !important;
 }
 
 /* Navbar styles */
@@ -21,10 +37,16 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: -.5rem!important;
-  font-family: var(--font-family-big-shoulders);
+  font-family: Josefin Sans;
   background-color: var(--grey) !important;
   border-radius: 5px;
-  width: 100%;
+  width: 20rem;
+}
+
+
+.dropdown-menu {
+  background-color: var(--black) !important;
+  border-radius: 5px;
 }
 
 .instrument-nav-sax img,
@@ -63,5 +85,5 @@
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: #f8f9fa;
-  margin-right: 1rem;
+ 
 }

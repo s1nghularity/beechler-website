@@ -27,6 +27,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.stripe-products-grid  {
+  position: relative;
+}
+
+.stripe-products-grid:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 200vw;
+  left: -100vw;
+  z-index: -1;
+  background-color: var(--white) !important;
+}
 
 .category-title {
   font-family: var(--font-family-big-shoulders);
@@ -50,6 +63,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: Josefin Sans;
 }
 
 .product-card {
@@ -68,12 +82,12 @@
   height: 10rem;
   width: 100%;
   object-fit: scale-down;
-  background-color:#f7f7f7
+  background-color:#f2f2f2
 }
 
 .product-description {
   flex: 1;
-  background-color:#f7f7f7;
+  background-color:#f2f2f2;
   padding: 0.5rem;
   border-color: transparent;
   max-height: 13rem;
@@ -93,7 +107,7 @@
   padding: 5px;
   border-radius: 3px;
   font-weight: bold;
-  min-width: 2.5rem;
+  min-width: 2rem;
   margin-right: -1rem;
 }
 
@@ -111,20 +125,30 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  font-family: var(--font-family-big-shoulders);
   gap: 0.5rem;
-  margin-left: 2.25rem;
+  margin-left: .25rem;
   color:white;
 }
+
+.accessories {
+  background-image: var(--accent);
+  border-radius: var(--radius);
+  color: black;
+  font-size: 1rem;
+  letter-spacing: -1px;
+  max-width: 11.5rem !important;
+  padding: .1rem;
+  padding-left: .75rem;
+  padding-top: .25rem;
+}
+
 
 .facing {
   font-weight: 100;
   font-size: 1.25rem;
   display: flex;
   flex-direction: column;
-  background-color: lightslategrey;
   padding: 0.5rem;
-  border-radius: 0.5rem;
   max-width: 5.5rem;
   height: 4rem;
 }
@@ -132,6 +156,8 @@
 .facing-text {
   align-self: center;
   margin-bottom: -0.5rem;
+  color: black;
+  font-weight: 300;
 }
 
 .facing-angles-container {
@@ -147,11 +173,11 @@
 .bore-specification {
   max-width: 2.5rem;
   height: 4rem;
-  font-weight: 100;
+  color: black;
+  font-weight: 300;
   font-size: 1.25rem;
-  background-color: lightslategrey;
   padding: 0.5rem;
-  border-radius: var(--radius);
+
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -166,61 +192,62 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightslategrey;
-  border-radius: var(--radius);
-  max-width: 2rem;
+  max-width: 2.5rem;
   height: 4rem;
   padding: 0.5rem;
 }
 
 .tip-openings-text {
+  font-family: Josefin Sans;
   font-size: 1.25rem;
-  font-weight: 100;
+  color: black;
+  font-weight: 300;
 }
 
 .model {
   display: flex;
   flex-direction: column;
-  background-color: var(--grey-alt);
-  border-radius: var(--radius);
+  color: black;
+  font-weight: 300;
   padding: 0.5rem;
-  max-width: min-content;
+  max-width: max-content;
+  letter-spacing: -1px;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .ligature-type {
   display: flex;
   flex-direction: column;
-  background-color: var(--grey-alt);
-  border-radius: var(--radius);
+  color: black;
+  font-weight: 300;
   padding: 0.5rem;
-  max-width: min-content;
-  max-height: 4rem;
+  max-width: max-content;
+  letter-spacing: -1px;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+
 }
 
 .finish {
   display: flex;
   flex-direction: column;
-  background-color: var(--grey-alt);
-  border-radius: var(--radius);
+  color: black;
+  font-weight: 300;
   padding: 0.5rem;
-  max-width: min-content;
-  min-height: 4rem;
+  max-width: max-content;
+  letter-spacing: -1px;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+
 }
 
-/*make the background color of the accessories --accent: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%); from the theme.css* using webkit etc*/
-.accessories {
-  display: flex;
-  flex-direction: column;
-  background-image: var(--accent);
-  border-radius: var(--radius);
-  color: black;
-  max-width: 10rem !important;
-  max-height: 1.5rem !important;
-}
 
 .price {
-  font-family: var(--font-family-big-shoulders);
   font-size: 2rem;
   text-align: center !important;
   color: var(--black);
+  font-weight: 400;
+
 }
+

@@ -144,7 +144,7 @@ const BoreSection = ({ bore }) => (
 
 const AccessoriesSection = ({ accessories }) => (
   <Col className="accessories">
-    <p>{accessories} included! </p>
+    <p>{accessories} included!</p>
   </Col>
 );
 

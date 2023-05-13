@@ -17,19 +17,30 @@ const ProductsPage = () => {
   const [filterApplied, setFilterApplied] = useState(false);
 
   const handleCategorySelect = (category) => {
+    console.log(`Selected category: ${category}`);
     setSelectedCategory(category);
     setFilterApplied(true);
   };
 
   const handleInstrumentSelect = (instrument) => {
+    console.log(`Selected instrument: ${instrument}`);
     setSelectedInstrument(instrument);
     setFilterApplied(true);
   };
 
   const handleSubtypeSelect = (subtype) => {
+      console.log(`Selected subtype: ${subtype}`);
     setSelectedSubtype(subtype);
     setFilterApplied(true);
   };
+
+  const resetFilters = () => {
+    setSelectedCategory(null);
+    setSelectedInstrument(null);
+    setSelectedSubtype(null);
+    setFilterApplied(false);
+  };
+  
 
   const showToast = () => {
     toast.error("No products available for the selected filters.", {
@@ -53,15 +64,23 @@ const ProductsPage = () => {
   useEffect(() => {
     if (filterApplied) {
       if (filteredProducts.length === 0) {
+        console.log("No products available for the selected filters.");
         showToast();
         setFilterApplied(false); 
       } else {
+        console.log(`Filtered products: ${JSON.stringify(filteredProducts)}`);
         setPreviousProducts(filteredProducts);
         setFilterApplied(false); 
       }
     }
   }, [filteredProducts, filterApplied]);
   
+  useEffect(() => {
+    console.log(`Selected category: ${selectedCategory}`);
+    console.log(`Selected instrument: ${selectedInstrument}`);
+    console.log(`Selected subtype: ${selectedSubtype}`);
+  }, [selectedCategory, selectedInstrument, selectedSubtype]);
+
 
   const location = useLocation();
 
@@ -70,10 +89,13 @@ const ProductsPage = () => {
     const categoryParam = searchParams.get("category");
     if (categoryParam) {
       const decodedCategory = decodeURIComponent(categoryParam);
-      setSelectedCategory(decodedCategory);
-      handleCategorySelect(decodedCategory);
+      if (decodedCategory !== selectedCategory) {
+        setSelectedCategory(decodedCategory);
+        handleCategorySelect(decodedCategory);
+      }
     }
-  }, [location.search]);
+  }, [location.search, selectedCategory]);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -95,6 +117,7 @@ const ProductsPage = () => {
             handleCategorySelect={handleCategorySelect}
             handleInstrumentSelect={handleInstrumentSelect}
             handleSubtypeSelect={handleSubtypeSelect}
+            resetFilters={resetFilters}
             infoContent={selectedCategory}
             className="products-page-sidebar"
           />
