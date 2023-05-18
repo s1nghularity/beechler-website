@@ -1,20 +1,3 @@
-/* Import theme.css */
-@import url("/src/styles/theme.css");
-
-/* Navbar */
-.navbar {
-  background-color: var(--black-alt);
-  display: flex;
-  align-items: center;
-}
-
-.navbar-wrapper {
-  max-width: 82em;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
 .stripe {
   position: relative;
   width: 100%;
@@ -30,14 +13,33 @@
   background-color: var(--black-alt);
 }
 
-.navbar-brand {
-  padding-left: 1.5rem;
+.navbar {
+  background-color: var(--black-alt);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-brand img {
+  width: auto;
+  margin-left: 1rem;
+}
+
+.contact-button {
+  margin-top: 0.5rem;
 }
 
 .nav-link {
-  color: var(--white) !important;
+  color: var(--white);
   font-size: 1.25rem;
+  font-weight: 500;
   padding-left: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: right;
+  width: 150px;
 }
 
 .nav-link:hover {
@@ -46,89 +48,56 @@
   -webkit-text-fill-color: transparent;
 }
 
-.super-title {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 .active-link {
   background-image: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
-
-/* Mobile menu */
-
-.mobile-collapse.show {
-  transition: height 0.3s ease;
-}
-
-/*Mobile Toggle Button*/
-.navbar-toggler:focus {
+.hamburger:focus {
   outline: none;
   box-shadow: none;
-  outline: 0;
 }
 
-.navbar-toggler {
-  border: none;
-  outline: 0 ;
-  box-shadow: none;
-  background: transparent ;
-}
-
-
-
-
-
-
-.navbar-toggler .icon-bar {
+.hamburger .icon-bar {
   display: block;
   width: 22px;
   height: 2px;
   border-radius: 1px;
   margin-top: 4px;
   margin-bottom: 4px;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  background-color: #fbb034;
 }
 
-.navbar-toggler .top-bar {
+.hamburger .top-bar {
   transform-origin: top left;
   background-color: #fbb034;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
 }
 
-.navbar-toggler .middle-bar {
+.hamburger .middle-bar {
   background-color: #fbb034;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
 }
 
-.navbar-toggler .bottom-bar {
+.hamburger .bottom-bar {
   transform-origin: bottom left;
   background-color: #fbb034;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
 }
 
-.navbar-toggler .icon-bar.top-bar.toggled {
+.hamburger .icon-bar.top-bar.toggled {
   transform: translateY(50%) translateY(-4px) rotate(45deg);
 }
 
-.navbar-toggler .icon-bar.middle-bar.toggled {
+.hamburger .icon-bar.middle-bar.toggled {
   opacity: 0;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
 }
 
-.navbar-toggler .icon-bar.bottom-bar.toggled {
+.hamburger .icon-bar.bottom-bar.toggled {
   transform: translateY(-50%) translateY(1px) rotate(-45deg);
-}
-
-.navbar-toggler:focus {
-  outline: none;
 }
 
 .scroll-to-top {
@@ -163,107 +132,104 @@
   opacity: 1;
 }
 
-.custom-nav-spacing {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  width: 100%;
-}
+/* Mobile */
+@media (max-width: 768px) {
 
-/* Mobile menu styles (always applied) */
-.mobile-collapse {
-  display: block;
-  width: 100%;
-  background-color: var(--black-alt);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 10;
-}
-
-.mobile-collapse.show {
-  transition: height 0.3s ease;
-  height: 100vh;
-}
-
-/*MOBILE*/
-@media (max-width: 766px) {
- 
   .navbar {
     background-color: var(--black-alt);
     display: flex;
-    align-items: center;
   }
-  
- 
+
+  div .navbar-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    display: flex;
+
+    justify-content: flex-end;
+  }
+
+  .navbar-brand {
+    padding-left: 0;
+    margin-right: 1rem;
+    order: 2;
+    margin-bottom: 1rem;
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+
+  .mobile-collapse {
+    display: none;
+    width: 100%;
+    background-color: var(--black-alt);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  }
+
+  .mobile-collapse.show {
+    display: block;
+    max-height: 1000px;
+    transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--black-alt);
+    transition: max-height 1s ease-in-out !important;
+    max-height: 0;
+    justify-content: flex-end!important;
+
+  }
+
+  .navbar-collapse.show {
+    max-height: 900vh !important; /* Adjust this value to suit your needs */
+    transition: max-height 1s ease-in-out !important;
+    z-index: 999;
+  }
+
   .desktop-collapse {
     display: none;
   }
-
-  .navbar-brand {
-    padding-left: 0rem;
-
-  }
-
-
-
 }
 
-/*TABLET*/
-@media (min-width: 767px) and (max-width: 992px) {
-  .mobile-collapse {
-    display: none;
-  }
-
-  .navbar-wrapper {
+/* Tablet */
+@media (min-width: 768px) and (max-width: 992px) {
+  .nav-link {
+    padding: 0rem;
+    margin: 0rem;
     display: flex;
-  }
-
-  .navbar-brand {
-    padding-left: 0rem;
-  }
-
-  .super-title {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: right;
   }
 }
 
-/*LAPTOP + DESKTOP*/
+/* Laptop + Desktop */
 @media (min-width: 993px) and (max-width: 1312px) {
-  .desktop-collapse {
-    display: flex;
-  }
-
-  .mobile-collapse {
-    display: none;
-  }
-
-  .navbar-wrapper {
-    display: flex;
-  }
-
-  .super-title {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    width: 100%;
+  #basic-navbar-nav {
+    display: flex !important;
   }
 }
 
-/*ULTRAWIDE*/
+/* Ultrawide */
 @media (min-width: 1312px) {
-  .desktop-collapse {
-    display: flex;
-  }
-
-  .mobile-collapse {
-    display: none;
-  }
-
-  .navbar-wrapper {
-    display: flex;
+  #basic-navbar-nav {
+    display: flex !important;
   }
 }
