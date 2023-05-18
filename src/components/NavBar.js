@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
 import { Navbar, Nav, NavbarBrand } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -45,9 +45,6 @@ function NavBar() {
   const handleContactClick = () => {
     setExpanded(false);
     setTogglerToggled(false);
-    window.location.href = "/";
-    ScrollLink.scrollToTop();
-    ScrollLink.scrollTo("#contact");
   };
 
   const links = [
@@ -59,48 +56,62 @@ function NavBar() {
   ];
 
   return (
-    <Navbar expanded={expanded} expand="md" className="stripe">
+    <div className="stripe">
+      <Navbar expanded={expanded} expand="md" className="navbar">
+        <div className="navbar-header">
+          {!isDesktop && (
+            <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              onClick={handleToggleClick}
+              className={`hamburger ${togglerToggled ? "toggled" : ""}`}
+            >
+              <span
+                className={`icon-bar top-bar ${
+                  togglerToggled ? "toggled" : ""
+                }`}
+              ></span>
+              <span
+                className={`icon-bar middle-bar ${
+                  togglerToggled ? "toggled" : ""
+                }`}
+              ></span>
+              <span
+                className={`icon-bar bottom-bar ${
+                  togglerToggled ? "toggled" : ""
+                }`}
+              ></span>
+            </Navbar.Toggle>
+          )}
+          <NavbarBrand href="/" className="navbar-brand">
+            <img src={logo} alt="Logo" width="100" height="50" />
+          </NavbarBrand>
+        </div>
 
-      <div className="navbar-header">
-      {!isDesktop && (
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={handleToggleClick}
-          className={`hamburger ${togglerToggled ? "toggled" : ""}`}
-        >
-          <span
-            className={`icon-bar top-bar ${togglerToggled ? "toggled" : ""}`}
-          ></span>
-          <span
-            className={`icon-bar middle-bar ${togglerToggled ? "toggled" : ""}`}
-          ></span>
-          <span
-            className={`icon-bar bottom-bar ${togglerToggled ? "toggled" : ""}`}
-          ></span>
-        </Navbar.Toggle>
-      )}
-      <NavbarBrand href="/" className="navbar-brand">
-        <img src={logo} alt="Logo" width="100" height="50" />
-      </NavbarBrand>
-      </div>
+        <Nav className="nav-link-wrapper" style={collapseStyles}>
+          {links.map(({ path, label }) => (
+            <Nav.Link
+              key={path}
+              as={Link}
+              to={path}
+              className={
+                location.pathname === path ? "nav-link active-link" : ""
+              }
+            >
+              {label}
+            </Nav.Link>
+          ))}
 
-      <Nav className={`mr-auto `} style={collapseStyles}>
-        {links.map(({ path, label }) => (
-          <Nav.Link
-            key={path}
-            as={Link}
-            to={path}
-            className={location.pathname === path ? "nav-link active-link" : ""}
+          <HashLink
+            to="/#contact"
+            onClick={handleContactClick}
+            className="contact-button"
           >
-            {label}
-          </Nav.Link>
-        ))}
-
-        <Nav.Link className= 'contact-button'onClick={handleContactClick}>
-          <FontAwesomeIcon icon={faEnvelope} />
-        </Nav.Link>
-      </Nav>
-    </Navbar>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </HashLink>
+          
+        </Nav>
+      </Navbar>
+    </div>
   );
 }
 

@@ -1,37 +1,44 @@
-import React from 'react';
+import React from "react";
+import { useEffect, useRef } from "react";
+import { animateScroll as scroll } from "react-scroll";
 
-import HomeCarousel from '../home/HomeCarousel.js';
-import HomeTrio from '../home/HomeTrio.js';
-import HomeCategories from '../home/HomeCategories.js';
-import HomeAbout from '../home/HomeAbout.js';
-import HomeArtistCard from '../home/HomeArtistCard.js';
-import HomeDealerCard from '../home/HomeDealerCard.js';
-import HomeTestimonials from '../home/HomeTestimonials.js';
-import HomeContact from '../home/HomeContact.js';
+import HomeCarousel from "../home/HomeCarousel.js";
+import HomeTrio from "../home/HomeTrio.js";
+import HomeCategories from "../home/HomeCategories.js";
+import HomeAbout from "../home/HomeAbout.js";
+import HomeArtistCard from "../home/HomeArtistCard.js";
+import HomeDealerCard from "../home/HomeDealerCard.js";
+import HomeTestimonials from "../home/HomeTestimonials.js";
+import HomeContact from "../home/HomeContact.js";
 import ScrollToTop from "../../ScrollToTop.js";
 
-
-// import HomeProductHighlights from './HomeProductHighlights';
-// import HomeArtists from './HomeArtists';
-// import HomeDealers from './HomeDealers';
-// import HomeFullWidthImage from './HomeFullWidthImage';
-
 function HomePage() {
+    useEffect(() => {
+        const hash = window.location.hash;
+        
+        if (hash) {
+          // Ensure the browser has rendered the DOM before we try to scroll to the hash
+          setTimeout(() => {
+            const id = hash.replace("#contact", "");
+            const element = document.getElementById(id);
+            if (element) element.scrollIntoView();
+          }, 0);
+        }
+      }, []);
+      
+
     return (
     <div>
         <ScrollToTop />
-        <HomeCarousel/>
+        <HomeCarousel />
         <HomeTrio />
         <HomeCategories />
-        <HomeAbout/>
+        <HomeAbout />
         <HomeArtistCard />
         <HomeDealerCard />
         <HomeTestimonials />
-        <HomeContact/>
-        {/* 
-        <HomeArtists />
-        <HomeDealers />
-        <HomeFullWidthImage /> */}
+
+        <HomeContact />
     </div>
     );
 }
