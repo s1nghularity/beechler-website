@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { animate, stagger } from 'motion';
+import { animate } from 'motion';
 import "../../../styles/theme.css";
 import "../../../styles/HomeArtistCard.css";
 

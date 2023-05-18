@@ -37,8 +37,6 @@
   margin-left: 0.1rem;
 }
 
-
-
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -86,9 +84,6 @@ div.swiper-button-next::after {
   opacity: 1;
 }
 
-.swiper-pagination-horizontal {
-  display: none !important;
-}
 
 .carousel-fade {
   position: absolute;
@@ -109,43 +104,66 @@ div.swiper-button-next::after {
   transform: scaleX(-1);
 }
 
-@media (max-width: 688px) {
-  .swiper-container {
-    width: 90%;
-    height: 40vw;
-  }
-
-  .swiper-button-next {
-    right: 1rem;
-  }
-
+/* Mobile */
+@media (max-width: 440px) {
+  .swiper-button-next,
   .swiper-button-prev {
-    left: 1rem;
+    display: none;
   }
+
+  .swiper-slide img{
+    height: 12rem;
+    width: 20rem;
+    margin-bottom: -1rem;
+  }
+  .carousel-fade, .carousel-fade-right {
+    display: none;
+  }
+
 }
 
-@media (min-width: 689px) and (max-width: 992px) {
-  .swiper-container {
-    width: 80%;
-    height: 45vw;
-  }
-
-  .swiper-button-next {
-    right: 4rem;
-  }
-
+@media (min-width: 441px) and (max-width: 767px) {
+  .swiper-button-next,
   .swiper-button-prev {
-    left: 4rem;
+    display: none;
   }
+
+  .swiper-slide img{
+    height: 20rem;
+    width: 37rem;
+    margin-bottom: -1rem;
+  }
+  .carousel-fade, .carousel-fade-right {
+    display: none;
+  }
+
+  .home-carousel-image {
+    padding: .1rem;
+  }
+
 }
 
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 992px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-slide img{
+    height: 20rem;
+    width: 37rem;
+    margin-bottom: -1rem;
+  }
+  .carousel-fade, .carousel-fade-right {
+    display: none;
+  }
+
+}
+
+/* Laptop + Desktop */
 @media (min-width: 993px) and (max-width: 1312px) {
-
-  .swiper-container {
-    width: 70%; 
-    height: 50vw; 
-  }
-
   .swiper-button-next {
     right: 11rem;
   }
@@ -155,10 +173,13 @@ div.swiper-button-next::after {
   }
 }
 
+/* Ultrawide */
 @media (min-width: 1312px) {
-  .swiper-container {
-    width: 60%;
-    height: 55vw; 
+  .swiper-button-next {
+    right: 15rem;
+  }
+
+  .swiper-button-prev {
+    left: 15rem;
   }
 }
-

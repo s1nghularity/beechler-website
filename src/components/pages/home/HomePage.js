@@ -1,6 +1,5 @@
 import React from "react";
-import { useEffect, useRef } from "react";
-import { animateScroll as scroll } from "react-scroll";
+import { useEffect } from "react";
 
 import HomeCarousel from "../home/HomeCarousel.js";
 import HomeTrio from "../home/HomeTrio.js";
@@ -17,7 +16,6 @@ function HomePage() {
         const hash = window.location.hash;
         
         if (hash) {
-          // Ensure the browser has rendered the DOM before we try to scroll to the hash
           setTimeout(() => {
             const id = hash.replace("#contact", "");
             const element = document.getElementById(id);

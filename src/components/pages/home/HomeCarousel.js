@@ -17,15 +17,15 @@ const HomeCarousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 688) {// Adjust values for mobile screens
-        setSlidesPerView(1.3); 
-        setSpaceBetween(40); 
-      } else if (window.innerWidth <= 992) {// Adjust values for medium screens
-        setSlidesPerView(1.35); 
-        setSpaceBetween(60); 
-      } else if (window.innerWidth <= 1312) {// Adjust values for large screens
+      if (window.innerWidth <= 767) {
+        setSlidesPerView(1.15); 
+        setSpaceBetween(22.5); 
+      } else if (window.innerWidth <= 992) {
+        setSlidesPerView(1.2); 
+        setSpaceBetween(6); 
+      } else if (window.innerWidth <= 1440) {
         setSlidesPerView(1.25); 
-        setSpaceBetween(90); 
+        setSpaceBetween(70); 
       }
     };
 
@@ -50,6 +50,7 @@ const HomeCarousel = () => {
           spaceBetween={spaceBetween}
           centeredSlides={true}
           centeredSlidesBounds={true}
+          pagination={false}
           loop={true}
           speed={1250}
           autoplay={{
@@ -60,19 +61,19 @@ const HomeCarousel = () => {
           modules={[Pagination, Navigation, Autoplay]}
         >
           <SwiperSlide>
-            <img src={tonalex} alt="Mouthpieces" />
+            <img src={tonalex} alt="Mouthpieces" className="home-carousel-image"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={mouthpiece} alt="Mouthpieces" />
+            <img src={mouthpiece} alt="Mouthpieces" className="home-carousel-image"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={artist} alt="Artists" />
+            <img src={artist} alt="Artists" className="home-carousel-image"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={dealer} alt="Artists" />
+            <img src={dealer} alt="Artists" className="home-carousel-image"/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={artist2} alt="Tip Openings" />
+            <img src={artist2} alt="Tip Openings" className="home-carousel-image" />
           </SwiperSlide>
         </Swiper>
       </div>

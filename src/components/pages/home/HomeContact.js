@@ -1,7 +1,7 @@
 import "../../../styles/theme.css";
 import "../../../styles/HomeContact.css";
 
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import { useForm, ValidationError  } from '@formspree/react';
 import { Card, Modal, Button } from 'react-bootstrap';
 
