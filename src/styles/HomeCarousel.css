@@ -114,7 +114,8 @@ div.swiper-button-next::after {
   .swiper-slide img{
     height: 12rem;
     width: 20rem;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
+    margin-left: .75rem;
   }
   .carousel-fade, .carousel-fade-right {
     display: none;

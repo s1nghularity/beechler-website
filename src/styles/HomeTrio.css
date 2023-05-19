@@ -1,9 +1,6 @@
-
-
 /*TRIO OF HIGHLIGHTS*/
 .stripe-trio {
   position: relative;
-
 }
 
 .stripe-trio:before {
@@ -19,99 +16,147 @@
   background-color: var(--black);
 }
 
-
 .hilightContainer {
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 4rem;
+  padding-top: 2rem;
+}
+
+.hilightCard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: 5rem;
+}
+
+.hexagon-container {
+  position: relative;
+  width: 60px;
+  height: 56.6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotate(90deg);
+  margin-right: 0.25rem;
+}
+
+.hexagon-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.hilight-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  font-weight: 300;
+}
+
+/* Mobile */
+@media (max-width: 440px) {
+  .hilightCard {
+    display: inline-flex;
+    margin-bottom: 3rem;
+    flex-direction: row;
+    margin-right: 0rem;
+  }
+
+  .hilightContainer {
     background-color: var(--black);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding-left: 4rem;
-    padding-top: 2rem;
+    padding-left: 1rem;
   }
-  
-  .hilightCard {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3rem;
 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-right: 5rem;
-
-
-  }
-  
   .hexagon-container {
-    position: relative;
     width: 60px;
-    height: 56.6px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    transform: rotate(90deg);
-    margin-right: 0.25rem;
+    height: 50px;
   }
-  
+
   .hexagon-inner {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.75);
   }
-  
+
   .hilight-text {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1.2rem;
-    color: var(--white);
-    font-weight: 300;
+    font-size: 1.25rem;
   }
-  
-  @media (max-width: 767px) {
-    .hilightCard {
-      display: inline-flex;
-      margin-bottom: 3rem ;
-      flex-direction: row;
-      margin-right: 0rem;
-    }
 
-    .hilightContainer {
-      background-color: var(--black);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      flex-direction: row;
-      padding-left: 1rem;
-    }
-  
-    .hexagon-container {
-      width: 60px;
-      height: 50px;
-    }
-  
-    .hexagon-inner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-90deg) scale(0.75);
-    }
-  
-    .hilight-text {
-      font-size: 1.25rem;
-    }
-  
-    .carousel-slide {
-      display: flex;
-      justify-content: center;
-      padding-right: 1rem !important;
-    }
-
+  .carousel-slide {
+    display: flex;
+    justify-content: center;
+    padding-right: 1rem !important;
   }
-  
+}
 
-  @media (min-width: 767px) and (max-width: 992px) {}
+@media (min-width: 441px) and (max-width: 767px) {
+  .hilightCard {
+    display: inline-flex;
+    margin-bottom: 3rem;
+    flex-direction: row;
+    margin-right: 0rem;
+  }
 
-  @media (min-width: 993px) and (max-width: 1312px) {}
-  
-  @media (min-width: 1312px) {}
+  .hilightContainer {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 1rem;
+  }
+
+  .hexagon-container {
+    width: 60px;
+    height: 50px;
+  }
+
+  .hexagon-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.75);
+  }
+
+  .hilight-text {
+    font-size: 1.25rem;
+  }
+
+  .carousel-slide {
+    display: flex;
+    justify-content: center;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 992px) {
+}
+
+/* Laptop + Desktop */
+@media (min-width: 993px) and (max-width: 1312px) {
+  .hilightCard {
+    display: inline-flex;
+    margin-bottom: 3rem;
+    flex-direction: row;
+    margin-right: 0rem;
+  }
+}
+
+/* Ultrawide */
+@media (min-width: 1312px) {
+}
