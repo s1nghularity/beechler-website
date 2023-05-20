@@ -9,26 +9,23 @@
   width: 200vw;
   left: -100vw;
   z-index: -1;
-  background-color: var(--black);
+  background-color: var(--black-alt);
 }
 
 .home-about {
-  padding-left: 4rem;
-  padding-right: 4rem;
-  background-color: var(--black);
+  background-color: var(--black-alt);
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .home-about-row {
-  padding-top: 2rem;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-/* Left Side About Section */
 .home-about-left {
-  height: 100%;
-  background-color: var(--black);
-  font-family: "Josefin Sans", sans-serif;
-  padding-top: 0.5rem;
+  margin-left: -2rem;
 }
 
 .home-about-left h2 {
@@ -41,58 +38,34 @@
   color: transparent;
 }
 
-div.col-md-4.home-about-left p.about-main-text {
-  font-family: "Josefin Sans", sans-serif;
+.about-main-text,
+.about-supplemental-text {
   font-size: 1.75rem;
-  font-weight: 500;
   color: var(--white);
   margin-top: 1rem;
 }
 
-div.col-md-4.home-about-left p.about-supplemental-text {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.75rem;
+.about-supplemental-text {
   font-weight: 100;
   line-height: 2.5rem;
-  color: var(--white);
-  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.about-section {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-/* Right Side of About Section */
-
-div .carousel-wrapper {
-  margin-left: 3rem;
-  max-width: calc(100% - 3rem);
-}
-
-div .slide {
-  padding: 0 1rem;
-}
-
-div .slide.selected {
+.slide.selected {
   opacity: 1;
-  padding: 0 1rem;
 }
 
-button.control-arrow.control-prev,
-button.control-arrow.control-next {
+.control-prev,
+.control-next {
   display: none;
 }
 
 .slide img {
-  height: 40rem;
+  height: 60rem;
   width: 100%;
   object-fit: cover;
   position: relative;
   border-radius: 1rem;
-  opacity: 0;
   transition: opacity 2s ease;
 }
 
@@ -100,7 +73,7 @@ button.control-arrow.control-next {
   opacity: 1;
 }
 
-.about-section-tag {
+.our-story-tag {
   font-family: "Big Shoulders Text", sans-serif;
   font-weight: 900;
   font-size: 2.5rem;
@@ -114,22 +87,19 @@ button.control-arrow.control-next {
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   animation: fadeInMoveRight 7.5s ease infinite;
-  animation-delay: inherit;
-  opacity: 0;
   transition: opacity 1s ease 3s, transform 1s ease 3s;
 }
 
-.about-section-tag.fadeInMoveRight {
+.our-story-tag.fadeInMoveRight {
   opacity: 1;
   transform: translate3d(-50%, -50%, 0) translateX(50px);
-  transition: opacity 1s ease, transform 1s ease;
 }
 
-.slide:not(.selected) .about-section-tag {
+.slide:not(.selected) .our-story-tag {
   animation: none;
 }
 
-.slide.selected .about-section-tag {
+.slide.selected .our-story-tag {
   animation: fadeInMoveRight 8s ease infinite;
 }
 
@@ -148,44 +118,46 @@ button.control-arrow.control-next {
   }
 }
 
-@media (max-width: 375px) {
-  div .carousel-wrapper {
-    margin-left: -5rem;
-    min-width: 25.5rem;
-  }
-  div .slide {
-    margin: 0rem;
-    padding: 0rem;
-    width: auto !important;
-    margin-bottom: 1rem !important;
+@media (max-width: 440px) {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
   }
 
-  .about-section-tag {
-    font-size: 2.5rem;
+  .slide img {
+    height: 30rem;
+    width: auto;
+  }
+
+  .our-story-tag {
+    font-size: 1.5rem;
     top: 60%;
     line-height: 1;
   }
 }
 
-@media (min-width: 376px) and (max-width: 767px) {
+@media (min-width: 401px) and (max-width: 767px) {
   .home-about-row {
-    height: auto;
-    margin-bottom: 10rem !important;
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1312px) {
+  .home-about-row {
+    flex-direction: column;
   }
 
-  div .home-about-right {
-    padding: 1rem;
+  .home-about-left {
+    width: var(--custom-column-width);
   }
 
-  div .carousel-wrapper {
-    margin-left: -4rem;
-    min-width: 47.5rem;
+  .home-about-right {
+    width: var(--custom-column-width);
   }
 
-  .about-section-tag {
-    font-size: 3.5rem;
-    top: 60%;
-    right: 2rem;
-    line-height: 1;
+  .slide img {
+    height: 50rem;
   }
+}
+@media (min-width: 1313px) {
+  
 }
