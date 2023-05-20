@@ -57,7 +57,7 @@ function HomeTrio() {
   ];
 
   const updateWindowDimensions = () => {
-    setIsMobile(window.innerWidth <= 767);
+    setIsMobile(window.innerWidth <= 710);
   };
 
   useEffect(() => {
@@ -69,7 +69,11 @@ function HomeTrio() {
   const renderDesktop = () => (
     <div className="d-flex justify-content-center">
       {traits.map((trait, index) => (
-        <CustomHexagon key={index} icon={trait.icon} text={trait.text} />
+        <CustomHexagon 
+        key={index} 
+        icon={trait.icon} 
+        text={trait.text} 
+        />
       ))}
     </div>
   );
@@ -82,8 +86,10 @@ function HomeTrio() {
       showArrows={false}
       emulateTouch={true}
       infiniteLoop={false}
+      draggable={false}
       centerMode={true}
       centerSlidePercentage={100}
+      className="home-trio-mobile-carousel"
     >
       {traits.map((trait, index) => (
         <div key={index} className="carousel-slide">

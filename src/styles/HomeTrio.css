@@ -72,12 +72,8 @@
   }
 
   .hilightContainer {
-    background-color: var(--black);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding-left: 1rem;
+    padding-left: auto; /* Remove the left padding */
+    padding-top: 2rem;
   }
 
   .hexagon-container {
@@ -93,22 +89,20 @@
   }
 
   .hilight-text {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
-  .carousel-slide {
-    display: flex;
-    justify-content: center;
-    padding-right: 1rem !important;
-  }
 }
 
 @media (min-width: 441px) and (max-width: 767px) {
   .hilightCard {
+    align-items: center; 
+    justify-content: center; 
     display: inline-flex;
     margin-bottom: 3rem;
     flex-direction: row;
-    margin-right: 0rem;
+    margin-right: 2rem;
+    
   }
 
   .hilightContainer {
@@ -117,7 +111,7 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding-left: 1rem;
+    
   }
 
   .hexagon-container {
@@ -133,30 +127,81 @@
   }
 
   .hilight-text {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    text-align: center;
+
+    
   }
 
-  .carousel-slide {
-    display: flex;
-    justify-content: center;
-    padding-right: 1rem !important;
-  }
+
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 992px) {
+  .hilightContainer {
+    margin-left: 1rem;
+  }
+  .hilightCard {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 3rem;
+    flex-direction: row;
+    margin-right: 2rem; 
+  }
+
+  .hexagon-container {
+    width: 60px;
+    height: 56.6px;
+    margin-right: 0.25rem;
+  }
+
+  .hexagon-inner {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  .hilight-text {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .hilightContainer {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
 }
+
 
 /* Laptop + Desktop */
 @media (min-width: 993px) and (max-width: 1312px) {
   .hilightCard {
-    display: inline-flex;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
     margin-bottom: 3rem;
     flex-direction: row;
-    margin-right: 0rem;
+    margin-right: 2rem; 
   }
+
+  .hilight-text {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
 }
 
 /* Ultrawide */
 @media (min-width: 1312px) {
+  .hilight-text {
+    font-size: 1.4rem;
+  }
+
+  .hilightCard {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 3rem;
+    flex-direction: row;
+    margin-right: 3rem; 
+  }
 }

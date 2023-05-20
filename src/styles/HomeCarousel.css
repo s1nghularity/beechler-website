@@ -84,7 +84,6 @@ div.swiper-button-next::after {
   opacity: 1;
 }
 
-
 .carousel-fade {
   position: absolute;
   top: 0;
@@ -111,16 +110,16 @@ div.swiper-button-next::after {
     display: none;
   }
 
-  .swiper-slide img{
+  .swiper-slide img {
     height: 12rem;
     width: 20rem;
     margin-bottom: -2rem;
-    margin-left: .75rem;
+    margin-left: 0.75rem;
   }
-  .carousel-fade, .carousel-fade-right {
+  .carousel-fade,
+  .carousel-fade-right {
     display: none;
   }
-
 }
 
 @media (min-width: 441px) and (max-width: 767px) {
@@ -129,38 +128,39 @@ div.swiper-button-next::after {
     display: none;
   }
 
-  .swiper-slide img{
+  .swiper-slide img {
     height: 20rem;
     width: 37rem;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
   }
-  .carousel-fade, .carousel-fade-right {
+  .carousel-fade,
+  .carousel-fade-right {
     display: none;
   }
 
   .home-carousel-image {
-    padding: .1rem;
+    padding: 0.1rem;
   }
-
 }
-
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 992px) {
+
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
   }
 
-  .swiper-slide img{
+  .swiper-slide img {
     height: 20rem;
     width: 37rem;
     margin-bottom: -1rem;
+    margin-left: 0.75rem;
   }
-  .carousel-fade, .carousel-fade-right {
+  .carousel-fade,
+  .carousel-fade-right {
     display: none;
   }
-
 }
 
 /* Laptop + Desktop */

@@ -20,13 +20,23 @@ const HomeCarousel = () => {
       if (window.innerWidth <= 440) {
         setSlidesPerView(1.2); 
         setSpaceBetween(2); 
-      }  
-        else if (window.innerWidth <= 767) {
+      }     
+        else if (window.innerWidth <= 713) {
         setSlidesPerView(1.15); 
-        setSpaceBetween(22); 
+        setSpaceBetween(20);
+      }  
+        else if (window.innerWidth <= 768) {
+        setSlidesPerView(1.2); 
+        setSpaceBetween(4);
+      } else if (window.innerWidth <= 950) {
+        setSlidesPerView(1.45); 
+        setSpaceBetween(6); 
       } else if (window.innerWidth <= 992) {
         setSlidesPerView(1.2); 
-        setSpaceBetween(6); 
+        setSpaceBetween(6);
+      } else if (window.innerWidth <= 1200) {
+        setSlidesPerView(1.3); 
+        setSpaceBetween(50); 
       } else if (window.innerWidth <= 1440) {
         setSlidesPerView(1.25); 
         setSpaceBetween(70); 
