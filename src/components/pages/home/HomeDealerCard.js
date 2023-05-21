@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { WorldMap } from "react-svg-worldmap";
 import "../../../styles/theme.css";
 import "../../../styles/HomeDealerCard.css";
@@ -36,12 +36,31 @@ const HomeDealerCard = () => {
     { country: "US", value: 34 },
   ];
 
+  const [mapWidth, setMapWidth] = useState(0);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      const width = Math.min(window.innerHeight, window.innerWidth) * 0.75;
+      setMapWidth(width);
+    };
+
+    handleWindowResize(); // Set initial width on component mount
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
-    <div className="home-dealer-card stripe-home-dealer">
+    <div className="stripe-home-dealer">
       
-      <div className="dealer-title">
+      <div className="home-dealer-title">
       <h2>Musician's Choice All Over The World</h2>
       </div>
+
+      <div className="home-dealer-map-wrapper">
 
       <WorldMap
         color="#faaf33"
@@ -53,7 +72,12 @@ const HomeDealerCard = () => {
         backgroundColor="var(--grey)"
         borderColor="#fcbb28"
         className="home-dealer-map"
+        style={{ width: mapWidth, height: mapWidth }}
       />
+
+    </div>
+
+
     </div>
   );
 };
