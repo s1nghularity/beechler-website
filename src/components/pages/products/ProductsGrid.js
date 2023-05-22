@@ -22,7 +22,7 @@ const ProductsGrid = ({ products }) => {
       {hasProducts ? (
         Object.entries(productsByCategory).map(([category, categoryProducts], categoryIndex) => (
           <React.Fragment key={`category-${categoryIndex}`}>
-            <Col xs={12}>
+            <Col >
               <h2 className="category-title">{category}</h2>
             </Col>
             <Row className="product-row">
@@ -33,7 +33,7 @@ const ProductsGrid = ({ products }) => {
           </React.Fragment>
         ))
       ) : (
-        <Col xs={12}>
+        <Col >
           <div className="empty-message">No products available for the selected combination of instrument and category.</div>
         </Col>
       )}

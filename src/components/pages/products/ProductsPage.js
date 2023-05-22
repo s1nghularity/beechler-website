@@ -107,12 +107,7 @@ const ProductsPage = () => {
   return (
     <Container fluid className="products-page">
       <Row>
-        <Col lg={9}>
-
-          <ProductsGrid products={previousProducts} />
-          <ScrollToTop />
-        </Col>
-        <Col lg={3} className="col-sidebar px-lg-0">
+      <Col sm={12} lg={3} className="col-sidebar px-lg-0">
           <ProductsPageSidebar
             handleCategorySelect={handleCategorySelect}
             handleInstrumentSelect={handleInstrumentSelect}
@@ -122,6 +117,13 @@ const ProductsPage = () => {
             className="products-page-sidebar"
           />
         </Col>
+
+        <Col sm={12} lg={9}>
+
+          <ProductsGrid products={previousProducts} />
+          <ScrollToTop />
+        </Col>
+
       </Row>
       <ToastContainer />
     </Container>
@@ -129,3 +131,5 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
+

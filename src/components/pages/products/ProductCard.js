@@ -1,24 +1,58 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import "../../../styles/ProductsPage.css";
 
 import {
+  ProductIconRow,
+  FacingSection,
+  BoreSection, 
+  TipOpeningSection,
+  AccessoriesSection,
+  ModelSection,
+  LigatureTypeSection,
+  FinishSection,
+} from "../products/ProductCardSpecs";
 
-  ProductDescription,
-} from "./ProductCardHelpers";
+const ProductDescription = ({ product }) => {
+  const {
+    bore,
+    facing,
+    tipOpening,
+    price,
+    ligatureType,
+    finish,
+    accessories,
+    model,
+  } = product;
 
-const ProductImage = ({ image }) => (
-  <div className="product-image">
-    <img src={image} alt="Product" />
-  </div>
-);
+  return (
+    <Card className="product-card-description">
+      <Row className="product-icon-row">
+        <ProductIconRow product={product} />
+      </Row>
 
+      <Row className="product-info-row">
+        {facing && <FacingSection facing={facing} />}
+        {bore && <BoreSection bore={bore} />}
+        {tipOpening && <TipOpeningSection tipOpening={tipOpening} />}
+        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} />}
+        {finish && <FinishSection finish={finish} />}
+        {accessories && <AccessoriesSection accessories={accessories} />}
+        {model && <ModelSection model={model} />}
+      </Row>
+
+      <Card.Text className="price mt-auto">${price}</Card.Text>
+    </Card>
+  );
+};
 
 const ProductCard = ({ product }) => (
   <Col xs={12} md={4} key={product.id}>
     <Card className="product-card">
       <div className="product-card-container">
-        <ProductImage image={product.image} id={product.id} />
+        <div className="product-image">
+          <img src={product.image} alt="Product" />
+        </div>
         <ProductDescription product={product} />
       </div>
     </Card>

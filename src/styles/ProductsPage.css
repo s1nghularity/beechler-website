@@ -1,33 +1,5 @@
 @import url("/src/styles/theme.css");
-
-/* Variables */
-:root {
-  --font-family-big-shoulders: "Big Shoulders Text", sans-serif;
-  --radius: 0.5rem;
-  --info-bg: var(--black-alt);
-}
-
-.col-sidebar{
-  background-color: var(--black-alt);
-
-}
-
-/* Products page styles */
-.products-grid {
-  display: flex;
-  background-color: var(--white);
-  justify-content: center;
-  position: relative;
-  padding-right: 2rem;
-}
-
-.products-page {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.stripe-products-grid  {
+.stripe-products-grid {
   position: relative;
 }
 
@@ -38,19 +10,21 @@
   width: 200vw;
   left: -100vw;
   z-index: -1;
-  background-color: var(--white) !important;
+  background-color: white !important;
 }
 
-.category-title {
-  font-family: var(--font-family-big-shoulders);
-  font-size: 3rem;
-  font-weight: 300;
-  margin: 5% 0 1rem;
-  text-align: center;
-  color: black;
+/*PRODUCTSPAGE.JS*/
+.col-sidebar {
+  background-color: var(--black-alt);
 }
 
-/* Product card styles */
+.products-grid {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 2rem;
+}
+
 .product-row {
   display: flex;
   margin: 1rem 0;
@@ -59,46 +33,55 @@
   flex-wrap: wrap;
 }
 
+.category-title {
+  font-family: Josefin Sans;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 5% 0 1rem;
+  text-align: center;
+  color: black;
+}
+
+/* PRODUCTCARD.JS */
 .product-card-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
   font-family: Josefin Sans;
 }
 
 .product-card {
-  height: 100%;
-  width: 90%;
   border: 0;
-  border-radius: 0.5rem;
 }
 
-.product-image {
-  position: relative;
+/*PRODUCTCARDHELPERS.JS*/
 
+
+.product-info-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .product-image img {
-  height: 10rem;
+  height: 20rem;
   width: 100%;
   object-fit: scale-down;
-  background-color:#f2f2f2
+
 }
 
-.product-description {
-  flex: 1;
-  background-color:#f2f2f2;
-  padding: 0.5rem;
+.product-card-description {
+
   border-color: transparent;
-  max-height: 13rem;
+  min-height: 11rem;
+  padding: 1rem;
   border-radius: 0;
 }
 
 .product-icon-row {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-bottom: 0.25rem;
 }
 
@@ -120,28 +103,21 @@
   margin-right: -1rem;
 }
 
-.product-info-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-left: .25rem;
-  color:white;
+.subtype-chip{
+
 }
 
 .accessories {
   background-image: var(--accent);
-  border-radius: var(--radius);
+  border-radius: 0.5rem;
   color: black;
   font-size: 1rem;
   letter-spacing: -1px;
   max-width: 11.5rem !important;
-  padding: .1rem;
-  padding-left: .75rem;
-  padding-top: .25rem;
+  padding: 0.1rem;
+  padding-left: 0.75rem;
+  padding-top: 0.25rem;
 }
-
 
 .facing {
   font-weight: 100;
@@ -207,47 +183,64 @@
 .model {
   display: flex;
   flex-direction: column;
-  color: black;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: black;
+  color: white;
   font-weight: 300;
   padding: 0.5rem;
-  max-width: max-content;
+  max-width: 6.5rem;
   letter-spacing: -1px;
   font-size: 1.25rem;
   line-height: 1.25rem;
+  margin: 1rem;
+  border-radius: .5rem;
 }
 
 .ligature-type {
   display: flex;
   flex-direction: column;
-  color: black;
-  font-weight: 300;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background: linear-gradient(to right, #7d878d, #2c3e50);
   padding: 0.5rem;
-  max-width: max-content;
+  max-width: min-content;
+  border-radius: .5rem;
+
+}
+
+.ligature-type.col > p {
+  color: white;
+  font-weight: 300;
   letter-spacing: -1px;
   font-size: 1.25rem;
   line-height: 1.25rem;
-
 }
 
 .finish {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  max-width: 5rem;
+  padding: 0.5rem;
+  border-radius: .5rem;
+  margin-left: .5rem;
+  background: linear-gradient(to right, #dfe2e0, #f0ee7c);
   color: black;
   font-weight: 300;
-  padding: 0.5rem;
-  max-width: max-content;
   letter-spacing: -1px;
   font-size: 1.25rem;
   line-height: 1.25rem;
-
 }
-
 
 .price {
   font-size: 2rem;
   text-align: center !important;
   color: var(--black);
   font-weight: 400;
-
 }
 

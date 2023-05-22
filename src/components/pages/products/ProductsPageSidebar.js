@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Navbar, Nav, NavDropdown, NavItem, Container } from "react-bootstrap";
 import "../../../styles/ProductsPageSidebar.css";
-import saxIcon from "../../../assets/img/products/saxophone.png";
-import clarinetIcon from "../../../assets/img/products/clarinet.png";
+import saxIcon from "../../../assets/img/products/sax2.png";
+import clarinetIcon from "../../../assets/img/products/clarinet2.png";
 import ProductNavInfo from "./ProductNavInfo.js";
 
 const ProductsPageSidebar = ({
