@@ -18,8 +18,8 @@ const HomeCarousel = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 440) {
-        setSlidesPerView(1.2); 
-        setSpaceBetween(2); 
+        setSlidesPerView(1.1); 
+        setSpaceBetween(20); 
       }     
         else if (window.innerWidth <= 713) {
         setSlidesPerView(1.15); 
