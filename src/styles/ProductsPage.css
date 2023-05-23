@@ -1,32 +1,25 @@
 @import url("/src/styles/theme.css");
-.stripe-products-grid {
-  position: relative;
-}
 
-.stripe-products-grid:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 200vw;
-  left: -100vw;
-  z-index: -1;
-  background-color: white !important;
-}
+
 
 /*PRODUCTSPAGE.JS*/
+.products-page {
+  display: flex;
+  flex-direction: row;
+}
+
+
 
 .products-grid {
   display: flex;
   justify-content: center;
   position: relative;
-  margin-left: 2rem;
 }
 
 .product-row {
   display: flex;
-  margin: 1rem 0;
+
   row-gap: 2rem;
-  margin-left: 4.5rem;
   flex-wrap: wrap;
 }
 
@@ -50,7 +43,7 @@
   border: 0;
 }
 
-/*PRODUCTCARDHSPECS.JS*/
+/*PRODUCTCARDSPECS.JS*/
 
 
 .product-info-row {
@@ -241,3 +234,8 @@
   font-weight: 400;
 }
 
+/* @media (max-width: 440px)
+@media (min-width: 441px) and (max-width: 767px)
+@media (min-width: 768px) and (max-width: 992px) 
+@media (min-width: 993px) and (max-width: 1312px)
+@media (min-width: 1312px) */

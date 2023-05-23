@@ -16,6 +16,8 @@ const ProductsPage = () => {
   const [previousProducts, setPreviousProducts] = useState(products);
   const [filterApplied, setFilterApplied] = useState(false);
 
+
+  //HANDLES SIDEBAR FILTERS//
   const handleCategorySelect = (category) => {
     console.log(`Selected category: ${category}`);
     setSelectedCategory(category);
@@ -49,7 +51,7 @@ const ProductsPage = () => {
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
-      draggable: true,
+      draggable: false,
       progress: undefined,
     });
   };
@@ -74,14 +76,10 @@ const ProductsPage = () => {
       }
     }
   }, [filteredProducts, filterApplied]);
-  
-  useEffect(() => {
-    console.log(`Selected category: ${selectedCategory}`);
-    console.log(`Selected instrument: ${selectedInstrument}`);
-    console.log(`Selected subtype: ${selectedSubtype}`);
-  }, [selectedCategory, selectedInstrument, selectedSubtype]);
 
 
+
+  //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
 
   useEffect(() => {
@@ -107,18 +105,17 @@ const ProductsPage = () => {
   return (
     <Container fluid className="products-page">
       <Row>
-      <Col lg={3} className="col-sidebar px-lg-0">
+      <Col>
           <ProductsPageSidebar
             handleCategorySelect={handleCategorySelect}
             handleInstrumentSelect={handleInstrumentSelect}
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
             infoContent={selectedCategory}
-            className="products-page-sidebar"
+            className="col-product-sidebar"
           />
         </Col>
-        <Col lg={9}>
-
+        <Col className="col-product-grid">
           <ProductsGrid products={previousProducts} />
           <ScrollToTop />
         </Col>

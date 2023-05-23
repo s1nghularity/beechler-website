@@ -1,156 +1,97 @@
 import React from "react";
-import { useState } from "react";
-import { Navbar, Nav, NavDropdown, NavItem, Container } from "react-bootstrap";
-import "../../../styles/ProductsPageSidebar.css";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import saxIcon from "../../../assets/img/products/sax2.png";
 import clarinetIcon from "../../../assets/img/products/clarinet2.png";
 import ProductNavInfo from "./ProductNavInfo.js";
+import "../../../styles/ProductsPage.css";
+import "../../../styles/ProductsPageSidebar.css"
+
+const instrumentOptions = [
+  { instrument: "Saxophone", icon: saxIcon },
+  { instrument: "Clarinet", icon: clarinetIcon },
+];
+
+const categoryOptions = [
+  "Beechler White Diamond",
+  "Beechler Tonalex",
+  "Beechler Legacy",
+  "Beechler Custom",
+  "Beechler Bellite",
+  "Beechler Bellite Custom",
+  "ARB Metal",
+  "ARB Custom Metal",
+  "Beechler & ARB Ligatures",
+  "Beechler & ARB Caps",
+  "Beechler Pegs",
+  "Accessories",
+];
+
+const subtypeOptions = ["Soprano", "Alto", "Tenor", "Baritone"];
 
 const ProductsPageSidebar = ({
   handleCategorySelect,
   handleInstrumentSelect,
   handleSubtypeSelect,
-  resetFilters,
   infoContent,
 }) => {
-
-  const [selectedInstrument, setSelectedInstrument] = useState(null);
+  const [selectedInstrument, setSelectedInstrument] = React.useState(null);
 
   const handleInstrumentClick = (instrument) => {
     handleInstrumentSelect(instrument);
     setSelectedInstrument(instrument);
   };
 
-
-
   return (
-
-    <Container className="products-page-sidebar">
-
-      <Navbar className="products-navbar" bg="dark" expand="lg">
+    <Container fluid>
+      <Navbar className="products-navbar">
         <Navbar.Toggle aria-controls="navbarToggler" />
         <Navbar.Collapse id="navbarToggler">
-          <Nav className="mr-auto">
-          <NavItem
-        className={`instrument-nav-sax ${selectedInstrument === "Saxophone" ? "selected" : ""}`}
-        title="Instrument"
-        id="navInstrument"
-        onClick={() => handleInstrumentClick("Saxophone")}
-      >
-              <img
-                className="instrument-icon"
-                src={saxIcon}
-                alt="saxophone icon"
-              ></img>
-            </NavItem>
-
-            <NavItem
-        className={`instrument-nav-clar ${selectedInstrument === "Clarinet" ? "selected" : ""}`}
-        title="Instrument"
-        id="navInstrument"
-        onClick={() => handleInstrumentClick("Clarinet")}
-      >
-              <img
-                className="instrument-icon"
-                src={clarinetIcon}
-                alt="clarinet icon"
-              ></img>
-            </NavItem>
-
-            <NavItem  onClick={() => resetFilters("null")}>
-              Reset Filters
-
-            </NavItem>
-
-
+          <Nav>
+            {instrumentOptions.map((option, index) => (
+              <Nav.Link
+                key={index}
+                className={`instrument-nav-${option.instrument.toLowerCase()} ${
+                  option.instrument === selectedInstrument ? "selected" : ""
+                }`}
+                title="Instrument Type"
+                id="navInstrument"
+                onClick={() => handleInstrumentClick(option.instrument)}
+              >
+                <img
+                  className="instrument-icon"
+                  src={option.icon}
+                  alt={`${option.instrument} icon`}
+                />
+              </Nav.Link>
+            ))}
 
             <NavDropdown title="Categories" id="navbarDropdown">
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler White Diamond")}
-              >
-                Beechler White Diamond
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler Tonalex")}
-              >
-                Beechler Tonalex
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler Legacy")}
-              >
-                Beechler Legacy
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler Custom")}
-              >
-                Beechler Custom
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler Bellite")}
-              >
-                Beechler Bellite
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler Bellite Custom")}
-              >
-                Beechler Bellite Custom
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("ARB Metal")}
-              >
-                ARB Metal
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("ARB Custom Metal")}
-              >
-                ARB Custom Metal
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler & ARB Ligatures")}
-              >
-                Beechler & ARB Ligatures
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler & ARB Caps")}
-              >
-                Beechler & ARB Caps
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Beechler Pegs")}
-              >
-                Beechler Pegs
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                onClick={() => handleCategorySelect("Accessories")}
-              >
-                Accessories
-              </NavDropdown.Item>
+              {categoryOptions.map((category, index) => (
+                <NavDropdown.Item
+                  key={index}
+                  onClick={() => handleCategorySelect(category)}
+                >
+                  {category}
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
 
-            <NavDropdown title="Subtype" id="navSubtype">
-              <NavDropdown.Item onClick={() => handleSubtypeSelect("Soprano")}>
-                Soprano
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => handleSubtypeSelect("Alto")}>
-                Alto
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => handleSubtypeSelect("Tenor")}>
-                Tenor
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => handleSubtypeSelect("Baritone")}>
-                Baritone
-              </NavDropdown.Item>
+            <NavDropdown title="Type" id="navSubtype">
+              {subtypeOptions.map((subtype, index) => (
+                <NavDropdown.Item
+                  key={index}
+                  onClick={() => handleSubtypeSelect(subtype)}
+                >
+                  {subtype}
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
 
       <ProductNavInfo infoContent={infoContent} />
-
-
     </Container>
-
-
   );
 };
 

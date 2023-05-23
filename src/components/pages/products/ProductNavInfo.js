@@ -1,9 +1,13 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import "../../../styles/ProductsPageSidebar.css"
 
 
 const ProductNavInfo = ({ infoContent }) => {
-    return (
-        <div className="information-container">
+  return (
+    <Container >
+      <Row className="product-nav-info-container">
+        <Col>
           <div className="static-info">
             <h3>General Product Information</h3>
             <ul>
@@ -12,9 +16,10 @@ const ProductNavInfo = ({ infoContent }) => {
               <li>All bite plates on metal mouthpieces are inlaid using rubber and are not applied with epoxy.</li>
               <li>If available, saxophone tip openings range from 4-10. </li>
               <li>If available, clarinet tip openings range from 1-12. </li>
-
             </ul>
           </div>
+        </Col>
+        <Col>
           <div className="dynamic-info">
             <h3>{infoContent ? infoContent : 'Select a Category'}</h3>
             {infoContent === 'Saxophones' && (
@@ -32,8 +37,10 @@ const ProductNavInfo = ({ infoContent }) => {
               </ul>
             )}
           </div>
-        </div>
-      );
-    };
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 export default ProductNavInfo;
