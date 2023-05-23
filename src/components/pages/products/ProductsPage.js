@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
-import ProductsPageSidebar from "../products/ProductsPageSidebar.js";
-import ProductsGrid from "../products/ProductsGrid.js";
-import { products } from "./ProductsData.js";
-import "../../../styles/ProductsPage.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
+
+import ProductNav from "./ProductNav";
+import ProductNavInfo from "./ProductNavInfo";
+import ProductsGrid from "./ProductsGrid.js";
+import { products } from "./ProductsData.js";
+import EmailSignup from "./EmailSignup.js";
 import ScrollToTop from "../../ScrollToTop.js";
+import "../../../styles/ProductsPage.css";
+import "../../../styles/ProductNav.css";
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -16,8 +20,7 @@ const ProductsPage = () => {
   const [previousProducts, setPreviousProducts] = useState(products);
   const [filterApplied, setFilterApplied] = useState(false);
 
-
-  //HANDLES SIDEBAR FILTERS//
+  //HANDLES PRODUCTNAV FILTERS//
   const handleCategorySelect = (category) => {
     console.log(`Selected category: ${category}`);
     setSelectedCategory(category);
@@ -31,7 +34,7 @@ const ProductsPage = () => {
   };
 
   const handleSubtypeSelect = (subtype) => {
-      console.log(`Selected subtype: ${subtype}`);
+    console.log(`Selected subtype: ${subtype}`);
     setSelectedSubtype(subtype);
     setFilterApplied(true);
   };
@@ -42,7 +45,6 @@ const ProductsPage = () => {
     setSelectedSubtype(null);
     setFilterApplied(false);
   };
-  
 
   const showToast = () => {
     toast.error("No products available for the selected filters.", {
@@ -68,16 +70,14 @@ const ProductsPage = () => {
       if (filteredProducts.length === 0) {
         console.log("No products available for the selected filters.");
         showToast();
-        setFilterApplied(false); 
+        setFilterApplied(false);
       } else {
         console.log(`Filtered products: ${JSON.stringify(filteredProducts)}`);
         setPreviousProducts(filteredProducts);
-        setFilterApplied(false); 
+        setFilterApplied(false);
       }
     }
   }, [filteredProducts, filterApplied]);
-
-
 
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
@@ -93,39 +93,45 @@ const ProductsPage = () => {
       }
     }
   }, [location.search, selectedCategory]);
-  
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
-  
-
 
   return (
     <Container fluid className="products-page">
       <Row>
-      <Col>
-          <ProductsPageSidebar
+        <Col sm={12} md={12} lg={4} xl={4} className="sticky-column">
+          <ProductNav
             handleCategorySelect={handleCategorySelect}
             handleInstrumentSelect={handleInstrumentSelect}
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
-            infoContent={selectedCategory}
-            className="col-product-sidebar"
           />
+          <ProductNavInfo infoContent={selectedCategory} />
         </Col>
-        <Col className="col-product-grid">
+        <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
-          <ScrollToTop />
         </Col>
+<Row sm ={12} md={12} lg={12} xl={12}>
+        <h2>EXPERT ADVICE ON THE BEST VALUE!</h2>
+        <p>
+          Serving musicians since 1942, Remle Musical Products is honored to be
+          part of your musical journey!
+        </p>
+        <Col sm={6} md={6} lg={6} xl={6}>
+          <EmailSignup />
+        </Col>
+        <Col sm={6} md={6} lg={6} xl={6}>
+          <Button href="/dealers">Find a store near you: FIND STORE</Button>
+        </Col>
+        </Row>
 
       </Row>
+
+      <ScrollToTop />
       <ToastContainer />
     </Container>
   );
 };
-
 export default ProductsPage;
-
-

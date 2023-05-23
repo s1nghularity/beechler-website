@@ -1,7 +1,5 @@
 @import url("/src/styles/theme.css");
 
-
-
 /*PRODUCTSPAGE.JS*/
 .products-page {
   display: flex;
@@ -18,7 +16,7 @@
 
 .product-row {
   display: flex;
-
+  justify-content: center;
   row-gap: 2rem;
   flex-wrap: wrap;
 }
@@ -31,6 +29,8 @@
   text-align: center;
   color: black;
 }
+
+
 
 /* PRODUCTCARD.JS */
 .product-card-container {
@@ -45,7 +45,6 @@
 
 /*PRODUCTCARDSPECS.JS*/
 
-
 .product-info-row {
   display: flex;
   justify-content: center;
@@ -57,11 +56,9 @@
   height: 20rem;
   width: 100%;
   object-fit: scale-down;
-
 }
 
 .product-card-description {
-
   border-color: transparent;
   min-height: 11rem;
   padding: 1rem;
@@ -93,8 +90,7 @@
   margin-right: -1rem;
 }
 
-.subtype-chip{
-
+.subtype-chip {
 }
 
 .accessories {
@@ -185,7 +181,7 @@
   font-size: 1.25rem;
   line-height: 1.25rem;
   margin: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .ligature-type {
@@ -197,8 +193,7 @@
   background: linear-gradient(to right, #7d878d, #2c3e50);
   padding: 0.5rem;
   max-width: min-content;
-  border-radius: .5rem;
-
+  border-radius: 0.5rem;
 }
 
 .ligature-type.col > p {
@@ -217,8 +212,8 @@
   text-align: center;
   max-width: 5rem;
   padding: 0.5rem;
-  border-radius: .5rem;
-  margin-left: .5rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
   background: linear-gradient(to right, #dfe2e0, #f0ee7c);
   color: black;
   font-weight: 300;
@@ -234,8 +229,3 @@
   font-weight: 400;
 }
 
-/* @media (max-width: 440px)
-@media (min-width: 441px) and (max-width: 767px)
-@media (min-width: 768px) and (max-width: 992px) 
-@media (min-width: 993px) and (max-width: 1312px)
-@media (min-width: 1312px) */
