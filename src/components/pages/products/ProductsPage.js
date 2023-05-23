@@ -109,24 +109,30 @@ const ProductsPage = () => {
             resetFilters={resetFilters}
           />
           <ProductNavInfo infoContent={selectedCategory} />
+
+            <Button href="/dealers" className="find-dealer">
+              Find a store near you!
+            </Button>
+
         </Col>
         <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
         </Col>
-<Row sm ={12} md={12} lg={12} xl={12}>
-        <h2>EXPERT ADVICE ON THE BEST VALUE!</h2>
-        <p>
-          Serving musicians since 1942, Remle Musical Products is honored to be
-          part of your musical journey!
-        </p>
-        <Col sm={6} md={6} lg={6} xl={6}>
-          <EmailSignup />
-        </Col>
-        <Col sm={6} md={6} lg={6} xl={6}>
-          <Button href="/dealers">Find a store near you: FIND STORE</Button>
-        </Col>
-        </Row>
 
+        <Row sm={12} md={12} lg={12} xl={12}>
+          <div className="product-email-signup">
+            <h2>EXPERT ADVICE ON THE BEST VALUE</h2>
+            <p>
+              Serving musicians since 1942, Remle Musical Products is honored to
+              be part of your musical journey.
+            </p>
+            <Col sm={6} md={6} lg={6} xl={6}>
+              <div className="email-signup-form">
+                <EmailSignup />
+              </div>
+            </Col>
+          </div>
+        </Row>
       </Row>
 
       <ScrollToTop />
