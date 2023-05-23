@@ -24,7 +24,7 @@ const ProductsPageSidebar = ({
 
 
   return (
-    <div className="stripe-products-page-sidebar">
+
     <Container className="products-page-sidebar">
 
       <Navbar className="products-navbar" bg="dark" expand="lg">
@@ -149,7 +149,7 @@ const ProductsPageSidebar = ({
 
 
     </Container>
-    </div>
+
 
   );
 };

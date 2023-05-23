@@ -14,9 +14,6 @@
 }
 
 /*PRODUCTSPAGE.JS*/
-.col-sidebar {
-  background-color: var(--black-alt);
-}
 
 .products-grid {
   display: flex;
@@ -53,7 +50,7 @@
   border: 0;
 }
 
-/*PRODUCTCARDHELPERS.JS*/
+/*PRODUCTCARDHSPECS.JS*/
 
 
 .product-info-row {

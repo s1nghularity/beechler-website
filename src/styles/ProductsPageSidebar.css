@@ -1,48 +1,23 @@
 @import url("/src/styles/theme.css");
 
-/* Variables */
-:root {
-  --font-family-big-shoulders: "Big Shoulders Text", sans-serif;
-}
-
 .products-page-sidebar {
-  background-color: var(--black-alt);
   font-family: Josefin Sans;
-  position: -webkit-sticky!important;
-  position: sticky !important;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-}
-
-.stripe-products-page-sidebar  {
-  position: relative;
-  
-}
-
-.stripe-products-page-sidebar:before {
-  content: "";
-  position: absolute;
-  margin-top: -1rem;
-  height: 1050vh;
-  width: 500vw;
-  left: -100vw;
-  z-index: -1;
-  background-color: var(--black-alt) !important;
 }
 
 /* Navbar styles */
 
-
-
 .products-navbar {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-left: -.5rem!important;
+  margin-left: -0.5rem !important;
   font-family: Josefin Sans;
   background-color: var(--grey) !important;
   border-radius: 5px;
-  width: 20rem;
+  width: max-content;
 }
-
 
 .dropdown-menu {
   background-color: var(--black) !important;
@@ -51,7 +26,7 @@
 
 .instrument-nav-sax img,
 .instrument-nav-clar img {
-  transition: background-color 0.3s ease;  
+  transition: background-color 0.3s ease;
   border-radius: 5px;
 }
 
@@ -62,11 +37,12 @@
 
 .instrument-nav-sax.selected img,
 .instrument-nav-clar.selected img {
-  background-color:darkcyan;
+  background-color: darkcyan;
 }
 
-.instrument-nav-sax, .instrument-nav-clar {
-  margin-left: .5rem;
+.instrument-nav-sax,
+.instrument-nav-clar {
+  margin-left: 0.5rem;
   margin-right: 1rem;
 }
 
@@ -85,5 +61,5 @@
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: #f8f9fa;
- 
+  width: 28.5rem;
 }
