@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Table, Container } from 'react-bootstrap';
+import InstagramCarousel from './InstagramCarousel';
 import '../../../styles/TipOpenings.css';
 
 function TipOpenings() {
@@ -27,9 +28,13 @@ function TipOpenings() {
     { name: "C Melody Sax", startingValueInches: 0.060 },
   ];
 
+  useEffect(() => {
+    document.title = 'Tip Openings';
+  }, []);
+
   return (
     <Container className='tip-openings'>
-      <Table striped bordered hover >
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Model</th>
@@ -37,18 +42,18 @@ function TipOpenings() {
             <th>Millimeters</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Beechler</td>
-            <td>{values.inches?.toFixed(3)}</td>
-            <td>{values.mm?.toFixed(3)}</td>
-          </tr>
-          <tr>
-            <td>ARB</td>
-            <td>{values.arbInches?.toFixed(3)}</td>
-            <td>{values.arbMm?.toFixed(3)}</td>
-          </tr>
-        </tbody>
+<tbody>
+  <tr>
+    <td>Beechler</td>
+    <td data-label="Inches">{values.inches?.toFixed(3)}</td>
+    <td data-label="Millimeters">{values.mm?.toFixed(3)}</td>
+  </tr>
+  <tr>
+    <td>ARB</td>
+    <td data-label="Inches">{values.arbInches?.toFixed(3)}</td>
+    <td data-label="Millimeters">{values.arbMm?.toFixed(3)}</td>
+  </tr>
+</tbody>
       </Table>
       <Table striped bordered hover>
         <tfoot>
@@ -69,6 +74,10 @@ function TipOpenings() {
           ))}
         </tfoot>
       </Table>
+
+
+        <InstagramCarousel />
+
     </Container>
   );
 }

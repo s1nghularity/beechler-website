@@ -1,46 +1,62 @@
-
-
 .tip-openings {
-    font-family: "Big Shoulders Text", sans-serif;
-    color: var(--white);
-    height: 100%;
-    
-  }
+  font-family: Josefin Sans, sans-serif;
+  color: var(--white);
+  height: 100%;
   
-  .tip-openings table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+}
+
+.tip-openings table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tip-openings th,
+.tip-openings td {
+  border: 1px solid var(--grey-alt);
+  padding: 12px;
+  text-align: center;
+}
+
+.tip-openings th {
+  background-color: var(--nav-accent);
+  color: var(--white);
+}
+
+.tip-openings tbody tr:nth-child(even) {
+  background-color: var(--grey);
+  color: var(--white);
+}
+
+.tip-openings tbody tr:nth-child(odd) {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.tip-openings tfoot tr {
+  background-color: var(--nav-accent);
+  color: var(--white);
+}
+
+.tip-openings tfoot tr:hover td {
+  cursor: pointer;
+  background-color: var(--black-alt);
+}
+
+.tip-openings td:hover,
+.tip-openings td:focus {
+  color: var(--nav-accent);
+}
+
+@media (max-width: 440px) {
+  .tip-openings {
+    font-size: 14px;
   }
-  
+
   .tip-openings th,
   .tip-openings td {
-    border: 1px solid var(--grey-alt);
     padding: 8px;
-    text-align: center;
   }
-  
-  .tip-openings th {
-    background-color: var(--nav-accent);
-    color: var(--white);
-  }
-  
-  .tip-openings tbody tr:nth-child(even) {
-    background-color: var(--grey);
-    color: var(--white);
-  }
-  
-  .tip-openings tbody tr:nth-child(odd) {
-    background-color: var(--white);
-    color: var(--black);
-  }
-  
-  .tip-openings tfoot tr {
-    background-color: var(--nav-accent);
-    color: var(--white);
-  }
-  
-  .tip-openings tfoot tr:hover td {
-    cursor: pointer;
-    background-color: var(--black-alt);
-  }
+
+
+}
