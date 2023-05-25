@@ -40,11 +40,14 @@ const ProductsPage = () => {
   };
 
   const resetFilters = () => {
-    setSelectedCategory(null);
-    setSelectedInstrument(null);
-    setSelectedSubtype(null);
-    setFilterApplied(false);
+    if (selectedCategory || selectedInstrument || selectedSubtype) {
+      setSelectedCategory(null);
+      setSelectedInstrument(null);
+      setSelectedSubtype(null);
+      setFilterApplied(false);
+    }
   };
+  
 
   const showToast = () => {
     toast.error("No products available for the selected filters.", {
@@ -111,6 +114,8 @@ const ProductsPage = () => {
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
+            <Button onClick={resetFilters} className="reset-filters">Reset Filters</Button>
+
           <ProductNavInfo infoContent={selectedCategory} selectedInstrument={selectedInstrument} />
 
             <Button href="/dealers" className="find-dealer">
