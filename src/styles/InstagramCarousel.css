@@ -1,37 +1,60 @@
-/* Styles for the Carousel component */
-.ig-carousel {
-    height: 100%!important;
+.slick-slider div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.instagram-carousel .slick-list .slick-track .slick-slide .ig-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:.5rem;
+}
+
+.instagram-carousel {
+  margin: 0 -4.5rem;  
 }
 
 
-.carousel .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-  }
+.ig-slide img {
+  width: 100%;
+  border-radius: 2rem;
   
-  /* Styles for the parallax background */
-  .carousel-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
+}
+
+
+
+
+
+@media (max-width: 440px) {
+  .instagram-carousel {
+    margin: 0 -20px;
   }
-  
-  /* Styles for the image */
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+
+}
+
+@media (min-width: 441px) and (max-width: 767px) {
+  .instagram-carousel {
+    margin: 0 -6rem;
   }
-  
-  /* Styles for the title */
-  .title {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 1.5em;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .instagram-carousel {
+    margin: 0 -8rem;
   }
-  
+
+
+}
+
+@media (min-width: 993px) and (max-width: 1312px) {
+
+}
+
+
+
+
+
+

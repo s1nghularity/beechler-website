@@ -1,6 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~react-responsive-carousel/lib/styles/carousel.min.css";
-
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 @import url("./styles/theme.css");
 @import url("./styles/NavBar.css");
 @import url("./styles/HomeCarousel.css");
@@ -10,6 +11,7 @@
 @import url("./styles/ProductsPage.css");
 @import url("./styles/ProductNav.css");
 @import url("./styles/TipOpenings.css");
+@import url("./styles/InstagramCarousel.css");
 
 .header-container {
   max-width: 82em;
