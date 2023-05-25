@@ -44,8 +44,8 @@ export default class InstagramCarousel extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            autoplaySpeed: 5000,
-            speed: 5000,
+            autoplaySpeed: 8000,
+            speed: 8000,
           },
         },
         {
@@ -53,8 +53,8 @@ export default class InstagramCarousel extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            autoplaySpeed: 5000,
-            speed: 5000,
+            autoplaySpeed: 8000,
+            speed: 8000,
           },
         },
         {
@@ -62,8 +62,8 @@ export default class InstagramCarousel extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            autoplaySpeed: 6000,
-            speed: 6000,
+            autoplaySpeed: 8000,
+            speed: 8000,
           },
         },
         {
@@ -71,8 +71,8 @@ export default class InstagramCarousel extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            autoplaySpeed: 6000,
-            speed: 6000,
+            autoplaySpeed: 8000,
+            speed: 8000,
           },
         },
       ],

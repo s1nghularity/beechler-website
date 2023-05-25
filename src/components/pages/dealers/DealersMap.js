@@ -11,10 +11,8 @@ import { faMusic } from "@fortawesome/free-solid-svg-icons";
 const DealersMap = () => {
   const [search, setSearch] = useState("");
 
-  // Add the faMusic icon to the library
   library.add(faMusic);
 
-  // Create an SVG string for the faMusic icon
   const musicIconSvg = icon({ prefix: "fas", iconName: "music" }).html;
 
   const musicalNoteIcon = L.divIcon({
@@ -22,6 +20,7 @@ const DealersMap = () => {
     iconSize: [25, 25],
     className: "leaflet-marker-icon",
   });
+  
   const filteredLocations = locationData.filter((location) => {
     return location.name.toLowerCase().includes(search.toLowerCase());
   });
@@ -33,36 +32,8 @@ const DealersMap = () => {
   return (
     <Container fluid>
       <Row>
-        <Col lg={3}>
-
-        <h1>Making Music All Over The World</h1>
-
-          <InputGroup className="mb-3">
-            <InputGroup.Text id="search-addon">Search</InputGroup.Text>
-            <FormControl
-              type="text"
-              placeholder="Search for dealers"
-              aria-label="Search"
-              aria-describedby="search-addon"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </InputGroup>
-
-
-          
-          {filteredLocations.map((location) => (
-            <div key={location.name}>
-              <strong>{location.name}</strong>
-              <p>
-                {location.address}, {location.city}, {location.state}{" "}
-                {location.zip}, {location.country}
-              </p>
-            </div>
-          ))}
-
-        </Col>
         <Col lg={9}>
+          <h2 className="dealer-map-title">Making Music All Over The World</h2>
           <MapContainer
             center={[38, -95]}
             zoom={4}
@@ -71,7 +42,7 @@ const DealersMap = () => {
             console.log(locationData);
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              attribution='© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
             {filteredLocations.map((location) => (
               <Marker
@@ -92,6 +63,33 @@ const DealersMap = () => {
               </Marker>
             ))}
           </MapContainer>
+        </Col>
+
+        <Col lg={3}>
+          <div className="dealers-list">
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="search-addon">Search</InputGroup.Text>
+              <FormControl
+                type="text"
+                placeholder="Search for dealers"
+                aria-label="Search"
+                aria-describedby="search-addon"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="dealer-search-input"
+              />
+            </InputGroup>
+
+            {filteredLocations.map((location) => (
+              <div key={location.name}>
+                <strong className="dealer-name">{location.name}</strong>
+                <p className="dealer-info">
+                  {location.address}, {location.city}, {location.state}{" "}
+                  {location.zip}, {location.country}
+                </p>
+              </div>
+            ))}
+          </div>
         </Col>
       </Row>
     </Container>
