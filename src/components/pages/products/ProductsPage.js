@@ -70,6 +70,7 @@ const ProductsPage = () => {
       if (filteredProducts.length === 0) {
         console.log("No products available for the selected filters.");
         showToast();
+        setSelectedCategory(null); // reset selectedCategory
         setFilterApplied(false);
       } else {
         console.log(`Filtered products: ${JSON.stringify(filteredProducts)}`);
@@ -78,6 +79,7 @@ const ProductsPage = () => {
       }
     }
   }, [filteredProducts, filterApplied]);
+  
 
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
@@ -92,7 +94,8 @@ const ProductsPage = () => {
         handleCategorySelect(decodedCategory);
       }
     }
-  }, [location.search, selectedCategory]);
+  }, [location.search]);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -108,7 +111,7 @@ const ProductsPage = () => {
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
-          <ProductNavInfo infoContent={selectedCategory} />
+          <ProductNavInfo infoContent={selectedCategory} selectedInstrument={selectedInstrument} />
 
             <Button href="/dealers" className="find-dealer">
               Find a store near you!

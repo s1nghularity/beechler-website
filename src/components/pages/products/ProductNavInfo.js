@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
-const ProductNavInfo = ({ infoContent }) => {
+const ProductNavInfo = ({ infoContent, selectedInstrument }) => {
   return (
     <Container >
       <Row className="product-nav-info-container">
@@ -21,20 +21,20 @@ const ProductNavInfo = ({ infoContent }) => {
         <Col>
           <div className="dynamic-info">
             <h3>{infoContent ? infoContent : 'Select a Category'}</h3>
-            {infoContent === 'Saxophones' && (
-              <ul>
-                <li>We offer a wide range of saxophones for all skill levels.</li>
-                <li>Our saxophones come with a 1-year warranty.</li>
-                <li>Accessories such as reeds and mouthpieces are also available.</li>
-              </ul>
-            )}
-            {infoContent === 'Clarinets' && (
-              <ul>
-                <li>We offer a wide range of clarinets for all skill levels.</li>
-                <li>Our clarinets come with a 1-year warranty.</li>
-                <li>Accessories such as reeds and mouthpieces are also available.</li>
-              </ul>
-            )}
+            {infoContent === 'Saxophones' || selectedInstrument === 'Saxophone' && (
+  <ul>
+    <li>We offer a wide range of saxophones for all skill levels.</li>
+    <li>Our saxophones come with a 1-year warranty.</li>
+    <li>Accessories such as reeds and mouthpieces are also available.</li>
+  </ul>
+)}
+{infoContent === 'Clarinets' || selectedInstrument === 'Clarinet' && (
+  <ul>
+    <li>We offer a wide range of clarinets for all skill levels.</li>
+    <li>Our clarinets come with a 1-year warranty.</li>
+    <li>Accessories such as reeds and mouthpieces are also available.</li>
+  </ul>
+)}
           </div>
         </Col>
       </Row>
