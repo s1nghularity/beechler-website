@@ -7,6 +7,7 @@ import ProductsPage from './components/pages/products/ProductsPage.js';
 import TipOpenings from './components/pages/tipopenings/TipOpenings.js';
 import DealersPage from "./components/pages/dealers/DealersPage.js";
 import ArtistsPage from "./components/pages/artists/ArtistsPage.js";
+import AboutPage from "./components/pages/about/AboutPage.js";
 import Footer from "./components/Footer.js";
 import "leaflet/dist/leaflet.css";
 
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/tip-openings" element={<TipOpenings />} />
             <Route path="/dealers" element={<DealersPage />} />
             <Route path="/artists" element={<ArtistsPage />} />
+            <Route path="/about" element={<AboutPage />} />
           </Routes>
           </div>
 
