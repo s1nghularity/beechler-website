@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .stripe-home-dealer::before {
@@ -15,10 +16,17 @@
   background-color: var(--grey);
 }
 
-
+.home-dealer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
 
 .home-dealer-map {
-  
+
   background-color: var(--grey);
 
 }
@@ -30,7 +38,6 @@
   padding-top: 1rem;
   color: var(--white);
   font-family: 'Big Shoulders Text', sans-serif;
-
   text-align: center;
 }
 
@@ -40,6 +47,7 @@
   stroke: var(--white);
   stroke-width: 0.75;
   outline: none;
+
 }
 
 .home-dealer-map .geo:hover {
@@ -61,7 +69,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: var(--black);
   z-index: 10;
-  font-family: "Big Shoulders Text", sans-serif;
+
 }
 
 
