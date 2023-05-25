@@ -35,6 +35,7 @@ const timelineData = [
         content: <img className="animated-content" src="https://picsum.photos/400/300?random=4" alt="Animated content 4" />,
     },
 
+
 ];
 
 const TimelineItem = ({ item }) => {

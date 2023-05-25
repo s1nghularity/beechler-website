@@ -1,4 +1,3 @@
-
 .products-navbar {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -7,7 +6,8 @@
   width: 100%;
 }
 
-.products-navbar .nav-link, .products-navbar .dropdown {
+.products-navbar .nav-link,
+.products-navbar .dropdown {
   width: auto;
 }
 
@@ -30,8 +30,6 @@
   padding: 1rem;
   background-color: #f8f9fa;
   font-family: Josefin Sans;
-
-
 }
 
 .instrument-icon img {
@@ -48,7 +46,6 @@
 .instrument-nav-clar.selected img {
   background-color: darkcyan;
 }
-
 
 .instrument-nav-sax,
 .instrument-nav-clar {
@@ -73,6 +70,11 @@
 @media (max-width: 440px) {
   .products-navbar {
     width: 23rem;
+    margin-left: .5rem;
+  }
+  .product-nav-info-container {
+    padding-left: .25rem;
+    margin-right: -.25rem;
   }
 }
 
@@ -88,17 +90,35 @@
     width: 25rem;
     margin-left: 10rem;
   }
+}
 
-} 
-
-
-
-@media (min-width: 992px) {
+@media (min-width: 1080px) {
   .sticky-column {
     position: sticky;
     z-index: 4;
     top: 0;
-    height: 100vh;
+    margin-bottom: 25rem;
+    margin-left: 0rem;
+    max-height: calc(100vh - 50px);
 
   }
+}
+
+@media (min-width: 1200px) {
+  .sticky-column {
+    position: sticky;
+    z-index: 4;
+    top: 0;
+    margin-bottom: 25rem;
+    margin-left: -2rem;
+    margin-right: 2rem;
+    max-height: calc(100vh - 50px);
+
   }
+
+  div .navbar-nav {
+    margin-left: 2.5rem;
+  }
+
+
+}

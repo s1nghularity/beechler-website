@@ -22,8 +22,8 @@ const categories = [
   { name: "Beechler Bellite", type: "beechler", image: b82 },
   { name: "ARB Metal", type: "arb", image: a83 },
   { name: "ARB Custom Metal", type: "arb", image: c13 },
-  { name: "Ligatures", type: "both", image: l01p },
-  { name: "Caps", type: "both", image: t02 },
+  { name: "Beechler & ARB Ligatures", type: "both", image: l01p },
+  { name: "Beechler & ARB Caps", type: "both", image: t02 },
   { name: "Pegs", type: "beechler", image: t02 },
   { name: "Accessories", type: "both", image: t02 },
   { name: "", type: "both", image: beechlerArb, className:"beechler-arb-logo"},
@@ -52,13 +52,13 @@ function HomeCategories() {
                           className={`category-image ${category.className || ""}`}
                         />
                         <div className="category-text">{category.name}</div>
-                      </div>
+                      </div>  
                     </Card.Body>
-                  </Card>
-                  <div className="category-line"></div>
-
+                  </Card> 
+                <div className="category-line"></div>             
                 </Link>
               </Col>
+              
             ))}
           </Row>
         </Container>

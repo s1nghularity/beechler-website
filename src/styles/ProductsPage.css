@@ -99,9 +99,11 @@
   color: black;
   font-size: 1rem;
   letter-spacing: -1px;
-  max-width: 11.5rem !important;
+  max-width: 11rem;
+  height: 2rem;
+  padding-bottom: -1.5rem;
   padding: 0.1rem;
-  padding-left: 0.75rem;
+  padding-left: 0.5rem;
   padding-top: 0.25rem;
 }
 
@@ -185,32 +187,29 @@
 }
 
 .ligature-type {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
   text-align: center;
   background: linear-gradient(to right, #7d878d, #2c3e50);
   padding: 0.5rem;
-  max-width: min-content;
+  max-width: 7rem;
+  max-height: 3.5rem;
   border-radius: 0.5rem;
 }
 
 .ligature-type.col > p {
+  display:flex;
   color: white;
   font-weight: 300;
   letter-spacing: -1px;
   font-size: 1.25rem;
   line-height: 1.25rem;
+  
 }
 
 .finish {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+
   text-align: center;
-  max-width: 5rem;
+  max-width: 7rem;
+  height: auto;
   padding: 0.5rem;
   border-radius: 0.5rem;
   margin-left: 0.5rem;
@@ -220,6 +219,18 @@
   letter-spacing: -1px;
   font-size: 1.25rem;
   line-height: 1.25rem;
+}
+
+.finish.col > p {
+  display:flex;
+  align-items: center;
+  color: black;
+  font-weight: 300;
+  letter-spacing: -1px;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-bottom: -.25rem;
+  
 }
 
 .price {
