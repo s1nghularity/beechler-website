@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import * as React from 'react';
-
+import TopBar from './components/TopBar.js';
 import NavBar from './components/NavBar.js';
 import HomePage from './components/pages/home/HomePage.js';
 import ProductsPage from './components/pages/products/ProductsPage.js';
@@ -18,8 +18,9 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-
+      <TopBar />
         <div className="header-container">
+
         <NavBar />
         </div>
         
