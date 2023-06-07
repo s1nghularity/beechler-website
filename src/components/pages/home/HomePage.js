@@ -29,7 +29,7 @@ function HomePage() {
     <div>
         <ScrollToTop />
         <HomeCarousel />
-        <HomeTrio />
+        {/* <HomeTrio /> */}
         <HomeCategories />
         <HomeAbout />
         <HomeArtistCard />

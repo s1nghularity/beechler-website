@@ -29,6 +29,7 @@
 }
 
 .nav-link {
+  font-family: Josefin Sans, sans-serif;
   color: var(--white);
   font-size: 1.25rem;
   font-weight: 500;
