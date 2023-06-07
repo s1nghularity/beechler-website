@@ -42,8 +42,8 @@ export default class InstagramCarousel extends Component {
         {
           breakpoint: 993, // Corresponds to your media query (min-width: 993px) and (max-width: 1312px)
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 4,
             autoplaySpeed: 8000,
             speed: 8000,
           },
