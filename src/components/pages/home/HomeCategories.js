@@ -14,13 +14,27 @@ import c88 from "../../../assets/img/home/categories/beechler-legacy-C88.png";
 import b21 from "../../../assets/img/home/categories/beechler-tonalex-B21.png";
 import b07 from "../../../assets/img/home/categories/beechler-white-diamond-B07.png";
 
+import diamond from "../../../assets/img/home/categories/diamond-family.png";
+import tonalex from "../../../assets/img/home/categories/tonalex-family.png";
+import bellite from "../../../assets/img/home/categories/bellite-family.png";
+/*TODO:NEED HARD RUBBER*/
+import customized from "../../../assets/img/home/categories/custom-family.png";
+import arb from "../../../assets/img/home/categories/arb-metal-family.png";
+import gnog from "../../../assets/img/home/categories/gnog-family.png";
+
 const categories = [
-  { name: "Beechler White Diamond", type: "beechler", image: b07 },
-  { name: "Beechler Tonalex", type: "beechler", image: b21 },
+  { name: "Beechler Diamond", type: "beechler", image: diamond },
+  { name: "Beechler Tonalex", type: "beechler", image: tonalex },
+  { name: "Beechler Bellite", type: "beechler", image: bellite },
+ { name: "Beechler Hard Rubber", type: "beechler", image: diamond },  /*TODO:NEED HARD RUBBER*/
+
+  { name: "Beechler Customized", type: "beechler", image: customized },
+  { name: "ARB Metal", type: "arb", image: arb },
+  { name: "Great Neck Original", type: "arb", image: gnog },
+
   { name: "Beechler Legacy", type: "beechler", image: c88 },
   { name: "Custom Beechler Bellite", type: "beechler", image: c32 },
-  { name: "Beechler Bellite", type: "beechler", image: b82 },
-  { name: "ARB Metal", type: "arb", image: a83 },
+
   { name: "ARB Custom Metal", type: "arb", image: c13 },
   { name: "Beechler & ARB Ligatures", type: "both", image: l01p },
   { name: "Beechler & ARB Caps", type: "both", image: t02 },
@@ -33,7 +47,7 @@ function HomeCategories() {
   return (
     <div className="stripe-categories">
       <div className="home-categories">
-        <h2>Our Selection</h2>
+        <h2>Our Mouthpieces</h2>
         <Container>
         <Row className="categories-grid">
             {categories.map((category, index) => (
