@@ -70,19 +70,19 @@ import P01 from "../../../assets/img/products/accessories-services/P01.png";
 import P02 from "../../../assets/img/products/accessories-services/P02.png";
 import P03 from "../../../assets/img/products/accessories-services/P03.png";
 //Ligatures
-
-
-
 import ligAntique from "../../../assets/img/products/ligatures/lig-antique.png";
 import ligBlack from "../../../assets/img/products/ligatures/lig-black.png";
 import ligChrome from "../../../assets/img/products/ligatures/lig-chrome.png";
 import ligGold from "../../../assets/img/products/ligatures/lig-gold.png";
 import ligMetal from "../../../assets/img/products/ligatures/lig-metal.png";
 import ligPrismatic from "../../../assets/img/products/ligatures/lig-prismatic.png";
-
-import arbT01 from "../../../assets/img/products/caps/arb-t01.png";
-import beechlerT01 from "../../../assets/img/products/caps/beechler-t01.png";
 import eboniteT02 from "../../../assets/img/products/caps/ebonite-t02.png";
+//Services
+import BP from "../../../assets/img/products/accessories-services/BP.png";
+import CE from "../../../assets/img/products/accessories-services/CE.png";
+import LC from "../../../assets/img/products/accessories-services/LC.png";
+import M03 from "../../../assets/img/products/accessories-services/M03.png";
+import RE from "../../../assets/img/products/accessories-services/RE.png";
 
 const saxTipOpening = true;
 const clarinetTipOpening = true;
@@ -662,6 +662,46 @@ export const products = [
     ligatureType: "Metal/Bellite Inverted",
     price: 73.63,
     image: ligGold,
+  },
+  {
+    category: "Accessories & Services",
+    subtype: null,
+    id: "BP",
+    finish: "Bite Plate Replacement",
+    price: 35.00,
+    image: BP,
+  },
+  {
+    category: "Accessories & Services",
+    subtype: null,
+    id: "CE",
+    finish: "Custom Engraving",
+    price: 10.00,
+    image: CE,
+  },
+  {
+    category: "Accessories & Services",
+    subtype: null,
+    id: "LC",
+    finish: "Ligature Change",
+    price: 6.00,
+    image: LC,
+  },
+  {
+    category: "Accessories & Services",
+    subtype: null,
+    id: "M03",
+    finish: "Tuffbite Mouthpiece Protector",
+    price: 5.00,
+    image: M03,
+  },
+  {
+    category: "Accessories & Services",
+    subtype: null,
+    id: "R",
+    finish: "Refacing or Repair",
+    price: 50.00,
+    image: RE,
   },
 
 ];
