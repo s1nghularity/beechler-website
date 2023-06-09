@@ -1,77 +1,55 @@
-import React, { useEffect } from 'react';
-import { animate } from 'motion';
+import React from 'react';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import "../../../styles/theme.css";
 import "../../../styles/HomeArtistCard.css";
 
 
-import alexhan from '../../../assets/img/home/artists/artist-alex-han.png';
-import anthony from '../../../assets/img/home/artists/artist-anthony-terry.png';
-import caryg from '../../../assets/img/home/artists/artist-cary-simms.png';
-import yellowBlob1 from '../../../assets/img/home/artists/y-blob-1.svg';
-import orangeBlob1 from '../../../assets/img/home/artists/o-blob-1.svg';
-import yellowBlob2 from '../../../assets/img/home/artists/y-blob-2.svg';
 
-function HomeArtistCard () {
-    useEffect(() => {
-        const targets = document.querySelectorAll(".artist-card");
-        
-        targets.forEach((target, index) => {
-          animate(target, { y: -100, opacity: 1 }, {
-            delay: index * 0.3, 
-            duration: 1.8,
-            y: 0,
-            opacity: 0,
-            easing: "ease-out",
-          });
-        });
-      }, []);
-      
-      
 
+const artists = [
+    {
+      name: "Alex Doronov",
+      mouthpieces: ["Bellite Alto #7", "Bellite Soprano #7"]
+    },
+    {
+        name: "Brandon Fields",
+        mouthpieces: ["Tonalex Alto 5S", "Bellite Alto #8"]
+      },
+          {
+      name: "Charles McPherson",
+      mouthpieces: ["Diamond Alto M5S", "Jazz Model Alto C80"]
+    },
+
+];
+
+const ArtistCard = ({ artist }) => {
   return (
-    <div className="artist-cards-container">
-
-        <span>
-            <h2 className="artist-card-header">Featured Artists</h2>
-        </span>
-
-        <div className="artist-card">
-            <div className="image-container">
-                <img className="artist-image" src={alexhan} alt="Alex Han" />
-                <div className="svg-background">
-                <img src={yellowBlob1} alt="Alex Han blob" />
-           
-                <span className='artist-name'>
-                    <h3>Alex Han</h3>
-                </span>
-
-                </div>
-            </div>
-        </div>
-
-        <div className="artist-card">
-            <div className="image-container">
-                <img className="artist-image" src={anthony} alt="Anthony Terry" />
-                <div className="svg-background">
-                    <img src={orangeBlob1} alt="Anthony Terry blob" />
-                    <h3>Anthony Terry</h3>
-                </div>
-            </div>
-        </div>
-
-        <div className="artist-card">
-            <div className="image-container">
-                <img className="artist-image" src={caryg} alt="Cary Simms" />
-                <div className="svg-background">
-                    <img src={yellowBlob2} alt="Cary Simms blob" />
-                    <h3>Cary Simms</h3>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
+    <Card className="text-white bg-secondary artist-card">
+      <Card.Body>
+        <Card.Title className="artist-name">{artist.name}</Card.Title>
+        <Card.Text>
+          {artist.mouthpieces.map((mouthpiece, index) => (
+            <div key={index} className="mouthpiece">{mouthpiece}</div>
+          ))}
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
+
+const HomeArtistCard = () => {
+    return (
+      <Container className="home-artist-card">
+        <Row className="artist-row">
+          {artists.map((artist, index) => (
+            <Col key={index} xs={12} sm={4} className={`artist-col ${index > 2 ? "d-none d-lg-block" : ""}`}>
+              <ArtistCard artist={artist} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    );
+  };
+  
 
 export default HomeArtistCard;

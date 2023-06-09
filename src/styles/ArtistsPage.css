@@ -1,4 +1,14 @@
-/* Style the artist card */
+.artist-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color:#2a3132;
+
+}
+
+
 .artist-card {
   position: relative;
   width: 250px;
@@ -9,7 +19,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Style the artist name */
 .artist-card .artist-name {
   margin: 0;
   padding: 10px;
@@ -20,7 +29,6 @@
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Style the mouthpieces */
 .artist-card .mouthpiece {
   margin: 5px;
   padding: 5px;
