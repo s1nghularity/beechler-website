@@ -142,7 +142,7 @@ export const ProductIconRow = ({ product }) => {
         <div className="product-id">{product.id}</div>
       </Col>
       
-      <Col xs="auto">
+      {/* <Col xs="auto">
         {product.instrument && (
           <img
             className="instrument-icon"
@@ -156,7 +156,7 @@ export const ProductIconRow = ({ product }) => {
             alt={product.instrument}
           />
         )}
-      </Col>
+      </Col> */}
 
       <Col xs="auto">
         {subtypes.map((subtypeValue, index) => (

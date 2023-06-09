@@ -6,21 +6,6 @@
   flex-direction: row;
 }
 
-.reset-filters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  margin-left: 8rem;
-  font-family: Josefin Sans;
-  font-size: 1rem;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
 
 .products-grid {

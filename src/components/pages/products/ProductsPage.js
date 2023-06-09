@@ -114,7 +114,7 @@ const ProductsPage = () => {
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
-            <Button onClick={resetFilters} className="reset-filters">Reset Filters</Button>
+
 
           <ProductNavInfo infoContent={selectedCategory} selectedInstrument={selectedInstrument} />
 

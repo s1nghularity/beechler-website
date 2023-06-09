@@ -1,14 +1,9 @@
 // Import necessary dependencies
 import React from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import saxIcon from "../../../assets/img/products/sax2.png";
 import clarinetIcon from "../../../assets/img/products/clarinet2.png";
 
-// Define the options for your navigation
-const instrumentOptions = [
-  { instrument: "Saxophone", icon: saxIcon },
-  { instrument: "Clarinet", icon: clarinetIcon },
-];
 
 const categoryOptions = [
   "Beechler White Diamond",
@@ -32,6 +27,7 @@ const ProductNav = ({
   handleCategorySelect,
   handleInstrumentSelect,
   handleSubtypeSelect,
+  resetFilters,
 }) => {
   const [selectedInstrument, setSelectedInstrument] = React.useState(null);
 
@@ -45,7 +41,7 @@ const ProductNav = ({
       <Navbar.Toggle aria-controls="navbarToggler" />
       <Navbar.Collapse id="navbarToggler">
         <Nav>
-          {instrumentOptions.map((option, index) => (
+          {/* {instrumentOptions.map((option, index) => (
             <Nav.Link
               key={index}
               className={`instrument-nav-${option.instrument.toLowerCase()} ${
@@ -61,7 +57,7 @@ const ProductNav = ({
                 alt={`${option.instrument} icon`}
               />
             </Nav.Link>
-          ))}
+          ))} */}
           <NavDropdown title="Categories" id="navbarDropdown">
             {categoryOptions.map((category, index) => (
               <NavDropdown.Item
@@ -82,6 +78,8 @@ const ProductNav = ({
               </NavDropdown.Item>
             ))}
           </NavDropdown>
+          <Button onClick={resetFilters} className="reset-filters">Reset Filters</Button>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>

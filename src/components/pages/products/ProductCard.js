@@ -32,9 +32,9 @@ const ProductDescription = ({ product }) => {
       </Row>
 
       <Row className="product-info-row">
-        {facing && <FacingSection facing={facing} />}
+        {/* {facing && <FacingSection facing={facing} />}
         {bore && <BoreSection bore={bore} />}
-        {tipOpening && <TipOpeningSection tipOpening={tipOpening} />}
+        {tipOpening && <TipOpeningSection tipOpening={tipOpening} />} */}
         {ligatureType && <LigatureTypeSection ligatureType={ligatureType} />}
         {finish && <FinishSection finish={finish} />}
         {accessories && <AccessoriesSection accessories={accessories} />}
