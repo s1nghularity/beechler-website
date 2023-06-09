@@ -101,34 +101,47 @@ export const FinishSection = ({ finish }) => (
 
 
 export const getChipColor = (subtype) => {
+  let color;
   switch (subtype) {
     case "BB":
-      return "skyblue";
+      color = "skyblue";
+      break;
     case "Soprano":
-      return "tomato";
+      color = "tomato";
+      break;
     case "Alto":
-      return "gold";
+      color = "gold";
+      break;
     case "Tenor":
-      return "green";
+      color = "green";
+      break;
     case "Baritone":
-      return "rebeccapurple";
+      color = "rebeccapurple";
+      break;
     default:
-      return "";
+      color = "#000000";
   }
+  const brightness = parseInt(color.replace("#", ""), 16) > 0xffffff / 2 ? '#000000' : '#ffffff';
+  return { backgroundColor: color, color: brightness };
 };
 
-const StyledChip = styled(Chip)(({ subtype }) => {
-  const chipColor = getChipColor(subtype);
+const StyledChip = styled(Chip)(({ theme, subtype }) => {
+  const { backgroundColor, color } = getChipColor(subtype);
   return {
-    backgroundColor: chipColor,
+    backgroundColor,
+    color,
+    fontSize: '1rem', // You can adjust this to increase or decrease the font size
+    fontWeight: 'bold', // Use 'bold' or a numeric value like '700' to increase the font weight
     "& .MuiAvatar-root": {
-      backgroundColor: chipColor,
+      backgroundColor,
+      color,
     },
   };
 });
 
+
 export const CustomChip = ({ subtype, ...rest }) => (
-  <StyledChip subtype={subtype} avatar={<Avatar />} {...rest} />
+  <StyledChip subtype={subtype} {...rest} />
 );
 
 export const ProductIconRow = ({ product }) => {
@@ -161,16 +174,12 @@ export const ProductIconRow = ({ product }) => {
       <Col xs="auto">
         {subtypes.map((subtypeValue, index) => (
           <CustomChip
-            key={index}
-            className="subtype-chip"
-            variant="outlined"
-            size="small"
-            label={subtypeValue}
-            avatar={<Avatar>{subtypeValue[0]}</Avatar>}
-            style={{
-              borderColor: getChipColor(subtypeValue),
-              color: getChipColor(subtypeValue),
-            }}
+          key={index}
+          className="subtype-chip"
+          variant="filled"
+          size="large"
+          label={subtypeValue}
+          subtype={subtypeValue}
           />
         ))}
       </Col>

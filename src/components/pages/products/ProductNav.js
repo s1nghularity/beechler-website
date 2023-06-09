@@ -6,18 +6,14 @@ import clarinetIcon from "../../../assets/img/products/clarinet2.png";
 
 
 const categoryOptions = [
-  "Beechler White Diamond",
+  "Beechler Diamond",
   "Beechler Tonalex",
-  "Beechler Legacy",
-  "Beechler Custom",
   "Beechler Bellite",
-  "Beechler Bellite Custom",
+  "Beechler Hard Rubber",
+  "Beechler Customized",
   "ARB Metal",
-  "ARB Custom Metal",
-  "Beechler & ARB Ligatures", 
-  "Beechler & ARB Caps",
-  "Beechler Pegs",
-  "Accessories",
+  "ARB Great Neck Originals", 
+  "Accessories & Services",
 ];
 
 const subtypeOptions = ["Soprano", "Alto", "Tenor", "Baritone"];
