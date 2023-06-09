@@ -17,15 +17,15 @@
   font-family: "Josefin Sans", sans-serif;
   color: var(--black);
   border-radius: 0.5rem;
-  margin: 0 2rem;
-  padding: 2rem 0;
+
 }
 
 .home-categories h2 {
-  font-family: "Big Shoulders Text", sans-serif;
-  font-size: 4.5rem;
-  font-weight: 500;
-  margin-bottom: 7rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5.5rem;
+  font-weight: 700;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -47,14 +47,14 @@
 }
 
 .category-card img {
-  width: 12rem;
-  height: 16rem;
+  width: 25rem;
+  height: 15rem;
   margin-bottom: 1rem;
 }
 
 .category-card .category-text {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 300;
   position: relative;
   color: var(--black);
   text-decoration: none !important;
@@ -82,22 +82,6 @@
   margin-bottom: 1rem;
 }
 
-.beechler-arb-logo {
-  position: relative;
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0;
-  margin-bottom:-5rem!important;
-  overflow: hidden;
-  background-image: url("../assets/img/blurry2.png");
-  border-radius: 1rem;
-}
-
-.category-line {
-  border-bottom: 2px solid rgba(128, 128, 128, 0.606);
-  margin-top: 1rem;
-  padding-top: 0rem;
-}
 
 @media (max-width: 440px) {
   .home-categories {

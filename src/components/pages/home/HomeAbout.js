@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import about1 from "../../../assets/img/home/about/about1.jpg";
 import about2 from "../../../assets/img/home/about/about2.jpg";
 import about3 from "../../../assets/img/home/about/about3.jpg";
-import about4 from "../../../assets/img/home/remle-ad-1949.jpg";
+import about4 from "../../../assets/img/home/the-hair.png";
 import "../../../styles/HomeAbout.css";
 
 function HomeAbout() {

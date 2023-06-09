@@ -29,18 +29,21 @@
 }
 
 .home-about-left h2 {
-  font-family: "Big Shoulders Text", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 7rem;
-  font-weight: 500;
+  font-weight: 700;
   background: var(--accent);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  letter-spacing: -1rem;
+  transform: translateX(-1rem);
+  margin-right: -2rem;
 }
 
 .about-main-text,
 .about-supplemental-text {
-  font-size: 1.75rem;
+  font-size: 1.95rem;
   color: var(--white);
   margin-top: 1rem;
 }

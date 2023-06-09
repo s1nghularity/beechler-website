@@ -35,7 +35,7 @@ function HomeCategories() {
         <Container>
         <Row className="categories-grid">
             {categories.map((category, index) => (
-              <Col key={index} md={4} sm={6} className="category-col">
+              <Col key={index} lg={6} md={6} sm={12} className="category-col">
                 <Link
                   key={index}
                   to={`/products?category=${encodeURIComponent(category.name)}`}
