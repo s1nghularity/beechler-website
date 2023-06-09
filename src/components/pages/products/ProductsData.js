@@ -61,10 +61,15 @@ import C16 from "../../../assets/img/products/greatneck/C16.png";
 
 
 //ACCESSORIES & SERVICES
-
-
-
-
+//Caps
+import T01A from "../../../assets/img/products/accessories-services/T01A.png";
+import T01B from "../../../assets/img/products/accessories-services/T01B.png";
+import T02 from "../../../assets/img/products/accessories-services/T02.png";   
+//Pegs
+import P01 from "../../../assets/img/products/accessories-services/P01.png";
+import P02 from "../../../assets/img/products/accessories-services/P02.png";
+import P03 from "../../../assets/img/products/accessories-services/P03.png";
+//Ligatures
 
 
 
@@ -493,14 +498,118 @@ export const products = [
   },
 
  
+//ACCESSORIES & SERVICES
+//Caps
+{
+  category: "Accessories & Services",
+  id: "T01S",
+  subtype: ["Soprano"],
+  finish: "Ebonite",
+  price: 27.91,
+  image: T01A,
+},
 
+{
+  category: "Accessories & Services",
+  id: "T01A",
+  subtype: ["Alto"],
+  finish: "Ebonite",
+  image: T01A,
+  price: 27.91,
+},
+{
+  category: "Accessories & Services",
+  id: "T01T",
+  subtype: ["Tenor"],
+  finish: "Metal/Bellite",
+  image: T02,
+  price: 27.91,
+},
+{
+  category: "Accessories & Services",
+  id: "T01B",
+  subtype: ["Baritone"],
+  finish: "Ebonite",
+  image: T01B,
+  price: 27.91,
+},
 
+{
+  category: "Accessories & Services",
+  id: "T02S",
+  subtype: ["Soprano"],
+  finish: "Ebonite",
+  image: T01B,
+  price: 28.50,
+},
+
+{
+  category: "Accessories & Services",
+  id: "T02C",
+  subtype: ["BB"],
+  finish: "Ebonite",
+  image: T01A,
+  price: 28.50,
+},
+
+{
+  category: "Accessories & Services",
+  id: "T02A",
+  subtype: ["Alto"],
+  finish: "Metal/Bellite",
+  image: eboniteT02,
+  price: 28.50,
+},
+
+{
+  category: "Accessories & Services",
+  id: "T02T",
+  subtype: ["Tenor"],
+  finish: "Ebonite",
+  image: T01A,
+  price: 28.50,
+},
+
+{
+  category: "Accessories & Services",
+  id: "T02B",
+  subtype: ["Baritone"],
+  finish: "Metal/Bellite",
+  image: eboniteT02,
+  price: 28.50,
+},
+
+{
+  category: "Accessories & Services",
+  id: "P01",
+  subtype: ["Soprano"],
+  finish: "Ebonite",
+  image: P01,
+  price: 11.88,
+},
+
+{
+  category: "Accessories & Services",
+  id: "P02",
+  subtype: ["BB"],
+  finish: "Ebonite",
+  image: P02,
+  price: 11.88,
+},
+{
+  category: "Accessories & Services",
+  id: "P03",
+  subtype: ["Soprano"],
+  finish: "Ebonite",
+  image: P03,
+  price: 11.88,
+},
 
 
   
 
   {
-    category: "Beechler & ARB Ligatures",
+    category: "Accessories & Services",
     id: "L01/A",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
     finish: "Antique",
@@ -509,10 +618,9 @@ export const products = [
     image: ligAntique,
   },
   {
-    category: "Beechler & ARB Ligatures",
+    category: "Accessories & Services",
     id: "L01/B",
     instrument: null,
-
     subtype: ["BB", "Soprano", "Alto", "Tenor", "Baritone"],
     finish: "Black Powder Coat",
     ligatureType: "Ebonite Inverted",
@@ -520,7 +628,7 @@ export const products = [
     image: ligBlack,
   },
   {
-    category: "Beechler & ARB Ligatures",
+    category: "Accessories & Services",
     id: "L01/P",
     subtype: ["Alto", "Tenor", "BB"],
     finish: "Red & Silver Vein",
@@ -529,7 +637,7 @@ export const products = [
     image: ligPrismatic,
   },
   {
-    category: "Beechler & ARB Ligatures",
+    category: "Accessories & Services",
     id: "L50/B",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
     finish: "Special Black",
@@ -538,7 +646,7 @@ export const products = [
     image: ligMetal,
   },
   {
-    category: "Beechler & ARB Ligatures",
+    category: "Accessories & Services",
     id: "L50/C",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
     finish: "White Bronze",
@@ -547,7 +655,7 @@ export const products = [
     image: ligChrome,
   },
   {
-    category: "Beechler & ARB Ligatures",
+    category: "Accessories & Services",
     id: "L50/G",
     subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
     finish: "Gold Plated",
@@ -556,36 +664,4 @@ export const products = [
     image: ligGold,
   },
 
-  {
-    category: "Beechler & ARB Caps",
-    id: "T01A",
-    subtype: ["Alto"],
-    finish: "Metal/Bellite",
-    image: arbT01,
-    price: 27.91,
-  },
-  {
-    category: "Beechler & ARB Caps",
-    id: "T01B",
-    subtype: ["Baritone"],
-    finish: "Metal/Bellite",
-    image: beechlerT01,
-    price: 27.91,
-  },
-  {
-    category: "Beechler & ARB Caps",
-    id: "T02A",
-    subtype: ["Alto"],
-    finish: "Ebonite",
-    image: eboniteT02,
-    price: 28.50,
-  },
-  {
-    category: "Beechler & ARB Caps",
-    id: "T02B",
-    subtype: ["Baritone"],
-    finish: "Ebonite",
-    image: eboniteT02,
-    price: 28.50,
-  },
 ];
