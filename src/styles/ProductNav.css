@@ -1,3 +1,7 @@
+div .sticky-column {
+  margin-bottom: 50rem;
+}
+
 .products-navbar {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -25,10 +29,7 @@
   margin-left: -1.85rem;
 }
 
-
-
-.static-info
-{
+.static-info {
   border-radius: 5px;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -38,28 +39,35 @@
 }
 
 .dynamic-info-container {
-  width: auto;
+  display: flex;
   border-radius: 5px;
   padding: 1rem;
   background-color: #f8f9fa;
   font-family: Josefin Sans;
   font-size: 1.25rem;
 }
- 
 
 .bore-section {
   background-color: lightgrey;
   font-family: Josefin Sans;
   font-size: 1.25rem;
-
+  border-radius: 5px;
+  padding: 1rem;
+  width: auto;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
 .bore-images img {
   width: 50px; /* adjust size as needed */
   margin-right: 10px;
-
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
-
 
 .dropdown-menu {
   background-color: var(--black) !important;
@@ -78,11 +86,11 @@
 @media (max-width: 440px) {
   .products-navbar {
     width: 23rem;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
   .product-nav-info-container {
-    padding-left: .25rem;
-    margin-right: -.25rem;
+    padding-left: 0.25rem;
+    margin-right: -0.25rem;
   }
 }
 
@@ -108,7 +116,6 @@
     margin-bottom: 25rem;
     margin-left: 0rem;
     max-height: calc(100vh - 50px);
-
   }
 }
 
@@ -121,14 +128,11 @@
     margin-left: -2rem;
     margin-right: 2rem;
     max-height: calc(100vh - 50px);
-
   }
 
   div .navbar-nav {
     margin-left: 2.5rem;
   }
-
-
 }
 
 .reset-filters {

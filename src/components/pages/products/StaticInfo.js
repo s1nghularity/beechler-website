@@ -22,6 +22,9 @@ const StaticInfo = () => {
                 All bite plates on metal mouthpieces are inlaid using rubber and
                 are not applied with epoxy.
               </li>
+              <li>
+              Bellite & Metal mouthpieces cast by the Lost Wax method in surgical stainless steel.
+              </li>
               <li>Saxophone tip openings range from 4-10. </li>
               <li>Clarinet tip openings range from 1-12. </li>
             </ul>

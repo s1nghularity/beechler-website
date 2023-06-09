@@ -26,7 +26,7 @@ const DynamicInfo = ({ infoContent }) => {
 
   return (
 <Container>
-  <Row className="dynamic-info-container">
+  <Row  className="dynamic-info-container">
     <Col md={12}>
       <div className="dynamic-info">
         <h3>{infoContent ? infoContent : "Select a Category"}</h3>
