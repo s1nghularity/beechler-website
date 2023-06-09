@@ -1,37 +1,72 @@
 import "../../../styles/ProductsPage.css";
 
-import wdAlto from "../../../assets/img/products/white-diamond/white-diamond-alto.png";
-import wdTenor from "../../../assets/img/products/white-diamond/white-diamond-tenor.png";
-import wdBaritone from "../../../assets/img/products/white-diamond/white-diamond-baritone.png";
-import wdClarinet from "../../../assets/img/products/white-diamond/white-diamond-clarinet.png";
 
+//DIAMOND
+import wdAlto from "../../../assets/img/products/diamond/white-diamond-alto.png";
+import wdTenor from "../../../assets/img/products/diamond/white-diamond-tenor.png";
+import wdBaritone from "../../../assets/img/products/diamond/white-diamond-baritone.png";
+import wdClarinet from "../../../assets/img/products/diamond/white-diamond-clarinet.png";
+import BL07 from "../../../assets/img/products/diamond/BL07.png";
+import BL0 from "../../../assets/img/products/diamond/BL0.png";
+import BL16 from "../../../assets/img/products/diamond/BL16.png";
+
+
+
+
+//TONALEX
 import taAlto from "../../../assets/img/products/tonalex/tonalex-alto.png";
 import taTenor from "../../../assets/img/products/tonalex/tonalex-tenor.png";
 import taClarinet from "../../../assets/img/products/tonalex/tonalex-clarinet.png";
 
-import arbAlto from "../../../assets/img/products/arb-metal/arb-metal-alto.png";
-import arbTenor from "../../../assets/img/products/arb-metal/arb-metal-tenor.png";
-import arbBaritone from "../../../assets/img/products/arb-metal/arb-metal-baritone.png";
 
-import arbCustomAlto from "../../../assets/img/products/arb-custom/arb-custom-alto.png";
-import arbCustomTenor from "../../../assets/img/products/arb-custom/arb-custom-tenor.png";
-import arbCustomBaritone from "../../../assets/img/products/arb-custom/arb-custom-baritone.png";
 
+
+//BELLITE
+import belliteSoprano from "../../../assets/img/products/bellite/bellite-soprano.png";
+import belliteAlto from "../../../assets/img/products/bellite/bellite-alto.png";
+import belliteTenor from "../../../assets/img/products/bellite/bellite-tenor.png";
+import belliteBaritone from "../../../assets/img/products/bellite/bellite-baritone.png";
+import customBelliteS from "../../../assets/img/products/bellite/custom-bellite-soprano.png";
+import customBelliteA from "../../../assets/img/products/bellite/custom-bellite-alto.png";
+import customBelliteT from "../../../assets/img/products/bellite/custom-bellite-tenor.png";
+import customBelliteB from "../../../assets/img/products/bellite/custom-bellite-baritone.png";
+
+
+
+
+//TODO:HARD RUBBER
+
+
+
+//CUSTOMIZED
 import beechlerDAlto from "../../../assets/img/products/beechler-custom/beechler-custom-d.png";
 import beechlerJazzAlto from "../../../assets/img/products/beechler-custom/beechler-custom-jazz-alto.png";
 import beechlerJazzTenor from "../../../assets/img/products/beechler-custom/beechler-custom-jazz-tenor.png";
 import beechler110 from "../../../assets/img/products/beechler-custom/beechler-custom-110.png";
 import beechlerPell from "../../../assets/img/products/beechler-custom/beechler-custom-pell.png";
 
-import belliteSoprano from "../../../assets/img/products/bellite/bellite-soprano.png";
-import belliteAlto from "../../../assets/img/products/bellite/bellite-alto.png";
-import belliteTenor from "../../../assets/img/products/bellite/bellite-tenor.png";
-import belliteBaritone from "../../../assets/img/products/bellite/bellite-baritone.png";
+//ARB METAL
+import arbAlto from "../../../assets/img/products/arb-metal/arb-metal-alto.png";
+import arbTenor from "../../../assets/img/products/arb-metal/arb-metal-tenor.png";
+import arbBaritone from "../../../assets/img/products/arb-metal/arb-metal-baritone.png";
+import arbCustomAlto from "../../../assets/img/products/arb-custom/arb-custom-alto.png";
+import arbCustomTenor from "../../../assets/img/products/arb-custom/arb-custom-tenor.png";
+import arbCustomBaritone from "../../../assets/img/products/arb-custom/arb-custom-baritone.png";
 
-import customBelliteS from "../../../assets/img/products/custom-bellite/custom-bellite-soprano.png";
-import customBelliteA from "../../../assets/img/products/custom-bellite/custom-bellite-alto.png";
-import customBelliteT from "../../../assets/img/products/custom-bellite/custom-bellite-tenor.png";
-import customBelliteB from "../../../assets/img/products/custom-bellite/custom-bellite-baritone.png";
+//GREAT NECK ORIGINAL
+import A29 from "../../../assets/img/products/greatneck/A29.png";
+import A30 from "../../../assets/img/products/greatneck/A30.png";
+import C15 from "../../../assets/img/products/greatneck/C15.png";
+import C16 from "../../../assets/img/products/greatneck/C16.png";
+
+
+//ACCESSORIES & SERVICES
+
+
+
+
+
+
 
 import ligAntique from "../../../assets/img/products/ligatures/lig-antique.png";
 import ligBlack from "../../../assets/img/products/ligatures/lig-black.png";
@@ -48,128 +83,191 @@ const saxTipOpening = true;
 const clarinetTipOpening = true;
 
 export const products = [
-  {
-    category: "ARB Metal",
-    id: "A81",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    accessories: "Cap & Ligature",
-    price: 498.28,
-    image: arbAlto,
-  },
-  {
-    category: "ARB Metal",
-    id: "A82",
-    instrument: "Saxophone",
-    subtype: "Tenor",
-    accessories: "Cap & Ligature",
-    price: 499.94,
-    image: arbTenor,
-  },
-  {
-    category: "ARB Metal",
-    id: "A83",
-    instrument: "Saxophone",
-    subtype: "Baritone",
-    accessories: "Cap & Ligature",
-    price: 502.31,
-    image: arbBaritone,
-  },
-  {
-    category: "ARB Custom Metal",
-    id: "C12",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    accessories: "Cap & Ligature",
-    price: 554.09,
-    image: arbCustomAlto,
-  },
-  {
-    category: "ARB Custom Metal",
-    id: "C13",
-    instrument: "Saxophone",
-    subtype: "Tenor",
-    accessories: "Cap & Ligature",
-    price: 552.19,
-    image: arbCustomTenor,
-  },
-  {
-    category: "ARB Custom Metal",
-    id: "C14",
-    instrument: "Saxophone",
-    subtype: "Baritone",
-    accessories: "Cap & Ligature",
-    price: 533.19,
-    image: arbCustomBaritone,
-  },
-  {
-    category: "ARB Great Neck Originals",
-    id: "A29",
-    instrument: "Clarinet",
-    subtype: "BB",
-    price: 180.5,
-    image: arbCustomBaritone,
-  },
-  {
-    category: "ARB Great Neck Originals",
-    id: "A30",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    bore: "Large",
-    price: 180.5,
-    image: arbCustomBaritone,
-  },
 
-  {
-    category: "Beechler Custom",
-    id: "C21",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    model: "Custom 'D' Series Model",
-    bore: "Medium",
-    facing: ["Medium"],
-    price: 210.19,
-    image: beechlerDAlto,
-  },
-  {
-    category: "Beechler Custom",
-    id: "C22",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    model: "Custom 'Jazz' Model",
-    settings: "Professional",
-    price: 210.19,
-    image: beechlerJazzAlto,
-  },
-  {
-    category: "Beechler Custom",
-    id: "C24",
-    instrument: "Saxophone",
-    subtype: "Tenor",
-    model: "Jazz Model",
-    bore: "Medium",
-    price: 241.06,
-    image: beechlerJazzTenor,
-  },
-  {
-    category: "Beechler Custom",
-    id: "C27",
-    instrument: "Saxophone",
-    subtype: "Tenor",
-    model: "Dave Pell Model",
-    tipOpenings: "4 to 9",
-    price: 241.06,
-    image: beechlerPell,
-  },
-  {
-    category: "Beechler Custom",
-    id: "C26",
-    instrument: "Saxophone",
-    subtype: "Tenor",
-    model: "110+ Model",
-    price: 241.06,
-    image: beechler110,
-  },
+ //DIAMOND
+ {
+  category: "Beechler Diamond",
+  id: "B07",
+  instrument: "Clarinet",
+  subtype: "BB",
+  bore: null,
+  tipOpening: clarinetTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: wdClarinet,
+  price: 199.38,
+},
+{
+  category: "Beechler Diamond",
+  id: "B10",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  bore: "Small",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: wdAlto,
+  price: 182.76,
+},
+{
+  category: "Beechler Diamond",
+  id: "B11",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  bore: "Medium",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: wdAlto,
+  price: 182.76,
+},
+{
+  category: "Beechler Diamond",
+  id: "B12",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  bore: "Large",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: wdAlto,
+  price: 182.76,
+},
+{
+  category: "Beechler Diamond",
+  id: "B14",
+  instrument: "Saxophone",
+  subtype: "Tenor",
+  bore: "Medium",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: wdTenor,
+  price: 182.76,
+},
+{
+  category: "Beechler Diamond",
+  id: "B16",
+  instrument: "Saxophone",
+  subtype: "Baritone",
+  bore: null,
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  extras: ["Cap", "Ligature"],
+  image: wdBaritone,
+  price: 231.56,
+},
+
+{
+  category: "Beechler Diamond",
+  id: "BL07",
+  instrument: "Clarinet",
+  subtype: "BB",
+  image: BL07,
+  price: 169.00,
+},
+
+{
+  category: "Beechler Diamond",
+  id: "BL10",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  image: BL0,
+  price: 157.00,
+},
+
+{
+  category: "Beechler Diamond",
+  id: "BL11",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  image: BL0,
+  price: 157.00,
+},
+
+{
+  category: "Beechler Diamond",
+  id: "BL12",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  image: BL0,
+  price: 157.00,
+},
+
+{
+  category: "Beechler Diamond",
+  id: "BL14",
+  instrument: "Saxophone",
+  subtype: "Tenor",
+  image: BL0,
+  price: 157.00,
+},
+
+{
+  category: "Beechler Diamond",
+  id: "BL16",
+  instrument: "Saxophone",
+  subtype: "Baritone",
+  image: BL16,
+  price: 194.00,
+},
+
+
+
+//TONALEX//
+{
+  category: "Beechler Tonalex",
+  id: "B17",
+  instrument: "Clarinet",
+  subtype: "BB",
+  bore: null,
+  tipOpening: clarinetTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: taClarinet,
+  price: 210.54,
+},
+{
+  category: "Beechler Tonalex",
+  id: "B18",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  bore: "Large",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: taAlto,
+  price: 189.17,
+},
+{
+  category: "Beechler Tonalex",
+  id: "B20",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  bore: "Small",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: taAlto,
+  price: 189.17,
+},
+{
+  category: "Beechler Tonalex",
+  id: "B21",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  bore: "Medium",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: taAlto,
+  price: 189.17,
+},
+{
+  category: "Beechler Tonalex",
+  id: "B19",
+  instrument: "Saxophone",
+  subtype: "Tenor",
+  bore: "Medium",
+  tipOpening: saxTipOpening,
+  facing: ["Standard", "Medium", "Long"],
+  image: taTenor,
+  price: 189.17,
+},
+
+//BELLITE
+
   {
     category: "Beechler Bellite",
     id: "B80",
@@ -207,7 +305,7 @@ export const products = [
     image: belliteBaritone,
   },
   {
-    category: "Custom Beechler Bellite",
+    category: "Beechler Bellite",
     id: "C31",
     instrument: "Saxophone",
     subtype: "Soprano",
@@ -216,7 +314,7 @@ export const products = [
     image: customBelliteS,
   },
   {
-    category: "Custom Beechler Bellite",
+    category: "Beechler Bellite",
     id: "C32",
     instrument: "Saxophone",
     subtype: "Alto",
@@ -225,7 +323,7 @@ export const products = [
     image: customBelliteA,
   },
   {
-    category: "Custom Beechler Bellite",
+    category: "Beechler Bellite",
     id: "C33",
     instrument: "Saxophone",
     subtype: "Tenor",
@@ -234,7 +332,7 @@ export const products = [
     image: customBelliteT,
   },
   {
-    category: "Custom Beechler Bellite",
+    category: "Beechler Bellite",
     id: "C34",
     instrument: "Saxophone",
     subtype: "Baritone",
@@ -243,131 +341,163 @@ export const products = [
     image: customBelliteB,
   },
 
-  //BEECHLER WHITE DIAMOND//
+//TODO:ADD HARD RUBBERB25 B25/C B26 B26/C B22 B28 B29
+
+//CUSTOMIZED
+
+{
+  category: "Beechler Customized",
+  id: "C21",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  model: "Custom 'D' Series Model",
+  bore: "Medium",
+  facing: ["Medium"],
+  price: 210.19,
+  image: beechlerDAlto,
+},
+{
+  category: "Beechler Customized",
+  id: "C22",
+  instrument: "Saxophone",
+  subtype: "Alto",
+  model: "Custom 'Jazz' Model",
+  settings: "Professional",
+  price: 210.19,
+  image: beechlerJazzAlto,
+},
+{
+  category: "Beechler Customized",
+  id: "C24",
+  instrument: "Saxophone",
+  subtype: "Tenor",
+  model: "Jazz Model",
+  bore: "Medium",
+  price: 241.06,
+  image: beechlerJazzTenor,
+},
+{
+  category: "Beechler Customized",
+  id: "C27",
+  instrument: "Saxophone",
+  subtype: "Tenor",
+  model: "Dave Pell Model",
+  tipOpenings: "4 to 9",
+  price: 241.06,
+  image: beechlerPell,
+},
+{
+  category: "Beechler Customized",
+  id: "C26",
+  instrument: "Saxophone",
+  subtype: "Tenor",
+  model: "110+ Model",
+  price: 241.06,
+  image: beechler110,
+},
+
+
+//ARB METAL
+
   {
-    category: "Beechler White Diamond",
-    id: "B07",
-    instrument: "Clarinet",
-    subtype: "BB",
-    bore: null,
-    tipOpening: clarinetTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: wdClarinet,
-    price: 199.38,
-  },
-  {
-    category: "Beechler White Diamond",
-    id: "B10",
+    category: "ARB Metal",
+    id: "A81",
     instrument: "Saxophone",
     subtype: "Alto",
-    bore: "Small",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: wdAlto,
-    price: 182.76,
+    accessories: "Cap & Ligature",
+    price: 498.28,
+    image: arbAlto,
   },
   {
-    category: "Beechler White Diamond",
-    id: "B11",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    bore: "Medium",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: wdAlto,
-    price: 182.76,
-  },
-  {
-    category: "Beechler White Diamond",
-    id: "B12",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    bore: "Large",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: wdAlto,
-    price: 182.76,
-  },
-  {
-    category: "Beechler White Diamond",
-    id: "B14",
+    category: "ARB Metal",
+    id: "A82",
     instrument: "Saxophone",
     subtype: "Tenor",
-    bore: "Medium",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: wdTenor,
-    price: 182.76,
+    accessories: "Cap & Ligature",
+    price: 499.94,
+    image: arbTenor,
   },
   {
-    category: "Beechler White Diamond",
-    id: "B16",
+    category: "ARB Metal",
+    id: "A83",
     instrument: "Saxophone",
     subtype: "Baritone",
-    bore: null,
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    extras: ["Cap", "Ligature"],
-    image: wdBaritone,
-    price: 231.56,
+    accessories: "Cap & Ligature",
+    price: 502.31,
+    image: arbBaritone,
+  },
+  {
+    category: "ARB Metal",
+    id: "C12",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    accessories: "Cap & Ligature",
+    price: 554.09,
+    image: arbCustomAlto,
+  },
+  {
+    category: "ARB Metal",
+    id: "C13",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    accessories: "Cap & Ligature",
+    price: 552.19,
+    image: arbCustomTenor,
+  },
+  {
+    category: "ARB Metal",
+    id: "C14",
+    instrument: "Saxophone",
+    subtype: "Baritone",
+    accessories: "Cap & Ligature",
+    price: 533.19,
+    image: arbCustomBaritone,
   },
 
-  //BEECHLER TONALEX//
+
+//GREAT NECK ORIGINALS
+
   {
-    category: "Beechler Tonalex",
-    id: "B17",
+    category: "ARB Great Neck Originals",
+    id: "A29",
     instrument: "Clarinet",
     subtype: "BB",
-    bore: null,
-    tipOpening: clarinetTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: taClarinet,
-    price: 210.54,
+    price: 180.5,
+    image: A29,
   },
   {
-    category: "Beechler Tonalex",
-    id: "B18",
+    category: "ARB Great Neck Originals",
+    id: "A30",
     instrument: "Saxophone",
     subtype: "Alto",
     bore: "Large",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: taAlto,
-    price: 189.17,
+    price: 180.5,
+    image: A30,
   },
   {
-    category: "Beechler Tonalex",
-    id: "B20",
+    category: "ARB Great Neck Originals",
+    id: "C15",
+    instrument: "Clarinet",
+    subtype: "BB",
+    price: 180.5,
+    image: C15,
+  },
+  {
+    category: "ARB Great Neck Originals",
+    id: "C16",
     instrument: "Saxophone",
     subtype: "Alto",
-    bore: "Small",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: taAlto,
-    price: 189.17,
+    price: 280,
+    image: C16,
+
   },
-  {
-    category: "Beechler Tonalex",
-    id: "B21",
-    instrument: "Saxophone",
-    subtype: "Alto",
-    bore: "Medium",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: taAlto,
-    price: 189.17,
-  },
-  {
-    category: "Beechler Tonalex",
-    id: "B19",
-    instrument: "Saxophone",
-    subtype: "Tenor",
-    bore: "Medium",
-    tipOpening: saxTipOpening,
-    facing: ["Standard", "Medium", "Long"],
-    image: taTenor,
-    price: 189.17,
-  },
+
+ 
+
+
+
+
+  
 
   {
     category: "Beechler & ARB Ligatures",

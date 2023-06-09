@@ -14,7 +14,7 @@ const categoryOptions = [
   "Beechler Bellite Custom",
   "ARB Metal",
   "ARB Custom Metal",
-  "Beechler & ARB Ligatures",
+  "Beechler & ARB Ligatures", 
   "Beechler & ARB Caps",
   "Beechler Pegs",
   "Accessories",

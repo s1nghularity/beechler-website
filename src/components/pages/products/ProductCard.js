@@ -39,9 +39,8 @@ const ProductDescription = ({ product }) => {
         {finish && <FinishSection finish={finish} />}
         {accessories && <AccessoriesSection accessories={accessories} />}
         {model && <ModelSection model={model} />}
+        <Card.Text className="price">${price}</Card.Text>
       </Row>
-
-      <Card.Text className="price mt-auto">${price}</Card.Text>
     </Card>
   );
 };
