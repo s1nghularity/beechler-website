@@ -1,9 +1,6 @@
 // Import necessary dependencies
 import React from "react";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
-import saxIcon from "../../../assets/img/products/sax2.png";
-import clarinetIcon from "../../../assets/img/products/clarinet2.png";
-
 
 const categoryOptions = [
   "Beechler Diamond",

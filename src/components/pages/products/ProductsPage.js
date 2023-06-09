@@ -5,7 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
 
 import ProductNav from "./ProductNav";
-import ProductNavInfo from "./ProductNavInfo";
+import StaticInfo from "./StaticInfo";
+import DynamicInfo from "./DynamicInfo";
 import ProductsGrid from "./ProductsGrid.js";
 import { products } from "./ProductsData.js";
 import EmailSignup from "./EmailSignup.js";
@@ -114,9 +115,10 @@ const ProductsPage = () => {
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
+          <StaticInfo />
 
 
-          <ProductNavInfo infoContent={selectedCategory} selectedInstrument={selectedInstrument} />
+
 
             <Button href="/dealers" className="find-dealer">
               Find a store near you!
@@ -126,6 +128,9 @@ const ProductsPage = () => {
         <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
         </Col>
+
+        <DynamicInfo infoContent={selectedCategory} selectedInstrument={selectedInstrument} />
+
 
         <Row sm={12} md={12} lg={12} xl={12}>
           <div className="product-email-signup">

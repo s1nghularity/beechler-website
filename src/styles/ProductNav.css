@@ -21,37 +21,45 @@
   position: -webkit-sticky !important;
   position: sticky !important;
   flex-direction: column;
+  width: 28rem;
+  margin-left: -1.85rem;
 }
 
-.static-info,
-.dynamic-info {
+
+
+.static-info
+{
   border-radius: 5px;
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: #f8f9fa;
   font-family: Josefin Sans;
+  font-size: 1.25rem;
 }
 
-.instrument-icon img {
-  transition: background-color 0.3s ease;
+.dynamic-info-container {
+  width: auto;
   border-radius: 5px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  font-family: Josefin Sans;
+  font-size: 1.25rem;
+}
+ 
+
+.bore-section {
+  background-color: lightgrey;
+  font-family: Josefin Sans;
+  font-size: 1.25rem;
+
 }
 
-.instrument-nav-sax:hover,
-.instrument-nav-clar:hover {
-  background-color: darkcyan;
+.bore-images img {
+  width: 50px; /* adjust size as needed */
+  margin-right: 10px;
+
 }
 
-.instrument-nav-sax.selected img,
-.instrument-nav-clar.selected img {
-  background-color: darkcyan;
-}
-
-.instrument-nav-sax,
-.instrument-nav-clar {
-  margin-left: 0.5rem;
-  margin-right: 1rem;
-}
 
 .dropdown-menu {
   background-color: var(--black) !important;
