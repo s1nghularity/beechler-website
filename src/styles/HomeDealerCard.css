@@ -33,11 +33,11 @@
 
 
 .home-dealer-title h2 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 700;
   padding-top: 1rem;
   color: var(--white);
-  font-family: 'Big Shoulders Text', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
 }
 

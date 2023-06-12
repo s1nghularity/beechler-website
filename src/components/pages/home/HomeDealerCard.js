@@ -58,7 +58,7 @@ const HomeDealerCard = () => {
     <div className="stripe-home-dealer">
       
       <div className="home-dealer-title">
-      <h2>Musician's Choice All Over The World</h2>
+      <h2>Internationally Adored <br/>By Artists & Dealers</h2>
       </div>
       <HomeArtistCard />
 

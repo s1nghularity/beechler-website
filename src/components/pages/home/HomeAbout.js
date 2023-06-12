@@ -59,13 +59,7 @@ function HomeAbout() {
           <div>
             <h2>OUR STORY</h2>
             <p className="about-main-text">
-              Ever since we broke the mold with our sensational chrome-lined
-              Alto Sax mouthpiece, musicians have loved our work.
-            </p>
-            <p className="about-supplemental-text">
-              Join the ranks of saxophonists and woodwind players who trust
-              Beechler for their mouthpiece and accessory needs. Elevate your
-              playing experience today.
+            Musicians have always loved our work.<br/><br/> Join the ranks of saxophonists and woodwind players who trust Beechler for their mouthpiece and accessory needs.<br/><br/> <i> Elevate your playing experience today.</i>
             </p>
           </div>
         </Col>

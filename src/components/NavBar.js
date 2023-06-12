@@ -48,6 +48,7 @@ function NavBar() {
   };
 
   const links = [
+    { path: "/", label: "Home" },
     { path: "/products", label: "Products" },
     { path: "/tip-openings", label: "Tip Openings" },
     { path: "/dealers", label: "Dealers" },

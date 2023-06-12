@@ -63,7 +63,7 @@ function HomeContact() {
             />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
             <button type="submit" disabled={state.submitting}>
-              We'll get back to you ASAP
+              Contact Us
             </button>
           </form>
         </Card>
