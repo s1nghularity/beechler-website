@@ -46,7 +46,6 @@
 }
 
 .contact-form button {
-  /*ensure button is on the right not left*/
   margin-left: auto;
   display: block;
   font-weight: 500;
