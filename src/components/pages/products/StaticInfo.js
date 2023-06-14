@@ -1,6 +1,12 @@
 import React from "react";
 import { Container} from "react-bootstrap";
 import "../../../styles/ProductInfo.css";
+import saxIcon from "../../../assets/img/products/sax2.png";
+import clarinetIcon from "../../../assets/img/products/clarinet2.png";
+
+/*TO ADD: a clarinet or saxophone icon next to the text in tipopenings where apprioriate 
+*/
+
 
 const StaticInfo = () => {
   return (
@@ -25,8 +31,8 @@ const StaticInfo = () => {
               <li>
               Bellite & Metal mouthpieces cast by the Lost Wax method in surgical stainless steel.
               </li>
-              <li>Saxophone tip openings: 4-10 </li>
-              <li>Clarinet tip openings: 1-12 </li>
+              <li>Saxophone tip openings: 4-10 <img alt="saxophone icon"> {saxIcon} </img> </li>
+              <li>Clarinet tip openings: 1-12 <img alt="clarinet icon"> {clarinetIcon} </img></li>
             </ul>
           </div>
 
