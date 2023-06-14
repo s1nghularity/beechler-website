@@ -23,7 +23,7 @@ const categories = [
   { name: "Beechler Hard Rubber", type: "beechler", image: diamond },  /*TODO:NEED HARD RUBBER*/
   { name: "Beechler Customized", type: "beechler", image: customized },
   { name: "ARB Metal", type: "arb", image: arb },
-  { name: "Great Neck Original", type: "arb", image: gnog },
+  { name: "ARB Great Neck Originals", type: "arb", image: gnog },
   { name: "Accessories & Services", type: "both", image: accessories },
 ];
 
