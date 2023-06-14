@@ -6,6 +6,20 @@ import largeBore from "../../../assets/img/products/accessories-services/large-b
 
 import "../../../styles/ProductNav.css";
 
+const InfoCard = ({ title, text }) => {
+  if (!text) {
+    return null;
+  }
+  return (
+    <Card>
+      <Card.Title>{title}</Card.Title>
+      <Card.Body>
+        <Card.Text>{text}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
+};
+
 const DynamicInfo = ({ infoContent }) => {
   const productInfo = {
     "Beechler Diamond": {
@@ -190,8 +204,8 @@ const DynamicInfo = ({ infoContent }) => {
   const currentProduct = productInfo[infoContent];
 
   return (
-    <Container>
-      <Row className="dynamic-info-container">
+    <Container className="product-d-info">
+    <Row className="dynamic-info-container">
         <Col md={12}>
           <div className="dynamic-info">
             <h3>{infoContent ? infoContent : "Select a Category"}</h3>
@@ -213,39 +227,30 @@ const DynamicInfo = ({ infoContent }) => {
                   }`}
                 >
                   <Col md={3}>
-                    {currentProduct.facings &&
-                      currentProduct.facings.length > 0 && (
-                        <FacingSection facing={currentProduct.facings} />
-                      )}
+                    <InfoCard
+                      title="Facings"
+                      text={currentProduct.facings?.join(", ")}
+                    />
                   </Col>
 
                   <Col md={3}>
-                    {currentProduct.tipOpenings && (
-                      <TipOpeningSection
-                        tipOpening={currentProduct.tipOpenings}
-                      />
-                    )}
+                    <InfoCard
+                      title="Tip Openings"
+                      text={Object.entries(currentProduct.tipOpenings || {})
+                        .map(([key, val]) => `${key}: ${val}`)
+                        .join(", ")}
+                    />
                   </Col>
 
                   <Col md={3}>
-                    {currentProduct.material && (
-                      <Card>
-                        <Card.Header className="card-title">
-                          Material
-                        </Card.Header>
-                        <Card.Body className="card-body">
-                          <Card.Text>{currentProduct.material}</Card.Text>
-                        </Card.Body>
-                      </Card>
-                    )}
+                    <InfoCard title="Material" text={currentProduct.material} />
                   </Col>
 
                   <Col md={3}>
-                    {currentProduct.additionalFeatures && (
-                      <AdditionalFeaturesSection
-                        additionalFeatures={currentProduct.additionalFeatures}
-                      />
-                    )}
+                    <InfoCard
+                      title="Additional Features"
+                      text={currentProduct.additionalFeatures?.join(", ")}
+                    />
                   </Col>
                 </Row>
               </>
