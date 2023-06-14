@@ -5,30 +5,15 @@
 }
 
 .navbar a:hover {
-  color: var(--nav-accent);
-}
-
-.product-info .card-title {
-  font-weight: 700;
-  background-color: grey;
-  color: white;
-}
-
-.product-info .card-body {
-  font-weight: 500;
-  background-color: white;
-  color: black;
+  color: var(--accent);
 }
 
 .reset-filters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin-left: auto;
   border-radius: 5px;
   font-family: Josefin Sans;
-  font-size: 1rem;
   font-weight: 700;
-  color: rgb(255, 255, 255);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -58,96 +43,4 @@
   border-radius: 5px;
 }
 
-/* Product nav info container styles */
-.product-nav-info-container {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  flex-direction: column;
-  width: 28rem;
-  margin-left: -1.85rem;
-}
 
-.product-info .dynamic-info-container {
-  display: flex;
-  border-radius: 5px;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  font-family: Josefin Sans;
-  font-size: 1.25rem;
-}
-
-/* Bore section styles */
-.product-info .bore-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.product-info .bore-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.product-info .bore-card {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.product-info .single-bore {
-  flex-direction: row;
-}
-
-/* Info section styles */
-.product-info .info-row {
-  flex-direction: column;
-}
-
-/* Media queries */
-@media (max-width: 440px) {
-  .products-navbar {
-    width: 23rem;
-    margin-left: 0.5rem;
-  }
-  .product-nav-info-container {
-    padding-left: 0.25rem;
-    margin-right: -0.25rem;
-  }
-}
-
-@media (min-width: 441px) and (max-width: 767px) {
-  .products-navbar {
-    width: 23rem;
-    margin-left: 10rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .products-navbar {
-    width: 25rem;
-    margin-left: 10rem;
-  }
-}
-
-@media (min-width: 1080px) {
-  .product-nav-info-container {
-    position: sticky;
-    z-index: 4;
-    top: 0;
-    margin-bottom: 25rem;
-    margin-left: 0rem;
-    max-height: calc(100vh - 50px);
-  }
-}
-
-@media (min-width: 1200px) {
-  .product-nav-info-container {
-    position: sticky;
-    z-index: 4;
-    top: 0;
-    margin-bottom: 25rem;
-    margin-left: -2rem;
-    margin-right: 2rem;
-    max-height: calc(100vh - 50px);
-  }
-}

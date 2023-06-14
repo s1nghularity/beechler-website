@@ -48,7 +48,6 @@ const ProductsPage = () => {
       setFilterApplied(false);
     }
   };
-  
 
   const showToast = () => {
     toast.error("No products available for the selected filters.", {
@@ -83,7 +82,6 @@ const ProductsPage = () => {
       }
     }
   }, [filteredProducts, filterApplied]);
-  
 
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
@@ -99,7 +97,6 @@ const ProductsPage = () => {
       }
     }
   }, [location.search]);
-  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -117,20 +114,18 @@ const ProductsPage = () => {
           />
           <StaticInfo />
 
-
-
-
-            <Button href="/dealers" className="find-dealer">
-              Find a store near you!
-            </Button>
-
+          <Button href="/dealers" className="find-dealer">
+            Find a store near you!
+          </Button>
         </Col>
         <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
         </Col>
 
-        <DynamicInfo infoContent={selectedCategory} selectedInstrument={selectedInstrument} />
-
+        <DynamicInfo
+          infoContent={selectedCategory}
+          selectedInstrument={selectedInstrument}
+        />
 
         <Row sm={12} md={12} lg={12} xl={12}>
           <div className="product-email-signup">

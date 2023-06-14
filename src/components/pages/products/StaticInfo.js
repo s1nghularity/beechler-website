@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container} from "react-bootstrap";
+import "../../../styles/ProductInfo.css";
 
 const StaticInfo = () => {
   return (
     <Container>
-      <Row className="product-nav-info-container">
-        <Col>
+
           <div className="static-info">
-            <h3>General Product Information</h3>
+            <h2>General FAQs</h2>
             <ul>
               <li>
                 All Beechler and ARB mouthpieces have been lab tested and proven
@@ -25,12 +25,11 @@ const StaticInfo = () => {
               <li>
               Bellite & Metal mouthpieces cast by the Lost Wax method in surgical stainless steel.
               </li>
-              <li>Saxophone tip openings range from 4-10. </li>
-              <li>Clarinet tip openings range from 1-12. </li>
+              <li>Saxophone tip openings: 4-10 </li>
+              <li>Clarinet tip openings: 1-12 </li>
             </ul>
           </div>
-        </Col>
-      </Row>
+
     </Container>
   );
 };

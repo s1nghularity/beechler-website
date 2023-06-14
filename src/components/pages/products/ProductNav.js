@@ -34,23 +34,7 @@ const ProductNav = ({
       <Navbar.Toggle aria-controls="navbarToggler" />
       <Navbar.Collapse id="navbarToggler">
         <Nav>
-          {/* {instrumentOptions.map((option, index) => (
-            <Nav.Link
-              key={index}
-              className={`instrument-nav-${option.instrument.toLowerCase()} ${
-                option.instrument === selectedInstrument ? "selected" : ""
-              }`}
-              title="Instrument Type"
-              id="navInstrument"
-              onClick={() => handleInstrumentClick(option.instrument)}
-            >
-              <img
-                className="instrument-icon"
-                src={option.icon}
-                alt={`${option.instrument} icon`}
-              />
-            </Nav.Link>
-          ))} */}
+
           <NavDropdown title="Categories" id="navbarDropdown">
             {categoryOptions.map((category, index) => (
               <NavDropdown.Item

@@ -4,16 +4,16 @@ import smallBore from "../../../assets/img/products/accessories-services/small-b
 import mediumBore from "../../../assets/img/products/accessories-services/medium-bore.png";
 import largeBore from "../../../assets/img/products/accessories-services/large-bore.png";
 
-import "../../../styles/ProductNav.css";
+import "../../../styles/ProductInfo.css";
 
 const InfoCard = ({ title, text }) => {
   if (!text) {
     return null;
   }
   return (
-    <Card>
-      <Card.Title>{title}</Card.Title>
-      <Card.Body>
+    <Card className="info-card">
+      <Card.Header className="info-card-header">{title}</Card.Header>
+      <Card.Body className="info-card-body">
         <Card.Text>{text}</Card.Text>
       </Card.Body>
     </Card>
@@ -142,11 +142,16 @@ const DynamicInfo = ({ infoContent }) => {
     return (
       <Row className={`bore-row ${bores.length === 1 ? "single-bore" : ""}`}>
         {bores.map((bore) => (
-          <Col md={4} key={bore} className="bore-col">
+          <Col md={4} key={bore}>
             <Card className="bore-card">
-              <Card.Header className="card-title">Bore Sizes</Card.Header>
-              <Card.Img variant="top" src={boreImages[bore].image} alt={bore} />
-              <Card.Body className="card-body">
+              <Card.Header className="bore-card-title">{bore} Bore</Card.Header>
+              <Card.Img
+                className="bore-card-image"
+                variant="top"
+                src={boreImages[bore].image}
+                alt={bore}
+              />
+              <Card.Body className="bore-card-body">
                 <Card.Text>{boreImages[bore].description}</Card.Text>
               </Card.Body>
             </Card>
@@ -156,76 +161,30 @@ const DynamicInfo = ({ infoContent }) => {
     );
   };
 
-  const FacingSection = ({ facing }) => {
-    if (!facing || facing.length === 0) {
-      return null;
-    }
-    return (
-      <Card>
-        <Card.Title>Facings</Card.Title>
-        <Card.Body>
-          <Card.Text>{facing.join(", ")}</Card.Text>
-        </Card.Body>
-      </Card>
-    );
-  };
-
-  const TipOpeningSection = ({ tipOpening }) => {
-    if (!tipOpening) {
-      return null;
-    }
-    const tipOpenings = Object.keys(tipOpening).map(
-      (key) => `${key}: ${tipOpening[key]}`
-    );
-    return (
-      <Card>
-        <Card.Title>Tip Openings</Card.Title>
-        <Card.Body>
-          <Card.Text>{tipOpenings.join(", ")}</Card.Text>
-        </Card.Body>
-      </Card>
-    );
-  };
-
-  const AdditionalFeaturesSection = ({ additionalFeatures }) => {
-    if (!additionalFeatures) {
-      return null;
-    }
-    return (
-      <Card>
-        <Card.Title>Additional Features</Card.Title>
-        <Card.Body>
-          <Card.Text>{additionalFeatures.join(", ")}</Card.Text>
-        </Card.Body>
-      </Card>
-    );
-  };
-
   const currentProduct = productInfo[infoContent];
 
   return (
-    <Container className="product-d-info">
-    <Row className="dynamic-info-container">
-        <Col md={12}>
-          <div className="dynamic-info">
-            <h3>{infoContent ? infoContent : "Select a Category"}</h3>
-            {currentProduct ? (
-              <>
-                <Card className="product-description-card">
-                  <Card.Body>
-                    <Card.Text>{currentProduct.description}</Card.Text>
-                  </Card.Body>
-                </Card>
+    <Container className="dynamic-info">
+      <Row>
+        <h3>{infoContent ? infoContent : "Select a Category"}</h3>
+        {currentProduct ? (
+          <>
+            <Card className="product-description" md={6}>
+              <Card.Body>
+                <Card.Text>{currentProduct.description}</Card.Text>
+              </Card.Body>
+            </Card>
 
-                <BoreSection bores={currentProduct.bores} />
-
-                <Row
-                  className={`info-row ${
-                    currentProduct.bores && currentProduct.bores.length === 1
-                      ? "info-row-next"
-                      : ""
-                  }`}
-                >
+            <BoreSection bores={currentProduct.bores} />
+            <Row className="info-row">
+              <Col
+                md={
+                  currentProduct.bores && currentProduct.bores.length === 1
+                    ? 9
+                    : 12
+                }
+              >
+                <Row>
                   <Col md={3}>
                     <InfoCard
                       title="Facings"
@@ -253,16 +212,16 @@ const DynamicInfo = ({ infoContent }) => {
                     />
                   </Col>
                 </Row>
-              </>
-            ) : (
-              <Card className="product-description-card">
-                <Card.Body>
-                  <Card.Text>Please select a category</Card.Text>
-                </Card.Body>
-              </Card>
-            )}
-          </div>
-        </Col>
+              </Col>
+            </Row>
+          </>
+        ) : (
+          <Card className="product-description-card">
+            <Card.Body>
+              <Card.Text>Please select a category</Card.Text>
+            </Card.Body>
+          </Card>
+        )}
       </Row>
     </Container>
   );
