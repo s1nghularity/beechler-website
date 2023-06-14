@@ -158,59 +158,59 @@ export const products = [
   price: 231.56,
 },
 
-{
-  category: "Beechler Diamond",
-  id: "BL07",
-  instrument: "Clarinet",
-  subtype: "BB",
-  image: BL07,
-  price: 169.00,
-},
+// {
+//   category: "Beechler Diamond",
+//   id: "BL07",
+//   instrument: "Clarinet",
+//   subtype: "BB",
+//   image: BL07,
+//   price: 169.00,
+// },
 
-{
-  category: "Beechler Diamond",
-  id: "BL10",
-  instrument: "Saxophone",
-  subtype: "Alto",
-  image: BL0,
-  price: 157.00,
-},
+// {
+//   category: "Beechler Diamond",
+//   id: "BL10",
+//   instrument: "Saxophone",
+//   subtype: "Alto",
+//   image: BL0,
+//   price: 157.00,
+// },
 
-{
-  category: "Beechler Diamond",
-  id: "BL11",
-  instrument: "Saxophone",
-  subtype: "Alto",
-  image: BL0,
-  price: 157.00,
-},
+// {
+//   category: "Beechler Diamond",
+//   id: "BL11",
+//   instrument: "Saxophone",
+//   subtype: "Alto",
+//   image: BL0,
+//   price: 157.00,
+// },
 
-{
-  category: "Beechler Diamond",
-  id: "BL12",
-  instrument: "Saxophone",
-  subtype: "Alto",
-  image: BL0,
-  price: 157.00,
-},
+// {
+//   category: "Beechler Diamond",
+//   id: "BL12",
+//   instrument: "Saxophone",
+//   subtype: "Alto",
+//   image: BL0,
+//   price: 157.00,
+// },
 
-{
-  category: "Beechler Diamond",
-  id: "BL14",
-  instrument: "Saxophone",
-  subtype: "Tenor",
-  image: BL0,
-  price: 157.00,
-},
+// {
+//   category: "Beechler Diamond",
+//   id: "BL14",
+//   instrument: "Saxophone",
+//   subtype: "Tenor",
+//   image: BL0,
+//   price: 157.00,
+// },
 
-{
-  category: "Beechler Diamond",
-  id: "BL16",
-  instrument: "Saxophone",
-  subtype: "Baritone",
-  image: BL16,
-  price: 194.00,
-},
+// {
+//   category: "Beechler Diamond",
+//   id: "BL16",
+//   instrument: "Saxophone",
+//   subtype: "Baritone",
+//   image: BL16,
+//   price: 194.00,
+// },
 
 
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import CheckCircle from "@mui/icons-material/CheckCircle";
 import smallBore from "../../../assets/img/products/accessories-services/small-bore.png";
 import mediumBore from "../../../assets/img/products/accessories-services/medium-bore.png";
 import largeBore from "../../../assets/img/products/accessories-services/large-bore.png";
@@ -11,14 +10,17 @@ const DynamicInfo = ({ infoContent }) => {
   const productInfo = {
     "Beechler Diamond": {
       description:
-        "Beechler Diamond Inlay alto and tenor mouthpieces come in three bore sizes. The Small bore has a medium high baffle and horseshoe shaped chamber producing a fast air column and generating a powerful and brilliant sound rich in overtones. The Medium bore has an open style baffle and open chamber producing a medium fast air column allowing for the production of subtleties of sound while maintaining ease of projection. The Large Bore has a medium baffle and open chamber which produce a rich saxophone sound. The Clarinet and Baritone are designed with a medium open chamber and medium baffle. The material used for these mouthpieces is a sturdy combination of the qualities of traditional hard rubber and new age plastics designed to utilize the full dynamic range of the instrument.",
+        "Beechler Diamond Inlay Alto and Tenor mouthpieces come in three bore sizes. The Clarinet and Baritone are designed with a medium open chamber and medium baffle. The material used for these mouthpieces is a sturdy combination of the qualities of traditional hard rubber and new age plastics designed to utilize the full dynamic range of the instrument.",
       bores: ["Small", "Medium", "Large"],
       facings: ["Standard", "Medium", "Long"],
       tipOpenings: {
-        Sax: "4-10",
+        Saxophones: "4-10",
         Clarinets: "Up to 12",
       },
       material: "Hard Rubber and Plastics",
+      additionalFeatures: [
+        "Beechler Black mouthpieces are available upon request.",
+      ],
     },
 
     "Beechler Tonalex": {
@@ -27,7 +29,7 @@ const DynamicInfo = ({ infoContent }) => {
       bores: ["Small", "Medium", "Large"],
       facings: ["Standard", "Medium", "Long"],
       tipOpenings: {
-        Sax: "4-10",
+        Saxophones: "4-10",
         Clarinets: "Up to 12",
       },
       material: "White Acoustic Resin",
@@ -35,7 +37,7 @@ const DynamicInfo = ({ infoContent }) => {
 
     "Beechler Bellite": {
       description:
-        "The Beechler Bellite Metal Mouthpiece is cast from the finest surgical stainless steel. This material is free from corrosion, breakage, or change in playing characteristics. They are cast at a temperature of 2000 degrees and will maintain consistent durability. The hardness of this metal provides an ultra fast response time to bring out the brilliance of the overtone series. The Bellite alto and tenor models feature a medium high baffle and open chamber which supports a brilliant contemporary sound as well as a subdued ballad sound. The Bellite Soprano and Baritone have an open baffle. Ligatures and caps are provided with all Beechler Bellite mouthpieces.",
+        "Beechler Bellite Metal Mouthpiece is cast from the finest surgical stainless steel. This material is free from corrosion, breakage, or change in playing characteristics. They are cast at a temperature of 2000 degrees and will maintain consistent durability. The hardness of this metal provides an ultra fast response time to bring out the brilliance of the overtone series. The Bellite alto and tenor models feature a medium high baffle and open chamber which supports a brilliant contemporary sound as well as a subdued ballad sound. The Bellite Soprano and Baritone have an open baffle. Ligatures and caps are provided with all Beechler Bellite mouthpieces.",
       bores: ["Medium"],
       facings: ["Medium", "Long"],
       tipOpenings: "4-10",
@@ -52,17 +54,19 @@ const DynamicInfo = ({ infoContent }) => {
       bores: ["Medium"],
       facings: ["Medium", "Long"],
       tipOpenings: {
-        Sax: "4-10",
+        Saxophones: "4-10",
       },
       material: "Hard Rubber",
     },
 
     "ARB Metal": {
       description:
-        "The ARB metal mouthpieces feature high baffles and step off chambers for the Alto, Tenor, and Baritone. The Soprano has a medium open chamber and medium baffle. They are extremely versatile and can be played with extraordinary brightness or with a soft afid mellow sound. These mouthpieces are the culmination of years of development in arriving at the best playing combination of tone chambers, facings, and density of metal. They have excellent brilliance, response, and depth of tone.",
+        "ARB metal mouthpieces feature high baffles and step off chambers for the Alto, Tenor, and Baritone. The Soprano has a medium open chamber and medium baffle. They are extremely versatile and can be played with extraordinary brightness or with a soft afid mellow sound. These mouthpieces are the culmination of years of development in arriving at the best playing combination of tone chambers, facings, and density of metal. They have excellent brilliance, response, and depth of tone.",
       bores: ["Large"],
       facings: ["Medium", "Long"],
-      tipOpenings: "4-10",
+      tipOpenings: {
+        Saxophones: "4-10",
+      },
       additionalFeatures: [
         "Cast by the Lost Wax method in surgical stainless steel.",
         "Cap & Ligature included",
@@ -72,11 +76,11 @@ const DynamicInfo = ({ infoContent }) => {
 
     "ARB Great Neck Originals": {
       description:
-        "The Great Neck Original Mouthpiece is made from the blanks of the 1940S. These mouthpieces were given this name by Arnold Brilhart because of the location of his original factoty in Great Neck, New York. The Alto and Tenor are large bore, medium baffle mouthpieces. The Clarinet has a medium open bore. The white pigment in these mouthpieces helps to produce the compact and subtle sound of those years. These are limited edition mouthpieces. They will never be available again after the current stock is gone.",
+        "ARB Great Neck Original Mouthpieces are made from the blanks of the 1940S. These mouthpieces were given this name by Arnold Brilhart because of the location of his original factoty in Great Neck, New York. The Alto and Tenor are large bore, medium baffle mouthpieces. The Clarinet has a medium open bore. The white pigment in these mouthpieces helps to produce the compact and subtle sound of those years. These are limited edition mouthpieces. They will never be available again after the current stock is gone.",
       bores: ["Large"],
       facings: ["Medium", "Long"],
       tipOpenings: {
-        Sax: "4-10",
+        Saxophones: "4-10",
         Clarinets: "Up to 12",
       },
       material: "1940s Blanks",
@@ -84,11 +88,11 @@ const DynamicInfo = ({ infoContent }) => {
 
     "Beechler Customized": {
       description:
-        "The Musicians and artisans at Remlé Musical Products have worked with many outstanding professional musicians over the years. We have created uthpieces for these gifted and supremely talented individuals  and have learned from them in the process. This experience has helped us create a customized series of Beechler & Arb lines. The custom mouthpieces offer a specialized contour applied to the baffle of a small bore mouthpiece or a metal mouthpiece. This alternate approach to the creating of a mouthpiece provides specialized acoustic and dynamic featurews desired by professionals. It allows fo the subtleties and nuances that can enhance musicianship and give the individual player the confidence to experiment, experience, and to explore.",
+        "The Musicians and artisans at Remlé Musical Products have worked with many outstanding professional musicians over the years. We have created mouthpieces for these gifted and supremely talented individuals and have learned from them in the process. This experience has helped us create a customized series of Beechler & Arb lines. The custom mouthpieces offer a specialized contour applied to the baffle of a small bore mouthpiece or a metal mouthpiece. This alternate approach to the creating of a mouthpiece provides specialized acoustic and dynamic featurews desired by professionals. It allows fo the subtleties and nuances that can enhance musicianship and give the individual player the confidence to experiment, experience, and to explore.",
       bores: ["Medium"],
       facings: ["Standard", "Medium"],
       tipOpenings: {
-        Sax: "4-19",
+        Saxophones: "4-9",
       },
       material: "Custom Material",
     },
@@ -117,20 +121,24 @@ const DynamicInfo = ({ infoContent }) => {
     },
   };
 
-  const BoreSection = ({ bore }) => {
-    if (!bore) {
+  const BoreSection = ({ bores }) => {
+    if (!bores || bores.length === 0) {
       return null;
     }
     return (
-      <div>
-        <p>{bore}</p>
-        <img
-          src={boreImages[bore].image}
-          alt={bore}
-          style={{ width: "100%", height: "auto" }}
-        />
-        <p>{boreImages[bore].description}</p>
-      </div>
+      <Row className={`bore-row ${bores.length === 1 ? "single-bore" : ""}`}>
+        {bores.map((bore) => (
+          <Col md={4} key={bore} className="bore-col">
+            <Card className="bore-card">
+              <Card.Header className="card-title">Bore Sizes</Card.Header>
+              <Card.Img variant="top" src={boreImages[bore].image} alt={bore} />
+              <Card.Body className="card-body">
+                <Card.Text>{boreImages[bore].description}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     );
   };
 
@@ -138,7 +146,14 @@ const DynamicInfo = ({ infoContent }) => {
     if (!facing || facing.length === 0) {
       return null;
     }
-    return <Card.Text>{facing.join(", ")} available</Card.Text>;
+    return (
+      <Card>
+        <Card.Title>Facings</Card.Title>
+        <Card.Body>
+          <Card.Text>{facing.join(", ")}</Card.Text>
+        </Card.Body>
+      </Card>
+    );
   };
 
   const TipOpeningSection = ({ tipOpening }) => {
@@ -148,14 +163,28 @@ const DynamicInfo = ({ infoContent }) => {
     const tipOpenings = Object.keys(tipOpening).map(
       (key) => `${key}: ${tipOpening[key]}`
     );
-    return <Card.Text>{tipOpenings.join(", ")}</Card.Text>;
+    return (
+      <Card>
+        <Card.Title>Tip Openings</Card.Title>
+        <Card.Body>
+          <Card.Text>{tipOpenings.join(", ")}</Card.Text>
+        </Card.Body>
+      </Card>
+    );
   };
 
   const AdditionalFeaturesSection = ({ additionalFeatures }) => {
     if (!additionalFeatures) {
       return null;
     }
-    return <Card.Text>{additionalFeatures.join(", ")}</Card.Text>;
+    return (
+      <Card>
+        <Card.Title>Additional Features</Card.Title>
+        <Card.Body>
+          <Card.Text>{additionalFeatures.join(", ")}</Card.Text>
+        </Card.Body>
+      </Card>
+    );
   };
 
   const currentProduct = productInfo[infoContent];
@@ -166,74 +195,67 @@ const DynamicInfo = ({ infoContent }) => {
         <Col md={12}>
           <div className="dynamic-info">
             <h3>{infoContent ? infoContent : "Select a Category"}</h3>
-            <Row>
-              <Col md={12}>
+            {currentProduct ? (
+              <>
                 <Card className="product-description-card">
                   <Card.Body>
-                    <Card.Text>
-                      {currentProduct
-                        ? currentProduct.description
-                        : "Please select a category"}
-                    </Card.Text>
+                    <Card.Text>{currentProduct.description}</Card.Text>
                   </Card.Body>
                 </Card>
-              </Col>
-              <Col md={2}>
-                <Card className="bore-sizes-card">
-                  <Card.Body>
-                    <Card.Title>Bore Sizes</Card.Title>
-                    {currentProduct &&
-                      currentProduct.bores.map((bore) => (
-                        <BoreSection key={bore} bore={bore} />
-                      ))}
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={2}>
-                <Card className="facings-card">
-                  <Card.Body>
-                    <Card.Title>Facings</Card.Title>
-                    {currentProduct && (
-                      <FacingSection facing={currentProduct.facings} />
-                    )}
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={2}>
-                <Card className="tip-openings-card">
-                  <Card.Body>
-                    <Card.Title>Tip Openings</Card.Title>
-                    {currentProduct && (
+
+                <BoreSection bores={currentProduct.bores} />
+
+                <Row
+                  className={`info-row ${
+                    currentProduct.bores && currentProduct.bores.length === 1
+                      ? "info-row-next"
+                      : ""
+                  }`}
+                >
+                  <Col md={3}>
+                    {currentProduct.facings &&
+                      currentProduct.facings.length > 0 && (
+                        <FacingSection facing={currentProduct.facings} />
+                      )}
+                  </Col>
+
+                  <Col md={3}>
+                    {currentProduct.tipOpenings && (
                       <TipOpeningSection
                         tipOpening={currentProduct.tipOpenings}
                       />
                     )}
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={2}>
-                <Card className="material-card">
-                  <Card.Body>
-                    <Card.Title>Material</Card.Title>
-                    <Card.Text>
-                      {currentProduct ? currentProduct.material : ""}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={2}>
-                <Card className="additional-features-card">
-                  <Card.Body>
-                    <Card.Title>Additional Features</Card.Title>
-                    <AdditionalFeaturesSection
-                      additionalFeatures={
-                        currentProduct && currentProduct.additionalFeatures
-                      }
-                    />
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
+                  </Col>
+
+                  <Col md={3}>
+                    {currentProduct.material && (
+                      <Card>
+                        <Card.Header className="card-title">
+                          Material
+                        </Card.Header>
+                        <Card.Body className="card-body">
+                          <Card.Text>{currentProduct.material}</Card.Text>
+                        </Card.Body>
+                      </Card>
+                    )}
+                  </Col>
+
+                  <Col md={3}>
+                    {currentProduct.additionalFeatures && (
+                      <AdditionalFeaturesSection
+                        additionalFeatures={currentProduct.additionalFeatures}
+                      />
+                    )}
+                  </Col>
+                </Row>
+              </>
+            ) : (
+              <Card className="product-description-card">
+                <Card.Body>
+                  <Card.Text>Please select a category</Card.Text>
+                </Card.Body>
+              </Card>
+            )}
           </div>
         </Col>
       </Row>

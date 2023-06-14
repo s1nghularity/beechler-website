@@ -83,6 +83,47 @@ img .bore-images {
   color: var(--nav-accent);
 }
 
+
+.card-title {
+  font-weight: 700;
+  background-color: grey;
+  color: white;
+}
+
+.card-body {
+  font-weight: 500;
+  background-color: white;
+  color: black;
+}
+
+.bore-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bore-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bore-card {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.single-bore {
+  flex-direction: row;
+}
+
+.info-row {
+  flex-direction: column;
+}
+
+
+
+
 @media (max-width: 440px) {
   .products-navbar {
     width: 23rem;
