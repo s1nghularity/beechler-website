@@ -81,7 +81,7 @@ const DynamicInfo = ({ infoContent }) => {
               </Card>
             </Col>
 
-            {/* Separate Info Section */}
+          
             {currentProduct.bores && currentProduct.bores.length === 1 && (
               <Row className="info-row">
                 <Col md={4}>
@@ -104,7 +104,6 @@ const DynamicInfo = ({ infoContent }) => {
                   <InfoCard title="Material" text={currentProduct.material} />
                 </Col>
 
-                {/* For the additional features, make sure to handle when it is not present */}
                 {currentProduct.additionalFeatures && (
                   <Col md={12}>
                     <InfoCard
@@ -130,9 +129,9 @@ const DynamicInfo = ({ infoContent }) => {
                     title="Tip Openings"
                     text={(() => {
                       const tipOpenings = currentProduct.tipOpenings || {};
-                      if (currentProduct.type === "saxophone") {
+                      if (currentProduct.type === "Saxophones") {
                         return `Saxophone: ${tipOpenings.saxophone || "N/A"}`;
-                      } else if (currentProduct.type === "clarinet") {
+                      } else if (currentProduct.type === "Clarinets") {
                         return `Clarinet: ${tipOpenings.clarinet || "N/A"}`;
                       } else {
                         return "N/A";

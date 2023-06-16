@@ -3,9 +3,9 @@ import { Container} from "react-bootstrap";
 import "../../../styles/ProductInfo.css";
 import saxIcon from "../../../assets/img/products/sax2.png";
 import clarinetIcon from "../../../assets/img/products/clarinet2.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-/*TO ADD: a clarinet or saxophone icon next to the text in tipopenings where apprioriate 
-*/
 
 
 const StaticInfo = () => {
@@ -31,8 +31,12 @@ const StaticInfo = () => {
               <li>
               Bellite & Metal mouthpieces cast by the Lost Wax method in surgical stainless steel.
               </li>
-              <li>Saxophone tip openings: 4-10 <img alt="saxophone icon"> {saxIcon} </img> </li>
-              <li>Clarinet tip openings: 1-12 <img alt="clarinet icon"> {clarinetIcon} </img></li>
+              <li>
+                <img src={saxIcon} alt="Saxophone" className="tip-sax" /> Saxophone tip openings: 4-10 <br/><br/>
+                <img src={clarinetIcon} alt="Clarinet" className="tip-clar"/> Clarinet tip openings: 1-12
+              </li> <br/>
+              <li>
+              <FontAwesomeIcon icon={faStar} className="warranty-star" /> Our mouthpieces, accessories and services come with a 1-year warranty.</li>
             </ul>
           </div>
 

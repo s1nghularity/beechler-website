@@ -665,7 +665,6 @@ export const products = [
   },
   {
     category: "Accessories & Services",
-    subtype: null,
     id: "BP",
     ligatureType: "Bite Plate Replacement",
     price: 35.00,
@@ -673,7 +672,6 @@ export const products = [
   },
   {
     category: "Accessories & Services",
-    subtype: null,
     id: "CE",
     ligatureType: "Custom Engraving",
     price: 10.00,
@@ -681,7 +679,6 @@ export const products = [
   },
   {
     category: "Accessories & Services",
-    subtype: null,
     id: "LC",
     ligatureType: "Ligature Change",
     price: 6.00,
@@ -689,7 +686,6 @@ export const products = [
   },
   {
     category: "Accessories & Services",
-    subtype: null,
     id: "M03",
     ligatureType: "Tuffbite Mouthpiece Protector",
     price: 5.00,
@@ -697,7 +693,6 @@ export const products = [
   },
   {
     category: "Accessories & Services",
-    subtype: null,
     id: "R",
     ligatureType: "Refacing or Repair",
     price: 50.00,

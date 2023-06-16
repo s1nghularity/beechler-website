@@ -1,76 +1,94 @@
-.static-info{
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    font-family: Josefin Sans;
-    font-size: 1.25rem;
-
+.static-info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: Josefin Sans;
+  font-size: 1.25rem;
 }
 
 .static-info img {
-    height: 20px;
-    margin-left: 5px;
-  }
+  height: 20px;
+  margin-left: 5px;
+}
 
-.dynamic-info{
-    display: flex;
-    border-radius: 5px;
-    padding: 1rem;
-    font-family: Josefin Sans;
-    font-size: 1.25rem;
-    flex-direction: column; /* to align your info cards properly */
+.dynamic-info {
+  display: flex;
+  border-radius: 5px;
+  padding: 1rem;
+  font-family: Josefin Sans;
+  font-size: 1.25rem;
+  flex-direction: column; /* to align your info cards properly */
 }
 
 .info-card {
-    margin-bottom: 1rem; /* to add some space between the cards */
+  margin-bottom: 1rem; /* to add some space between the cards */
 }
 
 .info-card-header {
-    background-color: #3e4042!important;
-    color: #ffffff!important;
-    font-weight: 700;
-    text-align: center;
-    padding: 0.75rem 1.25rem;
+  background-color: #3e4042 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
 }
 
 .info-card-body {
-    color: #000000;
-    font-weight: 400;
-    text-align: center;
-    padding: 0.75rem 1.25rem; 
+  color: #000000;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
 }
 
-.bore-card{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.bore-card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .single-bore .info-row {
-    flex-direction: row; /* switch to row when there's only one bore size */
+  flex-direction: row; /* switch to row when there's only one bore size */
 }
 
 .bore-card-title {
-    text-align: center;
-    padding: 0.75rem 1.25rem;
-    font-weight: 700;
-    background-color: #3e4042!important;
-    color: #ffffff!important;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  background-color: #3e4042 !important;
+  color: #ffffff !important;
 }
 
 .bore-card-image {
-    margin-top: 1rem;
-    max-height: 5rem;
-    object-fit: contain;
-  }
-
-.bore-card-body{
-    text-align: center;
+  margin-top: 1rem;
+  max-height: 5rem;
+  object-fit: contain;
 }
 
-
+.bore-card-body {
+  text-align: center;
+}
 
 div.bore-and-info-row.justify-content-center.row > div > div > div {
-    margin: 0 auto;
+  margin: 0 auto;
+}
+
+.static-info ul li:nth-child(5),
+.static-info ul li:nth-child(7) {
+  list-style-type: none;
+}
+
+.tip-sax,
+.tip-clar,
+.warranty-star {
+  width: 54px;
+  height: 54px !important;
+  margin-left: -4rem !important;
+}
+
+.warranty-star {
+  position: absolute;  
+  width: 54px;
+  height: 54px !important;
+  margin-left: -4rem !important;
+  margin-top: 1rem;
 }
