@@ -9,6 +9,7 @@ function TipOpenings () {
             <TipOpeningsTable />
             <InstagramCarousel />
         </Container>
+        
     );
             
 }

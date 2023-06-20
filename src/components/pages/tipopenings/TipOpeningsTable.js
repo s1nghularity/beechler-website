@@ -29,11 +29,11 @@ function TipOpeningsTable() {
 
   const sizeNumbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
   const saxophoneTypes = [
-    { name: "Soprano Sax", startingValueInches: 0.03 },
-    { name: "Alto Sax", startingValueInches: 0.05 },
-    { name: "Tenor Sax", startingValueInches: 0.06 },
-    { name: "Baritone Sax", startingValueInches: 0.07 },
-    { name: "C Melody Sax", startingValueInches: 0.06 },
+    { name: "Soprano", startingValueInches: 0.03 },
+    { name: "Alto", startingValueInches: 0.05 },
+    { name: "Tenor", startingValueInches: 0.06 },
+    { name: "Baritone", startingValueInches: 0.07 },
+    { name: "Bb Clarinet", startingValueInches: 0.06 },
   ];
 
   useEffect(() => {

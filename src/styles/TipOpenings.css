@@ -39,7 +39,7 @@
 
 .tip-openings tfoot tr:hover td {
   cursor: pointer;
-  background-color: var(--black-alt);
+  background-color: lightgray;
 }
 
 .tip-openings td:hover,

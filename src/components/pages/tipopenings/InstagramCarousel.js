@@ -85,6 +85,9 @@ export default class InstagramCarousel extends Component {
           <img src={ig1} alt="adobe illustrator"  />
         </div>
         <div className="ig-slide">
+          <img src={ig6} alt="adobe illustrator" />
+        </div>
+        <div className="ig-slide">
           <img src={ig2} alt="adobe illustrator" />
         </div>
         <div className="ig-slide">
@@ -96,14 +99,12 @@ export default class InstagramCarousel extends Component {
         <div className="ig-slide">
           <img src={ig5} alt="adobe illustrator" />
         </div>
+
         <div className="ig-slide">
-          <img src={ig6} alt="adobe illustrator" />
+          <img src={ig8} alt="adobe illustrator" />
         </div>
         <div className="ig-slide">
           <img src={ig7} alt="adobe illustrator" />
-        </div>
-        <div className="ig-slide">
-          <img src={ig8} alt="adobe illustrator" />
         </div>
         <div className="ig-slide">
           <img src={ig9} alt="adobe illustrator" />
