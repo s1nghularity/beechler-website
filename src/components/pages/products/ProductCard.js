@@ -4,9 +4,6 @@ import "../../../styles/ProductsPage.css";
 
 import {
   ProductIconRow,
-  FacingSection,
-  BoreSection, 
-  TipOpeningSection,
   AccessoriesSection,
   ModelSection,
   LigatureTypeSection,
@@ -15,9 +12,6 @@ import {
 
 const ProductDescription = ({ product }) => {
   const {
-    bore,
-    facing,
-    tipOpening,
     price,
     ligatureType,
     finish,
@@ -32,9 +26,6 @@ const ProductDescription = ({ product }) => {
       </Row>
 
       <Row className="product-info-row">
-        {/* {facing && <FacingSection facing={facing} />}
-        {bore && <BoreSection bore={bore} />}
-        {tipOpening && <TipOpeningSection tipOpening={tipOpening} />} */}
         {ligatureType && <LigatureTypeSection ligatureType={ligatureType} />}
         {finish && <FinishSection finish={finish} />}
         {accessories && <AccessoriesSection accessories={accessories} />}

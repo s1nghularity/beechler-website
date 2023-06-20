@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Card, Button } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 
 function HomeContact() {
   const [submitted, setSubmitted] = useState(false);

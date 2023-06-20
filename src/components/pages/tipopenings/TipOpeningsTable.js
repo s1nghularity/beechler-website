@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Container, Row } from "react-bootstrap";
-import InstagramCarousel from "./InstagramCarousel";
+import { Table, Container } from "react-bootstrap";
 import "../../../styles/TipOpenings.css";
 import "../../../styles/InstagramCarousel.css";
 
@@ -86,7 +85,6 @@ function TipOpeningsTable() {
           ))}
         </tfoot>
       </Table>
-
     </Container>
   );
 }

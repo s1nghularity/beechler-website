@@ -1,4 +1,3 @@
-// Import necessary dependencies
 import React from "react";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
@@ -15,18 +14,17 @@ const categoryOptions = [
 
 const subtypeOptions = ["Soprano", "Alto", "Tenor", "Baritone"];
 
-// Define the ProductNav component
 const ProductNav = ({
   handleCategorySelect,
-  handleInstrumentSelect,
   handleSubtypeSelect,
   resetFilters,
 }) => {
-  const [selectedInstrument, setSelectedInstrument] = React.useState(null);
-
-  const handleInstrumentClick = (instrument) => {
-    handleInstrumentSelect(instrument);
-    setSelectedInstrument(instrument);
+  const renderNavDropdownItems = (options, handleClick) => {
+    return options.map((option, index) => (
+      <NavDropdown.Item key={index} onClick={() => handleClick(option)}>
+        {option}
+      </NavDropdown.Item>
+    ));
   };
 
   return (
@@ -34,34 +32,17 @@ const ProductNav = ({
       <Navbar.Toggle aria-controls="navbarToggler" />
       <Navbar.Collapse id="navbarToggler">
         <Nav>
-
           <NavDropdown title="Categories" id="navbarDropdown">
-            {categoryOptions.map((category, index) => (
-              <NavDropdown.Item
-                key={index}
-                onClick={() => handleCategorySelect(category)}
-              >
-                {category}
-              </NavDropdown.Item>
-            ))}
+            {renderNavDropdownItems(categoryOptions, handleCategorySelect)}
           </NavDropdown>
           <NavDropdown title="Type" id="navSubtype">
-            {subtypeOptions.map((subtype, index) => (
-              <NavDropdown.Item
-                key={index}
-                onClick={() => handleSubtypeSelect(subtype)}
-              >
-                {subtype}
-              </NavDropdown.Item>
-            ))}
+            {renderNavDropdownItems(subtypeOptions, handleSubtypeSelect)}
           </NavDropdown>
           <Button onClick={resetFilters} className="reset-filters">Reset Filters</Button>
-
         </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
 };
-
 
 export default ProductNav;

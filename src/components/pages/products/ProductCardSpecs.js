@@ -1,10 +1,9 @@
 import { Row, Col } from "react-bootstrap";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { Chip, Avatar } from "@mui/material";
+import { Chip } from "@mui/material";
 import { styled } from "@mui/system";
 import "../../../styles/ProductsPage.css";
-import saxIcon from "../../../assets/img/products/sax2.png";
-import clarinetIcon from "../../../assets/img/products/clarinet2.png";
+
 
 
 export const AccessoriesSection = ({ accessories }) => (
