@@ -1,21 +1,19 @@
+.navbar .dropdown.show a.dropdown-toggle {
+  color: gold !important;
+}
+
+
+
 /* General styles */
 .navbar a {
   color: var(--white);
   text-decoration: none;
 }
 
-.navbar a:hover {
-  color: var(--accent);
-}
-
-.reset-filters {
-  display: block;
-  margin-left: auto;
-  border-radius: 5px;
-  font-family: Josefin Sans;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.navbar a:hover, 
+.navbar a:focus, 
+.navbar a:active {
+  color: gold;
 }
 
 /* Products navbar styles */
@@ -40,7 +38,19 @@
 
 .dropdown-menu {
   background-color: var(--black) !important;
+  font-family: Josefin Sans;
   border-radius: 5px;
+}
+
+/* Reset Filters Button styles */
+.reset-filters {
+  display: block;
+  margin-left: auto;
+  border-radius: 5px;
+  font-family: Josefin Sans;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 

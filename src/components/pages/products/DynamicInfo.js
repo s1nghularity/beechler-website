@@ -81,7 +81,6 @@ const DynamicInfo = ({ infoContent }) => {
               </Card>
             </Col>
 
-          
             {currentProduct.bores && currentProduct.bores.length === 1 && (
               <Row className="info-row">
                 <Col md={4}>
@@ -115,6 +114,10 @@ const DynamicInfo = ({ infoContent }) => {
               </Row>
             )}
 
+
+                        {/* SECONDARY MENU LAYOUT BASED ON BORES */}
+
+
             {currentProduct.bores && currentProduct.bores.length > 1 && (
               <Row className="info-row">
                 <Col md={3}>
@@ -127,16 +130,9 @@ const DynamicInfo = ({ infoContent }) => {
                 <Col md={3}>
                   <InfoCard
                     title="Tip Openings"
-                    text={(() => {
-                      const tipOpenings = currentProduct.tipOpenings || {};
-                      if (currentProduct.type === "Saxophones") {
-                        return `Saxophone: ${tipOpenings.saxophone || "N/A"}`;
-                      } else if (currentProduct.type === "Clarinets") {
-                        return `Clarinet: ${tipOpenings.clarinet || "N/A"}`;
-                      } else {
-                        return "N/A";
-                      }
-                    })()}
+                    text={Object.entries(currentProduct.tipOpenings || {})
+                      .map(([key, val]) => `${key}: ${val}`)
+                      .join(", ")}
                   />
                 </Col>
 
