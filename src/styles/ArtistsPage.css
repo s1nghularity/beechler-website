@@ -1,42 +1,93 @@
-.artist-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-  background-color:#2a3132;
-
+.artist-page {
+  margin-bottom: 2rem;
 }
 
+.artist-title-header{
+  font-family: Josefin Sans, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+  text-align: center;
+  margin-top: 1rem;
+}
 
 .artist-card {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  background-color: #222;
+  width: auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
+  background-color: #6c757d!important;
+  font-family: Josefin Sans, sans-serif;
+  padding: .5rem;
 }
 
 .artist-card .artist-name {
-  margin: 0;
-  padding: 10px;
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  letter-spacing: -1.5px;
   text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .artist-card .mouthpiece {
-  margin: 5px;
-  padding: 5px;
+  padding: .5rem;
   background-color: rgb(47, 40, 40);
   border-radius: 5px;
+  margin-bottom: .5rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: -1.5px;
+  width: 11.75rem;
+  
+  
+}
+.artist-chevron {
+  background-color: var(--nav-accent);
+  color: var(--white);
+  border: none;
+  border-radius: 50%; /* Make the buttons round */
+  width: 35px; /* Set a fixed width */
+  height: 35px; /* Set a fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 
+/*remove scrollbar*/
+.mouthpiece-container {
+  max-height: 100px;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
 
+.mouthpiece-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari and Opera */
+}
 
+.music-note {
+  font-size: 3rem; /* Adjust the size as needed */
+  animation: spin 2s linear infinite; /* This will make the note spin */
+  margin-top: -1.25rem;
+  /* apply gradient to text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
+
+}
+
+@keyframes spin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(1turn); }
+}
 
