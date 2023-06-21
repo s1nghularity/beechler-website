@@ -5,7 +5,10 @@ const ArtistData = [
   },
   {
     name: "Alex Doronov",
-    mouthpieces: ["Bellite Alto #7", "Bellite Soprano #7"],
+    mouthpieces: [
+      "Bellite Alto #7", 
+      "Bellite Soprano #7"
+    ],
   },
   {
     name: "Alex Han",
@@ -53,7 +56,10 @@ const ArtistData = [
   },
   {
     name: "Brandon Fields",
-    mouthpieces: ["Tonalex Alto 5S", "Bellite Alto #8"],
+    mouthpieces: [
+      "Tonalex Alto 5S", 
+      "Bellite Alto #8"
+    ],
   },
   {
     name: "Brian Denigan",
@@ -72,7 +78,10 @@ const ArtistData = [
   },
   {
     name: "Charles McPherson",
-    mouthpieces: ["Diamond Alto M5S", "Jazz Model Alto C80"],
+    mouthpieces: [
+      "Diamond Alto M5S", 
+      "Jazz Model Alto C80"
+    ],
   },
   {
     name: "Charles P. Walker",
@@ -88,7 +97,9 @@ const ArtistData = [
   },
   {
     name: "Danny Jung",
-    mouthpieces: ["Bellite Custom Alto #7", "Soprano #6"],
+    mouthpieces: [
+      "Bellite Custom Alto #7", 
+      "Soprano #6"],
   },
   {
     name: "Dave Boruff",
@@ -202,7 +213,9 @@ const ArtistData = [
   },
   {
     name: "James Maikel",
-    mouthpieces: ["Gold Alto #6", "White Diamond Alto S6S"],
+    mouthpieces: [
+      "Gold Alto #6", 
+      "White Diamond Alto S6S"],
   },
   {
     name: "Jay Beckenstein",
@@ -210,11 +223,15 @@ const ArtistData = [
   },
   {
     name: "Joe Houston",
-    mouthpieces: ["Bellite Alto #115", "Bellite Tenor #115"],
+    mouthpieces: [
+      "Bellite Alto #115", 
+      "Bellite Tenor #115"],
   },
   {
     name: "John Bambridge",
-    mouthpieces: ["Arbex – B Alto 7*", "Arbex – B Tenor 7*"],
+    mouthpieces: [
+      "Arbex B Alto 7*", 
+      "Arbex B Tenor 7*"],
   },
   {
     name: "John Klemmer",
@@ -250,18 +267,24 @@ const ArtistData = [
   },
   {
     name: "Louis Van Taylor",
-    mouthpieces: ["Bellite Soprano #5", "Bellite Alto #5"],
+    mouthpieces: [
+      "Bellite Soprano #5", 
+      "Bellite Alto #5"],
   },
   { 
     name: "Mace Hibbard", 
     mouthpieces: ["White Diamond M7S"] },
   {
     name: "Marcus Anderson",
-    mouthpieces: ["Bellite Alto #6", "Hard Rubber Tenor #7"],
+    mouthpieces: [
+      "Bellite Alto #6", 
+      "Hard Rubber Tenor #7"],
   },
   {
     name: "Mark Costner",
-    mouthpieces: ["Custom Alto", "Great Neck Original Clarinet"],
+    mouthpieces: [
+      "Custom Alto", 
+      "Great Neck Original Clarinet"],
   },
   { 
     name: "Mark Russo", 
@@ -305,7 +328,9 @@ const ArtistData = [
     mouthpieces: ["Custom Bellite Alto #7"] },
   {
     name: "Najee",
-    mouthpieces: ["Bellite Alto #7", "Bellite Soprano #7"],
+    mouthpieces: [
+      "Bellite Alto #7", 
+      "Bellite Soprano #7"],
   },
   {
     name: "Nelson Rangell",
@@ -375,7 +400,9 @@ const ArtistData = [
   },
   {
     name: "Rocky Gordon",
-    mouthpieces: ["Belllite Alto #7", "Hard Rubber Custom Alto C77"],
+    mouthpieces: [
+      "Belllite Alto #7", 
+      "Hard Rubber Custom Alto C77"],
   },
   {
     name: "Ron Brown",
@@ -393,11 +420,15 @@ const ArtistData = [
   },
   {
     name: "Stabe Wilson",
-    mouthpieces: ["Tenor Prototype", "Custom Jazz Alto C95"],
+    mouthpieces: [
+      "Tenor Prototype",
+      "Custom Jazz Alto C95"],
   },
   {
     name: "Tamara Danielsson",
-    mouthpieces: ["Small Bore Alto S5S", "Bellite Alto #5"],
+    mouthpieces: [
+      "Small Bore Alto S5S", 
+      "Bellite Alto #5"],
   },
   {
     name: "Ted Nash",
@@ -413,11 +444,15 @@ const ArtistData = [
   },
   {
     name: "Tom Timko",
-    mouthpieces: ["Bellite Tenor #110", "Diamond Alto M7S"],
+    mouthpieces: [
+      "Bellite Tenor #110", 
+      "Diamond Alto M7S"],
   },
   {
     name: "Vladimir Lebedev",
-    mouthpieces: ["Custom Bellite Alto #7", "ARB Alto #7"],
+    mouthpieces: [
+      "Custom Bellite Alto #7", 
+      "ARB Alto #7"],
   },
   {
     name: "Will Donato",
@@ -425,7 +460,9 @@ const ArtistData = [
   },
   {
     name: "Zé Canuto",
-    mouthpieces: ["ARB Metal Alto #6", "Medium Bore Alto #6 (M6S)"],
+    mouthpieces: [
+      "ARB Metal Alto #6", 
+      "Medium Bore Alto #6 M6S"],
   },
 ];
 
