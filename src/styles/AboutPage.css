@@ -1,49 +1,70 @@
-.about-page{
-    font-family: Josefin Sans, sans-serif;
+body {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .about-page {
+    font-family: 'Josefin Sans', sans-serif;
     margin-top: 1rem;
-}
-.about-header {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .about-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align:center;
-}
-.about-text{
+    text-align: center;
     padding: 1rem;
-}
-
-.about-video video {
-    width: 15rem;
-    height: 15rem;
+  }
+  
+  .about-text {
+    padding: 2rem;
+  }
+  
+  .about-video video {
+    width: 60%;
+    height: auto;
     border-radius: 1rem;
-}
+  }
 
-.about-timeline {
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .about-text-icon {
+    flex-basis: 50%;
+  }
+  
+  .about-image {
+    flex-basis: 50%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .about-video video {
+      width: 100%;
+    }
+  }
+  
+  .about-timeline {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
-}
+    margin: 2rem 0;
+  }
   
-.about-timeline p {
+  .about-timeline p {
     margin-bottom: 1rem;
-}
+  }
   
-.about-timeline img {
+  .about-timeline img {
     max-width: 100%;
     margin-bottom: 1rem;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-
-.about-grid .grid-image {
-    width: 100%;
-    height: auto;
-}
+  }
+  

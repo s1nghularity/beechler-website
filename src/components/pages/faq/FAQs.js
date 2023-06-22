@@ -38,7 +38,6 @@ const useStyles = makeStyles({
   accordion: {
     borderRadius: '.75rem',
     marginBottom: '2rem',
-    boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.125)',
     '&:last-child': {
       marginBottom: '1rem',
     },
@@ -49,7 +48,7 @@ const useStyles = makeStyles({
   accordionSummary: {
     borderRadius: '.75rem',
     backgroundColor: '#fbb034',
-    backgroundImage: 'linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)',
+    backgroundImage: 'linear-gradient(15deg, #fbb034 0%, #ffdd00 74%)',
     color: '#fdfdfe',
   },
   accordionDetails: {
