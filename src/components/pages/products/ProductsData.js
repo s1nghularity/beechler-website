@@ -67,6 +67,7 @@ import CE from "../../../assets/img/products/accessories-services/CE.png";
 import LC from "../../../assets/img/products/accessories-services/LC.png";
 import M03 from "../../../assets/img/products/accessories-services/M03.png";
 import RE from "../../../assets/img/products/accessories-services/RE.png";
+import tuffbite from "../../../assets/img/products/accessories-services/tuffbite.png";
 
 const saxTipOpening = true;
 const clarinetTipOpening = true;
@@ -587,6 +588,7 @@ export const products = [
     category: "Accessories & Services",
     id: "BP",
     ligatureType: "Bite Plate Replacement",
+    subtype: ["Service"],
     price: 35.0,
     image: BP,
   },
@@ -594,6 +596,7 @@ export const products = [
     category: "Accessories & Services",
     id: "CE",
     ligatureType: "Custom Engraving",
+    subtype: ["Service"],
     price: 10.0,
     image: CE,
   },
@@ -601,6 +604,7 @@ export const products = [
     category: "Accessories & Services",
     id: "LC",
     ligatureType: "Ligature Change",
+    subtype: ["Service"],
     price: 6.0,
     image: LC,
   },
@@ -608,13 +612,15 @@ export const products = [
     category: "Accessories & Services",
     id: "M03",
     ligatureType: "Tuffbite Mouthpiece Protector",
+    subtype: ["Service"],
     price: 5.0,
-    image: M03,
+    image: tuffbite,
   },
   {
     category: "Accessories & Services",
     id: "R",
     ligatureType: "Refacing or Repair",
+    subtype: ["Service"],
     price: 50.0,
     image: RE,
   },

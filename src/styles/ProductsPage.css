@@ -189,8 +189,9 @@
   background: linear-gradient(to right, #7d878d, #2c3e50);
   padding: 0.5rem;
   max-width: 7rem;
-  max-height: 3.5rem;
+  max-height: 4rem;
   border-radius: 0.5rem;
+   
 }
 
 .ligature-type.col > p {

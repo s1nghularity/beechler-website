@@ -92,6 +92,6 @@ export const productInfo = {
 
 "Accessories & Services": {
     description:
-        "All customizations are done by hand. We offer a variety of services to customize and provide the best playing experience. We also offer a variety of accessories to help you maintain your mouthpiece.",
+        "All customizations are done by hand. We offer a variety of services to customize and provide the best playing experience as well as accessories to help you maintain your mouthpiece. Our mouthpieces are handcrafted with extraordinary attention to detail, allowing for an almost infinite choice of fine mouthpieces to suit varying embouchures, reed preferences, choice of materials, playing styles, and situations. And if you're looking for something truly unique, we can even create a custom mouthpiece just for you.",
     },
 };

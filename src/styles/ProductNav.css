@@ -19,21 +19,29 @@
 /* Products navbar styles */
 .products-navbar {
   margin-top: 1rem;
-  margin-bottom: 1rem;
   background-color: var(--grey) !important;
   border-radius: 5px;
-  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  
 }
 
 .products-navbar .nav-link,
-.products-navbar .dropdown {
+.products-navbar.dropdown {
   width: auto;
 }
 
 .products-navbar .nav-link {
   align-items: center;
   font-family: Josefin Sans;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .dropdown-menu {
@@ -54,3 +62,24 @@
 }
 
 
+.find-dealer {
+  display: block;
+  margin-left: auto;
+  border-radius: 5px;
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: -2rem;
+  background: linear-gradient(90deg, #FFA500, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+ 
+  
+
+  
+
+
+}

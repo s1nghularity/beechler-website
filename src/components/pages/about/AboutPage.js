@@ -1,6 +1,6 @@
-import React from 'react';
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 import "../../../styles/AboutPage.css";
 import arbLoop from "../../../assets/img/about/arb-loop.mp4";
 
@@ -16,74 +16,99 @@ const timelineData = [
   {
     type: "animation",
     direction: "left",
-    content: <img className="animated-content" src="https://picsum.photos/400/300?random=1" alt="Animated content 1" />,
+    content: (
+      <img
+        className="animated-content"
+        src="https://picsum.photos/400/300?random=1"
+        alt="Animated content 1"
+      />
+    ),
   },
   {
     type: "animation",
     direction: "right",
-    content: <img className="animated-content" src="https://picsum.photos/400/300?random=2" alt="Animated content 2" />,
+    content: (
+      <img
+        className="animated-content"
+        src="https://picsum.photos/400/300?random=2"
+        alt="Animated content 2"
+      />
+    ),
   },
-    {
-        type: "animation",
-        direction: "left",
-        content: <img className="animated-content" src="https://picsum.photos/400/300?random=3" alt="Animated content 3" />,
-    },
+  {
+    type: "animation",
+    direction: "left",
+    content: (
+      <img
+        className="animated-content"
+        src="https://picsum.photos/400/300?random=3"
+        alt="Animated content 3"
+      />
+    ),
+  },
 
-    {
-        type: "animation",
-        direction: "right",
-        content: <img className="animated-content" src="https://picsum.photos/400/300?random=4" alt="Animated content 4" />,
-    },
-
-
+  {
+    type: "animation",
+    direction: "right",
+    content: (
+      <img
+        className="animated-content"
+        src="https://picsum.photos/400/300?random=4"
+        alt="Animated content 4"
+      />
+    ),
+  },
 ];
 
 const TimelineItem = ({ item }) => {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
-    const animation = useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateX(0)' : (item.direction === "left" ? 'translateX(-100px)' : 'translateX(100px)'),
-        config: { mass: 5, tension: 500, friction: 80 },
-    });
+  const animation = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView
+      ? "translateX(0)"
+      : item.direction === "left"
+      ? "translateX(-100px)"
+      : "translateX(100px)",
+    config: { mass: 5, tension: 500, friction: 80 },
+  });
 
-    switch (item.type) {
-        case "text":
-            return <p>{item.content}</p>;
-        case "image":
-            return <img src={item.src} alt="" />;
-        case "animation":
-            return (
-                <animated.div
-                    ref={ref}
-                    style={animation}
-                    className={`timeline-animation ${
-                        item.direction === "left"
-                            ? "timeline-animation-left"
-                            : "timeline-animation-right"
-                    }`}
-                >
-                    {item.content}
-                </animated.div>
-            );
-        default:
-            return null;
-    }
+  switch (item.type) {
+    case "text":
+      return <p>{item.content}</p>;
+    case "image":
+      return <img src={item.src} alt="" />;
+    case "animation":
+      return (
+        <animated.div
+          ref={ref}
+          style={animation}
+          className={`timeline-animation ${
+            item.direction === "left"
+              ? "timeline-animation-left"
+              : "timeline-animation-right"
+          }`}
+        >
+          {item.content}
+        </animated.div>
+      );
+    default:
+      return null;
+  }
 };
 
-
 const AboutPage = () => {
-    return (
-        <div className="about-page">
-            <div className="about-header">
-                <h1>About Remle Musical Products</h1>
-                <div className="about-video">
-                    <video src={arbLoop} autoPlay loop muted />
-                </div>
-                <div className="about-text">
+  return (
+    <div className="about-page">
+      <div className="about-header">
+        <h1>About Remle Musical Products</h1>
+        <div className="about-video">
+          <video src={arbLoop} autoPlay loop muted />
+        </div>
+        <div className="about-text">
           <p>
             Founded by Elmer Beechler in 1942, we design, manufacture, and
             distribute outstanding saxophone and clarinet mouthpieces and
@@ -112,12 +137,12 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="about-timeline">
-                {timelineData.map((item, index) => (
-                    <TimelineItem key={index} item={item} />
-                ))}
-            </div>
-        </div>
-    );
+        {timelineData.map((item, index) => (
+          <TimelineItem key={index} item={item} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default AboutPage;
