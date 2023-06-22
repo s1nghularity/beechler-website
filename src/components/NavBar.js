@@ -54,6 +54,7 @@ function NavBar() {
     { path: "/dealers", label: "Dealers" },
     { path: "/artists", label: "Artists" },
     { path: "/about", label: "About" },
+
   ];
 
   return (

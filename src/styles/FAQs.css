@@ -1,0 +1,29 @@
+.FAQs {
+    background-color: var(--grey-alt);
+    color: var(--white);
+    padding: 50px;
+  }
+  
+  .super-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+  
+  .card-header {
+    background-color: var(--grey);
+    color: var(--white);
+  }
+  
+  .toggle-button {
+    color: var(--white);
+  }
+  
+  .card-body {
+    background-color: var(--lt-grey);
+    color: var(--black);
+  }
+  
+  .warranty-star {
+    color: var(--nav-accent);
+  }
+  

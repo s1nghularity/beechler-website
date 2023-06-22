@@ -3,62 +3,39 @@ import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import "../../../styles/AboutPage.css";
 import arbLoop from "../../../assets/img/about/arb-loop.mp4";
+import Masonry from 'react-masonry-css';
+import NAMM2019 from "../../../assets/img/about/NAMM-2019.jpg";
+import Group from "../../../assets/img/about/Group.jpg";
+import Jim from "../../../assets/img/about/Jim.jpg";
 
 const timelineData = [
   {
     type: "text",
-    content: "Timeline text 1",
+    content: "Founded by Elmer Beechler in 1942, we design, manufacture, and distribute outstanding saxophone and clarinet mouthpieces and woodwind accessories.",
   },
   {
     type: "image",
-    src: "https://picsum.photos/400/300",
+    src: NAMM2019,
   },
   {
-    type: "animation",
-    direction: "left",
-    content: (
-      <img
-        className="animated-content"
-        src="https://picsum.photos/400/300?random=1"
-        alt="Animated content 1"
-      />
-    ),
+    type: "text",
+    content: "Remlé Musical Products, Inc. has been under the direction of Elmer Beechler’s daughter, Judy Beechler Roan, since 1993.",
   },
   {
-    type: "animation",
-    direction: "right",
-    content: (
-      <img
-        className="animated-content"
-        src="https://picsum.photos/400/300?random=2"
-        alt="Animated content 2"
-      />
-    ),
+    type: "image",
+    src: Group,
   },
   {
-    type: "animation",
-    direction: "left",
-    content: (
-      <img
-        className="animated-content"
-        src="https://picsum.photos/400/300?random=3"
-        alt="Animated content 3"
-      />
-    ),
+    type: "text",
+    content: "We believe we make the best mouthpieces in the world for the professional musician and players who want to play well for the simple pleasure and joy of it.",
   },
-
   {
-    type: "animation",
-    direction: "right",
-    content: (
-      <img
-        className="animated-content"
-        src="https://picsum.photos/400/300?random=4"
-        alt="Animated content 4"
-      />
-    ),
+    type: "image",
+    src: Jim,
   },
 ];
+
+const gridImages = Array(12).fill().map((_, i) => `https://picsum.photos/400/300?random=${i+3}`);
 
 const TimelineItem = ({ item }) => {
   const [ref, inView] = useInView({
@@ -81,20 +58,6 @@ const TimelineItem = ({ item }) => {
       return <p>{item.content}</p>;
     case "image":
       return <img src={item.src} alt="" />;
-    case "animation":
-      return (
-        <animated.div
-          ref={ref}
-          style={animation}
-          className={`timeline-animation ${
-            item.direction === "left"
-              ? "timeline-animation-left"
-              : "timeline-animation-right"
-          }`}
-        >
-          {item.content}
-        </animated.div>
-      );
     default:
       return null;
   }
@@ -110,35 +73,18 @@ const AboutPage = () => {
         </div>
         <div className="about-text">
           <p>
-            Founded by Elmer Beechler in 1942, we design, manufacture, and
-            distribute outstanding saxophone and clarinet mouthpieces and
-            woodwind accessories. Remlé Musical Products, Inc. has been under
-            the direction of Elmer Beechler’s daughter, Judy Beechler Roan,
-            since 1993. We believe we make the best mouthpieces in the world for
-            the professional musician and players who want to play well for the
-            simple pleasure and joy of it.
-            <br />
-            <br />
-            Our mouthpieces provide the variations needed to produce an
-            individual richness and quality of voice. All of our mouthpieces are
-            made according to precise design specifications. All surfaces are
-            hand finished by skilled artisans and play tested by professional
-            musicians. Because of our years of experience, excellent
-            craftsmanship, and extraordinary attention to detail, we can offer
-            musicians an almost infinite choice of fine mouthpieces to suit
-            varying embouchures, reed preferences, choice of materials, playing
-            styles, and situations. We can also make custom mouthpieces to suit
-            individual preferences.
-            <br />
-            <br />
-            We use Rico Jazz Select Reeds to play test all of our mouthpieces as
-            we have found them to be consistent in quality and performance.
+            We are a women-owned, family-owned, handcrafted artisans business.
           </p>
         </div>
       </div>
       <div className="about-timeline">
         {timelineData.map((item, index) => (
           <TimelineItem key={index} item={item} />
+        ))}
+      </div>
+      <div className="about-grid">
+        {gridImages.map((src, index) => (
+          <img key={index} src={src} alt="" className="grid-image" />
         ))}
       </div>
     </div>
