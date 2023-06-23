@@ -3,15 +3,22 @@
 }
 
 .about-header {
-  background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   padding: 4rem;
   text-align: center;  
+}
+
+.about-heart {
+  width: 10rem;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 1rem;
+  color: blueviolet;
 }
 
 .about-header h1 {
   font-size: 5rem;
   font-weight: 700;
-  color: #fff;
+  color: #000000;
 }
 
 div .about-video {
@@ -19,6 +26,14 @@ div .about-video {
   height: auto;
   margin: 0 auto;
   border-radius: 1rem;
+}
+
+div .about-video2 {
+  width: 35rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;;
   
 }
 
@@ -31,15 +46,20 @@ div .about-video {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+
+  
 }
 
 .parallax-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
   padding: 4rem;
+  margin: 1rem;
+  background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  border-radius: 1rem;
 }
 
 .parallax-section.inverse {
@@ -49,6 +69,7 @@ div .about-video {
 .parallax-image {
   width: 50%;
   height: 50%;
+  border-radius: .5rem;
 
 }
 
@@ -59,7 +80,7 @@ div .about-video {
 }
 
 .masonry-container {
-  padding: 4rem;
+
 }
 
 .masonry-grid {
@@ -76,4 +97,11 @@ div .about-video {
 .masonry-grid_column > img {
   margin-bottom: 30px;
   width: 100%;
+}
+
+.beechler-arb-about{
+  background-color: black;
+  height: 15rem;
+  border-radius: 1rem;
+  margin-bottom: -5rem;
 }
