@@ -19,16 +19,9 @@ import Max from "../../../assets/img/about/Max.jpg";
 import isaac from "../../../assets/img/about/Isaac.jpg";
 import kid from "../../../assets/img/about/kid.jpg";
 import everette from "../../../assets/img/about/everette.jpg";
+import vibes from "../../../assets/img/about/vibes.jpg";
 
 import { FaHeart } from "react-icons/fa";
-import beechlerArb from "../../../assets/img/home/beechler-arb.png";
-/*import colored american flag icon*/
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlagUsa } from "@fortawesome/free-solid-svg-icons";
-
-/*import family icon*/
-
-import { FaAmericanSignLanguageInterpreting } from "react-icons/fa";
 import { FaFamily } from "react-icons/fa";
 
 const timelineData = [
@@ -83,6 +76,7 @@ const masonryImages = [
   kid,
   everette,
   Group,
+  vibes,
 
   // Add more images here
 ];
