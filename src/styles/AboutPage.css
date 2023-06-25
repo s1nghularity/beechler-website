@@ -1,14 +1,17 @@
 .about-page {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
 }
+
+/*Section 1*/
 
 .about-header {
   padding: 4rem;
-  text-align: center;  
+  text-align: center;
 }
 
 .about-heart {
-  width: 10rem;
+  width: 5rem;
   height: auto;
   margin: 0 auto;
   border-radius: 1rem;
@@ -21,6 +24,11 @@
   color: #000000;
 }
 
+.about-text {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
 div .about-video {
   width: 20rem;
   height: auto;
@@ -28,60 +36,109 @@ div .about-video {
   border-radius: 1rem;
 }
 
+/*PARALLAX TIMELINE*/
+
+.background-svg {
+  height: auto;
+  width: 100%;
+  padding: 3rem;
+  background-image: url("/src/assets/img/about/tall0.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-section {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-image {
+  max-width: 30rem;
+  height: auto;
+}
+
+
+.parallax-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1081px) and (max-width: 1440px) {
+  div > div.main-content > div > div:nth-child(2){
+    width: 100vw;
+    margin-left: -4rem;
+  }
+
+  .parallax-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    width: 50rem;
+  }
+}
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate {
+  animation: slideInRight 1s;
+}
+
+/*Section 3*/
+
+.about-footer {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.about-footer h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000000;
+}
+
 div .about-video2 {
   width: 35rem;
   margin: 0 auto;
   border-radius: 1rem;
   margin-top: 1rem;
-  margin-bottom: -1rem;;
+  margin-bottom: -1rem;
+}
+
+@media screen and (max-width: 500px) {
+  div .about-video2 {
+    width: 25rem;
+    height: auto;
+    margin-left: -1.25rem;
+    margin-top: -1rem;
+
+  }
   
 }
 
-.about-text {
+.about-text2 {
   margin-top: 2rem;
   font-size: 3rem;
 }
 
-.parallax-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-
-  
-}
-
-.parallax-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 4rem;
-  margin: 1rem;
-  background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
-  border-radius: 1rem;
-}
-
-.parallax-section.inverse {
-  flex-direction: row-reverse;
-}
-
-.parallax-image {
-  width: 50%;
-  height: 50%;
-  border-radius: .5rem;
-
-}
-
-.parallax-text {
-  padding: 1rem;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.masonry-container {
-
-}
+/*PHOTO GRID*/
 
 .masonry-grid {
   display: flex;
@@ -99,9 +156,4 @@ div .about-video2 {
   width: 100%;
 }
 
-.beechler-arb-about{
-  background-color: black;
-  height: 15rem;
-  border-radius: 1rem;
-  margin-bottom: -5rem;
-}
+
