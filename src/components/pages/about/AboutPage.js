@@ -1,7 +1,7 @@
 import "../../../styles/AboutPage.css";
 import React from "react";
-import { ParallaxProvider } from 'react-scroll-parallax';
 import "animate.css";
+
 import Masonry from "react-masonry-css";
 import arbLoop from "../../../assets/img/about/arb-loop.mp4";
 import NAMM2019 from "../../../assets/img/about/NAMM-2019.jpg";
