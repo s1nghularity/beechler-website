@@ -1,21 +1,61 @@
 .about-page {
   font-family: "Josefin Sans", sans-serif;
-  width: 100%;
 }
 
-/*Section 1*/
 
+
+/*HORIZONTAL SCROLLING TIMELINE*/
+
+.carousel-container{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: space-evenly;
+
+}
+
+
+.dot{
+  height: 1rem;
+  width: 1rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.25rem;
+  transition: background-color 0.6s ease;
+}
+
+.carousel-slide{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+img.about-carousel-img{
+  width: 30rem;
+  height: auto; 
+  object-fit: cover;
+  border-radius: 1rem;
+  margin: auto; 
+}
+
+p.about-carousel-text{
+  max-width: 50rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+
+
+/*TOP SECTION TEXT IMAGE WAVY SVG*/
 .about-header {
   padding: 4rem;
   text-align: center;
-}
-
-.about-heart {
-  width: 5rem;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 1rem;
-  color: blueviolet;
 }
 
 .about-header h1 {
@@ -24,103 +64,104 @@
   color: #000000;
 }
 
-.about-text {
-  margin-top: 2rem;
-  font-size: 3rem;
-}
-
-div .about-video {
-  width: 20rem;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 1rem;
-}
-
-/*TIMELINE*/
-
-
-.about-timeline {
-  position: relative;
-  height: 100%;
-  min-height: 100vh;
-}
-
-.timeline-svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.parallax-section {
-  padding: 50px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.parallax-image {
-  max-width: 15rem;
-
-}
-
-.parallax-text {
-  font-size: 2rem;
+.intro-letter::first-letter {
+  font-size: 2em;
   font-weight: bold;
-  color: white;
-  text-align: center;
+  color: #fbb035;
+}
+
+.about-header-text {
   margin-top: 2rem;
-  max-width: 70%;
+  font-size: 2rem;
 }
 
+.image-container {
+  position: relative;
+  overflow: visible;
+}
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
+figure.figure {
+  width: 40rem;
+  margin-left: -10rem;
+  z-index: -3;
+}
+
+.background-svg-container {
+  margin-left: -10rem;
+  margin-top: -15rem!important;
+  z-index: -2;
+}
+
+@media only screen and (max-width: 1080px) {
+  .about-header {
+    padding: 2rem;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+  .about-header h1 {
+    font-size: 3rem;
+  }
+  .about-header-text {
+    font-size: 1.5rem;
+  }
+  figure.figure {
+    width: 30rem;
+    margin-left: -1rem;
+  }
+  .background-svg-container {
+    margin-left: -4rem;
   }
 }
 
-.animate {
-  animation: slideInRight 1s;
+@media only screen and (max-width: 730px) {
+  .about-header {
+    padding: 2rem;
+  }
+  .about-header h1 {
+    font-size: 3rem;
+  }
+  .about-header-text {
+    font-size: 1.25rem;
+  }
+  figure.figure {
+    width: 30rem;
+    margin-left: -1rem;
+  }
+  div.background-svg-container {
+    margin-left: -8rem;
+  }
 }
 
-/*Section 3*/
+@media only screen and (max-width: 530px) {
+  .about-header {
+    padding: 2rem;
+  }
+  .about-header h1 {
+    font-size: 3rem;
+  }
+  .about-header-text {
+    font-size: 1.25rem;
+  }
+  figure.figure {
+    width: 30rem;
+    margin-left: -6rem;
+  }
+  div.background-svg-container {
+    margin-left: -4rem;
+  }
+}
 
+/*FOOTER TEXT AND VIDEO*/
 .about-footer {
-  margin-top: 5rem;
+  margin-top: 2rem;
   text-align: center;
+  align-self: center;
+  margin-bottom: 2rem;
 }
 
 .about-footer h1 {
   font-size: 5rem;
   font-weight: 700;
   color: #000000;
-}
-
-div .about-video2 {
-  width: 35rem;
-  margin: 0 auto;
-  border-radius: 1rem;
-  margin-top: 1rem;
-  margin-bottom: -1rem;
-}
-
-@media screen and (max-width: 500px) {
-  div .about-video2 {
-    width: 25rem;
-    height: auto;
-    margin-left: -1.25rem;
-    margin-top: -1rem;
-
-  }
-  
+  letter-spacing: -7px;
 }
 
 .about-text2 {
@@ -128,7 +169,11 @@ div .about-video2 {
   font-size: 3rem;
 }
 
-/*PHOTO GRID*/
+div .about-video {
+  width: 20rem;
+  height: auto;
+  border-radius: 1rem;
+}
 
 .masonry-grid {
   display: flex;
@@ -145,5 +190,3 @@ div .about-video2 {
   margin-bottom: 30px;
   width: 100%;
 }
-
-
