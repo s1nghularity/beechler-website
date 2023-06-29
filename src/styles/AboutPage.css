@@ -182,11 +182,12 @@ div .about-video {
 }
 
 .masonry-grid_column {
-  padding-left: 30px;
+  padding-top: 5px;
+  padding-left: 10px;
   background-clip: padding-box;
 }
 
 .masonry-grid_column > img {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   width: 100%;
 }

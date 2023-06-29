@@ -53,6 +53,7 @@ function NavBar() {
     { path: "/tip-openings", label: "Tip Openings" },
     { path: "/dealers", label: "Dealers" },
     { path: "/artists", label: "Artists" },
+    { path: "/gallery", label: "Gallery" },
     { path: "/about", label: "About" },
 
   ];

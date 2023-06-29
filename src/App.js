@@ -11,8 +11,10 @@ import ProductsPage from "./components/pages/products/ProductsPage.js";
 import TipOpenings from "./components/pages/tipopenings/TipOpenings.js";
 import DealersPage from "./components/pages/dealers/DealersPage.js";
 import ArtistsPage from "./components/pages/artists/ArtistsPage.js";
+import Gallery from "./components/pages/gallery/Gallery.js";
 import AboutPage from "./components/pages/about/AboutPage.js";
 import FAQs from "./components/pages/faq/FAQs.js";
+import OurCommitment from "./components/pages/commitment/OurCommitment.js";
 import Footer from "./components/Footer.js";
 
 import "leaflet/dist/leaflet.css";
@@ -37,7 +39,9 @@ export default function App() {
             <Route path="/dealers" element={<DealersPage />} />
             <Route path="/artists" element={<ArtistsPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/faq" element={<FAQs />} />
+            <Route path="/commitment" element={<OurCommitment />} />
           </Routes>
         </div>
 

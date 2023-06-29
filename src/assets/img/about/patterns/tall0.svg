@@ -1,0 +1,14 @@
+<svg id="visual" viewBox="0 0 675 900" width="675" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >
+  <!-- Background -->
+  <rect x="0" y="0" width="675" height="900" fill="black" ></rect>
+
+  <!-- Path with linear gradient stroke -->
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(315)">
+      <stop offset="5%" stop-color="#fbb035"></stop>
+      <stop offset="74%" stop-color="#ffdd00"></stop>
+    </linearGradient>
+  </defs>
+  <path d="M127 0L129.5 8.8C132 17.7 137 35.3 129.3 53C121.7 70.7 101.3 88.3 98.5 106C95.7 123.7 110.3 141.3 107.7 159C105 176.7 85 194.3 78.7 212C72.3 229.7 79.7 247.3 92.5 265C105.3 282.7 123.7 300.3 124.2 318C124.7 335.7 107.3 353.3 93.8 371C80.3 388.7 70.7 406.3 69.3 423.8C68 441.3 75 458.7 78.2 476.2C81.3 493.7 80.7 511.3 80.8 529C81 546.7 82 564.3 89.7 582C97.3 599.7 111.7 617.3 122.2 635C132.7 652.7 139.3 670.3 130.8 688C122.3 705.7 98.7 723.3 96.2 741C93.7 758.7 112.3 776.3 116.2 794C120 811.7 109 829.3 97.8 847C86.7 864.7 75.3 882.3 69.7 891.2L64 900" fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="url(#gradient)" stroke-width="16"></path>
+</svg>
+<!-- #504538 #FBB035 #FFDD00 #B7A99A #FF7351  A33FFF -->
