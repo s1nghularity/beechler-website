@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { Container, Row, Col } from 'react-bootstrap';
 import elmer from '../../../assets/img/about/elmer.jpg';
+import bwgroup from '../../../assets/img/gallery/IMG_5689.png'
 import Group from '../../../assets/img/about/Group.jpg';
 import Jim from '../../../assets/img/about/Jim.jpg';
 import '../../../styles/AboutPage.css';
@@ -9,7 +10,7 @@ import '../../../styles/AboutPage.css';
 const AboutCarousel = () => {
   const data = [
     {
-      image: elmer,
+      image: bwgroup,
       text:
         'Founded by Elmer Beechler in 1942, we design, manufacture, and distribute outstanding saxophone and clarinet mouthpieces and woodwind accessories. Elmer’s passion for music and vision for creating mouthpieces continues to inspire and enhance the playing experience of professional musicians all over the world today.',
     },

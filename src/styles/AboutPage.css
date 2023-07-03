@@ -8,8 +8,6 @@
 
 .carousel-container{
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   justify-content: space-evenly;
 
 }
@@ -40,7 +38,8 @@ img.about-carousel-img{
   height: auto; 
   object-fit: cover;
   border-radius: 1rem;
-  margin: auto; 
+  margin: auto;
+  margin-bottom: 2rem; 
 }
 
 p.about-carousel-text{
@@ -48,6 +47,7 @@ p.about-carousel-text{
   font-size: 1.5rem;
   font-weight: 500;
   color: #000000;
+  margin-bottom: 2rem; 
 }
 
 

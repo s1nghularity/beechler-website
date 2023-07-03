@@ -78,6 +78,9 @@ const HomeCarousel = () => {
             <img src={tonalex} alt="Mouthpieces" className="home-carousel-image"/>
           </SwiperSlide>
           <SwiperSlide>
+            <img src={artist} alt="Artists" className="home-carousel-image"/>
+          </SwiperSlide>
+          <SwiperSlide>
             <img src={mouthpiece} alt="Mouthpieces" className="home-carousel-image"/>
           </SwiperSlide>
 
@@ -85,9 +88,7 @@ const HomeCarousel = () => {
             <img src={artist2} alt="Tip Openings" className="home-carousel-image" />
           </SwiperSlide>
 
-          <SwiperSlide>
-            <img src={artist} alt="Artists" className="home-carousel-image"/>
-          </SwiperSlide>
+
 
           <SwiperSlide>
             <img src={dealer} alt="Artists" className="home-carousel-image"/>

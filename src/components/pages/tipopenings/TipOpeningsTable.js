@@ -6,26 +6,31 @@ import "../../../styles/InstagramCarousel.css";
 function TipOpeningsTable() {
   const [values, setValues] = useState({});
 
-  const calculateInchesAndMm = (sizeNumber, startingValueInches) => {
-    const increment = 0.005;
-    const inches = startingValueInches + sizeNumber * increment;
-    const mm = inches * 25.4;
-    return { inches, mm };
+const calculateInchesAndMm = (sizeNumber, startingValueInches, saxophoneType) => {
+  const increment = saxophoneType === "Baritone" ? 0 : 0.005;
+  const inches = startingValueInches + sizeNumber * increment;
+  const mm = inches * 25.4;
+  return {
+    inches,
+    mm,
+    arbInches: saxophoneType === "Baritone" ? inches : inches + 0.005,
+    arbMm: saxophoneType === "Baritone" ? mm : mm + 0.005 * 25.4,
   };
+};
+const handleMouseOver = (sizeNumber, startingValueInches, saxophoneType) => {
+  const { inches, mm, arbInches, arbMm } = calculateInchesAndMm(
+    sizeNumber,
+    startingValueInches,
+    saxophoneType
+  );
 
-  const handleMouseOver = (sizeNumber, startingValueInches) => {
-    const { inches, mm } = calculateInchesAndMm(
-      sizeNumber,
-      startingValueInches
-    );
-
-    setValues({
-      inches,
-      mm,
-      arbInches: inches + 0.005,
-      arbMm: mm + 0.005 * 25.4,
-    });
-  };
+  setValues({
+    inches,
+    mm,
+    arbInches,
+    arbMm,
+  });
+};
 
   const sizeNumbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
   const saxophoneTypes = [
