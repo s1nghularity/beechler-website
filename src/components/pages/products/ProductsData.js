@@ -22,6 +22,13 @@ import customBelliteT from "../../../assets/img/products/bellite/custom-bellite-
 import customBelliteB from "../../../assets/img/products/bellite/custom-bellite-baritone.png";
 
 //TODO:HARD RUBBER
+import b22 from "../../../assets/img/products/hard-rubber/b22.png";
+import b25 from "../../../assets/img/products/hard-rubber/b25.png";
+import b25c from "../../../assets/img/products/hard-rubber/b25c.png";
+import b26 from "../../../assets/img/products/hard-rubber/b26.png";
+import b27 from "../../../assets/img/products/hard-rubber/b27.png";
+import b29 from "../../../assets/img/products/hard-rubber/b29.png";
+
 
 //CUSTOMIZED
 import beechlerDAlto from "../../../assets/img/products/beechler-custom/beechler-custom-d.png";
@@ -274,7 +281,63 @@ export const products = [
     image: customBelliteB,
   },
 
-  //TODO:ADD HARD RUBBERB25 B25/C B26 B26/C B22 B28 B29
+  //TODO:ADD BEECHLER HARD RUBBER B25 B25/C B26 B26/C B22 B28 B29
+
+  {
+    category: "Beechler Hard Rubber",
+    id: "B25",
+    instrument: "Saxophone",
+    subtype: "Soprano",
+    price: 219.25,
+    image: b25,
+  },
+
+  {
+    category: "Beechler Hard Rubber",
+    id: "B25/C",
+    instrument: "Saxophone",
+    subtype: "Soprano",
+    price: 226.58,
+    image: b25c,
+  },
+
+  {
+    category: "Beechler Hard Rubber",
+    id: "B26",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    price: 219.09,
+    image: b26,
+  },
+
+  {
+    category: "Beechler Hard Rubber",
+    id: "B22",
+    instrument: "Clarinet",
+    subtype: "BB",
+    price: 216.36,
+    image: b22,
+  },
+
+  {
+    category: "Beechler Hard Rubber",
+    id: "B28",
+    instrument: "Saxophone",
+    subtype: "Tenor",
+    price: 232.87,
+    image: b27,
+  },
+
+  {
+    category: "Beechler Hard Rubber",
+    id: "B29",
+    instrument: "Saxophone",
+    subtype: "Baritone",
+    accessories: "Cap & Ligature",
+    price: 275.03,
+    image: b29,
+  },
+
 
   //CUSTOMIZED
 

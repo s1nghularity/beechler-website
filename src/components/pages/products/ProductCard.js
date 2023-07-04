@@ -30,7 +30,7 @@ const ProductDescription = ({ product }) => {
         {finish && <FinishSection finish={finish} />}
         {accessories && <AccessoriesSection accessories={accessories} />}
         {model && <ModelSection model={model} />}
-        <Card.Text className="price">${price}</Card.Text>
+        <Card.Text className="price">MSRP ${price}</Card.Text>
       </Row>
     </Card>
   );
