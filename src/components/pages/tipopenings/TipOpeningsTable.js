@@ -1,49 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Table, Container } from "react-bootstrap";
 import "../../../styles/TipOpenings.css";
 import "../../../styles/InstagramCarousel.css";
 
 function TipOpeningsTable() {
-  const [values, setValues] = useState({});
+  const [selected, setSelected] = useState({});
 
-const calculateInchesAndMm = (sizeNumber, startingValueInches, saxophoneType) => {
-  const increment = saxophoneType === "Baritone" ? 0 : 0.005;
-  const inches = startingValueInches + sizeNumber * increment;
-  const mm = inches * 25.4;
-  return {
-    inches,
-    mm,
-    arbInches: saxophoneType === "Baritone" ? inches : inches + 0.005,
-    arbMm: saxophoneType === "Baritone" ? mm : mm + 0.005 * 25.4,
+  const data = {
+    'BEECHLER': {
+      'Bb Clarinet': [0.035, 0.04, 0.045, 0.05, 0.055, 0.06, 0.065, 0.07, 0.075],
+      'Soprano Sax': [0.04, 0.045, 0.05, 0.055, 0.06, 0.065, 0.07, 0.075, 0.08],
+      'Alto Sax': [0.06, 0.065, 0.07, 0.075, 0.08, 0.085, 0.09, 0.095, 0.1],
+      'Tenor Sax': [0.07, 0.075, 0.08, 0.085, 0.09, 0.095, 0.1, 0.105, 0.11],
+      'Baritone Sax': [0.08, 0.085, 0.09, 0.095, 0.1, 0.105, 0.11, 0.115, 0.12],
+    },
+    'ARB': {
+      'Bb Clarinet': [0.039, 0.042, 0.046, 0.05, 0.055, 0.058, 0.062, 0.066, 0.072],
+      'Soprano Sax': [0.042, 0.046, 0.05, 0.055, 0.058, 0.062, 0.066, 0.072, 0.08],
+      'Alto Sax': [0.065, 0.07, 0.075, 0.08, 0.085, 0.09, 0.095, 0.1, 0.15],
+      'Tenor Sax': [0.075, 0.08, 0.085, 0.09, 0.095, 0.1, 0.105, 0.11, 0.115],
+      'Baritone Sax': [0.08, 0.085, 0.09, 0.095, 0.1, 0.105, 0.11, 0.115, 0.12],
+    },
   };
-};
-const handleMouseOver = (sizeNumber, startingValueInches, saxophoneType) => {
-  const { inches, mm, arbInches, arbMm } = calculateInchesAndMm(
-    sizeNumber,
-    startingValueInches,
-    saxophoneType
-  );
 
-  setValues({
-    inches,
-    mm,
-    arbInches,
-    arbMm,
-  });
-};
+  const handleMouseOver = (instrument, sizeNumber) => {
+    const inchesBeechler = data['BEECHLER'][instrument][sizeNumber - 2];
+    const mmBeechler = inchesBeechler * 25.4;
+
+    const inchesARB = data['ARB'][instrument][sizeNumber - 2];
+    const mmARB = inchesARB * 25.4;
+
+    setSelected({
+      'BEECHLER': { inches: inchesBeechler, mm: mmBeechler },
+      'ARB': { inches: inchesARB, mm: mmARB },
+    });
+  };
 
   const sizeNumbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const saxophoneTypes = [
-    { name: "Soprano", startingValueInches: 0.03 },
-    { name: "Alto", startingValueInches: 0.05 },
-    { name: "Tenor", startingValueInches: 0.06 },
-    { name: "Baritone", startingValueInches: 0.07 },
-    { name: "Bb Clarinet", startingValueInches: 0.06 },
-  ];
-
-  useEffect(() => {
-    document.title = "Tip Openings";
-  }, []);
+  const instruments = ['Bb Clarinet', 'Soprano Sax', 'Alto Sax', 'Tenor Sax', 'Baritone Sax'];
 
   return (
     <Container className="tip-openings">
@@ -56,39 +50,39 @@ const handleMouseOver = (sizeNumber, startingValueInches, saxophoneType) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Beechler</td>
-            <td data-label="Inches">{values.inches?.toFixed(3)}</td>
-            <td data-label="Millimeters">{values.mm?.toFixed(3)}</td>
-          </tr>
-          <tr>
-            <td>ARB</td>
-            <td data-label="Inches">{values.arbInches?.toFixed(3)}</td>
-            <td data-label="Millimeters">{values.arbMm?.toFixed(3)}</td>
-          </tr>
+          {['BEECHLER', 'ARB'].map(model => (
+            <tr key={model}>
+              <td>{model}</td>
+              <td>{selected[model]?.inches?.toFixed(3) || ''}</td>
+              <td>{selected[model]?.mm?.toFixed(3) || ''}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
       <Table striped bordered hover>
-        <tfoot>
-          {saxophoneTypes.map((saxophoneType) => (
-            <tr key={saxophoneType.name}>
-              <td>{saxophoneType.name}</td>
-              {sizeNumbers.map((sizeNumber) => (
+        <thead>
+          <tr>
+            <th>Instrument</th>
+            {sizeNumbers.map(sizeNumber => (
+              <th key={sizeNumber}>#{sizeNumber}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {instruments.map(instrument => (
+            <tr key={instrument}>
+              <td>{instrument}</td>
+              {sizeNumbers.map(sizeNumber => (
                 <td
                   key={sizeNumber}
-                  onMouseOver={() =>
-                    handleMouseOver(
-                      sizeNumber,
-                      saxophoneType.startingValueInches
-                    )
-                  }
+                  onMouseOver={() => handleMouseOver(instrument, sizeNumber)}
                 >
                   #{sizeNumber}
                 </td>
               ))}
             </tr>
           ))}
-        </tfoot>
+        </tbody>
       </Table>
     </Container>
   );
