@@ -494,7 +494,7 @@ export const products = [
   {
     category: "Accessories & Services",
     id: "T01Arb",
-    subtype: ["BB","Soprano", "Alto", "Tenor"],
+    subtype: ["Any Size"],
     finish: "Ebonite",
     price: 27.91,
     image: T01A,
@@ -503,7 +503,7 @@ export const products = [
   {
     category: "Accessories & Services",
     id: "T02Beechler",
-    subtype: ["BB","Soprano", "Alto", "Tenor"],
+    subtype: ["Any Size"],
     finish: "Ebonite",
     image: T01B,
     price: 28.5,

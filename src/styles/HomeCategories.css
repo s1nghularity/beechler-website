@@ -30,9 +30,10 @@
 }
 
 .category-col {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
+  
 }
 
 .category-card,
@@ -47,14 +48,15 @@
 }
 
 .category-card img {
-  width: 25rem;
+  
   height: 15rem;
   margin-bottom: 1rem;
 }
 
 .category-card .category-text {
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 500;
+  line-height: 1;
   position: relative;
   color: var(--black);
   text-decoration: none !important;

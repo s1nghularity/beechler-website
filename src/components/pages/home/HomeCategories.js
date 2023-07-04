@@ -4,13 +4,13 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "../../../styles/HomeCategories.css";
 
 
-import diamond from "../../../assets/img/home/categories/diamond-family.png";
-import tonalex from "../../../assets/img/home/categories/tonalex-family.png";
-import bellite from "../../../assets/img/home/categories/bellite-family.png";
+import diamond from "../../../assets/img/products/diamond/diamond-family.png";
+import tonalex from "../../../assets/img/products/tonalex/tonalex-family.png";
+import bellite from "../../../assets/img/products/bellite/bellite-family.png";
 import hardRubber from "../../../assets/img/products/hard-rubber/hard-rubber-family.png";
 import customized from "../../../assets/img/home/categories/custom-family.png";
-import arb from "../../../assets/img/home/categories/arb-metal-family.png";
-import gnog from "../../..//assets/img/products/greatneck/og-family.png";
+import arb from "../../../assets/img/products/arb-metal/arb-metal-family.png";
+import gnog from "../../../assets/img/products/greatneck/og-family.png";
 import accessories from "../../../assets/img/home/categories/accessories.png";
 
 
