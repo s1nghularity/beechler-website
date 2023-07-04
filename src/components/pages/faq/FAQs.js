@@ -92,6 +92,10 @@ function FAQs() {
       answer:
         "Yes! We offer the service of creating a custom mouthpiece just for you. Please contact us for more details.",
     },
+    {
+      question: "Exactly how customized can I make it?",
+      answer: "Facing, Bore Size, Tip Openings, and Engravings are fully customizable, the materials we use are not. In over 75 years of serving musicians, we believe we have found the most natural combination of materials for artists and do not compromise on the quality of those materials."
+    }
   ];
 
   return (

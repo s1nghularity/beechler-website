@@ -339,6 +339,12 @@ border: 0;
   color: var(--white);
 }
 
+div.col-xl-8.col-lg-8.col-md-12.col-sm-12 > div > div:nth-child(2) > div:nth-child(5) > div > div > div.product-image > img {
+  width: 100%!important;
+  height: 25rem!important;
+  margin-top: -4.9rem;
+}
+
 @media screen and (max-width: 440px) {
   .reset-filters{
     margin-left: 8rem;

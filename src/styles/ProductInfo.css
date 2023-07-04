@@ -19,11 +19,16 @@
   padding: 1rem;
   font-family: Josefin Sans;
   font-size: 1.25rem;
-  flex-direction: column; /* to align your info cards properly */
+  flex-direction: column; 
 }
 
 .info-card {
-  margin-bottom: 1rem; /* to add some space between the cards */
+  margin-top: 1rem;
+}
+
+.info-card-text,
+.bore-card-body, .card-header {
+  text-align: center;
 }
 
 .info-card-header {
@@ -47,7 +52,7 @@
 }
 
 .single-bore .info-row {
-  flex-direction: row; /* switch to row when there's only one bore size */
+  flex-direction: row;
 }
 
 .bore-card-title {
@@ -64,9 +69,6 @@
   object-fit: contain;
 }
 
-.bore-card-body {
-  text-align: center;
-}
 
 div.bore-and-info-row.justify-content-center.row > div > div > div {
   margin: 0 auto;

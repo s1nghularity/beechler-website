@@ -12,7 +12,11 @@ import taTenor from "../../../assets/img/products/tonalex/tonalex-tenor.png";
 import taClarinet from "../../../assets/img/products/tonalex/tonalex-clarinet.png";
 
 //BELLITE
-import belliteSoprano from "../../../assets/img/products/bellite/bellite-soprano.png";
+import b80 from "../../../assets/img/products/bellite/b80.png";
+import b81 from "../../../assets/img/products/bellite/b81.png";
+import b82 from "../../../assets/img/products/bellite/b82.png";
+import c32 from "../../../assets/img/products/bellite/c32.png";
+import c33 from "../../../assets/img/products/bellite/c33.png";
 import belliteAlto from "../../../assets/img/products/bellite/bellite-alto.png";
 import belliteTenor from "../../../assets/img/products/bellite/bellite-tenor.png";
 import belliteBaritone from "../../../assets/img/products/bellite/bellite-baritone.png";
@@ -215,7 +219,7 @@ export const products = [
     subtype: "Soprano",
     accessories: "Cap & Ligature",
     price: 439.97,
-    image: belliteSoprano,
+    image: b80,
   },
   {
     category: "Beechler Bellite",
@@ -224,7 +228,7 @@ export const products = [
     subtype: "Alto",
     accessories: "Cap & Ligature",
     price: 498.28,
-    image: belliteAlto,
+    image: b81,
   },
   {
     category: "Beechler Bellite",
@@ -233,7 +237,7 @@ export const products = [
     subtype: "Tenor",
     accessories: "Cap & Ligature",
     price: 499.94,
-    image: belliteTenor,
+    image: b82,
   },
   {
     category: "Beechler Bellite",
@@ -260,7 +264,7 @@ export const products = [
     subtype: "Alto",
     accessories: "Cap & Ligature",
     price: 554.09,
-    image: customBelliteA,
+    image: c32,
   },
   {
     category: "Beechler Bellite",
@@ -269,7 +273,7 @@ export const products = [
     subtype: "Tenor",
     accessories: "Cap & Ligature",
     price: 552.19,
-    image: customBelliteT,
+    image: c33,
   },
   {
     category: "Beechler Bellite",
@@ -489,8 +493,8 @@ export const products = [
   //Caps
   {
     category: "Accessories & Services",
-    id: "T01S",
-    subtype: ["Soprano"],
+    id: "T01Arb",
+    subtype: ["BB","Soprano", "Alto", "Tenor"],
     finish: "Ebonite",
     price: 27.91,
     image: T01A,
@@ -498,33 +502,8 @@ export const products = [
 
   {
     category: "Accessories & Services",
-    id: "T01A",
-    subtype: ["Alto"],
-    finish: "Ebonite",
-    image: T01A,
-    price: 27.91,
-  },
-  {
-    category: "Accessories & Services",
-    id: "T01T",
-    subtype: ["Tenor"],
-    finish: "Metal/Bellite",
-    image: T02,
-    price: 27.91,
-  },
-  {
-    category: "Accessories & Services",
-    id: "T01B",
-    subtype: ["Baritone"],
-    finish: "Ebonite",
-    image: T01B,
-    price: 27.91,
-  },
-
-  {
-    category: "Accessories & Services",
-    id: "T02S",
-    subtype: ["Soprano"],
+    id: "T02Beechler",
+    subtype: ["BB","Soprano", "Alto", "Tenor"],
     finish: "Ebonite",
     image: T01B,
     price: 28.5,
@@ -532,40 +511,13 @@ export const products = [
 
   {
     category: "Accessories & Services",
-    id: "T02C",
-    subtype: ["BB"],
+    id: "T02Arb/Beechler",
+    subtype: ["Any Size"],
     finish: "Ebonite",
-    image: T01A,
-    price: 28.5,
-  },
-
-  {
-    category: "Accessories & Services",
-    id: "T02A",
-    subtype: ["Alto"],
-    finish: "Metal/Bellite",
     image: eboniteT02,
     price: 28.5,
   },
-
-  {
-    category: "Accessories & Services",
-    id: "T02T",
-    subtype: ["Tenor"],
-    finish: "Ebonite",
-    image: T01A,
-    price: 28.5,
-  },
-
-  {
-    category: "Accessories & Services",
-    id: "T02B",
-    subtype: ["Baritone"],
-    finish: "Metal/Bellite",
-    image: eboniteT02,
-    price: 28.5,
-  },
-
+//Pegs
   {
     category: "Accessories & Services",
     id: "P01",
@@ -591,11 +543,11 @@ export const products = [
     image: P03,
     price: 11.88,
   },
-
+//Ligatures
   {
     category: "Accessories & Services",
     id: "L01/A",
-    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    subtype: ["Any Size"],
     finish: "Antique",
     ligatureType: "Ebonite Inverted",
     price: 63.53,
@@ -605,7 +557,7 @@ export const products = [
     category: "Accessories & Services",
     id: "L01/B",
     instrument: null,
-    subtype: ["BB", "Soprano", "Alto", "Tenor", "Baritone"],
+    subtype: ["Any Size"],
     finish: "Black Powder Coat",
     ligatureType: "Ebonite Inverted",
     price: 63.53,
@@ -614,7 +566,7 @@ export const products = [
   {
     category: "Accessories & Services",
     id: "L01/P",
-    subtype: ["Alto", "Tenor", "BB"],
+    subtype: ["Any Size"],
     finish: "Red & Silver Vein",
     ligatureType: "Prismatic Inverted",
     price: 63.53,
@@ -623,7 +575,7 @@ export const products = [
   {
     category: "Accessories & Services",
     id: "L50/B",
-    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    subtype: ["Any Size"],
     finish: "Special Black",
     ligatureType: "Metal/Bellite Inverted",
     price: 63.53,
@@ -632,7 +584,7 @@ export const products = [
   {
     category: "Accessories & Services",
     id: "L50/C",
-    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    subtype: ["Any Size"],
     finish: "White Bronze",
     ligatureType: "Metal/Bellite Inverted",
     price: 67.69,
@@ -641,7 +593,7 @@ export const products = [
   {
     category: "Accessories & Services",
     id: "L50/G",
-    subtype: ["Soprano", "Alto", "Tenor", "Baritone"],
+    subtype: ["Any Size"],
     finish: "Gold Plated",
     ligatureType: "Metal/Bellite Inverted",
     price: 73.63,
