@@ -49,7 +49,7 @@ export const productInfo = {
     tipOpenings: {
       Saxophones: "4-10",
     },
-    material: "Hard Rubber",
+    material: "Composite",
   },
 
   "ARB Metal": {

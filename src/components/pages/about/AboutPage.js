@@ -5,7 +5,7 @@ import { Container, Row, Col, Figure } from "react-bootstrap";
 import "animate.css";
 
 import Masonry from "react-masonry-css";
-import arbLoop from "../../../assets/img/about/arb-loop.mp4";
+import arbLoop from "../../../assets/img/about/arb-loop.gif";
 import NAMM2019 from "../../../assets/img/about/NAMM-2019.jpg";
 import Group from "../../../assets/img/about/Group.jpg";
 import Jim from "../../../assets/img/about/Jim.jpg";
@@ -91,7 +91,10 @@ const AboutPage = () => {
           </Col>
         </Row>
         <div className="background-svg-container">
-          <BackgroundSVG className="background-svg" style={{ width: "100vw" }} />
+          <BackgroundSVG
+            className="background-svg"
+            style={{ width: "100vw" }}
+          />
         </div>
       </Row>
 
@@ -112,7 +115,7 @@ const AboutPage = () => {
           </div>
         </Col>
         <Col sm={4}>
-          <video src={arbLoop} autoPlay loop muted className="about-video" />
+          <img src={arbLoop} alt="Animated GIF" className="about-video" />
         </Col>
       </Row>
 

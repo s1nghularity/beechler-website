@@ -26,8 +26,9 @@ function HomePage() {
     <div>
       <ScrollToTop />
       <HomeCarousel />
-      <HomeCategories />
       <HomeAbout />
+      <HomeCategories />
+
       <HomeDealerCard />
       <HomeTestimonials />
       <HomeContact />

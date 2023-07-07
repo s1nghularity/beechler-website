@@ -18,23 +18,14 @@ const StaticInfo = () => {
               <li>
                 All Beechler and ARB mouthpieces have been lab tested and proven
                 safe for all long and short term human contact according to
-                Reach compliance standards.
-              </li>
-              <li>
-                If using Legere reeds please specify. This requires a different
-                facing length.
-              </li>
-              <li>
-                All bite plates on metal mouthpieces are inlaid using rubber and
-                are not applied with epoxy.
-              </li>
-              <li>
-              Bellite & Metal mouthpieces cast by the Lost Wax method in surgical stainless steel.
+                Reach compliance standards.<br/><br/>
               </li>
               <li>
                 <img src={saxIcon} alt="Saxophone" className="tip-sax" /> Saxophone tip openings: 4-10 <br/><br/>
-                <img src={clarinetIcon} alt="Clarinet" className="tip-clar"/> Clarinet tip openings: 1-12
-              </li> <br/>
+              </li>
+              <li>
+                <img src={clarinetIcon} alt="Clarinet" className="tip-clar"/> Clarinet tip openings: 1-12 <br/><br/>
+              </li> 
               <li>
               <FontAwesomeIcon icon={faStar} className="warranty-star" /> Our mouthpieces, accessories and services come with a 1-year warranty.</li>
             </ul>

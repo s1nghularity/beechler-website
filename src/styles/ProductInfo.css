@@ -74,8 +74,28 @@ div.bore-and-info-row.justify-content-center.row > div > div > div {
   margin: 0 auto;
 }
 
-.static-info ul li:nth-child(5),
-.static-info ul li:nth-child(7) {
+.static-info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: Josefin Sans;
+  font-size: 1.25rem;
+}
+
+.static-info h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+}
+
+.static-info ul li:first-child {
+  list-style-type: disc;
+}
+
+.static-info ul li:not(:first-child) {
   list-style-type: none;
 }
 

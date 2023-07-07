@@ -72,6 +72,10 @@ function FAQs() {
         "All Beechler and ARB mouthpieces have been lab tested and proven safe for all long and short term human contact according to Reach compliance standards. Bellite & Metal mouthpieces are cast by the Lost Wax method in surgical stainless steel. All bite plates on metal mouthpieces are inlaid using rubber and are not applied with epoxy.",
     },
     {
+      question: "What materials are used for Beechler and ARB caps?",
+      answer: "Metal/Bellite caps are made of spun aluminum then powder coated. Ebonite Alto, Tenor and Baritone caps are lacquered brass. Ebonite Clarinet and Soprano caps are silver."
+    },
+    {
       question:
         "What are the tip openings for saxophone and clarinet mouthpieces?",
       answer:

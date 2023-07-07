@@ -57,10 +57,10 @@ const HomeDealerCard = () => {
   return (
     <div className="stripe-home-dealer">
       
-      <div className="home-dealer-title">
+      {/* <div className="home-dealer-title">
       <h2>Internationally Adored <br/>By Artists & Dealers</h2>
       </div>
-      <HomeArtistCard />
+      <HomeArtistCard /> */}
 
       <div className="home-dealer-map-wrapper">
 

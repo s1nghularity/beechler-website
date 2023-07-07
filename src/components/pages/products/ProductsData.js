@@ -30,6 +30,7 @@ import b22 from "../../../assets/img/products/hard-rubber/b22.png";
 import b25 from "../../../assets/img/products/hard-rubber/b25.png";
 import b25c from "../../../assets/img/products/hard-rubber/b25c.png";
 import b26 from "../../../assets/img/products/hard-rubber/b26.png";
+import b26c from "../../../assets/img/products/hard-rubber/b26c.png";
 import b27 from "../../../assets/img/products/hard-rubber/b27.png";
 import b29 from "../../../assets/img/products/hard-rubber/b29.png";
 
@@ -64,6 +65,8 @@ import T02 from "../../../assets/img/products/accessories-services/T02.png";
 import P01 from "../../../assets/img/products/accessories-services/P01.png";
 import P02 from "../../../assets/img/products/accessories-services/P02.png";
 import P03 from "../../../assets/img/products/accessories-services/P03.png";
+import L52 from "../../../assets/img/products/accessories-services/L52.png";
+import L53 from "../../../assets/img/products/accessories-services/L53.png";
 //Ligatures
 import ligAntique from "../../../assets/img/products/ligatures/lig-antique.png";
 import ligBlack from "../../../assets/img/products/ligatures/lig-black.png";
@@ -148,7 +151,7 @@ export const products = [
     bore: null,
     tipOpening: saxTipOpening,
     facing: ["Standard", "Medium", "Long"],
-    extras: ["Cap", "Ligature"],
+    accessories: "Cap & Ligature",
     image: wdBaritone,
     price: 231.56,
   },
@@ -312,6 +315,15 @@ export const products = [
     subtype: "Alto",
     price: 219.09,
     image: b26,
+  },
+
+  {
+    category: "Beechler Hard Rubber",
+    id: "B26/C",
+    instrument: "Saxophone",
+    subtype: "Alto",
+    price: 219.09,
+    image: b26c,
   },
 
   {
@@ -598,6 +610,22 @@ export const products = [
     ligatureType: "Metal/Bellite Inverted",
     price: 73.63,
     image: ligGold,
+  },
+  {
+    category: "Accessories & Services",
+    id: "L52",
+    subtype: ["One Size"],
+    ligatureType: "Chrome",
+    price: 4.75,
+    image: L52,
+  },
+  {
+    category: "Accessories & Services",
+    id: "L53",
+    subtype: ["One Size"],
+    ligatureType: "Brass",
+    price: 4.75,
+    image: L53,
   },
   {
     category: "Accessories & Services",

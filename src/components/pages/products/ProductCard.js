@@ -8,15 +8,21 @@ import {
   ModelSection,
   LigatureTypeSection,
   FinishSection,
+  BoreSection
 } from "../products/ProductCardSpecs";
+
+const selectedProductIds = ["B10", "B11", "B12", "B18", "B20", "B21"];
+
 
 const ProductDescription = ({ product }) => {
   const {
+    id,
     price,
     ligatureType,
     finish,
     accessories,
     model,
+    bore,
   } = product;
 
   return (
@@ -30,6 +36,7 @@ const ProductDescription = ({ product }) => {
         {finish && <FinishSection finish={finish} />}
         {accessories && <AccessoriesSection accessories={accessories} />}
         {model && <ModelSection model={model} />}
+        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} />}
         <Card.Text className="price">MSRP ${price}</Card.Text>
       </Row>
     </Card>
