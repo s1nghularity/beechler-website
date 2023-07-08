@@ -1,14 +1,14 @@
 .home-testimonials {
-    background-color: var(--grey);
+    background-color: var(--black);
     color: var(--white);
-    width: 100%;
+    width:min-content;
     position: relative;
     margin: 0;
     padding:0;
   }
   
   .home-testimonials blockquote {
-    font-family: 'Big Shoulders Text', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -16,13 +16,13 @@
   }
   
   .home-testimonials footer {
-    font-family: 'Big Shoulders Text', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 100;
     font-size: 1.5rem!important;
   }
   
   .testimonial-card {
-    background-color: #000;
+    background-color: var(--grey-alt);
     border-radius: 1rem;
     padding: 2rem;
     margin: 1rem;
@@ -30,7 +30,7 @@
     
   
   .testimonial-card footer {
-    font-family: 'Big Shoulders Text', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 100;
     font-size: 1rem;
     color: #fff;

@@ -9,11 +9,11 @@
   width: 200vw;
   left: -100vw;
   z-index: -1;
-  background-color: var(--black-alt);
+  background-color: var(--black);
 }
 
 .home-about {
-  background-color: var(--black-alt);
+  background-color: var(--black);
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -30,14 +30,13 @@
 
 .home-about-left h2 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 700;
   background: var(--accent);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: -1rem;
-  transform: translateX(-1rem);
+  letter-spacing: -.5rem;
   margin-right: -2rem;
 }
 
@@ -54,14 +53,12 @@
   margin-bottom: 1rem;
 }
 
-.slide.selected {
-  opacity: 1;
-}
 
 .control-prev,
 .control-next {
   display: none;
 }
+
 
 .slide img {
   height: 60rem;
@@ -70,10 +67,12 @@
   position: relative;
   border-radius: 1rem;
   transition: opacity 2s ease;
+  z-index: 1;
 }
 
 .slide.selected img {
   opacity: 1;
+  z-index: 1;
 }
 
 .our-story-tag {
@@ -89,8 +88,9 @@
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
-  animation: fadeInMoveRight 7.5s ease infinite;
-  transition: opacity 1s ease 3s, transform 1s ease 3s;
+  animation: fadeInMoveRight 7.5s ease;
+  transition: opacity 1s ease, transform 3s ease;
+  z-index: 10;
 }
 
 .our-story-tag.fadeInMoveRight {
@@ -100,10 +100,14 @@
 
 .slide:not(.selected) .our-story-tag {
   animation: none;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) translateX(-50px);
 }
 
 .slide.selected .our-story-tag {
-  animation: fadeInMoveRight 8s ease infinite;
+  animation: fadeInMoveRight 8s ease;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0) translateX(50px);
 }
 
 @keyframes fadeInMoveRight {
@@ -122,10 +126,7 @@
 }
 
 @media (max-width: 440px) {
-  .swiper-container {
-    width: 100%;
-    height: 100%;
-  }
+
 
   .slide img {
     height: 30rem;
@@ -138,7 +139,6 @@
     line-height: 1;
   }
 }
-
 @media (min-width: 401px) and (max-width: 767px) {
   .home-about-row {
     flex-direction: column;
@@ -160,7 +160,4 @@
   .slide img {
     height: 50rem;
   }
-}
-@media (min-width: 1313px) {
-  
 }

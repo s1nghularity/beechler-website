@@ -6,6 +6,9 @@ import mouthpiece from "../../../assets/img/home/carousel-5.png";
 import artist2 from "../../../assets/img/home/carousel-3.png";
 import artist from "../../../assets/img/home/carousel-4.png";
 import dealer from "../../../assets/img/home/carousel-2.png";
+import ikechi from "../../../assets/img/home/ikechi-home.png";
+import adrian from "../../../assets/img/home/adrian-home.png";
+import pablo from "../../../assets/img/home/pablo-home.png";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -77,9 +80,11 @@ const HomeCarousel = () => {
           <SwiperSlide>
             <img src={tonalex} alt="Mouthpieces" className="home-carousel-image"/>
           </SwiperSlide>
+
           <SwiperSlide>
             <img src={artist} alt="Artists" className="home-carousel-image"/>
           </SwiperSlide>
+
           <SwiperSlide>
             <img src={mouthpiece} alt="Mouthpieces" className="home-carousel-image"/>
           </SwiperSlide>
@@ -88,10 +93,20 @@ const HomeCarousel = () => {
             <img src={artist2} alt="Tip Openings" className="home-carousel-image" />
           </SwiperSlide>
 
-
-
           <SwiperSlide>
             <img src={dealer} alt="Artists" className="home-carousel-image"/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={ikechi} alt="Mouthpieces" className="home-carousel-image"/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={adrian} alt="Tip Openings" className="home-carousel-image" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={pablo} alt="Artists" className="home-carousel-image"/>
           </SwiperSlide>
 
         </Swiper>

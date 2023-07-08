@@ -36,21 +36,25 @@ function HomeAbout() {
     return null;
   };
   
-  function handleSlideChange(index) {
-    const slides = document.querySelectorAll(".slide");
-    slides.forEach((slide, i) => {
-      const caption = slide.querySelector(".our-story-tag");
-      if (caption) {
-        if (i === index) {
-          slide.classList.add("fadeInMoveRight");
-          caption.classList.add("fadeInMoveRight");
-        } else {
+function handleSlideChange(index) {
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide, i) => {
+    const caption = slide.querySelector(".our-story-tag");
+    if (caption) {
+      if (i === index) {
+        slide.classList.add("fadeInMoveRight");
+        caption.classList.add("fadeInMoveRight");
+      } else {
+        caption.addEventListener("transitionend", () => {
           slide.classList.remove("fadeInMoveRight");
           caption.classList.remove("fadeInMoveRight");
-        }
+        }, { once: true });
+        slide.classList.add("fadeOutMoveLeft");
+        caption.classList.add("fadeOutMoveLeft");
       }
-    });
-  }
+    }
+  });
+}
 
   return (
     <Container fluid className="home-about stripe-home-about">
