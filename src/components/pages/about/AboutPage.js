@@ -23,13 +23,11 @@ import everette from "../../../assets/img/about/everette.jpg";
 import vibes from "../../../assets/img/about/vibes.jpg";
 import elmerT from "../../../assets/img/about/elmer-t.png";
 
-import AboutTimelineNew from "../../../components/pages/about/AboutTimelineNew";
-import AboutTimeline from "../../../components/pages/about/AboutTimeline";
+
 import AboutCarousel from "./AboutCarousel";
 
 import { ReactComponent as BackgroundSVG } from "../../pages/about/animatedwaves.svg";
 
-import { FaHeart } from "react-icons/fa";
 
 const masonryImages = [
   NAMM2019,
@@ -69,11 +67,21 @@ const AboutPage = () => {
                 today. <br />
                 <br />
                 At Remlé, we believe that music is not just a profession, but a
-                joyful expression of life. That's why we pour our hearts and
+                joyful expression of life. That is why we pour our hearts and
                 souls into every mouthpiece we create, meticulously handcrafting
                 them to precise design specifications. Our mouthpieces are then
                 play-tested by professional musicians and finished by skilled
                 artisans to ensure the highest quality.
+                <br />
+                <br />
+                Remlé Musical Products, Inc. has been under the direction of
+                Elmer Beechler's daughter, Judy Beechler Roan, since 1993. We
+                believe we make the best mouthpieces in the world for the
+                professional musician and players who want to play well for the
+                simple pleasure and joy of it.
+                <br />
+                <br />
+
               </p>
             </div>
           </Col>

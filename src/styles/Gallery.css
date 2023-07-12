@@ -14,3 +14,28 @@
   margin-bottom: 10px;
   width: 100%;
 }
+
+/*align to center of page*/
+.gallery-title-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: .5rem!important;
+}
+
+.gallery-title {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+
+}

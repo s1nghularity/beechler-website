@@ -63,7 +63,9 @@ function handleSlideChange(index) {
           <div>
             <h2>OUR STORY</h2>
             <p className="about-main-text">
-            Musicians have always loved our work.<br/><br/> Join the ranks of saxophonists and woodwind players who trust Beechler for their mouthpiece and accessory needs.<br/><br/> <i> Elevate your playing experience today.</i>
+            For over 77 years professional musicians and those who play for the joy and pleasure of the music have favored Beechler Mouthpieces.
+            <br/><br/> 
+            Join the ranks of saxophonists and woodwind players who trust Beechler for their mouthpieces and accessory needs.
             </p>
           </div>
         </Col>

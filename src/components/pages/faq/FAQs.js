@@ -69,7 +69,7 @@ function FAQs() {
     {
       question: "What materials are used in Beechler mouthpieces?",
       answer:
-        "All Beechler and ARB mouthpieces have been lab tested and proven safe for all long and short term human contact according to Reach compliance standards. Bellite & Metal mouthpieces are cast by the Lost Wax method in surgical stainless steel. All bite plates on metal mouthpieces are inlaid using rubber and are not applied with epoxy.",
+        "All Beechler and ARB mouthpieces have been lab tested and proven safe for all long and short term human contact according to Reach compliance standards. Bellite & Metal mouthpieces are cast by the Lost Wax method in surgical stainless steel. All bite plates on metal mouthpieces are inlaid using rubber and are not applied with epoxy. Beechler Black mouthpieces are available on request.",
     },
     {
       question: "What materials are used for Beechler and ARB caps?",

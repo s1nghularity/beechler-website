@@ -1,9 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { Container, Row, Col } from 'react-bootstrap';
-import elmer from '../../../assets/img/about/elmer.jpg';
 import bwgroup from '../../../assets/img/gallery/IMG_5689.png'
-import Group from '../../../assets/img/about/Group.jpg';
+import bwsolo from '../../../assets/img/gallery/IMG_5687.png'
 import Jim from '../../../assets/img/about/Jim.jpg';
 import '../../../styles/AboutPage.css';
 
@@ -12,17 +11,17 @@ const AboutCarousel = () => {
     {
       image: bwgroup,
       text:
-        'Founded by Elmer Beechler in 1942, we design, manufacture, and distribute outstanding saxophone and clarinet mouthpieces and woodwind accessories. Elmer’s passion for music and vision for creating mouthpieces continues to inspire and enhance the playing experience of professional musicians all over the world today.',
+      'Our mouthpieces provide the variations needed to produce an      individual richness and quality of voice. All surfaces are hand      finished by skilled artisans, some of whom have been with us for over twenty years.',
     },
     {
-      image: Group,
+      image: bwsolo,
       text:
-        'Remlé Musical Products, Inc. has been under the direction of Elmer Beechler’s daughter, Judith Roan Beechler, since 1993. Judy carries on her father’s legacy of excellence and innovation in mouthpiece design and manufacturing.',
+        ' Because of our years of experience, excellent craftsmanship, and extraordinary attention to detail, we can offer musicians an almost infinite choice of fine mouthpieces to suit varying embouchures, reed preferences, choice of materials, playing styles, and situations.',
     },
     {
       image: Jim,
       text:
-        'We believe we make the best mouthpieces in the world for the professional musician and players who want to play well for the simple pleasure and joy of it.',
+        'We can also make custom mouthpieces to suit individual preferences.',
     },
   ];
 

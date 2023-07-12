@@ -47,7 +47,6 @@ import saxMaxImg from "../../../assets/img/about/saxmax.jpg";
 import stabewilsonImg from "../../../assets/img/about/stabewilson.jpg";
 import stabewilson2Img from "../../../assets/img/about/stabewilson2.jpg";
 
-
 const masonryImages = [
   img1,
   img2,
@@ -92,29 +91,31 @@ const masonryImages = [
   saxMaxImg,
   stabewilsonImg,
   stabewilson2Img,
-
-]
+];
 
 const Gallery = () => {
   return (
     <Container>
-      <Row>
-        <h1>Gallery</h1>
+      <Row className="gallery-title-card">
+        <h1 className="gallery-title">
+          Serving musicians since 1942, <br /> Remle Musical Products is <b>honored</b>{" "}
+          <br /> to be part of your musical journey.
+        </h1>
       </Row>
-    <Row>
-      <div className="masonry-container">
-        <Masonry
-          breakpointCols={{ default: 4, 1100: 3, 700: 2, 500: 1 }}
-          className="masonry-grid"
-          columnClassName="masonry-grid_column"
-        >
-          {masonryImages.map((image, index) => (
-            <img key={index} src={image} alt="" />
-          ))}
-        </Masonry>
-      </div>
-    </Row>
-  </Container>
+      <Row>
+        <div className="masonry-container">
+          <Masonry
+            breakpointCols={{ default: 4, 1100: 3, 700: 2, 500: 1 }}
+            className="masonry-grid"
+            columnClassName="masonry-grid_column"
+          >
+            {masonryImages.map((image, index) => (
+              <img key={index} src={image} alt="" />
+            ))}
+          </Masonry>
+        </div>
+      </Row>
+    </Container>
   );
 };
 
