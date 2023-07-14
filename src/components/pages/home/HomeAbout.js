@@ -80,7 +80,7 @@ function handleSlideChange(index) {
                 <img src={about3} alt="your alt text" />
                 <p className="our-story-tag">Experience the difference.</p>
               </div>
-              <div className="our-story-slide-nbc">
+              <div className="our-story-slide">
                 <img src={about4} alt="your alt text" />
                 <p className="our-story-tag">Unmatched in the industry.</p>
               </div>
