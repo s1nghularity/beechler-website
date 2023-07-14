@@ -48,11 +48,6 @@
   background-color: var(--black)!important;
 }
 
-li.dot{
-  display:none!important;
-}
-
-
 div.home-top-carousel-slide{
   margin: 1rem;
 }
@@ -64,7 +59,9 @@ div.home-top-carousel-slide{
   height: 47rem!important;
 }
 
-
+li.dot{
+  display:none!important;
+}
 
 @media (max-width: 1200px) {
   .home-top-carousel-image {
@@ -86,15 +83,13 @@ div.home-top-carousel-slide{
 
 @media (max-width: 576px) {
   .home-top-carousel-image {
-    height: 15rem!important;
+    height: auto!important;
+    width: 20rem!important;
   }
 }
 
-@media (max-width: 400px) {
-  .home-top-carousel-image {
-    height: 10rem!important;
-  }
-}
+
+
 
 
 

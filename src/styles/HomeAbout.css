@@ -60,9 +60,9 @@
 
   .home-about-left p {
     font-size: 1.5rem;
-    width: 27rem;
-    margin-left: -2rem;
-    padding-right: 3rem;
+    width: 27rem!important;
+    margin-left: -2rem!important;
+    padding-right: 3rem!important;
   }
 }
 

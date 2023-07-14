@@ -22,14 +22,11 @@ const HomeCarousel = () => {
 
 
         <Carousel
-        
-          showArrows={true}
           showStatus={false}
           showThumbs={false}
           autoPlay={true}
           interval={7000}
           transitionTime={1250}
-          speed={5000}
           centerMode={true}
           infiniteLoop={true}
           draggable={true}

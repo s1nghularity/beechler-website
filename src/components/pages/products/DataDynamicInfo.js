@@ -2,7 +2,7 @@ export const productInfo = {
   "Beechler Diamond": {
     description:
       "Beechler Diamond Inlay Alto mouthpieces come in three bore sizes. The Clarinet, Tenor, and Baritone are designed with a medium open chamber and medium baffle. The composite material used for these mouthpieces is a sturdy combination of the qualities of traditional hard rubber and new age plastics designed to utilize the full dynamic range of the instrument. Facing lengths available in Standard, Medium, and Long.",
-    // bores: ["Small", "Medium", "Large"],
+    bores: ["Small", "Medium", "Large"],
     // facings: ["Standard", "Medium", "Long"],
     // tipOpenings: {
     //   Saxophones: "4-10",
@@ -17,7 +17,7 @@ export const productInfo = {
   "Beechler Tonalex": {
     description:
       "Beechler Tonalex Alto mouthpiece has medium baffles with open chambers. The Clarinet and Tenor mouthpieces have a medium open chamber. The white acoustic resin in these mouthpieces favors the softer singing qualities of the instrument. Facing lengths available in Standard, Medium, and Long.",
-    // bores: ["Small", "Medium", "Large"],
+    bores: ["Small", "Medium", "Large"],
     // facings: ["Standard", "Medium", "Long"],
     // tipOpenings: {
     //   Saxophones: "4-10",
@@ -93,7 +93,6 @@ export const productInfo = {
   "Accessories & Services": {
     description:
       "All customizations are done by hand. We offer a variety of services to customize and provide the best playing experience as well as accessories to help you maintain your mouthpiece. Our mouthpieces are handcrafted with extraordinary attention to detail, allowing for an almost infinite choice of fine mouthpieces to suit varying embouchures, reed preferences, choice of materials, playing styles, and situations. And if you're looking for something truly unique, we can even create a custom mouthpiece just for you.",
-    bores: ["Small", "Medium", "Large"],
     material: "Please specify Beechler or ARB for any of the L50 series ligatures.",
     
   },

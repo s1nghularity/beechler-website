@@ -112,14 +112,17 @@ const ProductsPage = () => {
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
-          <StaticInfo />
-
-          <Button href="/dealers" className="find-dealer">
-            Find a store near you!
-          </Button>
+                    <div class="golden-sticker">
+            <p>
+              All Beechler and ARB mouthpieces have been lab tested and proven
+              safe for all long and short term human contact according to Reach
+              compliance standards.
+            </p>
+          </div>
         </Col>
         <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
+
         </Col>
 
         <DynamicInfo
@@ -129,10 +132,9 @@ const ProductsPage = () => {
 
         <Row sm={12} md={12} lg={12} xl={12}>
           <div className="product-email-signup">
-            <h1>
-              Serving musicians since 1942, <br/> Remle Musical Products is honored <br/> to
-              be part of your musical journey.
-            </h1>
+            <Button href="/dealers" className="find-dealer">
+              Find a store near you!
+            </Button>
             <Col sm={6} md={6} lg={6} xl={6}>
               <div className="email-signup-form">
                 <EmailSignup />

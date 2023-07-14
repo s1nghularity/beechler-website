@@ -30,7 +30,7 @@ const ProductNav = ({
   return (
     <Navbar className="products-navbar">
       <Navbar.Toggle aria-controls="navbarToggler" />
-      <Navbar.Collapse id="navbarToggler">
+
         <Nav>
           <NavDropdown
             className="custom-caret"
@@ -47,7 +47,7 @@ const ProductNav = ({
             Reset Filters
           </Button>
         </Nav>
-      </Navbar.Collapse>
+
     </Navbar>
   );
 };

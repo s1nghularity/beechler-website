@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: none;
   
 }
 
@@ -14,6 +15,7 @@
   left: -100vw;
   z-index: -1;
   background-color: var(--black);
+  border: none;
 }
 
 .home-dealer-card {
@@ -23,11 +25,12 @@
   width: 100%;
   padding: 2rem;
   margin: 0 auto;
+  border: none;
 }
 
 .home-dealer-map {
   background-color: var(--black);
-
+  border: none;
 }
 
 

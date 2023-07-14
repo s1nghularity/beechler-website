@@ -35,7 +35,7 @@ export const BoreSection = ({ bore }) => (
 export const getChipColor = (subtype) => {
   let color;
   switch (subtype) {
-    case "BB":
+    case "Bb":
       color = "skyblue";
       break;
     case "Soprano":

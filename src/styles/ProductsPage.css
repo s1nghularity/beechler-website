@@ -1,12 +1,24 @@
 @import url("/src/styles/theme.css");
 
 /*PRODUCTSPAGE.JS*/
-.products-page {
+
+
+.golden-sticker {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  background: linear-gradient(to right,#7b10f5, #cf0e0e);
+  color:white;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  border-radius: 5px;
+  font-family: Josefin Sans;
 }
-
-
 
 .products-grid {
   display: flex;
@@ -30,8 +42,6 @@
   color: black;
 }
 
-
-
 /* PRODUCTCARD.JS */
 .product-card-container {
   display: flex;
@@ -44,9 +54,6 @@
 }
 
 /*PRODUCTCARDSPECS.JS*/
-
-
-
 .product-image img {
   height: 20rem;
   width: 100%;
@@ -148,7 +155,6 @@
   margin-bottom: -.25rem;
 }
 
-
 .finish {
   text-align: center;
   max-width: 7rem;
@@ -183,7 +189,6 @@
   font-weight: 300;
 }
 
-
 .find-dealer  {
   display: flex;
   flex-direction: column;
@@ -203,11 +208,21 @@
   text-align: center;
 }
 
-.product-email-signup p {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--black);
+.find-dealer {
+  margin-left: auto!important;
+  margin-right: auto!important;
+  display: block;
+  margin-left: auto;
+  border-radius: 5px;
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: -2rem;
+  background: linear-gradient(90deg, #FFA500, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .email-signup-form {

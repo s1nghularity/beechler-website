@@ -1,10 +1,26 @@
+.stripe-home-testimonials {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: var(--black);
+  
+}
+
+.stripe-home-testimonials::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 200vw;
+  left: -100vw;
+  z-index: -1;
+  background-color: var(--black);
+  border: none;
+}
+
 .home-testimonials {
-    background-color: var(--black);
-    color: var(--white);
-    width:min-content;
-    position: relative;
-    margin: 0;
-    padding:0;
+    border: none;
   }
   
   .home-testimonials blockquote {
@@ -13,6 +29,7 @@
     font-size: 1.2rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: var(--white);
   }
   
   .home-testimonials footer {
@@ -42,3 +59,11 @@
     margin-top: -.5rem!important;
   }
   
+/*reduce testimonial card width on mobile*/
+
+@media (max-width: 576px) {
+  .testimonial-card {
+    width: 90%!important;
+
+  }
+}

@@ -1,29 +1,25 @@
-.static-info {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  font-family: Josefin Sans;
-  font-size: 1.25rem;
-}
-
-.static-info img {
-  height: 20px;
-  margin-left: 5px;
-}
 
 .dynamic-info {
   display: flex;
   border-radius: 5px;
   padding: 1rem;
   font-family: Josefin Sans;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dynamic-info h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
 .info-card {
   margin-top: 1rem;
+
 }
 
 .info-card .card-header, .bore-card .card-header{
@@ -75,43 +71,3 @@ div.bore-and-info-row.justify-content-center.row > div > div > div {
   margin: 0 auto;
 }
 
-.static-info {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  font-family: Josefin Sans;
-  font-size: 1.25rem;
-}
-
-.static-info h2{
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-
-}
-
-.static-info ul li:first-child {
-  list-style-type: disc;
-}
-
-.static-info ul li:not(:first-child) {
-  list-style-type: none;
-}
-
-.tip-sax,
-.tip-clar,
-.warranty-star {
-  width: 54px;
-  height: 54px !important;
-  margin-left: -4rem !important;
-}
-
-.warranty-star {
-  position: absolute;  
-  width: 54px;
-  height: 54px !important;
-  margin-left: -4rem !important;
-  margin-top: 1rem;
-}

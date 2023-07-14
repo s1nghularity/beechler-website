@@ -31,11 +31,11 @@ function HomeCategories() {
   return (
     <div className="stripe-categories">
       <div className="home-categories">
-        <h2>Our Mouthpieces</h2>
+        <h2>OUR MOUTHPIECES</h2>
         <Container>
         <Row className="categories-grid">
             {categories.map((category, index) => (
-              <Col key={index} lg={6} md={6} sm={12} className="category-col">
+              <Col key={index} lg={6} md={12} sm={12} className="category-col">
                 <Link
                   key={index}
                   to={`/products?category=${encodeURIComponent(category.name)}`}

@@ -18,7 +18,6 @@ import OurCommitment from "./components/pages/commitment/OurCommitment.js";
 import Footer from "./components/Footer.js";
 
 import "leaflet/dist/leaflet.css";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
