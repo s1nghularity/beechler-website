@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import { Container, Row, Col } from 'react-bootstrap';
 import bwgroup from '../../../assets/img/gallery/IMG_5689.png'
 import bwsolo from '../../../assets/img/gallery/IMG_5687.png'
-import Jim from '../../../assets/img/about/Jim.jpg';
+import nbc from '../../../assets/img/home/about/nbc.png';
 import '../../../styles/AboutPage.css';
 
 const AboutCarousel = () => {
@@ -19,7 +19,7 @@ const AboutCarousel = () => {
         ' Because of our years of experience, excellent craftsmanship, and extraordinary attention to detail, we can offer musicians an almost infinite choice of fine mouthpieces to suit varying embouchures, reed preferences, choice of materials, playing styles, and situations.',
     },
     {
-      image: Jim,
+      image: nbc,
       text:
         'We can also make custom mouthpieces to suit individual preferences.',
     },

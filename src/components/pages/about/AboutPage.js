@@ -4,49 +4,14 @@ import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import "animate.css";
 
-import Masonry from "react-masonry-css";
 import arbLoop from "../../../assets/img/about/arb-loop.gif";
-import NAMM2019 from "../../../assets/img/about/NAMM-2019.jpg";
-import Group from "../../../assets/img/about/Group.jpg";
-import Jim from "../../../assets/img/about/Jim.jpg";
-import Jim2 from "../../../assets/img/about/Jim2.png";
-import Charles from "../../../assets/img/about/Charles.jpg";
-import fiftiesAd from "../../../assets/img/about/1953ad.JPG";
-import history from "../../../assets/img/about/history.jpg";
-import elmer from "../../../assets/img/about/elmer.jpg";
-import kenny from "../../../assets/img/about/kenny.jpg";
-import namm20 from "../../../assets/img/about/namm20.jpg";
-import Max from "../../../assets/img/about/Max.jpg";
-import isaac from "../../../assets/img/about/Isaac.jpg";
-import kid from "../../../assets/img/about/kid.jpg";
-import everette from "../../../assets/img/about/everette.jpg";
-import vibes from "../../../assets/img/about/vibes.jpg";
-import elmerT from "../../../assets/img/about/elmer-t.png";
-
+import elmerT from "../../../assets/img/about/elmer-oval.png";
 
 import AboutCarousel from "./AboutCarousel";
 
-import { ReactComponent as BackgroundSVG } from "../../pages/about/animatedwaves.svg";
 
 
-const masonryImages = [
-  NAMM2019,
-  Group,
-  Jim,
-  history,
-  Jim2,
-  fiftiesAd,
-  kenny,
-  namm20,
-  Charles,
-  Max,
-  isaac,
-  elmer,
-  kid,
-  everette,
-  Group,
-  vibes,
-];
+
 
 const AboutPage = () => {
   return (
@@ -56,7 +21,7 @@ const AboutPage = () => {
           <h1>Remlé Musical Products</h1>
         </Col>
         <Row>
-          <Col xs={12} md={9}>
+          <Col xs={12} md={8}>
             <div className="about-header-text">
               <p className="intro-letter">
                 Founded by Elmer Beechler in 1942, we design, manufacture, and
@@ -81,11 +46,10 @@ const AboutPage = () => {
                 simple pleasure and joy of it.
                 <br />
                 <br />
-
               </p>
             </div>
           </Col>
-          <Col xs={12} md={3}>
+          <Col xs={12} md={4}>
             <div className="image-container">
               <Figure>
                 <Figure.Image
@@ -98,12 +62,6 @@ const AboutPage = () => {
             </div>
           </Col>
         </Row>
-        <div className="background-svg-container">
-          <BackgroundSVG
-            className="background-svg"
-            style={{ width: "100vw" }}
-          />
-        </div>
       </Row>
 
       <div>
@@ -111,37 +69,20 @@ const AboutPage = () => {
       </div>
 
       <Row className="about-footer">
-        <Col sm={8}>
+        <Col sm={12}>
           <h1>American Made Since 1942</h1>
           <div className="about-text2">
             <p>
               Discover the joy of playing at your full potential with Remlé
               Musical Products.
-              {/* <br />
-              <FaHeart className="animate__animated animate__heartBeat animate__infinite	infinite about-heart" /> */}
             </p>
           </div>
         </Col>
-        <Col sm={4}>
+        <Col sm={12}>
           <img src={arbLoop} alt="Animated GIF" className="about-video" />
         </Col>
       </Row>
 
-      <Row>
-        <Col>
-          <div className="masonry-container">
-            <Masonry
-              breakpointCols={{ default: 4, 1100: 3, 700: 2, 500: 1 }}
-              className="masonry-grid"
-              columnClassName="masonry-grid_column"
-            >
-              {masonryImages.map((image, index) => (
-                <img key={index} src={image} alt="" />
-              ))}
-            </Masonry>
-          </div>
-        </Col>
-      </Row>
     </Container>
   );
 };
