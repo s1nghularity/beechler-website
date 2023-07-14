@@ -1,7 +1,7 @@
 import "../../../styles/Gallery.css";
 import Masonry from "react-masonry-css";
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 import img1 from "../../../assets/img/gallery/IMG_5687.png";
 import img2 from "../../../assets/img/gallery/IMG_5689.png";
@@ -47,6 +47,25 @@ import saxMaxImg from "../../../assets/img/gallery/saxmax.jpg";
 import stabewilsonImg from "../../../assets/img/gallery/stabewilson.jpg";
 import stabewilson2Img from "../../../assets/img/gallery/stabewilson2.jpg";
 
+import bwTrio1Img from "../../../assets/img/gallery/bw-trio1.png";
+import hands1Img from "../../../assets/img/gallery/hands1.png";
+import hands2Img from "../../../assets/img/gallery/hands2.png";
+import isaacImg from "../../../assets/img/gallery/Isaac.jpg";
+import jimImg from "../../../assets/img/gallery/Jim.jpg";
+import jim2Img from "../../../assets/img/gallery/Jim2.png";
+import kennyImg from "../../../assets/img/gallery/kenny.jpg";
+import kidImg from "../../../assets/img/gallery/kid.jpg";
+import larryWilliamsImg from "../../../assets/img/gallery/larrywilliams.png";
+import maxImg from "../../../assets/img/gallery/Max.jpg";
+import mouthpieceAboutImg from "../../../assets/img/gallery/mouthpieceAbout.jpg";
+import namm2019Img from "../../../assets/img/gallery/NAMM-2019.jpg";
+import namm20Img from "../../../assets/img/gallery/namm20.jpg";
+import nbcElmerImg from "../../../assets/img/gallery/nbc-elmer.png";
+import nbcImg from "../../../assets/img/gallery/nbc.png";
+import reginaJimImg from "../../../assets/img/gallery/reginajim.jpg";
+import tedNashImg from "../../../assets/img/gallery/tednash.jpg";
+
+
 const masonryImages = [
   img1,
   img2,
@@ -91,6 +110,25 @@ const masonryImages = [
   saxMaxImg,
   stabewilsonImg,
   stabewilson2Img,
+  bwTrio1Img,
+  hands1Img,
+  hands2Img,
+  isaacImg,
+  jimImg,
+  jim2Img,
+  kennyImg,
+  kidImg,
+  larryWilliamsImg,
+  maxImg,
+  mouthpieceAboutImg,
+  namm2019Img,
+  namm20Img,
+  nbcElmerImg,
+  nbcImg,
+  reginaJimImg,
+  tedNashImg,
+  mouthpieceAboutImg,
+
 ];
 
 const Gallery = () => {

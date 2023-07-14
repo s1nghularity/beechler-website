@@ -1,12 +1,10 @@
 .masonry-grid {
   display: flex;
-  margin-left: -30px;
   width: auto;
 }
 
 .masonry-grid_column {
   padding-top: 5px;
-  padding-left: 10px;
   background-clip: padding-box;
 }
 
@@ -14,6 +12,8 @@
   margin-bottom: 10px;
   width: 100%;
 }
+
+
 
 /*align to center of page*/
 .gallery-title-card {
@@ -37,5 +37,28 @@
   font-weight: 600;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
 
+/*media query to ensure single column centered on mobile*/
+@media (max-width: 500px) {
+  .masonry-grid {
+    width: 115%!important;
+    margin: 1rem;
+  }
+  .masonry-grid_column {
+    padding-top: 5px;
+    background-clip: padding-box;
+    width: 100%;
+  }
+  .masonry-grid_column>img {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .gallery-title-card {
+    margin-left: 0!important;
+
+  
+  }
 }

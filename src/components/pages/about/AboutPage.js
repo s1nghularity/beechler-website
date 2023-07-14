@@ -9,10 +9,6 @@ import elmerT from "../../../assets/img/about/elmer-oval.png";
 
 import AboutCarousel from "./AboutCarousel";
 
-
-
-
-
 const AboutPage = () => {
   return (
     <Container className="about-page">
@@ -82,7 +78,6 @@ const AboutPage = () => {
           <img src={arbLoop} alt="Animated GIF" className="about-video" />
         </Col>
       </Row>
-
     </Container>
   );
 };
