@@ -28,7 +28,6 @@ function HomePage() {
       <HomeCarousel />
       <HomeAbout />
       <HomeCategories />
-
       <HomeDealerCard />
       <HomeTestimonials />
       <HomeContact />
