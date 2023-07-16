@@ -34,7 +34,7 @@ const ProductNav = ({
         <Nav>
           <NavDropdown
             className="custom-caret"
-            title="Categories"
+            title="Mouthpieces"
             id="navbarDropdown"
           >
             {renderNavDropdownItems(categoryOptions, handleCategorySelect)}

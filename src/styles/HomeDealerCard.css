@@ -34,10 +34,10 @@
 }
 
 
-.home-dealer-title h2 {
+.home-dealer-title {
   font-size: 5rem;
   font-weight: 700;
-  padding-top: 1rem;
+  padding-top: 3rem;
   color: var(--white);
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;

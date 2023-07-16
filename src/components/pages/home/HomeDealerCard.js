@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { WorldMap } from "react-svg-worldmap";
 import "../../../styles/theme.css";
 import "../../../styles/HomeDealerCard.css";
+import HomeDealerStats from "./HomeDealerStats";
 
 const HomeDealerCard = () => {
   const data = [
@@ -55,6 +56,10 @@ const HomeDealerCard = () => {
 
   return (
     <div className="stripe-home-dealer">
+
+    <h1 className="home-dealer-title">SOLD ACROSS THE GLOBE</h1> 
+
+    <HomeDealerStats />
 
       <div className="home-dealer-map-wrapper">
 

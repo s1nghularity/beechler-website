@@ -51,8 +51,7 @@ const useStyles = makeStyles({
     color: "#fdfdfe",
   },
   accordionDetails: {
-    backgroundColor: "#fdfdfe",
-    backgroundImage: "linear-gradient(15deg, #fbb020 15%, #ffdd00 50%)",
+    backgroundColor: "lightgray",
 
   },
 });

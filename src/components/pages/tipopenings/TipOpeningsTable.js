@@ -41,7 +41,7 @@ function TipOpeningsTable() {
 
   return (
     <Container className="tip-openings">
-      <Table striped bordered hover>
+      <Table striped bordered hover className="tip-openings-small first-table">
         <thead>
           <tr>
             <th>Model</th>
@@ -49,17 +49,21 @@ function TipOpeningsTable() {
             <th>Millimeters</th>
           </tr>
         </thead>
-        <tbody>
-          {['BEECHLER', 'ARB'].map(model => (
-            <tr key={model}>
-              <td>{model}</td>
-              <td>{selected[model]?.inches?.toFixed(3) || ''}</td>
-              <td>{selected[model]?.mm?.toFixed(3) || ''}</td>
-            </tr>
-          ))}
-        </tbody>
+<tbody>
+  {['BEECHLER', 'ARB'].map((model, index) => (
+    <tr 
+      key={model}
+      style={{ backgroundColor: index % 2 === 0 ? 'white' : 'grey' }}
+    >
+      <td>{model}</td>
+      <td>{selected[model]?.inches?.toFixed(3) || ''}</td>
+      <td>{selected[model]?.mm?.toFixed(3) || ''}</td>
+    </tr>
+  ))}
+</tbody>
+
       </Table>
-      <Table striped bordered hover>
+      <Table striped  hover>
         <thead>
           <tr>
             <th>Instrument</th>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Card } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 const colorArray = [
   "rgb(255, 205, 197)",  // Light Red
@@ -26,26 +27,25 @@ function getDynamicColor(artist) {
 }
 
 
-
-
-const ArtistCard = ({ artist }) => {
+const ArtistCard = forwardRef(({ artist }, ref) => {
   return (
-    <Card className="artist-card">
-      <Card.Body>
-        <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }}>
-          {artist.name}
-        </Card.Title>
-        <Card.Text className="mouthpiece-container">
-          {artist.mouthpieces.slice(0, 3).map((mouthpiece, index) => (
-            <div key={index} className="mouthpiece">
-              {mouthpiece}
-            </div>
-          ))}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+    <motion.div ref={ref} initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+      <Card className="artist-card">
+        <Card.Body>
+          <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }}>
+            {artist.name}
+          </Card.Title>
+          <Card.Text className="mouthpiece-container">
+            {artist.mouthpieces.slice(0, 3).map((mouthpiece, index) => (
+              <div key={index} className="mouthpiece">
+                {mouthpiece}
+              </div>
+            ))}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </motion.div>
   );
-};
-
+});
 
 export default ArtistCard;

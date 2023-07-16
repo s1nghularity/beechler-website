@@ -94,8 +94,8 @@ function Footer() {
           <div className="footer-bottom">
             <p>Accessibility Statement</p>
             <p>
-              ©2023 All rights reserved. | beechler.com | Saxophone Mouthpieces,
-              Clarinet Mouthpieces | Crafted with care by S1nghularity
+              ©2023 All rights reserved. | Saxophone Mouthpieces,
+              Clarinet Mouthpieces | beechler.com  
             </p>
           </div>
         </Container>

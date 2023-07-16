@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
 
 import ProductNav from "./ProductNav";
-import StaticInfo from "./StaticInfo";
 import DynamicInfo from "./DynamicInfo";
 import ProductsGrid from "./ProductsGrid.js";
 import { products } from "./ProductsData.js";
@@ -112,7 +111,7 @@ const ProductsPage = () => {
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
-                    <div class="golden-sticker">
+          <div class="golden-sticker">
             <p>
               All Beechler and ARB mouthpieces have been lab tested and proven
               safe for all long and short term human contact according to Reach
@@ -122,7 +121,6 @@ const ProductsPage = () => {
         </Col>
         <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
-
         </Col>
 
         <DynamicInfo

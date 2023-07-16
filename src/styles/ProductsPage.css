@@ -6,14 +6,12 @@
 .golden-sticker {
   text-align: center;
   width: 100%;
-  padding: 1rem;
+  padding-top: 1rem;
   margin-top: 1rem;
-  padding-top: 2rem;
-  background: linear-gradient(to right,#7b10f5, #cf0e0e);
+  background: rgba(240, 177, 19, 0.837);
   color:white;
   border-radius: 1rem;
-  font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.25rem;
   display: flex;
   flex-direction: column;
   border-radius: 5px;

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import HomeCarousel from "../home/HomeCarousel.js";
 import HomeCategories from "../home/HomeCategories.js";
 import HomeAbout from "../home/HomeAbout.js";
+import HomeDealerStats from "../home/HomeDealerStats.js";
 import HomeDealerCard from "../home/HomeDealerCard.js";
 import HomeTestimonials from "../home/HomeTestimonials.js";
 import HomeContact from "../home/HomeContact.js";

@@ -1,0 +1,39 @@
+/*import theme.css*/
+
+.stats-card {
+    background-color: #343540!important;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 1rem;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: -1rem;
+    margin-bottom: -.5rem;
+  }
+
+  .stats-title.card-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #0c0b0b;
+    line-height: .9;
+
+  }
+  
+  .stats-icon{
+    width: 5rem;
+  }
+
+  .home-dealer-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    padding: 2rem;
+  }
