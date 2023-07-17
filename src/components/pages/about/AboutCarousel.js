@@ -46,10 +46,12 @@ const AboutCarousel = () => {
       <Slider {...settings}>
         {data.map((slide, index) => (
           <div key={index} className="carousel-slide">
-            <img src={slide.image} alt={`slide-${index}`} className="about-carousel-img" />
             <Container>
               <Row>
-                <Col>
+                <Col md={12}>
+                  <img src={slide.image} alt={`slide-${index}`} className="about-carousel-img img-fluid" />
+                </Col>
+                <Col md={12}>
                   <p className="about-carousel-text">{slide.text}</p>
                 </Col>
               </Row>

@@ -1,16 +1,24 @@
-import "../../../styles/AboutPage.css";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Container, Row, Col, Figure } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import { motion, useAnimation } from 'framer-motion';
 
 import "animate.css";
 
 import arbLoop from "../../../assets/img/about/arb-loop.gif";
 import elmerT from "../../../assets/img/about/elmer-oval.png";
-
 import AboutCarousel from "./AboutCarousel";
 
+import SineWave from "./SinWave";
+import MusicalStaff from "./MusicalStaff";
+import Wave from "./Wave";
+
 const AboutPage = () => {
+
+
   return (
+    
     <Container className="about-page">
       <Row className="about-header">
         <Col xs={12}>
@@ -18,6 +26,19 @@ const AboutPage = () => {
         </Col>
         <Row>
           <Col xs={12} md={8}>
+            <div className="elmer-about-container float-right">
+              <Figure>
+                <Figure.Image
+                  className="elmer-about"
+                  alt="Elmer Beechler"
+                  src={elmerT}
+                />
+                <Figure.Caption className="elmer-tag">
+                  Elmer Beechler
+                </Figure.Caption>
+              </Figure>
+            </div>
+
             <div className="about-header-text">
               <p className="intro-letter">
                 Founded by Elmer Beechler in 1942, we design, manufacture, and
@@ -45,28 +66,21 @@ const AboutPage = () => {
               </p>
             </div>
           </Col>
-          <Col xs={12} md={4}>
-            <div className="image-container">
-              <Figure>
-                <Figure.Image
-                  className="figure-img elmer-image"
-                  alt="Elmer Beechler"
-                  src={elmerT}
-                />
-                <Figure.Caption>Elmer Beechler</Figure.Caption>
-              </Figure>
-            </div>
-          </Col>
         </Row>
       </Row>
 
+    <Wave />  
+    <MusicalStaff  />
+
+
+      
       <div>
         <AboutCarousel />
       </div>
 
       <Row className="about-footer">
-        <Col sm={12}>
-          <h1>American Made Since 1942</h1>
+        <Col sm={8} className="about-footer-text-container">
+          <h1>Women Led & Family Owned</h1>
           <div className="about-text2">
             <p>
               Discover the joy of playing at your full potential with Remlé
@@ -74,7 +88,7 @@ const AboutPage = () => {
             </p>
           </div>
         </Col>
-        <Col sm={12}>
+        <Col sm={4}>
           <img src={arbLoop} alt="Animated GIF" className="about-video" />
         </Col>
       </Row>

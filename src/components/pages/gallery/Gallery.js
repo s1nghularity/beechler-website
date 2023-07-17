@@ -136,7 +136,7 @@ const Gallery = () => {
     <Container>
       <Row className="gallery-title-card">
         <h1 className="gallery-title">
-          Serving musicians since 1942, <br /> Remle Musical Products is <b>honored</b>{" "}
+          Serving musicians since 1942, <br /> Remle Musical Products is honored{" "}
           <br /> to be part of your musical journey.
         </h1>
       </Row>
@@ -148,7 +148,13 @@ const Gallery = () => {
             columnClassName="masonry-grid_column"
           >
             {masonryImages.map((image, index) => (
-              <img key={index} src={image} alt="" />
+              <img 
+                key={index} 
+                src={image} 
+                alt="" 
+                className="swing-in-top-fwd"
+                style={{ '--animation-delay': `${index * 0.2}s` }}
+              />
             ))}
           </Masonry>
         </div>
@@ -156,5 +162,7 @@ const Gallery = () => {
     </Container>
   );
 };
+
+
 
 export default Gallery;

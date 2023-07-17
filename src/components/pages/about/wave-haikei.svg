@@ -1,0 +1,8 @@
+<svg id="visual" viewBox="0 0 1440 600" width="1440" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <rect x="0" y="0" width="1440" height="600" fill="#FFFFFF"></rect>
+  <path d="M0 569L1440 569" fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#FCAF3C" stroke-width="4"></path>
+  <path d="M0 549L1440 549" fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#FCAF3C" stroke-width="4"></path>
+  <path d="M0 529L1440 529" fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#FCAF3C" stroke-width="4"></path>
+  <path d="M0 509L1440 509" fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#FCAF3C" stroke-width="4"></path>
+  <path d="M0 489L1440 489" fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#FCAF3C" stroke-width="4"></path>
+</svg>
