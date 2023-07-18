@@ -19,7 +19,7 @@ export default function MusicalStaff() {
           strokeLinecap="round"
           strokeLinejoin="miter"
           stroke="#FCAF3C"
-          strokeWidth="4"
+          strokeWidth="2"
           animate={{
             y: [0, -10, 0],
             transition: {
