@@ -1,68 +1,10 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({
-  root: {
-    fontFamily: "'Josefin Sans', sans-serif",
-    backgroundColor: "#fdfdfe",
-    color: "#2a3132",
-  },
-  title: {
-    fontSize: "3rem",
-    fontWeight: "700",
-    marginTop: "1rem",
-    marginBottom: "1rem",
-  },
-  heading: {
-    borderRadius: ".75rem",
-    fontSize: "2rem",
-    fontWeight: "600",
-    color: "#0c0b0b",
-    marginTop: "1rem",
-    border: "none",
-  },
-  answer: {
-    color: "#0c0b0b",
-    fontSize: "1.5rem",
-    fontWeight: "400",
-    marginTop: "1rem",
-    marginBottom: "0",
-    border: "none",
-  },
-  accordion: {
-
-    marginBottom: "2rem",
-    "&:last-child": {
-      marginBottom: "1rem",
-    },
-    "&::before": {
-      backgroundColor: "transparent",
-    },
-  },
-  accordionSummary: {
-    backgroundColor: "#fbb034",
-    color: "#fdfdfe",
-  },
-  accordionDetails: {
-    backgroundColor: "lightgray",
-
-  },
-});
+import { Container } from "@mui/material";
+import { motion, AnimatePresence } from "framer-motion";
+import "../../../styles/FAQs.css";
 
 function FAQs() {
-  const [expanded, setExpanded] = useState(false);
-  const classes = useStyles();
-
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
+  const [expanded, setExpanded] = useState(null);
 
   const faqs = [
     {
@@ -102,30 +44,67 @@ function FAQs() {
   ];
 
   return (
-    <Container className={classes.root}>
-      <h1 className={classes.title}>Frequently Asked Questions</h1>
 
-      {faqs.map((faq, index) => (
-        <Accordion
-          key={index}
-          className={classes.accordion}
-          expanded={expanded === `panel${index}`}
-          onChange={handleChange(`panel${index}`)}
-        >
-          <AccordionSummary
-            className={classes.accordionSummary}
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls={`panel${index}d-content`}
-            id={`panel${index}d-header`}
+<Container className="root">
+  <h1 className="title">Frequently Asked Questions</h1>
+
+  {faqs.map((faq, index) => (
+    <motion.div
+      key={index}
+      className="accordion"
+      initial={false}
+      positionTransition
+    >
+      <motion.header
+        initial={false}
+        className="accordionSummary"
+        onClick={() => setExpanded(expanded === index ? null : index)}
+        style={{
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        <h2 className="heading">{faq.question}</h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: expanded === index ? 1 : 0 }}
+          transition={{ duration: .5 }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)",
+            zIndex: -1,
+            borderRadius: ".75rem",
+          }}
+        />
+      </motion.header>
+
+      <AnimatePresence initial={false}>
+        {expanded === index && (
+          <motion.section
+            key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98], when: "afterChildren" }}
+            className="accordionDetails"
           >
-            <h2 className={classes.heading}>{faq.question}</h2>
-          </AccordionSummary>
-          <AccordionDetails className={classes.accordionDetails}>
-            <h5 className={classes.answer}>{faq.answer}</h5>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </Container>
+            <h5 className="answer">{faq.answer}</h5>
+          </motion.section>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  ))}
+</Container>
+
+
   );
 }
 

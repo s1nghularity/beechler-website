@@ -1,17 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { Container, Row, Col, Figure } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic } from "@fortawesome/free-solid-svg-icons";
-import { motion, useAnimation } from 'framer-motion';
-
-import "animate.css";
 
 import arbLoop from "../../../assets/img/about/arb-loop.gif";
 import elmerT from "../../../assets/img/about/elmer-oval.png";
 import AboutCarousel from "./AboutCarousel";
 
-import SineWave from "./SinWave";
-import MusicalStaff from "./MusicalStaff";
 import Wave from "./Wave";
 
 const AboutPage = () => {
@@ -70,7 +63,7 @@ const AboutPage = () => {
       </Row>
 
     <Wave />  
-    <MusicalStaff  />
+    {/* <MusicalStaff  /> */}
 
 
       

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Carousel } from "react-responsive-carousel";
 import { Card } from 'react-bootstrap';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -16,6 +16,30 @@ import PabloOchoa from "../../../assets/img/home/top-carousel/pablo-ochoa.png";
 import TedNash from "../../../assets/img/home/top-carousel/ted-nash.png";
 
 const HomeCarousel = () => {
+
+    const [centerSlidePercentage, setCenterSlidePercentage] = useState(40);
+
+  useEffect(() => {
+    const updateCenterSlidePercentage = () => {
+      const viewportWidth = window.innerWidth;
+      if (viewportWidth <= 768) {
+        setCenterSlidePercentage(100); // 100% on small devices
+      } else if (viewportWidth <= 1024) {
+        setCenterSlidePercentage(60); // 60% on medium devices
+      } else {
+        setCenterSlidePercentage(40); // 40% on large devices
+      }
+    };
+
+    window.addEventListener("resize", updateCenterSlidePercentage);
+    updateCenterSlidePercentage(); // initial update
+
+    return () => {
+      window.removeEventListener("resize", updateCenterSlidePercentage);
+    };
+  }, []);
+
+
     const renderCard = (src, alt) => (
         <Card className="home-top-carousel-slide">
             <Card.Img variant="top" src={src} alt={alt} className="home-top-carousel-image" />
@@ -34,7 +58,8 @@ const HomeCarousel = () => {
                 interval={7000}
                 transitionTime={3000}
                 centerMode={true}
-                centerSlidePercentage={40}
+                centerSlidePercentage={centerSlidePercentage}
+
                 infiniteLoop={true}
                 draggable={true}
                 swipeable={true}
@@ -44,10 +69,8 @@ const HomeCarousel = () => {
                 {renderCard(DaveKoz, 'Dave Koz')}
                 {renderCard(EveretteHarp, 'Everette Harp')}
                 {renderCard(GeraldAlbright, 'Gerald Albright')}
-                {renderCard(AdrianChia, 'Adrian Chia')}
                 {renderCard(HarpPaulo, 'Everette Harp & Michael Paulo')}
                 {renderCard(IkechiOnyenaka, 'Ikechi Onyenaka')}
-                {renderCard(AdrianChia, 'Adrian Chia')}
                 {renderCard(HanDurst, 'Alex Han & Craig Durst')}
                 {renderCard(JayBeckenstein, 'Jay Beckenstein')}
                 {renderCard(PabloOchoa, 'Pablo Ochoa')}

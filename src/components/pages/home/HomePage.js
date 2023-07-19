@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import HomeCarousel from "../home/HomeCarousel.js";
 import HomeCategories from "../home/HomeCategories.js";
 import HomeAbout from "../home/HomeAbout.js";
+import HomeOurStoryCarousel from "../home/HomeOurStoryCarousel.js";
 import HomeDealerStats from "../home/HomeDealerStats.js";
 import HomeDealerCard from "../home/HomeDealerCard.js";
 import HomeTestimonials from "../home/HomeTestimonials.js";
@@ -28,6 +29,7 @@ function HomePage() {
       <ScrollToTop />
       <HomeCarousel />
       <HomeAbout />
+      {/* <HomeOurStoryCarousel /> */}
       <HomeCategories />
       <HomeDealerCard />
       <HomeTestimonials />

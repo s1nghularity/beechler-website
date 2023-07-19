@@ -24,6 +24,15 @@
   position: relative;
 }
 
+.products-grid {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.products-grid.loaded {
+  opacity: 1;
+}
+
 .product-row {
   display: flex;
   justify-content: center;

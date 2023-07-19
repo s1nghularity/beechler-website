@@ -24,35 +24,36 @@ export default function Wave() {
     return path;
   };
 
-/* 
-  To manipulate the animation:
-  - amplitude: ↑ wave height, ↓ wave shortness
-  - frequency: ↑ wave width, ↓ wave narrowness
-  - phase: ← wave left, → wave right
-  - offset: ↑ wave up, ↓ wave down
-  - frame: ↑ wave speed, ↓ wave slowness
-*/
+  /* 
+    To manipulate the animation:
+    - amplitude: ↑ wave height, ↓ wave shortness
+    - frequency: ↑ wave width, ↓ wave narrowness
+    - phase: ← wave left, → wave right
+    - offset: ↑ wave up, ↓ wave down
+    - frame: ↑ wave speed, ↓ wave slowness
+  */
 
-const animateWave = (frame) => {
-  pathsRef.current.forEach((path, i) => {
-    path.setAttribute(
-      "d",
-      generateSineWavePath(10, 200, frame + i * 15, 100 + i * 15)
-    );
-  });
-  if (frame > 1440 + 200) {
-    // 1440 is the width of the SVG, 200 is the frequency of the sine wave
-    frame = -200;
-    setTimeout(() => requestAnimationFrame(() => animateWave(frame + 7)), 10000); // Delay next animation by 10 seconds
-  } else {
-    requestAnimationFrame(() => animateWave(frame + 7));
-  }
-};
+  const animateWave = (frame) => {
+    pathsRef.current.forEach((path, i) => {
+      if (path) {
+        path.setAttribute(
+          "d",
+          generateSineWavePath(10, 200, frame + i * 15, 100 + i * 15)
+        );
+      }
+    });
+    if (frame > 1440 + 200) {
+      // 1440 is the width of the SVG, 200 is the frequency of the sine wave
+      frame = -200;
+      setTimeout(() => requestAnimationFrame(() => animateWave(frame + 7)), 7000); // Delay animation
+    } else {
+      requestAnimationFrame(() => animateWave(frame + 7));
+    }
+  };
 
-useEffect(() => {
-  animateWave(-1000);
-}, []);
-
+  useEffect(() => {
+    animateWave(-7000); // Delay animation
+  }, []);
 
   return (
     <svg viewBox="0 0 1440 600" width="1440" height="600" className="wave-about">
@@ -63,10 +64,9 @@ useEffect(() => {
           d={generateSineWavePath(15, 200, i * 15, 100 + i * 15)}
           fill="none"
           stroke="#FCAF3C"
-          strokeWidth="2"
+          strokeWidth="1"
         />
       ))}
-
 
       <image href={treble2} x="5rem" y="4.75rem" width="100" height="100" />
     </svg>

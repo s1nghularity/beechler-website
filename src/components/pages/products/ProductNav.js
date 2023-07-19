@@ -31,23 +31,22 @@ const ProductNav = ({
     <Navbar className="products-navbar">
       <Navbar.Toggle aria-controls="navbarToggler" />
 
-        <Nav>
-          <NavDropdown
-            className="custom-caret"
-            title="Mouthpieces"
-            id="navbarDropdown"
-          >
-            {renderNavDropdownItems(categoryOptions, handleCategorySelect)}
-          </NavDropdown>
-          <NavDropdown className="custom-caret" title="Type" id="navSubtype">
-            {renderNavDropdownItems(subtypeOptions, handleSubtypeSelect)}
-          </NavDropdown>
+      <Nav>
+        <NavDropdown
+          className="custom-caret"
+          title="Mouthpieces"
+          id="navbarDropdown"
+        >
+          {renderNavDropdownItems(categoryOptions, handleCategorySelect)}
+        </NavDropdown>
+        <NavDropdown className="custom-caret" title="Type" id="navSubtype">
+          {renderNavDropdownItems(subtypeOptions, handleSubtypeSelect)}
+        </NavDropdown>
 
-          <Button onClick={resetFilters} className="reset-filters">
-            Reset Filters
-          </Button>
-        </Nav>
-
+        <Button onClick={resetFilters} className="reset-filters">
+          Reset Filters
+        </Button>
+      </Nav>
     </Navbar>
   );
 };

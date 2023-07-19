@@ -1,29 +1,75 @@
-.FAQs {
-    background-color: var(--grey-alt);
-    color: var(--white);
-    padding: 50px;
+/* faqs.css */
+.root {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #fdfdfe;
+  color: #2a3132;
+  padding: 1rem;
+  max-width: 600px!important;
+  margin: auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.heading {
+  border-radius: .75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0c0b0b;
+  padding: 1rem;
+  border: none;
+}
+
+.answer {
+  color: #0c0b0b;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 1rem;
+  border: none;
+}
+
+.accordion {
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.accordion:last-child {
+  margin-bottom: 1rem;
+}
+
+.accordion::before {
+  background-color: transparent;
+}
+
+.accordionSummary {
+  background-color: rgb(246, 246, 246);
+  border-radius: .75rem;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 1rem;
+}
+
+.accordionDetails {
+  background-color: rgb(246, 246, 246);
+  border-radius: .75rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
   }
-  
-  .super-title {
-    font-size: 3rem;
-    margin-bottom: 50px;
+
+  .heading {
+    font-size: 1.2rem;
   }
-  
-  .card-header {
-    background-color: var(--grey);
-    color: var(--white);
+
+  .answer {
+    font-size: 1rem;
   }
-  
-  .toggle-button {
-    color: var(--white);
-  }
-  
-  .card-body {
-    background-color: var(--lt-grey);
-    color: var(--black);
-  }
-  
-  .warranty-star {
-    color: var(--nav-accent);
-  }
-  
+}
