@@ -4,7 +4,6 @@ import { Card } from 'react-bootstrap';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../../styles/HomeCarousel.css";
 
-import AdrianChia from "../../../assets/img/home/top-carousel/adrian-chia.png";
 import DaveKoz from "../../../assets/img/home/top-carousel/dave-koz.png";
 import EveretteHarp from "../../../assets/img/home/top-carousel/everette-harp.png";
 import GeraldAlbright from "../../../assets/img/home/top-carousel/gerald-albright.png";

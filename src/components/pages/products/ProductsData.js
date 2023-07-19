@@ -17,12 +17,8 @@ import b81 from "../../../assets/img/products/bellite/b81.png";
 import b82 from "../../../assets/img/products/bellite/b82.png";
 import c32 from "../../../assets/img/products/bellite/c32.png";
 import c33 from "../../../assets/img/products/bellite/c33.png";
-import belliteAlto from "../../../assets/img/products/bellite/bellite-alto.png";
-import belliteTenor from "../../../assets/img/products/bellite/bellite-tenor.png";
 import belliteBaritone from "../../../assets/img/products/bellite/bellite-baritone.png";
 import customBelliteS from "../../../assets/img/products/bellite/custom-bellite-soprano.png";
-import customBelliteA from "../../../assets/img/products/bellite/custom-bellite-alto.png";
-import customBelliteT from "../../../assets/img/products/bellite/custom-bellite-tenor.png";
 import customBelliteB from "../../../assets/img/products/bellite/custom-bellite-baritone.png";
 
 //TODO:HARD RUBBER
@@ -60,7 +56,6 @@ import C16 from "../../../assets/img/products/greatneck/C16.png";
 //Caps
 import T01A from "../../../assets/img/products/accessories-services/T01A.png";
 import T01B from "../../../assets/img/products/accessories-services/T01B.png";
-import T02 from "../../../assets/img/products/accessories-services/T02.png";
 //Pegs
 import P01 from "../../../assets/img/products/accessories-services/P01.png";
 import P02 from "../../../assets/img/products/accessories-services/P02.png";
@@ -79,7 +74,6 @@ import eboniteT02 from "../../../assets/img/products/caps/ebonite-t02.png";
 import BP from "../../../assets/img/products/accessories-services/BP.png";
 import CE from "../../../assets/img/products/accessories-services/CE.png";
 import LC from "../../../assets/img/products/accessories-services/LC.png";
-import M03 from "../../../assets/img/products/accessories-services/M03.png";
 import RE from "../../../assets/img/products/accessories-services/RE.png";
 import tuffbite from "../../../assets/img/products/accessories-services/tuffbite.png";
 

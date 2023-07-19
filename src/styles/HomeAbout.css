@@ -69,7 +69,7 @@
 @media screen and (min-width: 712px) and (max-width: 1079px) {
   .home-about-left p {
     font-size: 1.5rem;
-    width: 40rem;
+    max-width: 40rem;
   }
 }
 
@@ -117,8 +117,8 @@
 }
 
 .our-story-slide img {
-  height: 30rem;
-  width: 100%;
+  height: 30rem!important;
+  width: 30rem!important;
   object-fit: cover;
   position: relative;
   border-radius: 1rem;
