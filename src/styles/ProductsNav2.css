@@ -1,0 +1,141 @@
+/* Variables */
+:root {
+  --lt-grey: #6c757d;
+  --grey: #2a3132;
+  --grey-alt: #343541;
+  --white: #fdfdfe;
+  --black: #0c0b0b;
+  --black-alt: #202123;
+  --accent: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  --nav-accent: #fbb034;
+}
+
+/* Generic Styles */
+.menu-section, .products-nav-button, .reset-filters {
+  background: var(--grey);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Menu Sections and Buttons */
+.menu-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-nav-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-nav-button path {
+  fill: var(--white);
+}
+
+.reset-filters {
+  padding: 5px 10px; 
+  font-size: .75rem; 
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation Menu */
+.products-nav-container {
+  margin-top: 1rem;
+  align-items: start;
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-nav-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+.products-nav-arrow{
+  margin-left: 1rem;
+}
+
+.products-nav-list {
+  list-style-type: none;
+  padding: 0;
+  background: var(--black);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  color: var(--white);
+  z-index: 1;
+}
+
+.products-nav-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Badges */
+.badges-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: .5rem!important;
+  font-size: 1rem!important;
+  font-weight: 300!important;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #4371d3;
+}
+
+/* Color variants */
+.tomato {
+  background-color: tomato;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.green {
+  background-color: green;
+}
+
+.rebeccapurple {
+  background-color: rebeccapurple;
+}
+
+/* Other Elements */
+.golden-sticker {
+  text-align: center;
+  width: 100%;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  background: rgba(240, 177, 19, 0.837);
+  color: white;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  font-family: Josefin Sans;
+}

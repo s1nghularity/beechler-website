@@ -80,6 +80,7 @@ import tuffbite from "../../../assets/img/products/accessories-services/tuffbite
 const saxTipOpening = true;
 const clarinetTipOpening = true;
 
+
 export const products = [
   //DIAMOND
   {
@@ -662,3 +663,5 @@ export const products = [
     image: RE,
   },
 ];
+
+

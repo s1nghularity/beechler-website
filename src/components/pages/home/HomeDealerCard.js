@@ -57,7 +57,7 @@ const HomeDealerCard = () => {
   return (
     <div className="stripe-home-dealer">
 
-    <h1 className="home-dealer-title">SOLD ACROSS THE GLOBE</h1> 
+    <h1 className="home-dealer-title">OUR GLOBAL REACH</h1> 
 
     <HomeDealerStats />
 

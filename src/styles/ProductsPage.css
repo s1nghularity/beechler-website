@@ -2,22 +2,6 @@
 
 /*PRODUCTSPAGE.JS*/
 
-
-.golden-sticker {
-  text-align: center;
-  width: 100%;
-  padding-top: 1rem;
-  margin-top: 1rem;
-  background: rgba(240, 177, 19, 0.837);
-  color:white;
-  border-radius: 1rem;
-  font-size: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  font-family: Josefin Sans;
-}
-
 .products-grid {
   display: flex;
   justify-content: center;

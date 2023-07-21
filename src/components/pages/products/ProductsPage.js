@@ -5,17 +5,17 @@ import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
 
 import ProductNav from "./ProductNav";
+import ProductsNav2 from "./ProductsNav2";
 import DynamicInfo from "./DynamicInfo";
 import ProductsGrid from "./ProductsGrid.js";
 import { products } from "./ProductsData.js";
 import EmailSignup from "./EmailSignup.js";
 import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
-import "../../../styles/ProductNav.css";
+import "../../../styles/ProductsNav2.css";
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [selectedInstrument, setSelectedInstrument] = useState(null);
   const [selectedSubtype, setSelectedSubtype] = useState(null);
   const [previousProducts, setPreviousProducts] = useState(products);
   const [filterApplied, setFilterApplied] = useState(false);
@@ -27,12 +27,6 @@ const ProductsPage = () => {
     setFilterApplied(true);
   };
 
-  const handleInstrumentSelect = (instrument) => {
-    console.log(`Selected instrument: ${instrument}`);
-    setSelectedInstrument(instrument);
-    setFilterApplied(true);
-  };
-
   const handleSubtypeSelect = (subtype) => {
     console.log(`Selected subtype: ${subtype}`);
     setSelectedSubtype(subtype);
@@ -40,11 +34,10 @@ const ProductsPage = () => {
   };
 
   const resetFilters = () => {
-    if (selectedCategory || selectedInstrument || selectedSubtype) {
+    if (selectedCategory  || selectedSubtype) {
       setSelectedCategory(null);
-      setSelectedInstrument(null);
       setSelectedSubtype(null);
-      setFilterApplied(false);
+      setFilterApplied({});
     }
   };
 
@@ -63,7 +56,6 @@ const ProductsPage = () => {
   const filteredProducts = products.filter(
     (product) =>
       (!selectedCategory || product.category === selectedCategory) &&
-      (!selectedInstrument || product.instrument === selectedInstrument) &&
       (!selectedSubtype || product.subtype === selectedSubtype)
   );
 
@@ -105,19 +97,14 @@ const ProductsPage = () => {
     <Container fluid className="products-page">
       <Row>
         <Col sm={12} md={12} lg={4} xl={4} className="sticky-column">
-          <ProductNav
+
+          <ProductsNav2
             handleCategorySelect={handleCategorySelect}
-            handleInstrumentSelect={handleInstrumentSelect}
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
-          <div class="golden-sticker">
-            <p>
-              All Beechler and ARB mouthpieces have been lab tested and proven
-              safe for all long and short term human contact according to Reach
-              compliance standards.
-            </p>
-          </div>
+
+
         </Col>
         <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
@@ -125,7 +112,6 @@ const ProductsPage = () => {
 
         <DynamicInfo
           infoContent={selectedCategory}
-          selectedInstrument={selectedInstrument}
         />
 
         <Row sm={12} md={12} lg={12} xl={12}>
