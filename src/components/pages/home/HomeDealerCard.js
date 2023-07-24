@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { WorldMap } from "react-svg-worldmap";
 import "../../../styles/theme.css";
 import "../../../styles/HomeDealerCard.css";
+import "../../../assets/img/home/dealermap/reach-compliant.png"
 import HomeDealerStats from "./HomeDealerStats";
 
 const HomeDealerCard = () => {
@@ -56,29 +57,28 @@ const HomeDealerCard = () => {
 
   return (
     <div className="stripe-home-dealer">
+      <h1 className="home-dealer-title">OUR REACH</h1>
 
-    <h1 className="home-dealer-title">OUR GLOBAL REACH</h1> 
-
-    <HomeDealerStats />
+      <HomeDealerStats />
 
       <div className="home-dealer-map-wrapper">
+        <WorldMap
+          color="#faaf33"
+          tooltipBgColor="black"
+          tooltipTextColor="white"
+          valueSuffix=" Dealers"
+          size="xxl"
+          data={data}
+          backgroundColor="#0c0b0b"
+          borderColor="#fcbb28"
+          className="home-dealer-map"
+          style={{ width: mapWidth, height: mapWidth }}
+        />
 
-      <WorldMap
-        color="#faaf33"
-        tooltipBgColor="black"
-        tooltipTextColor="white"
-        valueSuffix=" Dealers"
-        size="xxl"
-        data={data}
-        backgroundColor="#0c0b0b"
-        borderColor="#fcbb28"
-        className="home-dealer-map"
-        style={{ width: mapWidth, height: mapWidth }}
-      />
-
-    </div>
-
-
+        <div className="sticker-badge">
+          All Beechler and ARB mouthpieces are Reach compliant!
+        </div>
+      </div>
     </div>
   );
 };
