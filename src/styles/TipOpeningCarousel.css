@@ -23,10 +23,15 @@
 
 .tip-opening-carousel-image {
     width: 300px; 
-    height: auto; 
+    height: 400px; 
     object-fit: cover;
     transition: transform 0.5s;
     display: block;
-    border-radius: .5rem;
+    border-radius: .5rem!important;
+
+}
+
+.tip-opening-carousel-item carousel-item-10 {
+        border-radius: .5rem!important;
 
 }

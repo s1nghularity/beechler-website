@@ -25,7 +25,7 @@ const TipOpeningCarousel = () => {
       if (carouselRef.current) {
         carouselRef.current.scrollTo(scrollAmount, 0);
         if (scrollAmount < carouselRef.current.scrollWidth / 2) {
-          scrollAmount++;
+          scrollAmount += .5; // Increase this number to make the carousel scroll faster
         } else {
           scrollAmount = 0; // reset scrollAmount to 0 when halfway is reached
         }
