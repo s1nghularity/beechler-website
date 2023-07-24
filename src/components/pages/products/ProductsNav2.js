@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from 'react-router-dom';
-import useClickOutside from './useClickOutside';
+
 import { MenuButton, Badge, MenuOptions } from './MenuOptions.js';
 
 const ProductsNav2 = ({
@@ -63,7 +63,7 @@ const ProductsNav2 = ({
       badgeColor = "rebeccapurple";
       break;
     default:
-      badgeColor = ""; // Default case
+      badgeColor = "All"; // Default case
   }
 
   const categoryOptions = [
@@ -81,7 +81,9 @@ const ProductsNav2 = ({
 
 
   return (
+    <AnimatePresence>
     <div className="products-nav-container">
+
       <div className="products-nav-menu">
         <MenuButton isOpen={isMouthpiecesOpen} onClick={() => handleButtonClick("mouthpieces")}>
           Mouthpieces
@@ -110,7 +112,7 @@ const ProductsNav2 = ({
         />
       </div>
 
-      <AnimatePresence>
+
         <motion.div
           className="badges-container"
           initial={{ opacity: 0 }}
@@ -120,9 +122,7 @@ const ProductsNav2 = ({
           {selectedCategory && <Badge text={selectedCategory} />}
           {selectedType && <Badge text={selectedType} color={badgeColor} />}
         </motion.div>
-      </AnimatePresence>
 
-      <AnimatePresence>
         <motion.div
           className="golden-sticker"
           initial="closed"
@@ -134,8 +134,9 @@ const ProductsNav2 = ({
             compliance standards.
           </p>
         </motion.div>
-      </AnimatePresence>
+
     </div>
+    </AnimatePresence>
   );
 };
 

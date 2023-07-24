@@ -1,0 +1,32 @@
+.tip-opening-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 1rem;
+    scrollbar-width: none!important; /* Firefox */
+    -ms-overflow-style: none!important;  /* IE and Edge */
+    margin-bottom: 1rem;
+    width: 90rem;
+    margin-left: -4rem;
+    align-items: center;
+    
+}
+
+.tip-opening-carousel::-webkit-scrollbar { /* Chrome, Safari and Opera */
+    display: none;
+}
+
+
+.tip-opening-carousel-item {
+    flex: 0 0 auto;
+}
+
+.tip-opening-carousel-image {
+    width: 300px; 
+    height: auto; 
+    object-fit: cover;
+    transition: transform 0.5s;
+    display: block;
+    border-radius: .5rem;
+
+}

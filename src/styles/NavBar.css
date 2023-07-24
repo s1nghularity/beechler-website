@@ -19,7 +19,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
 }
 
 .navbar-brand img {
@@ -40,7 +39,8 @@
   width: 150px;
 }
 
-.nav-link:hover, .active-link {
+.nav-link:hover,
+.active-link {
   background-image: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -65,7 +65,9 @@
   background-color: #fbb034;
 }
 
-.hamburger .top-bar, .hamburger .middle-bar, .hamburger .bottom-bar {
+.hamburger .top-bar,
+.hamburger .middle-bar,
+.hamburger .bottom-bar {
   transform-origin: top left;
   background-color: #fbb034;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
@@ -132,7 +134,8 @@
     justify-content: space-between;
   }
 
-  .nav-link, .contact-button {
+  .nav-link,
+  .contact-button {
     margin-left: auto;
     justify-content: flex-end;
     margin-right: 1rem;
@@ -142,33 +145,31 @@
 /* Tablet */
 @media (min-width: 768px) and (max-width: 992px) {
   .nav-link-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 80%;
-  justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-evenly;
   }
-  
+
   .nav-link {
-  margin: 0 1rem;
+    margin: 0 1rem;
   }
   .contact-button {
-    margin-right:2rem
+    margin-right: 2rem;
   }
-  
-  }
-  
-  /* Laptop + Desktop */
-  @media (min-width: 993px) and (max-width: 1312px) {
+}
+
+/* Laptop + Desktop */
+@media (min-width: 993px) and (max-width: 1312px) {
   .nav-link-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 70%;
-  justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    justify-content: space-evenly;
   }
   .contact-button {
-  margin-right: 1rem;
+    margin-right: 1rem;
   }
-  
-  }
+}

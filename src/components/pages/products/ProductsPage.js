@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 import ProductNav from "./ProductNav";
 import ProductsNav2 from "./ProductsNav2";
@@ -13,6 +14,16 @@ import EmailSignup from "./EmailSignup.js";
 import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
+
+const gridVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -34,7 +45,7 @@ const ProductsPage = () => {
   };
 
   const resetFilters = () => {
-    if (selectedCategory  || selectedSubtype) {
+    if (selectedCategory || selectedSubtype) {
       setSelectedCategory(null);
       setSelectedSubtype(null);
       setFilterApplied({});
@@ -58,7 +69,6 @@ const ProductsPage = () => {
       (!selectedCategory || product.category === selectedCategory) &&
       (!selectedSubtype || product.subtype === selectedSubtype)
   );
-
   useEffect(() => {
     if (filterApplied) {
       if (filteredProducts.length === 0) {
@@ -76,7 +86,6 @@ const ProductsPage = () => {
 
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
-
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const categoryParam = searchParams.get("category");
@@ -94,25 +103,22 @@ const ProductsPage = () => {
   }, []);
 
   return (
+    <AnimatePresence>
     <Container fluid className="products-page">
-      <Row>
-        <Col sm={12} md={12} lg={4} xl={4} className="sticky-column">
 
+      <Row>
+        <Col sm={12} md={12} lg={4} xl={4}>
           <ProductsNav2
             handleCategorySelect={handleCategorySelect}
             handleSubtypeSelect={handleSubtypeSelect}
             resetFilters={resetFilters}
           />
-
-
         </Col>
         <Col sm={12} md={12} lg={8} xl={8}>
           <ProductsGrid products={previousProducts} />
         </Col>
 
-        <DynamicInfo
-          infoContent={selectedCategory}
-        />
+        <DynamicInfo infoContent={selectedCategory} />
 
         <Row sm={12} md={12} lg={12} xl={12}>
           <div className="product-email-signup">
@@ -126,11 +132,13 @@ const ProductsPage = () => {
             </Col>
           </div>
         </Row>
+
       </Row>
 
       <ScrollToTop />
       <ToastContainer />
     </Container>
+    </AnimatePresence>
   );
 };
 export default ProductsPage;

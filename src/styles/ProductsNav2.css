@@ -61,10 +61,10 @@
 
 .products-nav-menu {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   align-items: center;
   gap: 10px;
+
 }
 
 .products-nav-arrow{
@@ -95,7 +95,6 @@
 }
 
 .badge {
-  display: inline-block;
   padding: .5rem!important;
   font-size: 1rem!important;
   font-weight: 300!important;
@@ -130,7 +129,7 @@
   width: 100%;
   padding-top: 1rem;
   margin-top: 1rem;
-  background: rgba(240, 177, 19, 0.837);
+  background: linear-gradient(315deg, #ffca74 0%, #ffdd00 74%);
   color: white;
   border-radius: 1rem;
   font-size: 1.25rem;
