@@ -1,13 +1,14 @@
+
 .stats-card {
   background-color: #ffffff;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   padding: 1rem;
-  border-radius: 50%; /* Make it circular */
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); /* Give it some depth */
-  overflow: hidden; /* Ensures nothing spills out of the circular card */
-  width: 13rem; /* Define a width */
-  height: 13rem; /* And a height */
+  border-radius: 50%; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  width: 13rem; 
+  height: 13rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,16 +34,16 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 5rem;  /* increased size */
+  font-size: 5rem;  
   font-weight: 700;
-  margin-bottom: -1rem; /* decreased space */
+  margin-bottom: -1rem; 
 }
 
 .stats-title {
-  font-size: 1.5rem; /* increased size */
+  font-size: 1.5rem;
   font-weight: 600;
   color: #0c0b0b;
-  margin-top: .25rem; /* decreased space */
+  margin-top: .25rem; 
 }
 
 .stats-icon {
@@ -50,4 +51,27 @@
   height: 4rem;
   margin-top: -.5rem;
   margin-bottom: -.25rem;
+}
+
+@media (max-width: 768px) {
+  .stats-card {
+    width: 10rem; /* Smaller width */
+    height: 10rem; /* Smaller height */
+  }
+
+  .home-dealer-stats > .col {
+    margin: 0 1.5rem; /* Smaller margin */
+  }
+
+  .gradient-text {
+    font-size: 4rem; /* Smaller font size */
+  }
+
+  .stats-title {
+    font-size: 1.2rem; /* Smaller font size */
+  }
+
+  .stats-icon {
+    height: 3rem; /* Smaller height */
+  }
 }

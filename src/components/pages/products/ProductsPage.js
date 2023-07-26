@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-import ProductNav from "./ProductNav";
+// import ProductNav from "./ProductNav";
 import ProductsNav2 from "./ProductsNav2";
 import DynamicInfo from "./DynamicInfo";
 import ProductsGrid from "./ProductsGrid.js";

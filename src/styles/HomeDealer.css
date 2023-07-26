@@ -27,11 +27,6 @@
   border: none;
 }
 
-.home-dealer-map {
-  background-color: var(--black);
-  border: none;
-}
-
 .home-dealer-title {
   font-size: 5rem;
   font-weight: 700;
@@ -41,50 +36,27 @@
   text-align: center;
 }
 
-.home-dealer-map .geo {
-  fill:#0c0b0b;
-  fill: var(--accent);
-  stroke: var(--white);
-  stroke-width: 0.75;
-  outline: none;
 
-}
-
-.home-dealer-map .geo:hover {
-  fill: var(--nav-accent);
-}
-
-.home-dealer-map .default-geo {
-  fill: #0c0b0b;
-  stroke: var(--white);
-  stroke-width: 0.75;
-  outline: none;
-}
-
-.home-dealer-map .dealers-tooltip {
-  position: absolute;
-  background-color: var(--white);
-  border-radius: 5px;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: var(--black);
-  z-index: 10;
-
-}
-
-
-
-.home-dealer-map-wrapper {
+.home-dealer-map-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -3rem;
+  margin-bottom: -5rem;
+
 }
+
 
 
 .reach-compliant-sticker{
   margin-bottom: 3rem;
   border: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem!important;
+  height: auto;
 }
+
 
 .reach-compliant-sticker:hover {
   transform: scale(1.1);
@@ -176,11 +148,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
-
-
-
 
 @media (max-width: 712px) {
 
