@@ -85,7 +85,6 @@ const HomeDealerCard = () => {
 
       <HomeDealerStats />
 
-
       <div className="home-dealer-map-wrapper">
         <WorldMap
           color="gold"

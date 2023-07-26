@@ -71,8 +71,13 @@
   margin-bottom: 0rem;
 }
 
+/* add linear-gradient(to right, orange, gold) to category-text */
 .category-card:hover .category-text {
-  color: var(--nav-accent);
+  background: linear-gradient(to right, orange, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease-in-out;
+  
 }
 
 .category-card:hover .category-image {

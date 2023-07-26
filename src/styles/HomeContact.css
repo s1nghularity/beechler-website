@@ -6,6 +6,7 @@
   background-color: var(--black);
   padding: 2rem;
   color: var(--white);
+  font-family: Josefin Sans, sans-serif;
 }
 
 .contact-form {
@@ -47,6 +48,7 @@
 
 .contact-form button {
   margin-left: auto;
+  margin-right: auto;
   display: block;
   font-weight: 500;
   font-size: 1.2rem;
