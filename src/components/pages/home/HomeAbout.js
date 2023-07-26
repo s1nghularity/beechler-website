@@ -5,7 +5,7 @@ function HomeAbout() {
   return (
     <Container fluid className="home-about stripe-home-about">
       <Row className="home-about-row">
-        <Col md={12} lg={12} className="home-about-left">
+        <Col className="home-about-left">
           <div className="our-story-carousel">
             <h2 className="home-about-left-title">OUR STORY</h2>
             <p className="about-main-text">

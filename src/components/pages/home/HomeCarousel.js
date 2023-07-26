@@ -26,7 +26,7 @@ const HomeCarousel = () => {
       } else if (viewportWidth <= 1024) {
         setCenterSlidePercentage(60); // 60% on medium devices
       } else {
-        setCenterSlidePercentage(40); // 40% on large devices
+        setCenterSlidePercentage(45); // 40% on large devices
       }
     };
 
@@ -58,7 +58,6 @@ const HomeCarousel = () => {
                 transitionTime={3000}
                 centerMode={true}
                 centerSlidePercentage={centerSlidePercentage}
-
                 infiniteLoop={true}
                 draggable={true}
                 swipeable={true}

@@ -2,7 +2,7 @@ import "../../../styles/theme.css";
 import "../../../styles/HomeDealerStats.css";
 
 import React, { useEffect } from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import globe from "../../../assets/img/home/globe.png";
