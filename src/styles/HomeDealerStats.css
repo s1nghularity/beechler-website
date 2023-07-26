@@ -1,39 +1,53 @@
-/*import theme.css*/
-
 .stats-card {
-    background-color: #343540!important;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 1rem;
-  }
-  
-  .gradient-text {
-    background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 5rem;
-    font-weight: 700;
-    margin-top: -1rem;
-    margin-bottom: -.5rem;
-  }
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 1rem;
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); /* Give it some depth */
+  overflow: hidden; /* Ensures nothing spills out of the circular card */
+  width: 13rem; /* Define a width */
+  height: 13rem; /* And a height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow .3s ease;
+  margin-bottom: 1.5rem;
+}
 
-  .stats-title.card-title {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #0c0b0b;
-    line-height: .9;
+.home-dealer-stats > .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3rem;
+}
 
-  }
-  
-  .stats-icon{
-    width: 5rem;
-  }
+.stats-card:hover {
+  box-shadow: 0px 0px 20px 2px rgba(255, 223, 0, 0.7); /* soft golden glow */
+}
 
-  .home-dealer-stats {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: none;
-    padding: 2rem;
-  }
+.gradient-text {
+  background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;  /* increased size */
+  font-weight: 700;
+  margin-bottom: -1rem; /* decreased space */
+}
+
+.stats-title {
+  font-size: 1.5rem; /* increased size */
+  font-weight: 600;
+  color: #0c0b0b;
+  margin-top: .25rem; /* decreased space */
+}
+
+.stats-icon {
+  width: auto;
+  height: 4rem;
+  margin-top: -.5rem;
+  margin-bottom: -.25rem;
+}

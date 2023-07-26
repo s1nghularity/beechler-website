@@ -1,23 +1,27 @@
 import "../../../styles/theme.css";
 import "../../../styles/HomeDealerStats.css";
 
-import React, { useEffect } from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect } from "react";
+import { Card, Row, Col } from "react-bootstrap";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import globe from "../../../assets/img/home/globe.png";
 import liberty from "../../../assets/img/home/liberty.png";
 import store from "../../../assets/img/home/store.png";
 
 const HomeDealerStats = () => {
   const countCountry = useMotionValue(0);
-  const roundedCountry = useTransform(countCountry, value => Math.round(value));
+  const roundedCountry = useTransform(countCountry, (value) =>
+    Math.round(value)
+  );
 
   const countState = useMotionValue(0);
-  const roundedState = useTransform(countState, value => Math.round(value));
+  const roundedState = useTransform(countState, (value) => Math.round(value));
 
   const countDealers = useMotionValue(0);
-  const roundedDealers = useTransform(countDealers, value => Math.round(value));
+  const roundedDealers = useTransform(countDealers, (value) =>
+    Math.round(value)
+  );
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -33,7 +37,7 @@ const HomeDealerStats = () => {
         controlsCountry.stop();
         controlsState.stop();
         controlsDealers.stop();
-      }
+      };
     }
   }, [countCountry, countState, countDealers, inView]);
 
@@ -41,31 +45,28 @@ const HomeDealerStats = () => {
     <div className="stripe-home-dealer-stats">
       <Row ref={ref} className="home-dealer-stats">
         <Col>
-          <Card className="stats-card">
-            <Card.Body>
-              <motion.h1 className="gradient-text">{roundedCountry}</motion.h1>
-              <Card.Title className="stats-title">Countries</Card.Title>
-              <img src={globe} alt="globe" className="stats-icon" />
-            </Card.Body>
-          </Card>
+          <div className="stats-card">
+            <motion.h1 className="gradient-text">{roundedCountry}</motion.h1>
+            <img src={globe} alt="globe" className="stats-icon" />
+            <h2 className="stats-title">Countries</h2>
+          </div>
+
         </Col>
         <Col>
-          <Card className="stats-card">
-            <Card.Body>
-              <motion.h1 className="gradient-text">{roundedDealers}</motion.h1>
-              <Card.Title className="stats-title">Dealers Worldwide</Card.Title>
-              <img src={store} alt="store" className="stats-icon"/>
-            </Card.Body>
-          </Card>
+          <div className="stats-card">
+            <motion.h1 className="gradient-text">{roundedDealers}</motion.h1>
+            <img src={store} alt="store" className="stats-icon" />
+            <h2 className="stats-title">Dealers <br/>Worldwide</h2>
+          </div>
+
         </Col>
         <Col>
-          <Card className="stats-card">
-            <Card.Body>
-              <motion.h1 className="gradient-text">{roundedState}</motion.h1>
-              <Card.Title className="stats-title">States</Card.Title>
-              <img src={liberty} alt="liberty" className="stats-icon"/>
-            </Card.Body>
-          </Card>
+          <div className="stats-card">
+            <motion.h1 className="gradient-text">{roundedState}</motion.h1>
+            <img src={liberty} alt="liberty" className="stats-icon" />
+            <h2 className="stats-title">U.S. <br/> States</h2>
+          </div>
+
         </Col>
       </Row>
     </div>

@@ -6,7 +6,6 @@
   border: none;
   
 }
-
 .stripe-home-dealer::before {
   content: "";
   position: absolute;
@@ -32,7 +31,6 @@
   background-color: var(--black);
   border: none;
 }
-
 
 .home-dealer-title {
   font-size: 5rem;
@@ -75,18 +73,131 @@
 }
 
 
-.sticker-badge {
-  background-color: #fcbb28;
-  color: #0c0b0b;
-  font-weight: bold;
-  padding: 1em;
-  border-radius: 1em;
-  text-align: center;
-  margin: 1em 0;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Josefin Sans', sans-serif;
-  margin-bottom: 3rem;
+
+
+.home-dealer-map-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
+.reach-compliant-sticker{
+  margin-bottom: 3rem;
+  border: none;
+}
+
+.reach-compliant-sticker:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .reach-compliant-sticker {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .reach-compliant-sticker {
+    width: 150px;
+  }
+}
+
+
+
+
+/* Modal */
+.react-modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.react-modal-content {
+  overflow: auto;
+  max-width: 400px;
+  background: no-repeat center center fixed; 
+  padding: 20px;
+  position: relative;
+  border-radius: 15px; 
+  text-align: center;
+  margin: 0 auto; 
+  background-size: cover;
+  background-origin: border-box;
+}
+
+.modal-body {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.react-modal-content .modal-body {
+  background: rgba(255, 255, 255, 0.7); /* Translucent white background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Modal Header */
+.react-modal-content h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+  color: var(--black);
+}
+
+/* Modal Body */
+.react-modal-content p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  color: var(--grey);
+}
+
+.close-button {
+  /*button currently bottom left corner, should be centered*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(7, 7, 7); 
+  border: none; 
+  color: white; /* text color */
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer; /* change cursor to pointer when hovering over the button */
+  border-radius: 5px;
+  position: absolute;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+@media (max-width: 712px) {
+
+
+  .react-modal-content {
+    overflow: auto;
+    border-radius: 1rem!important;
+  }
+
+  .modal-body {
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  .react-modal-content .modal-body {
+    border-radius: 10px;
+  }
+}
+

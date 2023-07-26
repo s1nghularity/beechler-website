@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { WorldMap } from "react-svg-worldmap";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../../styles/theme.css";
 import "../../../styles/HomeDealerCard.css";
-import "../../../assets/img/home/dealermap/reach-compliant.png"
+import reachCompliantSticker from "../../../assets/img/home/dealermap/reach-compliant.png";
+import euFlag from "../../../assets/img/home/dealermap/eu-flag.png";
+
 import HomeDealerStats from "./HomeDealerStats";
+import Modal from "react-modal";
+import "animate.css";
+
+Modal.setAppElement("#root");
 
 const HomeDealerCard = () => {
   const data = [
@@ -55,15 +63,32 @@ const HomeDealerCard = () => {
     };
   }, []);
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const [modalAnimation, setModalAnimation] = useState("animate__backInLeft");
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalAnimation("animate__backOutRight");
+    setTimeout(() => {
+      setModalIsOpen(false);
+      setModalAnimation("animate__backInLeft");
+    }, 700); // Match the duration of your CSS animation
+  };
+
   return (
     <div className="stripe-home-dealer">
       <h1 className="home-dealer-title">OUR REACH</h1>
 
       <HomeDealerStats />
 
+
       <div className="home-dealer-map-wrapper">
         <WorldMap
-          color="#faaf33"
+          color="gold"
           tooltipBgColor="black"
           tooltipTextColor="white"
           valueSuffix=" Dealers"
@@ -75,9 +100,48 @@ const HomeDealerCard = () => {
           style={{ width: mapWidth, height: mapWidth }}
         />
 
-        <div className="sticker-badge">
-          All Beechler and ARB mouthpieces are Reach compliant!
-        </div>
+        <img
+          src={reachCompliantSticker}
+          alt="Reach compliant sticker"
+          className="reach-compliant-sticker"
+          style={{
+            display: "block",
+            width: "250px",
+            padding: "1rem",
+          }}
+          onClick={openModal}
+        />
+
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          shouldCloseOnOverlayClick={false} // Prevent modal from closing when clicking outside
+          contentLabel="Compliance Information"
+          className={`react-modal-content animate__animated ${modalAnimation}`}
+          overlayClassName="react-modal-overlay"
+          style={{
+            content: {
+              backgroundImage: `url(${euFlag})`,
+              backgroundSize: "auto 300px", // cover makes sure it always covers the whole area
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center", // This should always center your image
+              border: "none",
+              outline: "none",
+              borderRadius: "1rem",
+            },
+          }}
+        >
+          <div className="modal-body">
+            <h5>
+              All Beechler and ARB mouthpieces have been lab tested and proven
+              safe for all long and short term human contact according to E.U.
+              compliance standards.
+            </h5>
+            <button className="close-button" onClick={closeModal}>
+              <FontAwesomeIcon icon={faTimes} />
+            </button>
+          </div>
+        </Modal>
       </div>
     </div>
   );
