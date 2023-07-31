@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.menu-wrapper {
+  position: relative; /* newly added rule */
+}
+
 /* Menu Sections and Buttons */
 .menu-section {
   position: relative;
@@ -72,16 +76,25 @@
 }
 
 .products-nav-list {
+  position: absolute;
+  top: 60px; /* Adjust this value for the gap you want between button and submenu */
+  left: 0;
+  /* existing rules */
   list-style-type: none;
   padding: 0;
   background: var(--black);
   border-radius: 10px;
   overflow: hidden;
-  display: none;
   width: 100%;
   color: var(--white);
   z-index: 1;
 }
+
+.menu-options-container {
+  display: flex;
+  align-items: flex-start;
+}
+
 
 .products-nav-item {
   padding: 10px;
@@ -98,6 +111,7 @@
   padding: .5rem!important;
   font-size: 1rem!important;
   font-weight: 300!important;
+  margin-top: 1rem;;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -137,4 +151,5 @@
   flex-direction: column;
   border-radius: 5px;
   font-family: Josefin Sans;
+  position: relative;
 }
