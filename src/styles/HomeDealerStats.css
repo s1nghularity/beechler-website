@@ -1,3 +1,7 @@
+.home-dealer-stats {
+  gap: 2rem;
+}
+
 .stats-card {
   background-color: #ffffff;
   text-align: center;
@@ -16,13 +20,6 @@
   margin-bottom: 1.5rem;
 }
 
-.home-dealer-stats > .col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 3rem;
-}
 
 .stats-card:hover {
   box-shadow: 0px 0px 20px 2px rgba(255, 223, 0, 0.7); /* soft golden glow */
@@ -55,6 +52,15 @@
 /*media query to make the stats cards smaller on mobile*/
 
 @media screen and (max-width: 480px) {
+  .home-dealer-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+  }
+
   .stats-card {
     width: 6rem!important;
     height: 6rem!important;
@@ -80,10 +86,6 @@
   .stats-card {
     width: 10rem;
     height: 10rem;
-  }
-
-  .home-dealer-stats > .col {
-    margin: 0 1.5rem;
   }
 
   .gradient-text {

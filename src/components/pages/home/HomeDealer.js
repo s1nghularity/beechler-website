@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../../styles/theme.css";
 import "../../../styles/HomeDealer.css";
 import reachCompliantSticker from "../../../assets/img/home/dealermap/reach-compliant.png";
+import reach2 from "../../../assets/img/home/dealermap/reach2.png";
 import euFlag from "../../../assets/img/home/dealermap/eu-flag.png";
 
 import HomeDealerStats from "./HomeDealerStats";
@@ -38,7 +39,7 @@ const HomeDealer = () => {
 
         <HomeDealerMap />
         <img
-          src={reachCompliantSticker}
+          src={reach2}
           alt="Reach compliant sticker"
           className="reach-compliant-sticker"
           style={{
