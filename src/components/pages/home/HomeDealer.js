@@ -37,7 +37,7 @@ const HomeDealer = () => {
       <HomeDealerStats />
 
 
-        <HomeDealerMap />
+        <HomeDealerMap className="home-dealer-map"  />
         <img
           src={reach2}
           alt="Reach compliant sticker"

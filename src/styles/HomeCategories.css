@@ -70,7 +70,6 @@
   margin-bottom: 0rem;
 }
 
-/* add linear-gradient(to right, orange, gold) to category-text */
 .category-card:hover .category-text {
   background: linear-gradient(to right, orange, gold);
   -webkit-background-clip: text;
@@ -81,7 +80,11 @@
 
 .category-card:hover .category-image {
   transform: scale(1.3);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.category-card .category-image {
+  transition: transform 0.5s ease-in-out;
 }
 
 .category-link {

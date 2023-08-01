@@ -28,7 +28,7 @@
 }
 
 .home-dealer-title {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 700;
   padding-top: 3rem;
   color: var(--white);
@@ -45,13 +45,15 @@
 
 }
 
+.home-dealer-map {
+  position: relative;
+}
+
+
 .reach-compliant-sticker{
-  margin-bottom: 3rem;
-  border: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 15rem!important;
-  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 10rem;
 }
 
 .reach-compliant-sticker:hover {
@@ -59,20 +61,28 @@
   transition: transform 0.5s ease;
   cursor: pointer;
 }
+@media screen  and (max-width: 500px){
+  .home-dealer-map-container{
+    margin-top: -1rem;
+    margin-bottom: -1rem;
 
-@media only screen and (max-width: 480px) {
-  .reach-compliant-sticker  {
-    width: 150px!important;
-    margin-top: 2rem;
+  }
+  .reach-compliant-sticker {
+    max-width: 150px!important;; 
+    bottom: 1rem;
+    right: 1rem;
   }
   .home-dealer-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
+    letter-spacing: -0.3rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .reach-compliant-sticker {
-    width: 200px;
+    width: 200px!important;; 
+    bottom: 0;
+    right: 1;
   }
 }
 
