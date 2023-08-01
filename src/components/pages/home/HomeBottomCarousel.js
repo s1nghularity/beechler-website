@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import 'animate.css';
+
 import { Carousel } from "react-responsive-carousel";
 import { Container, Row, Col } from 'react-bootstrap';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,9 +11,9 @@ import about4 from "../../../assets/img/home/about/nbc-elmer.png";
 import about4bw from "../../../assets/img/home/about/nbc.png";
 import about5 from "../../../assets/img/home/about/hands2.png";
 
-import "../../../styles/HomeAbout.css";
+import "../../../styles/HomeBottomCarousel.css";
 
-function OurCommitmentCarousel() {
+function HomeBottomCarousel() {
 
 function handleSlideChange(index) {
   const slides = document.querySelectorAll(".our-story-slide");
@@ -57,28 +58,20 @@ function handleSlideChange(index) {
                 <p className="our-story-tag">Unleash your sound.</p>
               </div>
               <div className="our-story-slide">
+                <img src={about4} alt="your alt text" />
+                <p className="our-story-tag">Timeless style.</p>
+              </div>
+              <div className="our-story-slide">
                 <img src={about2} alt="your alt text" />
-                <p className="our-story-tag">Crafted to perfection.</p>
+                <p className="our-story-tag">Handcrafted vibes.</p>
               </div>
               <div className="our-story-slide">
                 <img src={about2h} alt="your alt text" />
-                <p className="our-story-tag">Crafted to perfection.</p>
+                <p className="our-story-tag">Technical pioneers.</p>
               </div>
               <div className="our-story-slide">
                 <img src={about3} alt="your alt text" />
                 <p className="our-story-tag">Experience the difference.</p>
-              </div>
-              <div className="our-story-slide">
-                <img src={about4} alt="your alt text" />
-                <p className="our-story-tag">Unmatched in the industry.</p>
-              </div>
-              <div className="our-story-slide">
-                <img src={about4bw} alt="your alt text" />
-                <p className="our-story-tag">Timeless style and design.</p>
-              </div>
-              <div className="our-story-slide">
-                <img src={about5} alt="your alt text" />
-                <p className="our-story-tag">Pioneers of technique.</p>
               </div>
             </Carousel>
         </Col>
@@ -87,4 +80,4 @@ function handleSlideChange(index) {
   );
 }
 
-export default OurCommitmentCarousel;
+export default HomeBottomCarousel;

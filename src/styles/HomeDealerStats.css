@@ -1,19 +1,18 @@
-
 .stats-card {
   background-color: #ffffff;
   text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   padding: 1rem;
-  border-radius: 50%; 
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); 
-  overflow: hidden; 
-  width: 13rem; 
+  border-radius: 50%;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 13rem;
   height: 13rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: box-shadow .3s ease;
+  transition: box-shadow 0.3s ease;
   margin-bottom: 1.5rem;
 }
 
@@ -34,44 +33,68 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 5rem;  
+  font-size: 5rem;
   font-weight: 700;
-  margin-bottom: -1rem; 
+  margin-bottom: -1rem;
 }
 
 .stats-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #0c0b0b;
-  margin-top: .25rem; 
+  margin-top: 0.25rem;
 }
 
 .stats-icon {
   width: auto;
   height: 4rem;
-  margin-top: -.5rem;
-  margin-bottom: -.25rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.25rem;
+}
+
+/*media query to make the stats cards smaller on mobile*/
+
+@media screen and (max-width: 480px) {
+  .stats-card {
+    width: 6rem!important;
+    height: 6rem!important;
+  }
+
+
+  .gradient-text {
+    font-size: 1.75rem!important;
+  }
+
+  .stats-title {
+    font-size: .75rem!important;
+
+  }
+
+  .stats-icon {
+    height: 1.5rem!important;
+    margin-top: .5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .stats-card {
-    width: 10rem; /* Smaller width */
-    height: 10rem; /* Smaller height */
+    width: 10rem;
+    height: 10rem;
   }
 
   .home-dealer-stats > .col {
-    margin: 0 1.5rem; /* Smaller margin */
+    margin: 0 1.5rem;
   }
 
   .gradient-text {
-    font-size: 4rem; /* Smaller font size */
+    font-size: 4rem;
   }
 
   .stats-title {
-    font-size: 1.2rem; /* Smaller font size */
+    font-size: 1.2rem;
   }
 
   .stats-icon {
-    height: 3rem; /* Smaller height */
+    height: 3rem;
   }
 }
