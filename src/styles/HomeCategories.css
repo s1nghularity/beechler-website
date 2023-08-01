@@ -50,7 +50,6 @@
 }
 
 .category-card img {
-  
   height: 15rem;
   margin-bottom: 1rem;
 }
@@ -107,15 +106,22 @@
   .home-categories h2 {
     font-family: "Josefin Sans", sans-serif;
     font-size: 3.5rem;
-/*reduce space between text letters */
     letter-spacing: -0.5rem;
     font-weight: 900;
     padding-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
     margin-right: .5rem;
+  }
 
-    
+  .category-card .category-text {
+    font-size: 2rem;
+    margin-top: -1.5rem;
+  }
+
+  .category-card img {
+    height: 12rem;
+    margin-bottom: 1rem;
   }
 
 }
