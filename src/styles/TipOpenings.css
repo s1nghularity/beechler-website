@@ -4,14 +4,14 @@
   height: 100%;  
 }
 
-
 .tip-openings table {
   margin-top: 1rem;
-  width: 70%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px!important;
   border-collapse: collapse!important;
+  overflow-x: auto;  /* New property */
 }
 
 .tip-openings th,
@@ -53,35 +53,17 @@
   color: var(--nav-accent);
 }
 
-/* New class for the bottom table */
-.tip-openings-small {
-  max-width: 300px;
-  
-}
-
-/* Adjusting the max-width of the cells in the bottom table */
-.tip-openings-small th,
-.tip-openings-small td {
-  max-width: 50px;
-}
-
 @media (max-width: 440px) {
   .tip-openings {
-    font-size: 14px;
+    font-size: 0.875rem;  /* 14px */
   }
 
   .tip-openings th,
   .tip-openings td {
-    padding: 8px;
+    padding: 0.5rem;  /* 8px */
   }
   
   .tip-openings table {
     border-radius: 5px;
-  }
-
-  /* Adjusting the max-width of the cells in the bottom table for smaller screens */
-  .tip-openings-small th,
-  .tip-openings-small td {
-    max-width: 30px;
   }
 }

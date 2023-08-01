@@ -63,7 +63,7 @@ function TipOpeningsTable() {
 </tbody>
 
       </Table>
-      <Table striped  hover>
+      <Table striped  hover className='big-table'>
         <thead>
           <tr>
             <th>Instrument</th>

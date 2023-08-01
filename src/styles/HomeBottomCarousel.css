@@ -94,14 +94,10 @@
     height: 20rem !important;
     width: 21rem !important;
   }
-
   .our-story-tag {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1;
-    left: .5rem!important;  
-    transform: translate3d(0, -50%, 0);  /* Adjust only vertical positioning */
-
-
+    transform: translate3d(-50%, -50%, 0);
   }
   .our-story-carousel {
     margin-top: 0;
@@ -110,7 +106,8 @@
     width: 120%;
   }
 }
-@media screen and (min-width: 440px) and (max-width: 949px) {
+
+@media screen and (min-width: 441px) and (max-width: 949px) {
   .our-story-carousel {
     margin-top: 0;
     margin-bottom: 0;

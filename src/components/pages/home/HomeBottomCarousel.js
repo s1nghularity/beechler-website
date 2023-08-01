@@ -63,11 +63,11 @@ function handleSlideChange(index) {
               </div>
               <div className="our-story-slide">
                 <img src={about2} alt="your alt text" />
-                <p className="our-story-tag">Handcrafted vibes.</p>
+                <p className="our-story-tag">Bespoke mouthpieces.</p>
               </div>
               <div className="our-story-slide">
                 <img src={about2h} alt="your alt text" />
-                <p className="our-story-tag">Technical pioneers.</p>
+                <p className="our-story-tag">Technical excellence.</p>
               </div>
               <div className="our-story-slide">
                 <img src={about3} alt="your alt text" />

@@ -4,8 +4,8 @@
   flex-direction: column;
   align-items: center;
   border: none;
-  
 }
+
 .stripe-home-dealer::before {
   content: "";
   position: absolute;
@@ -36,7 +36,6 @@
   text-align: center;
 }
 
-
 .home-dealer-map-container {
   display: flex;
   flex-direction: column;
@@ -46,8 +45,6 @@
 
 }
 
-
-
 .reach-compliant-sticker{
   margin-bottom: 3rem;
   border: none;
@@ -56,7 +53,6 @@
   width: 15rem!important;
   height: auto;
 }
-
 
 .reach-compliant-sticker:hover {
   transform: scale(1.1);
@@ -69,6 +65,9 @@
     width: 150px!important;
     margin-top: 2rem;
   }
+  .home-dealer-title {
+    font-size: 3.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -76,11 +75,6 @@
     width: 200px;
   }
 }
-
-
-
-
-
 
 /* Modal */
 .react-modal-overlay {
