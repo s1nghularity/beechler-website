@@ -5,29 +5,10 @@
   color: var(--white);
   padding: 2rem 0;
   font-family: "Josefin Sans", sans-serif;
+  
 }
 
-.stripe-footer {
-  position: relative;
-  overflow: hidden;
-  clear: both;
-}
-
-.stripe-footer:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 200vw;
-  left: -100vw;
-  z-index: -1;
-  background-color: var(--black);
-}
-
-.footer .container {
-  max-width: 82em;
-}
-
-.footer-section{
+.footer-section {
   margin-bottom: 2rem;
 }
 
@@ -78,9 +59,6 @@
   color: var(--accent);
 }
 
-/* Media Queries for refined footer across devices */
-
-/* Mobile devices (up to 440px) */
 @media (max-width: 440px) {
   .footer {
     padding: 2rem 1rem;
@@ -89,15 +67,11 @@
     text-align: center;
   }
 
-  
-.social-link {
-  color: var(--white);
-
-}
-  
+  .social-link {
+    color: var(--white);
+  }
 }
 
-/* Small tablets and large smartphones (441px - 767px) */
 @media (min-width: 441px) and (max-width: 767px) {
   .footer {
     padding: 2rem;
@@ -107,7 +81,6 @@
   }
 }
 
-/* Tablets (768px - 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
   .footer {
     padding: 2rem 4rem;
@@ -117,24 +90,18 @@
   }
 }
 
-/* Large tablets and desktops (993px - 1312px) */
 @media (min-width: 993px) and (max-width: 1312px) {
-.social-link{
-  margin-right:13rem;
-}
+  .social-link {
+    margin-right: 13rem;
+  }
 }
 
-/* Extra large devices (1312px and above) */
 @media (min-width: 1312px) {
   .footer {
     display: flex;
   }
 
-  .social-link{
-    margin-right:13rem;
+  .social-link {
+    margin-right: 13rem;
   }
 }
-
-
-
-

@@ -13,23 +13,47 @@
 @import url("./styles/TipOpenings.css");
 @import url("./styles/InstagramCarousel.css");
 
-.header-container {
-  max-width: 85em;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.scroll-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
 }
 
-.main-content {
-  max-width: 85em;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.scroll-to-top.visible {
+  opacity: 0.8;
 }
 
-.footer-container {
-  max-width: 85em;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.scroll-to-top-button {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.scroll-to-top-button:hover {
+  opacity: 1;
+}
+
+.scroll-to-top-chevron {
+  background: linear-gradient(to right, orange, gold);
+  -webkit-background-clip: text;
+}
+
+.home-page {
+  overflow: end !important;;
 }

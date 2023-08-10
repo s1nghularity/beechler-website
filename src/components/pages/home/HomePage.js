@@ -8,7 +8,7 @@ import HomeBottomCarousel from "./HomeBottomCarousel.js";
 import HomeDealer from "../home/HomeDealer.js";
 import HomeTestimonials from "../home/HomeTestimonials.js";
 import HomeContact from "../home/HomeContact.js";
-import ScrollToTop from "../../ScrollToTop.js";
+
 
 function HomePage() {
   useEffect(() => {
@@ -24,8 +24,8 @@ function HomePage() {
   }, []);
 
   return (
-    <div>
-      <ScrollToTop />
+    <div className="home-page">
+
       <HomeCarousel />
       <HomeAbout />
       <HomeCategories />

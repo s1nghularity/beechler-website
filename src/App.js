@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import * as React from "react";
 import TopBar from "./components/TopBar.js";
 import NavBar from "./components/NavBar.js";
@@ -16,6 +12,8 @@ import AboutPage from "./components/pages/about/AboutPage.js";
 import FAQs from "./components/pages/faq/FAQs.js";
 import OurCommitment from "./components/pages/commitment/OurCommitment.js";
 import Footer from "./components/Footer.js";
+import ScrollToTop from "./components/ScrollToTop.js";
+import { Container } from "react-bootstrap";
 
 import "leaflet/dist/leaflet.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -25,14 +23,12 @@ export default function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <TopBar />
-        <div className="header-container">
-          <NavBar />
-        </div>
-
-        <div className="main-content">
+        <NavBar />
+        <Container>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage className="home-page"/>} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/tip-openings" element={<TipOpenings />} />
             <Route path="/dealers" element={<DealersPage />} />
@@ -42,8 +38,7 @@ export default function App() {
             <Route path="/faq" element={<FAQs />} />
             <Route path="/commitment" element={<OurCommitment />} />
           </Routes>
-        </div>
-
+        </Container>
         <Footer />
       </Router>
     </div>

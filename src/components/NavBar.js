@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { Navbar, Nav, NavbarBrand } from "react-bootstrap";
+import { Navbar, Nav, NavbarBrand, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -59,7 +59,7 @@ function NavBar() {
   ];
 
   return (
-    <div className="stripe">
+
       <Navbar expanded={expanded} expand="md" className="navbar">
         <div className="navbar-header">
           {!isDesktop && (
@@ -114,7 +114,6 @@ function NavBar() {
           
         </Nav>
       </Navbar>
-    </div>
   );
 }
 
