@@ -13,6 +13,12 @@
 @import url("./styles/TipOpenings.css");
 @import url("./styles/InstagramCarousel.css");
 
+
+.App {
+  width: 100%; 
+  overflow-x: hidden;
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 1rem;
@@ -54,6 +60,3 @@
   -webkit-background-clip: text;
 }
 
-.home-page {
-  overflow: end !important;;
-}
