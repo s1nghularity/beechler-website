@@ -1,7 +1,6 @@
 .about-page {
   font-family: "Josefin Sans", sans-serif;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 /*TOP SECTION*/
@@ -19,10 +18,7 @@
   font-size: 2em;
   font-weight: bold;
   color: #fbb035;
-  margin-right: 0.1em;
-  margin-top: -0.1em;
-  margin-bottom: -0.1rem;
-
+  margin: 0.1em;
 }
 
 .about-header-text {
@@ -30,69 +26,41 @@
   font-size: 1.75rem;
   font-weight: 300;
   margin-left: -5rem;
-  padding-right: -2rem;
 }
 
 .elmer-about-container {
   float: right;
   width: 30rem;
   margin-right: -29rem;
-  margin-top: 5rem;  
+  margin-top: 5rem;
 }
 
 .elmer-tag {
-  font-size: 2.5rem!important;
+  font-size: 2.5rem !important;
   font-weight: 300;
   color: #000000;
   margin-left: 7rem;
   margin-top: -1rem;
-
-
-}
-
-
-
-.staff-icon {
-  position: absolute;
-  top: calc(50% - 0.5em);
-  left: -1.5em;
-  transform: scale(0.25);
 }
 
 .wave-about {
-  width: 120%;
-  height: 100%;
+  width: 100%; 
+  height: auto; 
   margin-top: -35rem;
   margin-bottom: -50rem;
-  margin-left: -10rem;
   z-index: -1;
 }
-
-.animate__rubberBand {
-  animation-duration: 10s; /* Set the duration of the animation */
-  animation-delay: 10s; /* Set the delay before the animation starts */
-  animation-name: rubberBand; /* Set the name of the animation */
-}
-
-.musical-staff {
-  margin-top: -25rem;
-  margin-left: -4.5rem
-
-  
-}
-
-
 
 
 /*HORIZONTAL SCROLLING TIMELINE*/
 
-.carousel-container{
+.carousel-container {
   text-align: center;
 }
 
-.dot{
-  height: .5rem;
-  width: .5rem;
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -100,7 +68,7 @@
   transition: background-color 0.6s ease;
 }
 
-.carousel-slide{
+.carousel-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,77 +77,20 @@
   height: 100%;
 }
 
-img.about-carousel-img{
+img.about-carousel-img {
   width: 50rem;
-  height: auto; 
+  height: auto;
   object-fit: cover;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin: auto;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
 }
 
-p.about-carousel-text{
+p.about-carousel-text {
   max-width: 50rem;
   font-size: 1.5rem;
   font-weight: 300;
   color: #000000;
-}
-
-@media only screen and (max-width: 1080px) {
-  .about-header {
-    padding: 2rem;
-  }
-  .about-header h1 {
-    font-size: 3rem;
-  }
-  .about-header-text {
-    font-size: 1.5rem;
-  }
-  figure.figure {
-    width: 30rem;
-    margin-left: -1rem;
-  }
-  .background-svg-container {
-    margin-left: -4rem;
-  }
-}
-
-@media only screen and (max-width: 730px) {
-  .about-header {
-    padding: 2rem;
-  }
-  .about-header h1 {
-    font-size: 3rem;
-  }
-  .about-header-text {
-    font-size: 1.25rem;
-  }
-  figure.figure {
-    width: 30rem;
-    margin-left: -1rem;
-  }
-  div.background-svg-container {
-    margin-left: -8rem;
-  }
-}
-
-@media only screen and (max-width: 530px) {
-  .about-header {
-    padding: 2rem;
-  }
-  .about-header h1 {
-    font-size: 3rem;
-  }
-  .about-header-text {
-    font-size: 1.25rem;
-  }
-  figure.figure {
-    width: 30rem;
-    margin-left: -6rem;
-  }
-  div.background-svg-container {
-    margin-left: -4rem;
-  }
 }
 
 /*FOOTER TEXT AND VIDEO*/
@@ -190,7 +101,7 @@ p.about-carousel-text{
   margin-bottom: 2rem;
 }
 
-.about-footer-text-container{
+.about-footer-text-container {
   margin-top: -3rem;
   text-align: center;
   align-self: center;
@@ -217,3 +128,131 @@ div .about-video {
 }
 
 
+@media only screen and (max-width: 400px) {
+  .about-header h1 {
+    margin-top: -2rem;
+    letter-spacing: .5px;
+  }
+
+  div.elmer-about-container.float-right > figure > img {
+    width: 15rem;
+  }
+
+  .elmer-tag {
+    font-size: 1.5rem !important;
+    margin-left: 0;
+    margin-top: .5rem;
+  }
+  .intro-letter {
+    text-align: center;
+    width: 175%;
+    margin-left: -32.5%;
+  }
+
+  .wave-about {
+    width: 250%; 
+    height: auto; 
+    margin-top: -5rem;
+    margin-bottom: -15rem;
+    margin-left: -2rem;
+    z-index: -1;
+  }
+ 
+  .about-footer h1 {
+    font-size: 2rem;
+    letter-spacing: .5px;
+  }
+
+  img.about-carousel-img {
+    max-width: 20rem;
+  }
+
+  p.about-carousel-text {
+    max-width: 20rem;
+  }
+
+  div .about-video {
+    max-width: 15rem;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .about-header,
+  .elmer-about-container,
+  .about-footer {
+    text-align: center;
+    margin: auto;
+    
+  }
+
+  .about-header h1,
+  .about-footer h1 {
+    font-size: 3rem;
+  }
+
+  .about-header-text,
+  .elmer-tag,
+  .about-text2 {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  .elmer-about-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  div.elmer-about-container.float-right > figure > img {
+    width: 15rem;
+  }
+
+
+  .intro-letter {
+    text-align: center;
+    width: 175%;
+    margin-left: -32.5%;
+  }
+
+  
+  .wave-about {
+    width: 250%; 
+    height: auto; 
+    margin-top: -5rem;
+    margin-bottom: -15rem;
+    margin-left: -5rem;
+    z-index: -1;
+  }
+
+
+  img.about-carousel-img {
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  p.about-carousel-text {
+    max-width: 30rem;
+    margin: auto;
+  }
+
+  div .about-video {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 730px) and (max-width: 900px) {
+  .about-header-text,
+  .elmer-about-container {
+    margin-left: 2rem;
+    margin-right: -5rem;
+  }
+
+  .about-header-text {
+    margin-top: 25rem;
+    margin-left: 5rem;
+  }
+}

@@ -64,11 +64,11 @@ export default function Wave() {
           d={generateSineWavePath(15, 200, i * 15, 100 + i * 15)}
           fill="none"
           stroke="#FCAF3C"
-          strokeWidth="1"
+          strokeWidth="3"
         />
       ))}
 
-      <image href={treble2} x="5rem" y="4.75rem" width="100" height="100" />
+      <image href={treble2} x="5rem" y="4.75rem" width="100" height="100" className="treble2" />
     </svg>
   );
 }

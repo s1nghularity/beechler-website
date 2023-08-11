@@ -8,10 +8,7 @@ import AboutCarousel from "./AboutCarousel";
 import Wave from "./Wave";
 
 const AboutPage = () => {
-
-
   return (
-    
     <Container className="about-page">
       <Row className="about-header">
         <Col xs={12}>
@@ -62,17 +59,14 @@ const AboutPage = () => {
         </Row>
       </Row>
 
-    <Wave />  
-    {/* <MusicalStaff  /> */}
+      <Wave />
 
-
-      
       <div>
         <AboutCarousel />
       </div>
 
       <Row className="about-footer">
-        <Col sm={8} className="about-footer-text-container">
+        <Col sm={12} lg={8} className="about-footer-text-container">
           <h1>Women Led & Family Owned</h1>
           <div className="about-text2">
             <p>
@@ -81,7 +75,7 @@ const AboutPage = () => {
             </p>
           </div>
         </Col>
-        <Col sm={4}>
+        <Col sm={12} lg={4}>
           <img src={arbLoop} alt="Animated GIF" className="about-video" />
         </Col>
       </Row>

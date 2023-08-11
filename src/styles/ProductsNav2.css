@@ -153,3 +153,10 @@
   font-family: Josefin Sans;
   position: relative;
 }
+
+/*ensure the nav buttons remain within device width*/
+@media (max-width: 568px) {
+  .products-nav-menu {
+    margin-left: -1.25rem;
+  }
+}

@@ -66,4 +66,12 @@
   .tip-openings table {
     border-radius: 5px;
   }
+
+  /*shift table to the left and ensure it is not wider than the screen*/
+  table.big-table.table.table-striped.table-hover {
+    font-size: 0.875rem;  /* 14px */
+    margin-left: -2.5rem;
+  }
+
+
 }
