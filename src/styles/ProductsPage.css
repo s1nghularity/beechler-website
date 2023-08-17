@@ -6,15 +6,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-}
-
-.products-grid {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.products-grid.loaded {
-  opacity: 1;
+  opacity: 1; /* Ensure that the grid is visible */
 }
 
 .product-row {
@@ -32,6 +24,7 @@
   text-align: center;
   color: black;
 }
+
 
 /* PRODUCTCARD.JS */
 .product-card-container {

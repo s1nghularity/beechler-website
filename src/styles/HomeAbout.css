@@ -28,7 +28,7 @@
 }
 
 .home-about-left h2 {
-  font-size: 7vw;
+  font-size: 5rem;
   font-weight: 700;
   background: var(--accent);
   background-clip: text;
@@ -40,7 +40,7 @@
 .home-about-left p {
   align-self: flex;
   font-weight: 300;
-  font-size: 3vw;
+  font-size: 2rem;
   color: var(--white);
   margin-top: 1rem;
   max-width: 80%;

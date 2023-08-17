@@ -27,7 +27,7 @@ const HomeDealer = () => {
     setTimeout(() => {
       setModalIsOpen(false);
       setModalAnimation("animate__fadeIn");
-    }, 700); // Match the duration of your CSS animation
+    }, 700); 
   };
 
   return (

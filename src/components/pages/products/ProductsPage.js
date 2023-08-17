@@ -15,15 +15,7 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
-const gridVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
