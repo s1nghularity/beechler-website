@@ -58,5 +58,7 @@
 .scroll-to-top-chevron {
   background: linear-gradient(to right, orange, gold);
   -webkit-background-clip: text;
+  width: 2rem;
+  height: 2rem;
 }
 
