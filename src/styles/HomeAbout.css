@@ -21,7 +21,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
 
 .home-about-left {
@@ -29,61 +28,34 @@
 }
 
 .home-about-left h2 {
-  font-size: 8rem;
+  font-size: 7vw;
   font-weight: 700;
   background: var(--accent);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: -0.5rem;
-  margin-top: -2.5rem;
+
 }
 
 .home-about-left p {
   align-self: flex;
-  font-size: 3rem;
+  font-weight: 300;
+  font-size: 3vw;
   color: var(--white);
   margin-top: 1rem;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -1rem;
+
 }
 
-@media (max-width: 440px) {
+/*esnure the our story text tittle and text below is larger on mobile, header equivalent to 5rem and text below pproportionally smaller */
+@media (max-width: 768px) {
   .home-about-left h2 {
-    font-size: 15vw;
-    letter-spacing: -0.3rem;
+    font-size: 4rem;
   }
 
   .home-about-left p {
-    font-size: 4vw;
-    max-width: 80%;
+    font-size: 1.5rem;
   }
 }
-
-@media screen and (min-width: 712px) and (max-width: 1079px) {
-  .home-about-left h2 {
-    font-size: 15vw;
-    letter-spacing: -0.3rem;
-  }
-
-  .home-about-left p {
-    font-size: 4vw;
-    max-width: 80%;
-  }
-}
-
-@media screen and (min-width: 1080px) and (max-width: 1439px) {
-  .home-about-left h2 {
-    font-size: 15vw;
-    letter-spacing: -0.5rem;
-    margin-top: -10rem;
-  }
-
-  .home-about-left p {
-    font-size: 3.5vw;
-    max-width: 80%;
-  }
-}
-

@@ -22,16 +22,16 @@ const HomeCarousel = () => {
     const updateCenterSlidePercentage = () => {
       const viewportWidth = window.innerWidth;
       if (viewportWidth <= 768) {
-        setCenterSlidePercentage(100); // 100% on small devices
+        setCenterSlidePercentage(100);
       } else if (viewportWidth <= 1024) {
-        setCenterSlidePercentage(60); // 60% on medium devices
+        setCenterSlidePercentage(50);
       } else {
-        setCenterSlidePercentage(45); // 40% on large devices
+        setCenterSlidePercentage(33.33);
       }
     };
 
     window.addEventListener("resize", updateCenterSlidePercentage);
-    updateCenterSlidePercentage(); // initial update
+    updateCenterSlidePercentage();
 
     return () => {
       window.removeEventListener("resize", updateCenterSlidePercentage);

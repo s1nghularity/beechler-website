@@ -40,7 +40,6 @@
   padding-bottom: 1rem;
   border-radius: 1rem;
   background-color: var(--black)!important;
-  height: 30rem; 
 }
 
 .home-top-carousel-slide {
@@ -60,14 +59,3 @@ li.dot{
   display:none!important;
 }
 
-@media (max-width: 500px) {
-  .home-top-carousel{
-    height: 22rem; 
-  }
-}
-
-@media (min-width: 700px) and (max-width: 800px) {
-  .home-top-carousel{
-    height: 38rem; 
-  }
-}
