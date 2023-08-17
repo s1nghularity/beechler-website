@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard.js";
 
@@ -15,15 +15,15 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
 
   const hasProducts = products.length > 0;
 
-  const getCategoryTitleAnimation = (category) => {
-    if (category === selectedCategory) {
+  const getCategoryTitleAnimation = (category, subtype) => {
+    if (category === selectedCategory || subtype === selectedSubtype) {
       return "animate__flipInX";
     }
     return "animate__fadeIn";
   };
 
-  const getProductRowAnimation = (category) => {
-    if (category === selectedCategory) {
+  const getProductRowAnimation = (category, subtype) => {
+    if (category === selectedCategory || subtype === selectedSubtype) {
       return "animate__fadeIn";
     }
     return "animate__flipInUp"; // Default animation for product rows
@@ -38,7 +38,7 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
               <Col>
                 <h2 className={`category-title animate__animated ${getCategoryTitleAnimation(category)}`}>{category}</h2>
               </Col>
-              <Row className={`product-row animate__animated ${getProductRowAnimation(category)}`}>
+              <Row className={`product-row animate__animated ${getProductRowAnimation(category, selectedSubtype)}`}>
                 {categoryProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
@@ -59,4 +59,3 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
 };
 
 export default ProductsGrid;
-
