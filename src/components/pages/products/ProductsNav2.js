@@ -1,10 +1,12 @@
 import { products } from "./ProductsData.js";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 import { MenuButton, Badge, MenuOptions } from "./MenuOptions.js";
+
+
 
 const ProductsNav2 = ({
   handleCategorySelect,
@@ -20,6 +22,16 @@ const ProductsNav2 = ({
   const [selectedType, setSelectedType] = useState(null);
   const isSubmenuOpen = isMouthpiecesOpen || isTypeOpen;
   const badgeIsSelected = !!selectedCategory || !!selectedType;
+  const [animateSelection, setAnimateSelection] = useState(false);
+
+  useEffect(() => {
+    if (animateSelection) {
+      setTimeout(() => {
+        setAnimateSelection(false);
+      }, 1000); // Reset after 1 second (or the duration of your animation)
+    }
+  }, [animateSelection]);
+  
 
   const handleButtonClick = (selectedMenu) => {
     if (selectedMenu === "mouthpieces") {
@@ -46,13 +58,15 @@ const ProductsNav2 = ({
       setSelectedType(null);
     }
     setIsMouthpiecesOpen(false);
-    setIsTypeOpen(false); // Reset Type button when category changes
+    setIsTypeOpen(false);
+    setAnimateSelection(true);
   };
 
   const handleSubtypeSelection = (option) => {
     handleSubtypeSelect(option);
     setSelectedType(option);
     setIsTypeOpen(false);
+    setAnimateSelection(true);
   };
 
   const selectionIsValid = (category, subtype) => {
@@ -100,6 +114,8 @@ const ProductsNav2 = ({
   ];
 
   const subtypeOptions = ["Soprano", "Alto", "Tenor", "Baritone"];
+
+  
 
   return (
     <AnimatePresence>

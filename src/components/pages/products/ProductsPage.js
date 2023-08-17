@@ -107,7 +107,8 @@ const ProductsPage = () => {
           />
         </Col>
         <Col sm={12} md={12} lg={8} xl={8}>
-          <ProductsGrid products={previousProducts} />
+        <ProductsGrid products={previousProducts} selectedCategory={selectedCategory} selectedSubtype={selectedSubtype} />
+
         </Col>
 
         <DynamicInfo infoContent={selectedCategory} />
