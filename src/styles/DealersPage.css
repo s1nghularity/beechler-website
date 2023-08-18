@@ -30,15 +30,14 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  padding: 10px;
   max-height: calc(30vh - 0.5rem); 
   overflow-y: auto;
   margin-bottom: 1rem;
   z-index: 1000;
   font-family: Josefin Sans, sans-serif;
+  margin-right: 1rem;
 }
 
 /* Search bar */
@@ -48,7 +47,10 @@
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   z-index: 1001;
-  margin-bottom: 1rem;
+  overflow: hidden;
+  height: 2.4rem;
+  padding: 0;
+
 }
 
 
@@ -61,8 +63,15 @@
   display: flex;
   flex-direction: column;
   z-index: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  max-height: calc(80vh - 50px);
+  overflow-y: auto;
+  padding: 0.5rem;
+}
 
+.dealer-list-container {
+  top: 150px;
+  overflow: hidden;
 }
 
 /* Musical note icon */
@@ -128,9 +137,33 @@
   color: var(--nav-accent);
 }
 
+.dealer-search-input {
+  cursor: cursor;
+}
+.dealer-info-container {
+  cursor: pointer;
+}
+
+.leaflet-grab {
+  cursor: grab;
+}
+
+.leaflet-grabbing {
+  cursor: grabbing;
+}
+
+#search-addon.input-group-text {
+  cursor: pointer;
+}
+
+.dealer-info-container:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}
+
+
 @media (max-width: 768px) {
   .dealer-search-container {
-    width: 100%; /* Full width */
+    width: 100%; 
     left: 0;
     transform: none;
     margin-bottom: -1rem;

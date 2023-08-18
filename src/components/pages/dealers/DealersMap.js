@@ -1,18 +1,16 @@
+// DealersMap.js
 import React, { useState, useEffect, useMemo, useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { Container, Row, Col, InputGroup, FormControl } from "react-bootstrap";
+import { MapContainer, TileLayer } from "react-leaflet";
+import { Container } from "react-bootstrap";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { locationData } from "./DealerData";
 import "../../../styles/DealersPage.css";
 import { library, icon } from "@fortawesome/fontawesome-svg-core";
-import {
-  faMusic,
-  faMapMarkerAlt,
-  faPhoneAlt,
-  faGlobe,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import DealerSearch from "./DealerSearch";
+import DealerList from "./DealerList";
+import DealerMarker from "./DealerMarker";
 
 const DealersMap = () => {
   const [search, setSearch] = useState("");
@@ -74,46 +72,13 @@ const DealersMap = () => {
     if (map && markerRef) {
       map.flyTo([location.latitude, location.longitude], 15, {
         animate: true,
-        duration: 1, // 1 second; adjust as needed
+        duration: 3,
       });
-      markerRef.openPopup();
+      setTimeout(() => {
+        markerRef.openPopup();
+      }, 3000);
     }
   };
-
-  const getDistance = (location) => {
-    if (!userLocation) {
-      return Infinity;
-    }
-    const R = 6371e3; // metres
-    const φ1 = (userLocation.latitude * Math.PI) / 180; // φ, λ in radians
-    const φ2 = (location.latitude * Math.PI) / 180;
-    const Δφ = ((location.latitude - userLocation.latitude) * Math.PI) / 180;
-    const Δλ = ((location.longitude - userLocation.longitude) * Math.PI) / 180;
-
-    const a =
-      Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
-      Math.cos(φ1) *
-        Math.cos(φ2) *
-        Math.sin(Δλ / 2) *
-        Math.sin(Δλ / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-    const d = R * c; // in metres
-    return d;
-  };
-
-  const sortedLocations = useMemo(
-    () =>
-      filteredLocations
-        .map((location) => ({
-          ...location,
-          distance: getDistance(location),
-        }))
-        .sort((a, b) => a.distance - b.distance),
-    [filteredLocations, userLocation]
-  );
-
-  const closestLocation = sortedLocations[0];
 
   return (
     <Container fluid>
@@ -129,71 +94,23 @@ const DealersMap = () => {
           attribution='© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         {filteredLocations.map((location) => (
-          <Marker
-            key={location.name}
-            position={[location.latitude, location.longitude]}
-            icon={musicalNoteIcon}
-            ref={(ref) => {
-              markerRefs.current[location.name] = ref;
-            }}
-          >
-            <Popup className="dealer-map-popup">
-  <div className="popup-content">
-    <strong>{location.name}</strong>
-    <div className="popup-detail">
-      <FontAwesomeIcon
-        icon={faMapMarkerAlt}
-        className="dealer-popup-icon"
-        onClick={() => handleLocationClick(location)}
-      />
-      {location.address}, {location.city}, {location.state} {location.zip}, {location.country}
-    </div>
-    <div className="popup-detail">
-      <FontAwesomeIcon icon={faPhoneAlt} className="dealer-popup-icon" />
-      {location.phone}
-    </div>
-    <div className="popup-detail">
-      <FontAwesomeIcon icon={faGlobe} className="dealer-popup-icon" />
-      <a href={location.website} target="_blank" rel="noreferrer">
-        {location.website}
-      </a>
-    </div>
-  </div>
-</Popup>
-          </Marker>
+          <DealerMarker
+            location={location}
+            musicalNoteIcon={musicalNoteIcon}
+            handleLocationClick={handleLocationClick}
+            markerRefs={markerRefs}
+          />
         ))}
         <div
           className="dealer-search-container"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="dealer-search-bar">
-            <InputGroup className="mb-3">
-              <InputGroup.Text id="search-addon">Search</InputGroup.Text>
-              <FormControl
-                type="text"
-                placeholder="Search for dealers"
-                aria-label="Search"
-                aria-describedby="search-addon"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="dealer-search-input"
-              />
-            </InputGroup>
-          </div>
-          {filteredLocations.map((location) => (
-            <div
-              key={location.name}
-              className="dealer-info-container"
-              onClick={() => handleLocationClick(location)}
-            >
-              <strong className="dealer-name">{location.name}</strong>
-              <p className="dealer-info">
-                {location.address}, {location.city}, {location.state}{" "}
-                {location.zip}, {location.country}
-              </p>
-            </div>
-          ))}
+          <DealerSearch search={search} setSearch={setSearch} />
+          <DealerList
+            filteredLocations={filteredLocations}
+            handleLocationClick={handleLocationClick}
+          />
         </div>
       </MapContainer>
     </Container>
