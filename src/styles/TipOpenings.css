@@ -11,7 +11,7 @@
   margin-right: auto;
   border-radius: 10px!important;
   border-collapse: collapse!important;
-  overflow-x: auto;  /* New property */
+  overflow-x: auto;
 }
 
 .tip-openings th,
@@ -55,22 +55,22 @@
 
 @media (max-width: 440px) {
   .tip-openings {
-    font-size: 0.875rem;  /* 14px */
+    font-size: 0.875rem;  
   }
 
   .tip-openings th,
   .tip-openings td {
-    padding: 0.5rem;  /* 8px */
+    padding: 0.5rem; 
   }
   
   .tip-openings table {
     border-radius: 5px;
   }
 
-  /*shift table to the left and ensure it is not wider than the screen*/
+
   table.big-table.table.table-striped.table-hover {
-    font-size: 0.875rem;  /* 14px */
-    margin-left: -2.5rem;
+    font-size: 0.875rem;  
+    margin-left: -.5rem;
   }
 
 

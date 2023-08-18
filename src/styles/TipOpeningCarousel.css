@@ -1,37 +1,33 @@
 .tip-opening-carousel {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    gap: 1rem;
-    scrollbar-width: none!important; /* Firefox */
-    -ms-overflow-style: none!important;  /* IE and Edge */
-    margin-bottom: 1rem;
-    width: 90rem;
-    margin-left: -4rem;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: 1rem;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  margin-bottom: 1rem;
+  align-items: center;
+  width: 130%;
+  margin-left: -15%;
 }
 
-.tip-opening-carousel::-webkit-scrollbar { /* Chrome, Safari and Opera */
-    display: none;
+.tip-opening-carousel::-webkit-scrollbar {
+  display: none;
 }
-
 
 .tip-opening-carousel-item {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .tip-opening-carousel-image {
-    width: 300px; 
-    height: 400px; 
-    object-fit: cover;
-    transition: transform 0.5s;
-    display: block;
-    border-radius: .5rem!important;
-
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s;
+  display: block;
+  border-radius: 0.5rem !important;
 }
 
 .tip-opening-carousel-item carousel-item-10 {
-        border-radius: .5rem!important;
-
+  border-radius: 0.5rem !important;
 }
