@@ -15,6 +15,7 @@ const ArtistData = [
     mouthpieces: [
       "Custom Hard Rubber Alto",
       "Hard Rubber Soprano 6S",
+      "Beechler Custom Bellite Alto #7",
     ],
   },
   {
@@ -188,7 +189,6 @@ const ArtistData = [
     mouthpieces: [
       "Diamond Alto S9S",
       "Custom Jazz Alto C90",
-      "Bellite Tenor #110",
       "Hard Rubber Baritone #9",
     ],
   },
@@ -240,10 +240,7 @@ const ArtistData = [
       "John Klemmer ARB Metal Tenor #7",
     ],
   },
-  {
-    name: "Jonas Ganzmiller",
-    mouthpieces: ["Diamond Alto M6S"],
-  },
+
   {
     name: "Kenny G",
     mouthpieces: ["Diamond Alto S5S"],
@@ -308,13 +305,7 @@ const ArtistData = [
       "Hard Rubber Soprano #7",
     ],
   },
-  {
-    name: "Michael Lington",
-    mouthpieces: [
-      "Custom Bellite Alto #8",
-      "Hard Rubber Soprano #7",
-    ],
-  },
+
   {
     name: "Michael Paulo",
     mouthpieces: [
@@ -371,10 +362,7 @@ const ArtistData = [
     name: "Randal Clark",
     mouthpieces: ["C32 Custom Bellite Alto #7"],
   },
-  {
-    name: "Randy Gist",
-    mouthpieces: ["ARB Metal #6"],
-  },
+
   {
     name: "Ray Hutcherson",
     mouthpieces: ["Diamond Alto M8S"],
@@ -432,7 +420,9 @@ const ArtistData = [
   },
   {
     name: "Ted Nash",
-    mouthpieces: ["Diamond Alto M9S"],
+    mouthpieces: [
+      "Diamond Alto M9S",
+      "Hard Rubber Soprano #6"],
   },
   {
     name: "Thom Mason",

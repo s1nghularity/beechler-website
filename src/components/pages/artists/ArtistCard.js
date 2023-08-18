@@ -22,14 +22,18 @@ const colorArray = [
 ];
 
 function getDynamicColor(artist) {
-  let index = artist.charCodeAt(0) % 16; // Get the ASCII value of the first character and mod it by 16
+  let index = artist.charCodeAt(0) % 16; 
   return colorArray[index];
 }
 
+const variants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: { opacity: 1, scale: 1 },
+};
 
-const ArtistCard = forwardRef(({ artist }, ref) => {
+const ArtistCard = ({ artist }) => {
   return (
-    <motion.div ref={ref} initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+    <motion.div initial="hidden" animate="visible" variants={variants}>
       <Card className="artist-card">
         <Card.Body>
           <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }}>
@@ -46,6 +50,6 @@ const ArtistCard = forwardRef(({ artist }, ref) => {
       </Card>
     </motion.div>
   );
-});
+};
 
 export default ArtistCard;
