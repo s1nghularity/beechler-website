@@ -283,7 +283,7 @@ export const products = [
     image: customBelliteB,
   },
 
-  //TODO:ADD BEECHLER HARD RUBBER B25 B25/C B26 B26/C B22 B28 B29
+//Beechler Hard Rubber
 
   {
     category: "Beechler Hard Rubber",
@@ -291,7 +291,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Soprano",
     price: 219.25,
-    image: b25,
+    image: b25c,
   },
 
   {
@@ -300,7 +300,7 @@ export const products = [
     instrument: "Saxophone",
     subtype: "Soprano",
     price: 226.58,
-    image: b25c,
+    image: b25,
   },
 
   {
@@ -357,7 +357,7 @@ export const products = [
     id: "C21",
     instrument: "Saxophone",
     subtype: "Alto",
-    model: "Custom 'D' Series Model",
+    model: "'D' Series Model",
     bore: "Medium",
     facing: ["Medium"],
     price: 210.19,
@@ -368,7 +368,7 @@ export const products = [
     id: "C22",
     instrument: "Saxophone",
     subtype: "Alto",
-    model: "Custom 'Jazz' Model",
+    model: "Jazz Model",
     settings: "Professional",
     price: 210.19,
     image: beechlerJazzAlto,

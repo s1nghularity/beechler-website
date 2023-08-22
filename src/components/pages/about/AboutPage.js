@@ -67,7 +67,6 @@ const AboutPage = () => {
 
       <Row className="about-footer">
         <Col sm={12} lg={8} className="about-footer-text-container">
-          <h1>Women Led & Family Owned</h1>
           <div className="about-text2">
             <p>
               Discover the joy of playing at your full potential with Remlé

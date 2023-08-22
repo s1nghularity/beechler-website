@@ -8,10 +8,11 @@ import {
   ModelSection,
   LigatureTypeSection,
   FinishSection,
-  BoreSection
+  BoreSection,
+  CustomBubble
 } from "../products/ProductCardSpecs";
 
-const selectedProductIds = ["B10", "B11", "B12", "B18", "B20", "B21"];
+const selectedProductIds = ["B10", "B11", "B12","B14", "B19", "B18", "B20", "B21"];
 
 
 const ProductDescription = ({ product }) => {
@@ -25,6 +26,11 @@ const ProductDescription = ({ product }) => {
     bore,
   } = product;
 
+  const isCustomModel = (id) => {
+    return id && (id.startsWith("C") || id.includes("/C"));
+  };
+  
+
   return (
     <Card className="product-card-description">
       <Row className="product-icon-row">
@@ -37,6 +43,15 @@ const ProductDescription = ({ product }) => {
         {accessories && <AccessoriesSection accessories={accessories} />}
         {model && <ModelSection model={model} />}
         {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} />}
+      </Row>
+
+      {isCustomModel(id) && (
+        <Row className="custom-bubble-row">
+          <CustomBubble />
+        </Row>
+      )}
+
+      <Row className="price-row">
         <Card.Text className="price">MSRP ${price}</Card.Text>
       </Row>
     </Card>

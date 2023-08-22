@@ -13,22 +13,22 @@ export const productInfo = {
 
   "Beechler Bellite": {
     description:
-      "Beechler Bellite Metal Mouthpiece is cast from the finest surgical stainless steel. This material is averse to corrosion, breakage, or change in playing characteristics. They are cast by the lost wax method, at a temperature of 2000 degrees, and will maintain consistent durability. The hardness of this metal provides an ultra-fast response time to bring out the brilliance of the overtone series. The Bellite alto and tenor models feature a medium-high baffle and open chamber which supports a brilliant contemporary sound as well as a subdued ballad sound. The Bellite Soprano and Baritone have an open baffle. Ligatures and caps are provided with all Beechler Bellite mouthpieces.",
+      "Beechler Bellite Metal Mouthpiece is cast from the finest surgical stainless steel. This material is averse to corrosion, breakage, or change in playing characteristics. They are cast by the time-honored lost wax method, at a temperature of 2000 degrees, and will maintain consistent durability. The hardness of this metal provides an ultra-fast response time to bring out the brilliance of the overtone series. The Bellite alto and Tenor models feature a medium-high baffle and open chamber which supports a brilliant contemporary sound as well as a subdued ballad sound. The Bellite Soprano and Baritone have an open baffle. Ligatures and caps are provided with all Beechler Bellite mouthpieces.",
   },
 
   "Beechler Hard Rubber": {
     description:
-      "Made from quality hard rubber. The hardness of the rubber and the size and shape of the chamber produce a dark, traditional sound. Facing lengths available in Medium and Long.",
+      "Made from quality hard rubber. The hardness of the rubber and the size and shape of the chamber produce a dark, traditional sound.",
   },
 
   "ARB Metal": {
     description:
-      "ARB metal mouthpieces feature high baffles and step-off chambers for the Alto, Tenor, and Baritone. Like the Beechler Bellite, they are cast by the lost wax method, at a temperature of 2000 degrees, and will maintain consistent durability. They are extremely versatile and can be played with extraordinary brightness or with a soft and mellow sound. These mouthpieces are the culmination of years of development in arriving at the best playing combination of tone chambers, facings, and density of metal. They have excellent brilliance, response, and depth of tone. Ligatures and caps are provided with all ARB metal mouthpieces.",
+      "ARB metal mouthpieces feature high baffles and step-off chambers for the Alto, Tenor, and Baritone. Like the Beechler Bellite, they are cast by the time-honored lost wax method, at a temperature of 2000 degrees, and will maintain consistent durability. They are extremely versatile and can be played with extraordinary brightness or with a soft and mellow sound. These mouthpieces are the culmination of years of development in arriving at the best playing combination of tone chambers, facings, and density of metal. They have excellent brilliance, response, and depth of tone. Ligatures and caps are provided with all ARB metal mouthpieces.",
   },
 
   "ARB Great Neck Originals": {
     description:
-      "ARB Great Neck Original Mouthpieces are made from the blanks of the 1940s. These mouthpieces were given this name by Arnold Brilhart because of the location of his original factory in Great Neck, New York. The Alto and Tenor are large bore, medium baffle mouthpieces. The Clarinet has a medium open bore. The white pigment in these mouthpieces helps to produce the compact and subtle sound of those years. These are limited edition mouthpieces. Facing lengths available in Medium and Long. They will never be available again after the current stock is gone.",
+      "ARB Great Neck Original Mouthpieces are made from the blanks of the 1940s. These mouthpieces were given this name by Arnold Brilhart because of the location of his original factory in Great Neck, New York. The Alto and Tenor are large bore, medium baffle mouthpieces. The Clarinet has a medium open bore. The white pigment in these mouthpieces helps to produce the compact and subtle sound of those years. These are limited edition mouthpieces. They will never be available again after the current stock is gone.",
   },
 
   "Beechler Customized": {

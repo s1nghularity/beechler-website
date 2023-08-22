@@ -32,27 +32,16 @@ export const BoreSection = ({ bore }) => (
 );
 
 
+const chipColors = {
+  Bb: "skyblue",
+  Soprano: "tomato",
+  Alto: "gold",
+  Tenor: "green",
+  Baritone: "rebeccapurple",
+};
+
 export const getChipColor = (subtype) => {
-  let color;
-  switch (subtype) {
-    case "Bb":
-      color = "skyblue";
-      break;
-    case "Soprano":
-      color = "tomato";
-      break;
-    case "Alto":
-      color = "gold";
-      break;
-    case "Tenor":
-      color = "green";
-      break;
-    case "Baritone":
-      color = "rebeccapurple";
-      break;
-    default:
-      color = "#000000";
-  }
+  const color = chipColors[subtype] || "#000000";
   const brightness = parseInt(color.replace("#", ""), 16) > 0xffffff / 2 ? '#000000' : '#ffffff';
   return { backgroundColor: color, color: brightness };
 };
@@ -72,7 +61,7 @@ const StyledChip = styled(Chip)(({ theme, subtype }) => {
 });
 
 export const CustomChip = ({ subtype, ...rest }) => (
-  <StyledChip subtype={subtype} {...rest} />
+  <StyledChip role="listitem" subtype={subtype} {...rest} />
 );
 
 export const ProductIconRow = ({ product }) => {
@@ -81,7 +70,7 @@ export const ProductIconRow = ({ product }) => {
     : [product.subtype];
 
   return (
-    <Row className="product-icon-row">
+    <Row className="product-icon-row" role="list">
       <Col xs="auto">
         <div className="product-id">{product.id}</div>
       </Col>
@@ -98,7 +87,11 @@ export const ProductIconRow = ({ product }) => {
           />
         ))}
       </Col>
-
     </Row>
   );
 };
+
+
+export const CustomBubble = () => (
+  <div className="custom-bubble"> <p>Custom</p></div>
+);
