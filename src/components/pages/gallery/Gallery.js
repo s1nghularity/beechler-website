@@ -7,7 +7,7 @@ import img1 from "../../../assets/img/gallery/IMG_5687.png";
 import img2 from "../../../assets/img/gallery/IMG_5689.png";
 import img3 from "../../../assets/img/gallery/IMG_5690.png";
 import img4 from "../../../assets/img/gallery/IMG_5694.png";
-import img5 from "../../../assets/img/gallery/IMG_5697.png";
+
 import vibesImg from "../../../assets/img/gallery/vibes.jpg";
 import ad1953Img from "../../../assets/img/gallery/1953ad.JPG";
 import adrianChiaImg from "../../../assets/img/gallery/adrianchia.jpg";
@@ -29,7 +29,7 @@ import fridaHidalgoImg from "../../../assets/img/gallery/fridahidalgo.jpg";
 import funJimImg from "../../../assets/img/gallery/funjim.jpg";
 import ikechiOnyenakaImg from "../../../assets/img/gallery/ikechionyenaka.jpg";
 import joeNunezImg from "../../../assets/img/gallery/joenunez.jpg";
-import joeNunezCImg from "../../../assets/img/gallery/joenunezc.jpg";
+
 import johnDoeImg from "../../../assets/img/gallery/johndoe.jpg";
 import kellyMooreImg from "../../../assets/img/gallery/kellymoore.jpg";
 import kunlePeaceOlusesiImg from "../../../assets/img/gallery/kunlepeaceolusesi.jpg";
@@ -41,7 +41,7 @@ import michaelPauloImg from "../../../assets/img/gallery/michaelpaulo.jpg";
 import mikePotterImg from "../../../assets/img/gallery/mikepotter.jpg";
 import nelsonRangellImg from "../../../assets/img/gallery/nelsonrangell.jpg";
 import pabloOchoaImg from "../../../assets/img/gallery/pabloochoa.jpg";
-import patLoomisScottPageImg from "../../../assets/img/gallery/patloomisscottpage.jpg";
+
 import roccoVentrellaImg from "../../../assets/img/gallery/roccoventrella.jpg";
 import saxMaxImg from "../../../assets/img/gallery/saxmax.jpg";
 import stabewilsonImg from "../../../assets/img/gallery/stabewilson.jpg";
@@ -64,17 +64,23 @@ import nbcElmerImg from "../../../assets/img/gallery/nbc-elmer.png";
 import nbcImg from "../../../assets/img/gallery/nbc.png";
 import reginaJimImg from "../../../assets/img/gallery/reginajim.jpg";
 import tedNashImg from "../../../assets/img/gallery/tednash.jpg";
-
+/*import judy group*/
+import judygroup from "../../../assets/img/about/judy-group.jpg";
 
 const masonryImages = [
   img1,
+  judygroup,
+  namm2019Img,
+  kennyImg,
+  kunlePeaceOlusesiImg,
   img2,
   img3,
   img4,
-  img5,
+  fridaHidalgoImg,
   vibesImg,
   ad1953Img,
   adrianChiaImg,
+  maryWhiteImg,
   alanJamieImg,
   alexHanImg,
   anthonyTerryBwImg,
@@ -85,27 +91,21 @@ const masonryImages = [
   charlesMcNealImg,
   dHayesMMillerImg,
   docWhiteImg,
-  donaldHayesImg,
   donaldHayes2Img,
   everetteImg,
   franckJimImg,
-  fridaHidalgoImg,
   funJimImg,
   ikechiOnyenakaImg,
   joeNunezImg,
-  joeNunezCImg,
   johnDoeImg,
   kellyMooreImg,
-  kunlePeaceOlusesiImg,
   lawrenceTamezImg,
   loomisJimMcNealImg,
   marcoMacissoImg,
-  maryWhiteImg,
   michaelPauloImg,
   mikePotterImg,
   nelsonRangellImg,
   pabloOchoaImg,
-  patLoomisScottPageImg,
   roccoVentrellaImg,
   saxMaxImg,
   stabewilsonImg,
@@ -116,18 +116,9 @@ const masonryImages = [
   isaacImg,
   jimImg,
   jim2Img,
-  kennyImg,
   kidImg,
   larryWilliamsImg,
   maxImg,
-  mouthpieceAboutImg,
-  namm2019Img,
-  namm20Img,
-  nbcElmerImg,
-  nbcImg,
-  reginaJimImg,
-  tedNashImg,
-  mouthpieceAboutImg,
 
 ];
 
