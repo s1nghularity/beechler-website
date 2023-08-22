@@ -22,7 +22,6 @@ import charlesImg from "../../../assets/img/gallery/Charles.jpg";
 import charlesMcNealImg from "../../../assets/img/gallery/charlesmcneal.jpg";
 import dHayesMMillerImg from "../../../assets/img/gallery/dhayesmmiller.jpg";
 import docWhiteImg from "../../../assets/img/gallery/docwhite.jpg";
-import donaldHayesImg from "../../../assets/img/gallery/donaldhayes.jpg";
 import donaldHayes2Img from "../../../assets/img/gallery/donaldhayes2.jpg";
 import everetteImg from "../../../assets/img/gallery/everette.jpg";
 import franckJimImg from "../../../assets/img/gallery/franckjim.jpg";
@@ -58,13 +57,8 @@ import kennyImg from "../../../assets/img/gallery/kenny.jpg";
 import kidImg from "../../../assets/img/gallery/kid.jpg";
 import larryWilliamsImg from "../../../assets/img/gallery/larrywilliams.png";
 import maxImg from "../../../assets/img/gallery/Max.jpg";
-import mouthpieceAboutImg from "../../../assets/img/gallery/mouthpieceAbout.jpg";
 import namm2019Img from "../../../assets/img/gallery/NAMM-2019.jpg";
-import namm20Img from "../../../assets/img/gallery/namm20.jpg";
-import nbcElmerImg from "../../../assets/img/gallery/nbc-elmer.png";
-import nbcImg from "../../../assets/img/gallery/nbc.png";
-import reginaJimImg from "../../../assets/img/gallery/reginajim.jpg";
-import tedNashImg from "../../../assets/img/gallery/tednash.jpg";
+
 /*import judy group*/
 import judygroup from "../../../assets/img/about/judy-group.jpg";
 
