@@ -13,6 +13,7 @@ import FAQs from "./components/pages/faq/FAQs.js";
 import OurCommitment from "./components/pages/commitment/OurCommitment.js";
 import Footer from "./components/Footer.js";
 import ScrollToTop from "./components/ScrollToTop.js";
+import AutoScrollToTop from "./components/AutoScrollToTop.js";
 import { Container } from "react-bootstrap";
 
 import "leaflet/dist/leaflet.css";
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <div className="App">
       <Router>
+        <AutoScrollToTop />
         <ScrollToTop />
         <TopBar />
         <NavBar />

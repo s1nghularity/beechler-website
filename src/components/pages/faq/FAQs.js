@@ -53,7 +53,7 @@ function FAQs() {
       key={index}
       className="accordion"
       initial={false}
-      positionTransition
+      positiontransition
     >
       <motion.header
         initial={false}

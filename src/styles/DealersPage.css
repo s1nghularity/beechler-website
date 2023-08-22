@@ -27,6 +27,7 @@
 
 /* Search container */
 .dealer-search-container {
+  
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -70,18 +71,25 @@
 }
 
 .dealer-list-container {
+  min-height: 200px;
   top: 150px;
   overflow: hidden;
 }
 
-/* Musical note icon */
+div .no-results-placeholder {
+  padding: 10px;
+  color: #666;
+  font-style: italic;
+  font-size: 2rem;
+}
+
 .musical-note-icon {
   color: var(--nav-accent);
   font-size: 1.75rem;
 
 }
 
-/* Popup */
+
 .leaflet-popup-content-wrapper {
   background-color: var(--white);
   border-radius: 5px;
@@ -157,15 +165,52 @@
 }
 
 .dealer-info-container:hover {
-  background-color: #f0f0f0; /* Background color on hover */
+  background-color: #f0f0f0;
 }
 
 
 @media (max-width: 768px) {
+
+  .leaflet-container {
+    min-height: 50vh;
+  }
+
   .dealer-search-container {
-    width: 100%; 
+    width: 100%;
     left: 0;
     transform: none;
     margin-bottom: -1rem;
   }
+  .dealer-info-container {
+    overflow-y: auto;
+  }
+
+  .dealer-map-title {
+    font-size: 3rem;
+  }
+
+  .dealer-search-input {
+    cursor: pointer;
+  }
+
+  .dealer-map-popup .leaflet-popup-content-wrapper {
+    padding: 0.5rem;
+  }
+
+  .dealer-map-popup .leaflet-popup-content {
+    font-size: 1rem;
+  }
+
+  .popup-detail {
+    margin: 2px 0;
+  }
+
+  .popup-detail i {
+    margin-right: 10px;
+  }
+
+  .popup-content {
+    font-size: 1rem;
+  }
+  
 }
