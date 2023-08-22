@@ -42,7 +42,6 @@ const DealersMap = () => {
     });
     setFilteredLocations(result);
   }, [search]);
-  
 
   const mapRef = useRef(null);
 
@@ -90,15 +89,15 @@ const DealersMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-{filteredLocations.map((location, index) => (
-  <DealerMarker
-    key={index} // Use the index as the key
-    location={location}
-    musicalNoteIcon={musicalNoteIcon}
-    handleLocationClick={handleLocationClick}
-    markerRefs={markerRefs}
-  />
-))}
+        {filteredLocations.map((location, index) => (
+          <DealerMarker
+            key={index}
+            location={location}
+            musicalNoteIcon={musicalNoteIcon}
+            handleLocationClick={handleLocationClick}
+            markerRefs={markerRefs}
+          />
+        ))}
 
         <div
           className="dealer-search-container"

@@ -19,7 +19,7 @@ const ArtistData = [
     ],
   },
   {
-    name: "Alvin McKinney",
+    name: "Dr. Alvin McKinney",
     mouthpieces: [
       "Custom Alto S9S",
       "Hard Rubber Soprano #8",
@@ -136,6 +136,10 @@ const ArtistData = [
   {
     name: "David Choy",
     mouthpieces: ["Bellite #7"],
+  },
+  {
+    name: "David Sanborn",
+    mouthpieces: ["Custom Ligatures"],
   },
   {
     name: "David Mann",
@@ -425,7 +429,7 @@ const ArtistData = [
       "Hard Rubber Soprano #6"],
   },
   {
-    name: "Thom Mason",
+    name: "Dr. Thom Mason",
     mouthpieces: [
       "Bellite Alto #7",
       "Bellite Tenor #110",
