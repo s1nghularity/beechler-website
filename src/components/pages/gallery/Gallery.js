@@ -1,7 +1,8 @@
 import "../../../styles/Gallery.css";
 import Masonry from "react-masonry-css";
-import React from "react";
+import React, { useEffect, useRef } from 'react';
 import { Container, Row } from "react-bootstrap";
+
 
 import img1 from "../../../assets/img/gallery/IMG_5687.png";
 import img2 from "../../../assets/img/gallery/IMG_5689.png";
@@ -123,8 +124,21 @@ const masonryImages = [
 ];
 
 const Gallery = () => {
+
+  const masonryRef = useRef(null);
+
+  useEffect(() => {
+    const images = masonryRef.current.querySelectorAll('img');
+    images.forEach((img, index) => {
+      setTimeout(() => {
+        img.classList.add('ready-to-animate');
+      }, index * 200);
+    });
+  }, []);
+
+
   return (
-    <Container>
+<Container>
       <Row className="gallery-title-card">
         <h1 className="gallery-title">
           Serving musicians since 1942, <br /> Remle Musical Products is honored{" "}
@@ -132,7 +146,7 @@ const Gallery = () => {
         </h1>
       </Row>
       <Row>
-        <div className="masonry-container">
+        <div className="masonry-container" ref={masonryRef}>
           <Masonry
             breakpointCols={{ default: 4, 1100: 3, 700: 2, 500: 1 }}
             className="masonry-grid"
@@ -142,9 +156,10 @@ const Gallery = () => {
               <img 
                 key={index} 
                 src={image} 
-                alt="" 
+                alt={`Image ${index + 1} in the gallery`}
                 className="swing-in-top-fwd"
                 style={{ '--animation-delay': `${index * 0.2}s` }}
+                loading="lazy"
               />
             ))}
           </Masonry>
