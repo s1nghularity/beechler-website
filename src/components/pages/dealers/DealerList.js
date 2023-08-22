@@ -3,9 +3,9 @@ import React from 'react';
 
 const DealerList = ({ filteredLocations, handleLocationClick }) => (
   <div className="dealer-list-container">
-    {filteredLocations.map((location) => (
-      <div
-        key={location.name}
+    {filteredLocations.map((location, index) => (
+  <div
+    key={index}
         className="dealer-info-container"
         onClick={() => handleLocationClick(location)}
       >

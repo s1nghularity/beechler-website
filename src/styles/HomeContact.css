@@ -25,7 +25,8 @@
   color: var(--white);
 }
 
-.contact-form label {
+.contact-form label,
+.contact-form select {
   font-weight: 100;
   font-size: 1.2rem;
   display: block;
@@ -34,7 +35,8 @@
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   padding: 0.5rem;
   font-weight: 100;
@@ -65,13 +67,19 @@
   opacity: 0.8;
 }
 
+.contact-form .disclaimer {
+  font-size: 0.8rem;
+  color: gold;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 .message-section {
   background-color: var(--black-alt);
   border-radius: 1rem;
   padding: 2rem;
   width: 100%;
   max-width: 600px;
-  margin-top: 2rem;
   text-align: center;
 }
 
@@ -80,3 +88,4 @@
   font-size: 1.2rem;
   color: var(--white);
 }
+

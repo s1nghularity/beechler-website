@@ -14,7 +14,7 @@ import DealerMarker from "./DealerMarker";
 
 const DealersMap = () => {
   const [search, setSearch] = useState("");
-  const [userLocation, setUserLocation] = useState(null);
+  const [filteredLocations, setFilteredLocations] = useState(locationData);
 
   library.add(faMusic);
 
@@ -26,27 +26,23 @@ const DealersMap = () => {
     className: "leaflet-marker-icon",
   });
 
-  const filteredLocations = useMemo(
-    () =>
-      locationData.filter((location) =>
-        location.name.toLowerCase().includes(search.toLowerCase())
-      ),
-    [search]
-  );
-
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setUserLocation({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-        });
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }, []);
+    const result = locationData.filter((location) => {
+      const searchLower = search.toLowerCase();
+      return (
+        location.name?.toLowerCase().includes(searchLower) ||
+        location.address?.toLowerCase().includes(searchLower) ||
+        location.city?.toLowerCase().includes(searchLower) ||
+        location.state?.toLowerCase().includes(searchLower) ||
+        location.zip?.toLowerCase().includes(searchLower) ||
+        location.country?.toLowerCase().includes(searchLower) ||
+        location.phone?.toLowerCase().includes(searchLower) ||
+        location.website?.toLowerCase().includes(searchLower)
+      );
+    });
+    setFilteredLocations(result);
+  }, [search]);
+  
 
   const mapRef = useRef(null);
 
@@ -93,14 +89,16 @@ const DealersMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        {filteredLocations.map((location) => (
-          <DealerMarker
-            location={location}
-            musicalNoteIcon={musicalNoteIcon}
-            handleLocationClick={handleLocationClick}
-            markerRefs={markerRefs}
-          />
-        ))}
+{filteredLocations.map((location, index) => (
+  <DealerMarker
+    key={index} // Use the index as the key
+    location={location}
+    musicalNoteIcon={musicalNoteIcon}
+    handleLocationClick={handleLocationClick}
+    markerRefs={markerRefs}
+  />
+))}
+
         <div
           className="dealer-search-container"
           onMouseEnter={handleMouseEnter}

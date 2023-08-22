@@ -665,3 +665,14 @@ export const products = [
 ];
 
 
+const productsByCategory = products.reduce((acc, product) => {
+  if (!acc[product.category]) {
+    acc[product.category] = [];
+  }
+  acc[product.category].push(product.id);
+  return acc;
+}, {});
+
+for (const category of Object.keys(productsByCategory)) {
+  console.log(`${category}: ${productsByCategory[category].join(", ")}`);
+}
