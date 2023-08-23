@@ -1,10 +1,16 @@
+.navbar-container {
+  max-width: 1200px; /* Set the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  width: 100%; /* Take the full available width up to the max-width */
+  display: flex; /* Use flex layout to align the content */
+  justify-content: space-between; /* Distribute the space between the elements */
+}
 
 .navbar {
   background-color: var(--black-alt);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .navbar-brand img {
@@ -22,8 +28,24 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 150px;  
+  width: 150px;
 }
+
+.nav-link.spacing {
+  margin-right: 10px;
+}
+
+.navbar-tip-openings {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-tip-openings span {
+  line-height: 1;
+}
+
 .nav-link:hover,
 .active-link {
   background-image: var(--accent);
@@ -35,16 +57,15 @@
   margin: 0.5rem 1rem 0 0;
 }
 
-.hamburger{
-  outline: none!important;; 
-  box-shadow: none!important;
-  border: none!important;
-
+.hamburger {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 .hamburger:focus {
-  outline: none!important;; 
-  box-shadow: none!important;
-  border: none!important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 .hamburger .icon-bar {
   display: block;
@@ -75,9 +96,6 @@
   transform: translateY(-50%) translateY(1px) rotate(-45deg);
 }
 
-
-
-
 /* Mobile */
 @media (max-width: 767px) {
   .navbar {
@@ -91,12 +109,30 @@
     justify-content: space-between;
   }
 
+  .nav-link-wrapper {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.1s !important;
+  }
+
+  .navbar.expanded .nav-link-wrapper {
+    opacity: 1;
+  }
+
+  .navbar-tip-openings {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-tip-openings span {
+    line-height: normal;
+    margin-right: 7.5px;
+  }
+
   .nav-link,
   .contact-button {
     margin-left: auto;
     justify-content: flex-end;
     margin-right: 1rem;
-    
   }
 }
 /* Tablet */
@@ -110,12 +146,11 @@
   }
 
   .nav-link {
-    font-size: .9rem;
-
+    font-size: 0.9rem;
   }
   .contact-button {
     margin-right: 4rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 /* Laptop + Desktop */
@@ -129,6 +164,6 @@
   }
   .contact-button {
     margin-right: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
