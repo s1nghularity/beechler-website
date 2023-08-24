@@ -59,6 +59,21 @@ const DealersMap = () => {
     }
   };
 
+  const handleTouchStart = () => {
+    const map = mapRef.current;
+    if (map) {
+      map.scrollWheelZoom.disable(); // Disable scroll wheel zoom on touch start
+    }
+  };
+  
+  const handleTouchEnd = () => {
+    const map = mapRef.current;
+    if (map) {
+      map.scrollWheelZoom.enable(); // Enable scroll wheel zoom on touch end
+    }
+  };
+  
+
   const markerRefs = useRef({});
 
   const handleLocationClick = (location) => {
@@ -85,6 +100,8 @@ const DealersMap = () => {
         ref={mapRef}
         touchZoom={true}
         tap={false}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
