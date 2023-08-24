@@ -58,7 +58,11 @@ function NavBar() {
   ];
 
   return (
-<Navbar expanded={expanded} expand="md" className={`navbar ${expanded ? "expanded" : ""}`}>
+    <Navbar
+      expanded={expanded}
+      expand="md"
+      className={`navbar ${expanded ? "expanded" : ""}`}
+    >
       <div className="navbar-header">
         {!isDesktop && (
           <Navbar.Toggle
@@ -87,25 +91,25 @@ function NavBar() {
       </div>
 
       <Nav className="nav-link-wrapper" style={collapseStyles}>
-      {links.map(({ path, label, className }) => (
-  <Nav.Link
-    key={path}
-    as={Link}
-    to={path}
-    className={`nav-link ${location.pathname === path ? "active-link" : ""} ${className || ""}`}
-  >
-    {label === "Tip Openings" ? (
-      <div className="navbar-tip-openings">
-        <span>Tip</span>
-        <span>Openings</span>
-      </div>
-    ) : (
-      label
-    )}
-  </Nav.Link>
-))}
-
-
+        {links.map(({ path, label, className }) => (
+          <Nav.Link
+            key={path}
+            as={Link}
+            to={path}
+            className={`nav-link ${
+              location.pathname === path ? "active-link" : ""
+            } ${className || ""}`}
+          >
+            {label === "Tip Openings" ? (
+              <div className="navbar-tip-openings">
+                <span>Tip</span>
+                <span>Openings</span>
+              </div>
+            ) : (
+              label
+            )}
+          </Nav.Link>
+        ))}
 
         <HashLink
           to="/#contact"
