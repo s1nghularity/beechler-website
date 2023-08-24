@@ -43,7 +43,7 @@ function HomeContact() {
     <div className="contact-container stripe-home-dealer" id="contact">
       {submitted ? (
         <div className="message-section">
-          <p>Thank you for connecting! Someone from the team will get back to you soon.</p>
+          <h2>Thank you for reaching out! <br/><br/> Someone from the team will get back to you soon.</h2>
         </div>
       ) : (
         <Card className="contact-form" role="form">

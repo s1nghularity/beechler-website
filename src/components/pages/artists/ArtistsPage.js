@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import KeyboardDoubleArrowRightTwoToneIcon from '@mui/icons-material/KeyboardDoubleArrowRightTwoTone';
+import KeyboardDoubleArrowLeftTwoToneIcon from '@mui/icons-material/KeyboardDoubleArrowLeftTwoTone';
 
 import "../../../styles/ArtistsPage.css";
 import artistsData from "./ArtistData";
@@ -47,24 +49,25 @@ const ArtistsPage = () => {
           The Musicians Choice
         </h1>
         <div className="pagination-buttons">
-          <button
-            onClick={prevPage}
-            disabled={currentPage === 1}
-            className="artist-chevron"
-            aria-label="Previous Page"
-          >
-            <FaChevronLeft />
-          </button>
-          <div className="music-note">&#9835;</div>
-          <button
-            onClick={nextPage}
-            disabled={currentPage === totalPages}
-            className="artist-chevron"
-            aria-label="Next Page"
-          >
-            <FaChevronRight />
-          </button>
-        </div>
+  <button
+    onClick={prevPage}
+    disabled={currentPage === 1}
+    className="artist-chevron"
+    aria-label="Previous Page"
+  >
+    <KeyboardDoubleArrowLeftTwoToneIcon />
+  </button>
+  <div className="music-note">&#9835;</div>
+  <button
+    onClick={nextPage}
+    disabled={currentPage === totalPages}
+    className="artist-chevron"
+    aria-label="Next Page"
+  >
+    <KeyboardDoubleArrowRightTwoToneIcon />
+  </button>
+</div>
+
       </Col>
 
       <Grid currentArtists={currentArtists} />
