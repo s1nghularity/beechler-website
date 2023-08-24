@@ -31,7 +31,7 @@ function Footer() {
       links: [{ path: "/faq", label: "Frequently Asked Questions" }],
     },
     {
-      title: "Follow us",
+      title: "Follow Us",
       links: [
         {
           path: "https://www.facebook.com/beechlermouthpieces/",

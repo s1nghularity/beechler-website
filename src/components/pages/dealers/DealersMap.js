@@ -84,6 +84,7 @@ const DealersMap = () => {
         style={{ height: "80vh", width: "100%" }}
         ref={mapRef}
         touchZoom={true}
+        tap={false}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

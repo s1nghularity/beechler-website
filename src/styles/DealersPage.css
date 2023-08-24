@@ -170,20 +170,18 @@ div .no-results-placeholder {
   .dealer-search-container {
     width: 100%;
     left: 0;
-    transform: none;
     margin-bottom: -1rem;
-    max-height: 40vh; /* Set a fixed height */
+    max-height: 45vh;
   }
 
   .dealer-list-container {
     min-height: 200px;
     top: 150px;
-    overflow-y: auto; /* Enable scrolling here but hide scrollbar */
-    /* Hide scrollbar for Chrome, Safari and Opera */
+    overflow-y: scroll!important; 
     &::-webkit-scrollbar {
       display: none;
     }
-    /* Hide scrollbar for IE, Edge and Firefox */
+
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
