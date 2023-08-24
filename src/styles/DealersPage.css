@@ -20,7 +20,6 @@
   border-radius: 10px;
   padding: 10px;
   position: relative;
-  max-height: 75vh;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -167,6 +166,24 @@ div .no-results-placeholder {
 .dealer-info-container:hover {
   background-color: #f0f0f0;
 }
+
+@media (max-width: 500px) {
+  .dealer-search-container {
+    width: 100%;
+    left: 0;
+    transform: none;
+    margin-bottom: -1rem;
+    max-height: 40vh; /* Set a fixed height */
+    overflow-y: hidden; /* Hide overflow here */
+  }
+
+  .dealer-list-container {
+    min-height: 200px;
+    top: 150px;
+    overflow-y: auto; /* Enable scrolling here */
+  }
+}
+
 
 
 @media (max-width: 768px) {
