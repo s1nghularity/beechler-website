@@ -61,6 +61,7 @@ import namm2019Img from "../../../assets/img/gallery/NAMM-2019.jpg";
 
 /*import judy group*/
 import judygroup from "../../../assets/img/about/judy-group.jpg";
+import judyAdrian from "../../../assets/img/gallery/judy-adrian.png";
 
 const masonryImages = [
   img1,
@@ -69,6 +70,7 @@ const masonryImages = [
   kennyImg,
   kunlePeaceOlusesiImg,
   img2,
+  judyAdrian,
   img3,
   img4,
   fridaHidalgoImg,
