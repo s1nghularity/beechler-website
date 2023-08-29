@@ -886,7 +886,8 @@ export const locationData = [
     country: "USA",
     phone: "(702) 734-0007",
     website: "https://locations.samash.com/nv/las-vegas/53/",
-    latitude: 36.143429,
+    latitude: 36.1400489751871,
+    longitude: -115.13769530313702,
   },
 
   {
@@ -1208,7 +1209,7 @@ export const locationData = [
     address: "925 Bloor St. W",
     city: "Toronto",
     province: "Ontario",
-    postalCode: "M6H 1L5",
+    zip: "M6H 1L5",
     country: "Canada",
     phone: "+416-588-7886",
     website: "https://www.long-mcquade.com/location/Ontario/Toronto/",
@@ -1220,7 +1221,7 @@ export const locationData = [
     address: "368 Terminal Ave",
     city: "Vancouver",
     province: "British Columbia",
-    postalCode: "V6A 3W9",
+    zip: "V6A 3W9",
     country: "Canada",
     phone: "+604-734-4886",
     website:
@@ -1233,7 +1234,7 @@ export const locationData = [
     address: "4242-B E. Hastings St.",
     city: "Burnaby",
     province: "British Columbia",
-    postalCode: "V5C-2J6",
+    zip: "V5C-2J6",
     country: "Canada",
     phone: "+604-294-1777",
     website: "http://massullomusic.com/",
@@ -1245,7 +1246,7 @@ export const locationData = [
     name: "Central Conservatory of Music",
     address: "43 Bao Jia Jie, Xicheng District",
     city: "Beijing",
-    postalCode: "100032",
+    zip: "100032",
     country: "China",
     phone: "",
     website: "http://en.ccom.edu.cn/2020/",
@@ -1257,7 +1258,7 @@ export const locationData = [
     address: "3F, No. 16, Ln. 15, Yongchun St.",
     city: "Lukang Township",
     state: "Changhua County",
-    postalCode: "50546",
+    zip: "50546",
     country: "Taiwan",
     latitude: 24.063426183420273,
     longitude: 120.42902527632596,
@@ -1267,7 +1268,7 @@ export const locationData = [
     address: "No. 34, Ln. 283, Zhongzheng Rd.",
     city: "Yonghe District",
     state: "New Taipei City",
-    postalCode: "23449",
+    zip: "23449",
     country: "Taiwan",
     latitude: 25.000790125710957,
     longitude: 121.51684774073941,
@@ -1813,3 +1814,4 @@ export const locationData = [
     longitude: 6.154015124870469,
   },
 ];
+

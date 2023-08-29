@@ -29,9 +29,9 @@ const HomeDealerStats = () => {
 
   useEffect(() => {
     if (inView) {
-      const controlsCountry = animate(countCountry, 27, { duration: 5 });
-      const controlsState = animate(countState, 34, { duration: 5 });
-      const controlsDealers = animate(countDealers, 130, { duration: 5 });
+      const controlsCountry = animate(countCountry, 28, { duration: 5 });
+      const controlsState = animate(countState, 26, { duration: 5 });
+      const controlsDealers = animate(countDealers, 147, { duration: 5 });
 
       return () => {
         controlsCountry.stop();
