@@ -73,6 +73,7 @@
     "semantic-ui-react": "^2.1.4",
     "slick-carousel": "^1.8.1",
     "swiper": "^10.0.4",
+    "tinify": "^1.7.1",
     "typescript": "^5.0.4",
     "web-vitals": "^2.1.4"
   },
