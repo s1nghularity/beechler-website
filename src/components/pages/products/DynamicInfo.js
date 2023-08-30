@@ -6,12 +6,12 @@ import largeBore from "../../../assets/img/products/accessories-services/large-b
 import { productInfo } from "./DataDynamicInfo";
 import "../../../styles/ProductInfo.css";
 
-const InfoCard = ({ title, text }) => {
+const InfoCard = ({ title, text, itemProp }) => {
   if (!text) {
     return null;
   }
   return (
-    <Card className="info-card">
+    <Card className="info-card" itemProp={itemProp}>
       <Card.Header>{title}</Card.Header>
       <Card.Body>
         <Card.Text className="info-card-text">{text}</Card.Text>
@@ -59,9 +59,9 @@ const DynamicInfo = ({ infoContent }) => {
   const currentProduct = productInfo[infoContent] || {};
 
   return (
-    <Container className="dynamic-info">
+    <Container className="dynamic-info" itemScope itemType="http://schema.org/Product">
       <Row>
-        <h3>{infoContent || "Select a Category"}</h3>
+        <h3 itemProp="name">{infoContent || "Select a Category"}</h3>
       </Row>
 
       {currentProduct.description && (
@@ -69,7 +69,7 @@ const DynamicInfo = ({ infoContent }) => {
           <Col>
             <Card className="product-description">
               <Card.Body>
-                <Card.Text>{currentProduct.description}</Card.Text>
+                <Card.Text itemProp="description">{currentProduct.description}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -78,7 +78,7 @@ const DynamicInfo = ({ infoContent }) => {
 
       <Row>
         <Col md={4}>
-          <InfoCard title="Facings" text={currentProduct.facings?.join(", ")} />
+          <InfoCard title="Facings" text={currentProduct.facings?.join(", ")} itemProp="additionalProperty" />
         </Col>
 
         <Col md={4}>
@@ -87,11 +87,12 @@ const DynamicInfo = ({ infoContent }) => {
             text={Object.entries(currentProduct.tipOpenings || {})
               .map(([key, val]) => `${key}: ${val}`)
               .join(", ")}
+            itemProp="additionalProperty"
           />
         </Col>
 
         <Col md={4}>
-          <InfoCard title="Material" text={currentProduct.material} />
+          <InfoCard title="Material" text={currentProduct.material} itemProp="material" />
         </Col>
 
         {currentProduct.additionalFeatures && (
@@ -99,6 +100,7 @@ const DynamicInfo = ({ infoContent }) => {
             <InfoCard
               title="Additional Features"
               text={currentProduct.additionalFeatures.join(", ")}
+              itemProp="additionalProperty"
             />
           </Col>
         )}

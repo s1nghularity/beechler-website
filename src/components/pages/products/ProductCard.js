@@ -32,17 +32,17 @@ const ProductDescription = ({ product }) => {
   
 
   return (
-    <Card className="product-card-description">
+    <Card className="product-card-description" itemscope itemtype="http://schema.org/Product">
       <Row className="product-icon-row">
         <ProductIconRow product={product} />
       </Row>
 
       <Row className="product-info-row">
-        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} />}
-        {finish && <FinishSection finish={finish} />}
-        {accessories && <AccessoriesSection accessories={accessories} />}
-        {model && <ModelSection model={model} />}
-        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} />}
+        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} itemprop="additionalProperty" />}
+        {finish && <FinishSection finish={finish} itemprop="additionalProperty" />}
+        {accessories && <AccessoriesSection accessories={accessories} itemprop="additionalProperty" />}
+        {model && <ModelSection model={model} itemprop="model" />}
+        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} itemprop="additionalProperty" />}
       </Row>
 
       {isCustomModel(id) && (
@@ -52,7 +52,7 @@ const ProductDescription = ({ product }) => {
       )}
 
       <Row className="price-row">
-        <Card.Text className="price">MSRP ${price}</Card.Text>
+        <Card.Text className="price" itemprop="price">MSRP ${price}</Card.Text>
       </Row>
     </Card>
   );
@@ -60,9 +60,9 @@ const ProductDescription = ({ product }) => {
 
 const ProductCard = ({ product }) => (
   <Col xs={12} md={4} key={product.id}>
-    <Card className="product-card">
+    <Card className="product-card" itemscope itemtype="http://schema.org/Product">
       <div className="product-card-container">
-        <div className="product-image">
+        <div className="product-image" itemprop="image">
           <img src={product.image} alt="Product" />
         </div>
         <ProductDescription product={product} />

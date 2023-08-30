@@ -96,7 +96,13 @@ const ProductsPage = () => {
 
   return (
     <AnimatePresence>
-    <Container fluid className="products-page">
+          <Container fluid className="products-page" itemScope itemType="http://schema.org/ItemList">
+        {/* Add itemListElement for schema.org */}
+        <meta itemProp="itemListElement" content={JSON.stringify(products.map((product, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "url": `/product/${product.id}`
+        })))} />
 
       <Row>
         <Col sm={12} md={12} lg={4} xl={4}>

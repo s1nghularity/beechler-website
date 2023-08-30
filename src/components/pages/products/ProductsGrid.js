@@ -30,22 +30,24 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
   };
 
   return (
-    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`}>
+    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`} itemscope itemtype="http://schema.org/Product">
       {hasProducts ? (
-        Object.entries(productsByCategory).map(
-          ([category, categoryProducts], categoryIndex) => (
-            <React.Fragment key={`category-${categoryIndex}`}>
-              <Col>
-                <h2 className={`category-title animate__animated ${getCategoryTitleAnimation(category)}`}>{category}</h2>
-              </Col>
-              <Row className={`product-row animate__animated ${getProductRowAnimation(category, selectedSubtype)}`}>
-                {categoryProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </Row>
-            </React.Fragment>
-          )
-        )
+        <>
+          {Object.entries(productsByCategory).map(
+            ([category, categoryProducts], categoryIndex) => (
+              <React.Fragment key={`category-${categoryIndex}`}>
+                <Col>
+                  <h2 className={`category-title animate__animated ${getCategoryTitleAnimation(category)}`} itemprop="name">{category}</h2>
+                </Col>
+                <Row className={`product-row animate__animated ${getProductRowAnimation(category, selectedSubtype)}`} role="list">
+                  {categoryProducts.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </Row>
+              </React.Fragment>
+            )
+          )}
+        </>
       ) : (
         <Col>
           <div className="empty-message">
