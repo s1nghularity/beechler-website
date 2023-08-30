@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Figure } from "react-bootstrap";
 
 import arbLoop from "../../../assets/img/about/arb-loop.gif";
-import elmerT from "../../../assets/img/about/elmer-oval.png";
+import elmerT from "../../../assets/img/about/elmer-oval.webp";
 import AboutCarousel from "./AboutCarousel";
 
 import Wave from "./Wave";

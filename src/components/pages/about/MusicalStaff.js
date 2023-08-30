@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import treble2 from "../../../components/pages/about/treble2.png";
+import treble2 from "../../../components/pages/about/treble2.webp";
 
 export default function MusicalStaff() {
   return (

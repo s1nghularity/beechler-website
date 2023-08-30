@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import smallBore from "../../../assets/img/products/accessories-services/small-bore.png";
-import mediumBore from "../../../assets/img/products/accessories-services/medium-bore.png";
-import largeBore from "../../../assets/img/products/accessories-services/large-bore.png";
+import smallBore from "../../../assets/img/products/accessories-services/small-bore.webp";
+import mediumBore from "../../../assets/img/products/accessories-services/medium-bore.webp";
+import largeBore from "../../../assets/img/products/accessories-services/large-bore.webp";
 import { productInfo } from "./DataDynamicInfo";
 import "../../../styles/ProductInfo.css";
 

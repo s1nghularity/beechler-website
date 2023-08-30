@@ -4,14 +4,14 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "../../../styles/HomeCategories.css";
 
 
-import diamond from "../../../assets/img/products/diamond/diamond-family.png";
-import tonalex from "../../../assets/img/products/tonalex/tonalex-family.png";
-import bellite from "../../../assets/img/products/bellite/bellite-family.png";
-import hardRubber from "../../../assets/img/products/hard-rubber/hard-rubber-family.png";
-import customized from "../../../assets/img/home/categories/custom-family.png";
-import arb from "../../../assets/img/products/arb-metal/arb-metal-family.png";
-import gnog from "../../../assets/img/products/greatneck/og-family.png";
-import accessories from "../../../assets/img/home/categories/accessories.png";
+import diamond from "../../../assets/img/products/diamond/diamond-family.webp";
+import tonalex from "../../../assets/img/products/tonalex/tonalex-family.webp";
+import bellite from "../../../assets/img/products/bellite/bellite-family.webp";
+import hardRubber from "../../../assets/img/products/hard-rubber/hard-rubber-family.webp";
+import customized from "../../../assets/img/home/categories/custom-family.webp";
+import arb from "../../../assets/img/products/arb-metal/arb-metal-family.webp";
+import gnog from "../../../assets/img/products/greatneck/og-family.webp";
+import accessories from "../../../assets/img/home/categories/accessories.webp";
 
 
 

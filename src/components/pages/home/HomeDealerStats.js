@@ -5,9 +5,9 @@ import React, { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import globe from "../../../assets/img/home/globe.png";
-import liberty from "../../../assets/img/home/liberty.png";
-import store from "../../../assets/img/home/store.png";
+import globe from "../../../assets/img/home/globe.webp";
+import liberty from "../../../assets/img/home/liberty.webp";
+import store from "../../../assets/img/home/store.webp";
 
 const HomeDealerStats = () => {
   const countCountry = useMotionValue(0);

@@ -3,9 +3,9 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../../styles/theme.css";
 import "../../../styles/HomeDealer.css";
-import reachCompliantSticker from "../../../assets/img/home/dealermap/reach-compliant.png";
-import reach2 from "../../../assets/img/home/dealermap/reach2.png";
-import euFlag from "../../../assets/img/home/dealermap/eu-flag.png";
+import reachCompliantSticker from "../../../assets/img/home/dealermap/reach-compliant.webp";
+import reach2 from "../../../assets/img/home/dealermap/reach2.webp";
+import euFlag from "../../../assets/img/home/dealermap/eu-flag.webp";
 
 import HomeDealerStats from "./HomeDealerStats";
 import HomeDealerMap from "./HomeDealerMap";

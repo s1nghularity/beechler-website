@@ -3,13 +3,13 @@ import 'animate.css';
 import { Carousel } from "react-responsive-carousel";
 import { Container, Row, Col } from 'react-bootstrap';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import about1 from "../../../assets/img/home/about/about1.jpg";
-import about2 from "../../../assets/img/home/about/about2.jpg";
-import about2h from "../../../assets/img/home/about/judy-group.jpg";
-import about3 from "../../../assets/img/home/about/about3.jpg";
-import about4 from "../../../assets/img/home/about/nbc-elmer.png";
-import about4bw from "../../../assets/img/home/about/nbc.png";
-import about5 from "../../../assets/img/home/about/hands2.png";
+import about1 from "../../../assets/img/home/about/about1.webp";
+import about2 from "../../../assets/img/home/about/about2.webp";
+import about2h from "../../../assets/img/home/about/judy-group.webp";
+import about3 from "../../../assets/img/home/about/about3.webp";
+import about4 from "../../../assets/img/home/about/nbc-elmer.webp";
+import about4bw from "../../../assets/img/home/about/nbc.webp";
+import about5 from "../../../assets/img/home/about/hands2.webp";
 
 import "../../../styles/HomeBottomCarousel.css";
 

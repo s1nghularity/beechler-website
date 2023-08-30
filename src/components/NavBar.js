@@ -7,7 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/NavBar.css";
 import "../styles/theme.css";
-import logo from "../assets/img/home/beechler-logo-t.png";
+import logo from "../assets/img/home/beechler-logo-t.webp";
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);

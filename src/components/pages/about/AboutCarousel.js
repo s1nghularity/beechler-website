@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { Container, Row, Col } from 'react-bootstrap';
-import bwgroup from '../../../assets/img/gallery/IMG_5689.png';
-import bwsolo from '../../../assets/img/gallery/IMG_5687.png';
-import nbc from '../../../assets/img/home/about/nbc.png';
+import bwgroup from '../../../assets/img/gallery/IMG_5689.webp';
+import bwsolo from '../../../assets/img/gallery/IMG_5687.webp';
+import nbc from '../../../assets/img/home/about/nbc.webp';
 import '../../../styles/AboutPage.css';
 
 const AboutCarousel = () => {

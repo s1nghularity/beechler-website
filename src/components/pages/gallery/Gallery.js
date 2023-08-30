@@ -4,64 +4,64 @@ import React, { useEffect, useRef } from 'react';
 import { Container, Row } from "react-bootstrap";
 
 
-import img1 from "../../../assets/img/gallery/IMG_5687.png";
-import img2 from "../../../assets/img/gallery/IMG_5689.png";
-import img3 from "../../../assets/img/gallery/IMG_5690.png";
-import img4 from "../../../assets/img/gallery/IMG_5694.png";
+import img1 from "../../../assets/img/gallery/IMG_5687.webp";
+import img2 from "../../../assets/img/gallery/IMG_5689.webp";
+import img3 from "../../../assets/img/gallery/IMG_5690.webp";
+import img4 from "../../../assets/img/gallery/IMG_5694.webp";
 
-import vibesImg from "../../../assets/img/gallery/vibes.jpg";
-import ad1953Img from "../../../assets/img/gallery/1953ad.JPG";
-import adrianChiaImg from "../../../assets/img/gallery/adrianchia.jpg";
-import alanJamieImg from "../../../assets/img/gallery/alanjamie.jpg";
-import alexHanImg from "../../../assets/img/gallery/alexhan.jpg";
-import anthonyTerryBwImg from "../../../assets/img/gallery/anthonyterrybw.jpg";
-import betterSaxImg from "../../../assets/img/gallery/bettersax.jpg";
-import billBergmanJimImg from "../../../assets/img/gallery/billbergmanjim.jpg";
-import blondGuyImg from "../../../assets/img/gallery/blondguy.jpg";
-import charlesImg from "../../../assets/img/gallery/Charles.jpg";
-import charlesMcNealImg from "../../../assets/img/gallery/charlesmcneal.jpg";
-import dHayesMMillerImg from "../../../assets/img/gallery/dhayesmmiller.jpg";
-import docWhiteImg from "../../../assets/img/gallery/docwhite.jpg";
-import donaldHayes2Img from "../../../assets/img/gallery/donaldhayes2.jpg";
-import everetteImg from "../../../assets/img/gallery/everette.jpg";
-import franckJimImg from "../../../assets/img/gallery/franckjim.jpg";
-import fridaHidalgoImg from "../../../assets/img/gallery/fridahidalgo.jpg";
-import funJimImg from "../../../assets/img/gallery/funjim.jpg";
-import ikechiOnyenakaImg from "../../../assets/img/gallery/ikechionyenaka.jpg";
-import joeNunezImg from "../../../assets/img/gallery/joenunez.jpg";
+import vibesImg from "../../../assets/img/gallery/vibes.webp";
+import ad1953Img from "../../../assets/img/gallery/1953ad.webp";
+import adrianChiaImg from "../../../assets/img/gallery/adrianchia.webp";
+import alanJamieImg from "../../../assets/img/gallery/alanjamie.webp";
+import alexHanImg from "../../../assets/img/gallery/alexhan.webp";
+import anthonyTerryBwImg from "../../../assets/img/gallery/anthonyterrybw.webp";
+import betterSaxImg from "../../../assets/img/gallery/bettersax.webp";
+import billBergmanJimImg from "../../../assets/img/gallery/billbergmanjim.webp";
+import blondGuyImg from "../../../assets/img/gallery/blondguy.webp";
+import charlesImg from "../../../assets/img/gallery/Charles.webp";
+import charlesMcNealImg from "../../../assets/img/gallery/charlesmcneal.webp";
+import dHayesMMillerImg from "../../../assets/img/gallery/dhayesmmiller.webp";
+import docWhiteImg from "../../../assets/img/gallery/docwhite.webp";
+import donaldHayes2Img from "../../../assets/img/gallery/donaldhayes2.webp";
+import everetteImg from "../../../assets/img/gallery/everette.webp";
+import franckJimImg from "../../../assets/img/gallery/franckjim.webp";
+import fridaHidalgoImg from "../../../assets/img/gallery/fridahidalgo.webp";
+import funJimImg from "../../../assets/img/gallery/funjim.webp";
+import ikechiOnyenakaImg from "../../../assets/img/gallery/ikechionyenaka.webp";
+import joeNunezImg from "../../../assets/img/gallery/joenunez.webp";
 
-import johnDoeImg from "../../../assets/img/gallery/johndoe.jpg";
-import kellyMooreImg from "../../../assets/img/gallery/kellymoore.jpg";
-import kunlePeaceOlusesiImg from "../../../assets/img/gallery/kunlepeaceolusesi.jpg";
-import lawrenceTamezImg from "../../../assets/img/gallery/lawrencetamez.jpg";
-import loomisJimMcNealImg from "../../../assets/img/gallery/loomisjimmcneal.jpg";
-import marcoMacissoImg from "../../../assets/img/gallery/marcomacisso.jpg";
-import maryWhiteImg from "../../../assets/img/gallery/marywhite.jpg";
-import michaelPauloImg from "../../../assets/img/gallery/michaelpaulo.jpg";
-import mikePotterImg from "../../../assets/img/gallery/mikepotter.jpg";
-import nelsonRangellImg from "../../../assets/img/gallery/nelsonrangell.jpg";
-import pabloOchoaImg from "../../../assets/img/gallery/pabloochoa.jpg";
+import johnDoeImg from "../../../assets/img/gallery/johndoe.webp";
+import kellyMooreImg from "../../../assets/img/gallery/kellymoore.webp";
+import kunlePeaceOlusesiImg from "../../../assets/img/gallery/kunlepeaceolusesi.webp";
+import lawrenceTamezImg from "../../../assets/img/gallery/lawrencetamez.webp";
+import loomisJimMcNealImg from "../../../assets/img/gallery/loomisjimmcneal.webp";
+import marcoMacissoImg from "../../../assets/img/gallery/marcomacisso.webp";
+import maryWhiteImg from "../../../assets/img/gallery/marywhite.webp";
+import michaelPauloImg from "../../../assets/img/gallery/michaelpaulo.webp";
+import mikePotterImg from "../../../assets/img/gallery/mikepotter.webp";
+import nelsonRangellImg from "../../../assets/img/gallery/nelsonrangell.webp";
+import pabloOchoaImg from "../../../assets/img/gallery/pabloochoa.webp";
 
-import roccoVentrellaImg from "../../../assets/img/gallery/roccoventrella.jpg";
-import saxMaxImg from "../../../assets/img/gallery/saxmax.jpg";
-import stabewilsonImg from "../../../assets/img/gallery/stabewilson.jpg";
-import stabewilson2Img from "../../../assets/img/gallery/stabewilson2.jpg";
+import roccoVentrellaImg from "../../../assets/img/gallery/roccoventrella.webp";
+import saxMaxImg from "../../../assets/img/gallery/saxmax.webp";
+import stabewilsonImg from "../../../assets/img/gallery/stabewilson.webp";
+import stabewilson2Img from "../../../assets/img/gallery/stabewilson2.webp";
 
-import bwTrio1Img from "../../../assets/img/gallery/bw-trio1.png";
-import hands1Img from "../../../assets/img/gallery/hands1.png";
-import hands2Img from "../../../assets/img/gallery/hands2.png";
-import isaacImg from "../../../assets/img/gallery/Isaac.jpg";
-import jimImg from "../../../assets/img/gallery/Jim.jpg";
-import jim2Img from "../../../assets/img/gallery/Jim2.png";
-import kennyImg from "../../../assets/img/gallery/kenny.jpg";
-import kidImg from "../../../assets/img/gallery/kid.jpg";
-import larryWilliamsImg from "../../../assets/img/gallery/larrywilliams.png";
-import maxImg from "../../../assets/img/gallery/Max.jpg";
-import namm2019Img from "../../../assets/img/gallery/NAMM-2019.jpg";
+import bwTrio1Img from "../../../assets/img/gallery/bw-trio1.webp";
+import hands1Img from "../../../assets/img/gallery/hands1.webp";
+import hands2Img from "../../../assets/img/gallery/hands2.webp";
+import isaacImg from "../../../assets/img/gallery/Isaac.webp";
+import jimImg from "../../../assets/img/gallery/Jim.webp";
+import jim2Img from "../../../assets/img/gallery/Jim2.webp";
+import kennyImg from "../../../assets/img/gallery/kenny.webp";
+import kidImg from "../../../assets/img/gallery/kid.webp";
+import larryWilliamsImg from "../../../assets/img/gallery/larrywilliams.webp";
+import maxImg from "../../../assets/img/gallery/Max.webp";
+import namm2019Img from "../../../assets/img/gallery/NAMM-2019.webp";
 
 /*import judy group*/
-import judygroup from "../../../assets/img/about/judy-group.jpg";
-import judyAdrian from "../../../assets/img/gallery/judy-adrian.png";
+import judygroup from "../../../assets/img/about/judy-group.webp";
+import judyAdrian from "../../../assets/img/gallery/judy-adrian.webp";
 
 const masonryImages = [
   img1,

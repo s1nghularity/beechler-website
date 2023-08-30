@@ -31,6 +31,8 @@
   height: 10rem;
   display: block;
   margin: 0 auto;
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: crisp-edges; 
 }
 
 @media screen and (max-width: 568px) {

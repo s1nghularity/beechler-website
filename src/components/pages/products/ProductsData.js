@@ -1,81 +1,81 @@
 import "../../../styles/ProductsPage.css";
 
 //DIAMOND
-import wdAlto from "../../../assets/img/products/diamond/white-diamond-alto.png";
-import wdTenor from "../../../assets/img/products/diamond/white-diamond-tenor.png";
-import wdBaritone from "../../../assets/img/products/diamond/white-diamond-baritone.png";
-import wdClarinet from "../../../assets/img/products/diamond/white-diamond-clarinet.png";
+import wdAlto from "../../../assets/img/products/diamond/white-diamond-alto.webp";
+import wdTenor from "../../../assets/img/products/diamond/white-diamond-tenor.webp";
+import wdBaritone from "../../../assets/img/products/diamond/white-diamond-baritone.webp";
+import wdClarinet from "../../../assets/img/products/diamond/white-diamond-clarinet.webp";
 
 //TONALEX
-import taAlto from "../../../assets/img/products/tonalex/tonalex-alto.png";
-import taTenor from "../../../assets/img/products/tonalex/tonalex-tenor.png";
-import taClarinet from "../../../assets/img/products/tonalex/tonalex-clarinet.png";
+import taAlto from "../../../assets/img/products/tonalex/tonalex-alto.webp";
+import taTenor from "../../../assets/img/products/tonalex/tonalex-tenor.webp";
+import taClarinet from "../../../assets/img/products/tonalex/tonalex-clarinet.webp";
 
 //BELLITE
-import b80 from "../../../assets/img/products/bellite/b80.png";
-import b81 from "../../../assets/img/products/bellite/b81.png";
-import b82 from "../../../assets/img/products/bellite/b82.png";
-import c32 from "../../../assets/img/products/bellite/c32.png";
-import c33 from "../../../assets/img/products/bellite/c33.png";
-import belliteBaritone from "../../../assets/img/products/bellite/bellite-baritone.png";
-import customBelliteS from "../../../assets/img/products/bellite/custom-bellite-soprano.png";
-import customBelliteB from "../../../assets/img/products/bellite/custom-bellite-baritone.png";
+import b80 from "../../../assets/img/products/bellite/b80.webp";
+import b81 from "../../../assets/img/products/bellite/b81.webp";
+import b82 from "../../../assets/img/products/bellite/b82.webp";
+import c32 from "../../../assets/img/products/bellite/c32.webp";
+import c33 from "../../../assets/img/products/bellite/c33.webp";
+import belliteBaritone from "../../../assets/img/products/bellite/bellite-baritone.webp";
+import customBelliteS from "../../../assets/img/products/bellite/custom-bellite-soprano.webp";
+import customBelliteB from "../../../assets/img/products/bellite/custom-bellite-baritone.webp";
 
 //TODO:HARD RUBBER
-import b22 from "../../../assets/img/products/hard-rubber/b22.png";
-import b25 from "../../../assets/img/products/hard-rubber/b25.png";
-import b25c from "../../../assets/img/products/hard-rubber/b25c.png";
-import b26 from "../../../assets/img/products/hard-rubber/b26.png";
-import b26c from "../../../assets/img/products/hard-rubber/b26c.png";
-import b27 from "../../../assets/img/products/hard-rubber/b27.png";
-import b29 from "../../../assets/img/products/hard-rubber/b29.png";
+import b22 from "../../../assets/img/products/hard-rubber/b22.webp";
+import b25 from "../../../assets/img/products/hard-rubber/b25.webp";
+import b25c from "../../../assets/img/products/hard-rubber/b25c.webp";
+import b26 from "../../../assets/img/products/hard-rubber/b26.webp";
+import b26c from "../../../assets/img/products/hard-rubber/b26c.webp";
+import b27 from "../../../assets/img/products/hard-rubber/b27.webp";
+import b29 from "../../../assets/img/products/hard-rubber/b29.webp";
 
 
 //CUSTOMIZED
-import beechlerDAlto from "../../../assets/img/products/beechler-custom/beechler-custom-d.png";
-import beechlerJazzAlto from "../../../assets/img/products/beechler-custom/beechler-custom-jazz-alto.png";
-import beechlerJazzTenor from "../../../assets/img/products/beechler-custom/beechler-custom-jazz-tenor.png";
-import beechler110 from "../../../assets/img/products/beechler-custom/beechler-custom-110.png";
-import beechlerPell from "../../../assets/img/products/beechler-custom/beechler-custom-pell.png";
+import beechlerDAlto from "../../../assets/img/products/beechler-custom/beechler-custom-d.webp";
+import beechlerJazzAlto from "../../../assets/img/products/beechler-custom/beechler-custom-jazz-alto.webp";
+import beechlerJazzTenor from "../../../assets/img/products/beechler-custom/beechler-custom-jazz-tenor.webp";
+import beechler110 from "../../../assets/img/products/beechler-custom/beechler-custom-110.webp";
+import beechlerPell from "../../../assets/img/products/beechler-custom/beechler-custom-pell.webp";
 
 //ARB METAL
-import arbAlto from "../../../assets/img/products/arb-metal/arb-metal-alto.png";
-import arbTenor from "../../../assets/img/products/arb-metal/arb-metal-tenor.png";
-import arbBaritone from "../../../assets/img/products/arb-metal/arb-metal-baritone.png";
-import arbCustomAlto from "../../../assets/img/products/arb-custom/arb-custom-alto.png";
-import arbCustomTenor from "../../../assets/img/products/arb-custom/arb-custom-tenor.png";
-import arbCustomBaritone from "../../../assets/img/products/arb-custom/arb-custom-baritone.png";
+import arbAlto from "../../../assets/img/products/arb-metal/arb-metal-alto.webp";
+import arbTenor from "../../../assets/img/products/arb-metal/arb-metal-tenor.webp";
+import arbBaritone from "../../../assets/img/products/arb-metal/arb-metal-baritone.webp";
+import arbCustomAlto from "../../../assets/img/products/arb-custom/arb-custom-alto.webp";
+import arbCustomTenor from "../../../assets/img/products/arb-custom/arb-custom-tenor.webp";
+import arbCustomBaritone from "../../../assets/img/products/arb-custom/arb-custom-baritone.webp";
 
 //GREAT NECK ORIGINAL
-import A29 from "../../../assets/img/products/greatneck/A29.png";
-import A30 from "../../../assets/img/products/greatneck/A30.png";
-import C15 from "../../../assets/img/products/greatneck/C15.png";
-import C16 from "../../../assets/img/products/greatneck/C16.png";
+import A29 from "../../../assets/img/products/greatneck/A29.webp";
+import A30 from "../../../assets/img/products/greatneck/A30.webp";
+import C15 from "../../../assets/img/products/greatneck/C15.webp";
+import C16 from "../../../assets/img/products/greatneck/C16.webp";
 
 //ACCESSORIES & SERVICES
 //Caps
-import T01A from "../../../assets/img/products/accessories-services/T01A.png";
-import T01B from "../../../assets/img/products/accessories-services/T01B.png";
+import T01A from "../../../assets/img/products/accessories-services/T01A.webp";
+import T01B from "../../../assets/img/products/accessories-services/T01B.webp";
 //Pegs
-import P01 from "../../../assets/img/products/accessories-services/P01.png";
-import P02 from "../../../assets/img/products/accessories-services/P02.png";
-import P03 from "../../../assets/img/products/accessories-services/P03.png";
-import L52 from "../../../assets/img/products/accessories-services/L52.png";
-import L53 from "../../../assets/img/products/accessories-services/L53.png";
+import P01 from "../../../assets/img/products/accessories-services/P01.webp";
+import P02 from "../../../assets/img/products/accessories-services/P02.webp";
+import P03 from "../../../assets/img/products/accessories-services/P03.webp";
+import L52 from "../../../assets/img/products/accessories-services/L52.webp";
+import L53 from "../../../assets/img/products/accessories-services/L53.webp";
 //Ligatures
-import ligAntique from "../../../assets/img/products/ligatures/lig-antique.png";
-import ligBlack from "../../../assets/img/products/ligatures/lig-black.png";
-import ligChrome from "../../../assets/img/products/ligatures/lig-chrome.png";
-import ligGold from "../../../assets/img/products/ligatures/lig-gold.png";
-import ligMetal from "../../../assets/img/products/ligatures/lig-metal.png";
-import ligPrismatic from "../../../assets/img/products/ligatures/lig-prismatic.png";
-import eboniteT02 from "../../../assets/img/products/caps/ebonite-t02.png";
+import ligAntique from "../../../assets/img/products/ligatures/lig-antique.webp";
+import ligBlack from "../../../assets/img/products/ligatures/lig-black.webp";
+import ligChrome from "../../../assets/img/products/ligatures/lig-chrome.webp";
+import ligGold from "../../../assets/img/products/ligatures/lig-gold.webp";
+import ligMetal from "../../../assets/img/products/ligatures/lig-metal.webp";
+import ligPrismatic from "../../../assets/img/products/ligatures/lig-prismatic.webp";
+import eboniteT02 from "../../../assets/img/products/caps/ebonite-t02.webp";
 //Services
-import BP from "../../../assets/img/products/accessories-services/BP.png";
-import CE from "../../../assets/img/products/accessories-services/CE.png";
-import LC from "../../../assets/img/products/accessories-services/LC.png";
-import RE from "../../../assets/img/products/accessories-services/RE.png";
-import tuffbite from "../../../assets/img/products/accessories-services/tuffbite.png";
+import BP from "../../../assets/img/products/accessories-services/BP.webp";
+import CE from "../../../assets/img/products/accessories-services/CE.webp";
+import LC from "../../../assets/img/products/accessories-services/LC.webp";
+import RE from "../../../assets/img/products/accessories-services/RE.webp";
+import tuffbite from "../../../assets/img/products/accessories-services/tuffbite.webp";
 
 const saxTipOpening = true;
 const clarinetTipOpening = true;

@@ -4,15 +4,15 @@ import { Card } from 'react-bootstrap';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../../styles/HomeCarousel.css";
 
-import DaveKoz from "../../../assets/img/home/top-carousel/dave-koz.png";
-import EveretteHarp from "../../../assets/img/home/top-carousel/everette-harp.png";
-import GeraldAlbright from "../../../assets/img/home/top-carousel/gerald-albright.png";
-import HanDurst from "../../../assets/img/home/top-carousel/han-durst.png";
-import HarpPaulo from "../../../assets/img/home/top-carousel/harp-paulo.png";
-import IkechiOnyenaka from "../../../assets/img/home/top-carousel/ikechi-onyenaka.png";
-import JayBeckenstein from "../../../assets/img/home/top-carousel/jay-beckenstein.png";
-import PabloOchoa from "../../../assets/img/home/top-carousel/pablo-ochoa.png";
-import TedNash from "../../../assets/img/home/top-carousel/ted-nash.png";
+import DaveKoz from "../../../assets/img/home/top-carousel/dave-koz.webp";
+import EveretteHarp from "../../../assets/img/home/top-carousel/everette-harp.webp";
+import GeraldAlbright from "../../../assets/img/home/top-carousel/gerald-albright.webp";
+import HanDurst from "../../../assets/img/home/top-carousel/han-durst.webp";
+import HarpPaulo from "../../../assets/img/home/top-carousel/harp-paulo.webp";
+import IkechiOnyenaka from "../../../assets/img/home/top-carousel/ikechi-onyenaka.webp";
+import JayBeckenstein from "../../../assets/img/home/top-carousel/jay-beckenstein.webp";
+import PabloOchoa from "../../../assets/img/home/top-carousel/pablo-ochoa.webp";
+import TedNash from "../../../assets/img/home/top-carousel/ted-nash.webp";
 
 const HomeCarousel = () => {
 
