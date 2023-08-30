@@ -166,6 +166,17 @@ div .no-results-placeholder {
   background-color: #f0f0f0;
 }
 
+.dealer-search-container,
+.dealer-info-container {
+  touch-action: auto;
+}
+.leaflet-container {
+  min-height: 50vh;
+  max-height: 50vh;
+}
+
+
+
 @media (max-width: 500px) {
   .dealer-search-container {
     width: 100%;
@@ -192,7 +203,8 @@ div .no-results-placeholder {
 @media (max-width: 768px) {
 
   .leaflet-container {
-    min-height: 50vh;
+    min-height: 60vh;
+    max-height: 60vh;
   }
 
   .dealer-search-container {
@@ -200,6 +212,7 @@ div .no-results-placeholder {
     left: 0;
     transform: none;
     margin-bottom: -1rem;
+    max-height: 45vh;
   }
   .dealer-info-container {
     overflow-y: auto;
