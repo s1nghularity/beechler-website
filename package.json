@@ -107,7 +107,8 @@
     ]
   },
   "reactSnap": {
-    "inlineCss": true
+    "inlineCss": true,
+    "skipThirdPartyRequests": true
   }
   
 }
