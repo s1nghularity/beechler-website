@@ -23,7 +23,7 @@ const generateProductJSONLD = (products) => {
       "@type": "Product",
       "name": product.name,
       "category": product.category,
-      "position": index + 1
+
     }))
   };
 };
