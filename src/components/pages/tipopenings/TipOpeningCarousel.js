@@ -36,10 +36,10 @@ const TipOpeningCarousel = () => {
   }, []);
 
   return (
-    <div ref={carouselRef} className="tip-opening-carousel">
+    <div ref={carouselRef} className="tip-opening-carousel" itemScope itemType="https://schema.org/ImageGallery">
       {infiniteImages.map((img, idx) => (
         <div key={idx} className={`tip-opening-carousel-item carousel-item-${idx}`}>
-          <img src={img} alt={`Image ${idx + 1}`} className="tip-opening-carousel-image" />
+          <img src={img} alt={`Artist Instagram Image ${idx + 1}`} className="tip-opening-carousel-image" itemProp="image" />
         </div>
       ))}
     </div>

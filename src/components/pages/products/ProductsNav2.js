@@ -119,41 +119,50 @@ const ProductsNav2 = ({
 
   return (
     <AnimatePresence>
-      <div className="products-nav-container">
-        <div className="products-nav-menu">
-          <div className="menu-wrapper">
-            <MenuButton
-              isOpen={isMouthpiecesOpen}
-              onClick={() => handleButtonClick("mouthpieces")}
-            >
-              Mouthpieces
-            </MenuButton>
-            <MenuOptions
-              options={categoryOptions}
-              isOpen={isMouthpiecesOpen}
-              onOptionSelect={handleCategorySelection}
-            />
-          </div>
-
-          <div className="menu-wrapper">
-            <MenuButton
-              isOpen={isTypeOpen}
-              onClick={() => handleButtonClick("type")}
-              disabled={selectedCategory === "Accessories & Services"} // Disable Type button when Accessories & Services is selected
-            >
-              Type
-            </MenuButton>
-            <MenuOptions
-              options={subtypeOptions}
-              isOpen={isTypeOpen}
-              onOptionSelect={handleSubtypeSelection}
-            />
-          </div>
-
-          <button className="reset-filters" onClick={handleResetFilters}>
-            Reset Filters
-          </button>
+    {/* Added 'role' and 'aria-label' attributes for accessibility */}
+    <nav role="navigation" aria-label="Product Navigation" className="products-nav-container">
+      {/* Added 'role' attribute for accessibility */}
+      <div role="menu" className="products-nav-menu">
+        <div className="menu-wrapper">
+          {/* Added 'aria-haspopup' and 'aria-expanded' attributes for accessibility */}
+          <MenuButton
+            aria-haspopup="true"
+            aria-expanded={isMouthpiecesOpen}
+            isOpen={isMouthpiecesOpen}
+            onClick={() => handleButtonClick("mouthpieces")}
+          >
+            Mouthpieces
+          </MenuButton>
+          <MenuOptions
+            options={categoryOptions}
+            isOpen={isMouthpiecesOpen}
+            onOptionSelect={handleCategorySelection}
+          />
         </div>
+
+        <div className="menu-wrapper">
+          {/* Added 'aria-haspopup' and 'aria-expanded' attributes for accessibility */}
+          <MenuButton
+            aria-haspopup="true"
+            aria-expanded={isTypeOpen}
+            isOpen={isTypeOpen}
+            onClick={() => handleButtonClick("type")}
+            disabled={selectedCategory === "Accessories & Services"}
+          >
+            Type
+          </MenuButton>
+          <MenuOptions
+            options={subtypeOptions}
+            isOpen={isTypeOpen}
+            onOptionSelect={handleSubtypeSelection}
+          />
+        </div>
+
+        {/* Added 'aria-label' attribute for accessibility */}
+        <button aria-label="Reset Filters" className="reset-filters" onClick={handleResetFilters}>
+          Reset Filters
+        </button>
+      </div>
 
         <div className="submenu-badges-sticker-container">
           {" "}
@@ -184,7 +193,7 @@ const ProductsNav2 = ({
             </p>
           </motion.div>
         </div>
-      </div>
+      </nav>
     </AnimatePresence>
   );
 };

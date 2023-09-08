@@ -4,18 +4,15 @@ import TipOpeningCarousel from './TipOpeningCarousel.js';
 
 function TipOpenings () {
     return (
-        <section>
-        <section>
-            <TipOpeningsTable />
-        </section>
-        <section>
-            <TipOpeningCarousel/>
-        </section>
-        </section>
-
-        
+        <main itemScope itemType="https://schema.org/WebPage">
+            <section>
+                <TipOpeningsTable />
+            </section>
+            <section>
+                <TipOpeningCarousel/>
+            </section>
+        </main>
     );
-            
 }
 
 export default TipOpenings;

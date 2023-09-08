@@ -42,31 +42,83 @@ const HomeDealerStats = () => {
   }, [countCountry, countState, countDealers, inView]);
 
   return (
-    <div className="stripe-home-dealer-stats">
+    <div
+      className="stripe-home-dealer-stats"
+      itemScope
+      itemType="http://schema.org/ItemList"
+    >
       <Row ref={ref} className="home-dealer-stats">
         <Col>
-          <div className="stats-card">
-            <motion.h1 className="gradient-text">{roundedCountry}</motion.h1>
-            <img src={globe} alt="globe" className="stats-icon" />
-            <h2 className="stats-title">Countries</h2>
+          <div
+            className="stats-card"
+            itemScope
+            itemType="http://schema.org/QuantitativeValue"
+          >
+            <motion.h1
+              className="gradient-text"
+              aria-label={`${roundedCountry} countries`}
+              itemProp="value"
+            >
+              {roundedCountry}
+            </motion.h1>
+            <img
+              src={globe}
+              alt="globe"
+              className="stats-icon"
+              itemProp="image"
+            />
+            <h2 className="stats-title" itemProp="name">
+              Countries
+            </h2>
           </div>
-
         </Col>
         <Col>
-          <div className="stats-card">
-            <motion.h1 className="gradient-text">{roundedDealers}</motion.h1>
-            <img src={store} alt="store" className="stats-icon" />
-            <h2 className="stats-title">Dealers <br/>Worldwide</h2>
+          <div
+            className="stats-card"
+            itemScope
+            itemType="http://schema.org/QuantitativeValue"
+          >
+            <motion.h1
+              className="gradient-text"
+              aria-label={`${roundedDealers} dealers worldwide`}
+              itemProp="value"
+            >
+              {roundedDealers}
+            </motion.h1>
+            <img
+              src={store}
+              alt="store"
+              className="stats-icon"
+              itemProp="image"
+            />
+            <h2 className="stats-title" itemProp="name">
+              Dealers Worldwide
+            </h2>
           </div>
-
         </Col>
         <Col>
-          <div className="stats-card">
-            <motion.h1 className="gradient-text">{roundedState}</motion.h1>
-            <img src={liberty} alt="liberty" className="stats-icon" />
-            <h2 className="stats-title">U.S. <br/> States</h2>
+          <div
+            className="stats-card"
+            itemScope
+            itemType="http://schema.org/QuantitativeValue"
+          >
+            <motion.h1
+              className="gradient-text"
+              aria-label={`${roundedState} U.S. states`}
+              itemProp="value"
+            >
+              {roundedState}
+            </motion.h1>
+            <img
+              src={liberty}
+              alt="liberty"
+              className="stats-icon"
+              itemProp="image"
+            />
+            <h2 className="stats-title" itemProp="name">
+              U.S. States
+            </h2>
           </div>
-
         </Col>
       </Row>
     </div>

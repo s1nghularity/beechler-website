@@ -52,7 +52,7 @@ function TipOpeningsTable() {
   ];
 
   return (
-    <Container className="tip-openings">
+<Container className="tip-openings" itemScope itemType="https://schema.org/Table">
       <Table striped bordered hover className="tip-openings-small first-table">
         <thead>
           <tr>

@@ -12,13 +12,14 @@ import {
   CustomBubble
 } from "../products/ProductCardSpecs";
 
-const selectedProductIds = ["B10", "B11", "B12","B14", "B19", "B18", "B20", "B21"];
-
+const selectedProductIds = ["B10", "B11", "B12", "B14", "B19", "B18", "B20", "B21"];
 
 const ProductDescription = ({ product }) => {
   const {
     id,
+    name,
     price,
+    category,
     ligatureType,
     finish,
     accessories,
@@ -29,20 +30,21 @@ const ProductDescription = ({ product }) => {
   const isCustomModel = (id) => {
     return id && (id.startsWith("C") || id.includes("/C"));
   };
-  
 
   return (
-    <Card className="product-card-description" itemscope itemtype="http://schema.org/Product">
+    <Card className="product-card-description" itemScope itemType="http://schema.org/Product">
+      <meta itemProp="name" content={name} />
+      <meta itemProp="category" content={category} />
       <Row className="product-icon-row">
         <ProductIconRow product={product} />
       </Row>
 
       <Row className="product-info-row">
-        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} itemprop="additionalProperty" />}
-        {finish && <FinishSection finish={finish} itemprop="additionalProperty" />}
-        {accessories && <AccessoriesSection accessories={accessories} itemprop="additionalProperty" />}
-        {model && <ModelSection model={model} itemprop="model" />}
-        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} itemprop="additionalProperty" />}
+        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} itemProp="additionalProperty" />}
+        {finish && <FinishSection finish={finish} itemProp="additionalProperty" />}
+        {accessories && <AccessoriesSection accessories={accessories} itemProp="additionalProperty" />}
+        {model && <ModelSection model={model} itemProp="model" />}
+        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} itemProp="additionalProperty" />}
       </Row>
 
       {isCustomModel(id) && (
@@ -52,7 +54,13 @@ const ProductDescription = ({ product }) => {
       )}
 
       <Row className="price-row">
-        <Card.Text className="price" itemprop="price">MSRP ${price}</Card.Text>
+        <Card.Text 
+          className="price" 
+          aria-label={`Product price: ${price}`}
+          itemProp="price"
+        >
+          MSRP ${price}
+        </Card.Text>
       </Row>
     </Card>
   );
@@ -60,10 +68,10 @@ const ProductDescription = ({ product }) => {
 
 const ProductCard = ({ product }) => (
   <Col xs={12} md={4} key={product.id}>
-    <Card className="product-card" itemscope itemtype="http://schema.org/Product">
+    <Card className="product-card" itemScope itemType="http://schema.org/Product">
       <div className="product-card-container">
-        <div className="product-image" itemprop="image">
-          <img src={product.image} alt="Product" />
+        <div className="product-image" itemProp="image">
+          <img src={product.image} alt={`Product ${product.name}`} />
         </div>
         <ProductDescription product={product} />
       </div>
