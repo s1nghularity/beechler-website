@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { Container } from "react-bootstrap";
 import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { locationData } from "./DealerData";
 import "../../../styles/DealersPage.css";
 import { library, icon } from "@fortawesome/fontawesome-svg-core";
@@ -41,10 +42,6 @@ const DealersMap = () => {
     });
     setFilteredLocations(result);
   }, [search]);
-
-  useEffect(() => {
-    import("leaflet/dist/leaflet.css");
-  }, []);
   
 
   const mapRef = useRef(null);
