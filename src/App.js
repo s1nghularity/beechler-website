@@ -33,7 +33,7 @@ export default function App() {
             <Route path="/" element={<HomePage className="home-page"/>} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/tip-openings" element={<TipOpenings />} />
-            {/* <Route path="/dealers" element={<DealersPage />} /> */}
+            <Route path="/dealers" element={<DealersPage />} />
             <Route path="/artists" element={<ArtistsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/gallery" element={<Gallery />} />

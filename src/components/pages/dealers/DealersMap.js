@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import L from "leaflet";
 import { locationData } from "./DealerData";
 import "../../../styles/DealersPage.css";
+import 'leaflet/dist/leaflet.css';
 import { library, icon } from "@fortawesome/fontawesome-svg-core";
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
 import DealerSearch from "./DealerSearch";
@@ -44,6 +45,7 @@ const DealersMap = () => {
   
 
   const mapRef = useRef(null);
+  const markerRefs = useRef({});
 
   const handleMouseEnter = () => {
     const map = mapRef.current;
@@ -72,9 +74,7 @@ const DealersMap = () => {
       map.scrollWheelZoom.enable(); // Enable scroll wheel zoom on touch end
     }
   };
-  
-
-  const markerRefs = useRef({});
+ 
 
   const handleLocationClick = (location) => {
     const map = mapRef.current;

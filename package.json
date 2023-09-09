@@ -107,7 +107,10 @@
     ]
   },
   "reactSnap": {
-    "inlineCss": true
+    "inlineCss": true,
+    "ignoreForPreload": [
+      "/public/leaflet.css"
+    ]
   }
   
 }
