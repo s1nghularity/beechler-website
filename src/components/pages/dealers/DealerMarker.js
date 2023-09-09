@@ -1,4 +1,3 @@
-// DealerMarker.js
 import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,11 +5,13 @@ import { faMapMarkerAlt, faPhoneAlt, faGlobe } from "@fortawesome/free-solid-svg
 
 const DealerMarker = ({ location, musicalNoteIcon, handleLocationClick, markerRefs }) => (
   <Marker
-    key={location.name}
     position={[location.latitude, location.longitude]}
     icon={musicalNoteIcon}
     ref={(ref) => {
         markerRefs.current[location.name] = ref;
+    }}
+    eventHandlers={{
+      click: () => handleLocationClick(location),
     }}
   >
     <Popup className="dealer-map-popup">
