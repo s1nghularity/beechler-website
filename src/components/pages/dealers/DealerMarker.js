@@ -8,7 +8,9 @@ const DealerMarker = ({ location, musicalNoteIcon, handleLocationClick, markerRe
     position={[location.latitude, location.longitude]}
     icon={musicalNoteIcon}
     ref={(ref) => {
+      if (ref) {
         markerRefs.current[location.name] = ref;
+      }
     }}
     eventHandlers={{
       click: () => handleLocationClick(location),

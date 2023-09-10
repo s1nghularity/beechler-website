@@ -15,10 +15,11 @@ const DealersMap = () => {
   const [search, setSearch] = useState("");
   const [filteredLocations, setFilteredLocations] = useState(locationData);
 
+  const mapRef = useRef(null);
+  const markerRefs = useRef({});
+
   library.add(faMusic);
-
   const musicIconSvg = icon({ prefix: "fas", iconName: "music" }).html;
-
   const musicalNoteIcon = L.divIcon({
     html: `<div class="musical-note-icon">${musicIconSvg}</div>`,
     iconSize: [25, 25],
@@ -43,8 +44,7 @@ const DealersMap = () => {
   }, [search]);
   
 
-  const mapRef = useRef(null);
-  const markerRefs = useRef({});
+
 
   const handleMouseEnter = () => {
     const map = mapRef.current;
