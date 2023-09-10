@@ -1,11 +1,10 @@
 // DealersMap.js
 import React, { useState, useEffect, useRef } from "react";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { Map, TileLayer } from "react-leaflet-universal";
 import { Container } from "react-bootstrap";
 import L from "leaflet";
 import { locationData } from "./DealerData";
 import "../../../styles/DealersPage.css";
-import 'leaflet/dist/leaflet.css';
 import { library, icon } from "@fortawesome/fontawesome-svg-core";
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
 import DealerSearch from "./DealerSearch";
@@ -93,7 +92,7 @@ const DealersMap = () => {
   return (
     <Container fluid>
       <h1 className="dealer-map-title">Making Music All Over The World</h1>
-      <MapContainer
+      <Map
         center={[38, -95]}
         zoom={4}
         style={{ height: "80vh", width: "100%" }}
@@ -128,7 +127,7 @@ const DealersMap = () => {
             handleLocationClick={handleLocationClick}
           />
         </div>
-      </MapContainer>
+      </Map>
     </Container>
   );
 };
