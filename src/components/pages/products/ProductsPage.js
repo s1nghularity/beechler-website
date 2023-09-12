@@ -15,6 +15,18 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
+const generateProductJSONLD = (products) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": products.map((product, index) => ({
+      "@type": "Product",
+      "name": product.name,
+      "category": product.category,
+
+    }))
+  };
+};
 
 
 const ProductsPage = () => {
@@ -22,6 +34,9 @@ const ProductsPage = () => {
   const [selectedSubtype, setSelectedSubtype] = useState(null);
   const [previousProducts, setPreviousProducts] = useState(products);
   const [filterApplied, setFilterApplied] = useState(false);
+
+
+  
 
   //HANDLES PRODUCTNAV FILTERS//
   const handleCategorySelect = (category) => {
@@ -76,6 +91,7 @@ const ProductsPage = () => {
     }
   }, [filteredProducts, filterApplied]);
 
+
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
   useEffect(() => {
@@ -92,6 +108,18 @@ const ProductsPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const jsonld = generateProductJSONLD(products);
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify(jsonld);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   return (

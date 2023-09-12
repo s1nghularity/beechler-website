@@ -1,8 +1,7 @@
 import "../../../styles/Gallery.css";
 import Masonry from "react-masonry-css";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 import { Container, Row } from "react-bootstrap";
-
 
 import img1 from "../../../assets/img/gallery/IMG_5687.webp";
 import img2 from "../../../assets/img/gallery/IMG_5689.webp";
@@ -64,81 +63,79 @@ import judygroup from "../../../assets/img/about/judy-group.webp";
 import judyAdrian from "../../../assets/img/gallery/judy-adrian.webp";
 
 const masonryImages = [
-  img1,
-  judygroup,
-  namm2019Img,
-  kennyImg,
-  kunlePeaceOlusesiImg,
-  img2,
-  judyAdrian,
-  img3,
-  img4,
-  fridaHidalgoImg,
-  vibesImg,
-  ad1953Img,
-  adrianChiaImg,
-  maryWhiteImg,
-  alanJamieImg,
-  alexHanImg,
-  anthonyTerryBwImg,
-  betterSaxImg,
-  billBergmanJimImg,
-  blondGuyImg,
-  charlesImg,
-  charlesMcNealImg,
-  dHayesMMillerImg,
-  docWhiteImg,
-  donaldHayes2Img,
-  everetteImg,
-  franckJimImg,
-  funJimImg,
-  ikechiOnyenakaImg,
-  joeNunezImg,
-  johnDoeImg,
-  kellyMooreImg,
-  lawrenceTamezImg,
-  loomisJimMcNealImg,
-  marcoMacissoImg,
-  michaelPauloImg,
-  mikePotterImg,
-  nelsonRangellImg,
-  pabloOchoaImg,
-  roccoVentrellaImg,
-  saxMaxImg,
-  stabewilsonImg,
-  stabewilson2Img,
-  bwTrio1Img,
-  hands1Img,
-  hands2Img,
-  isaacImg,
-  jimImg,
-  jim2Img,
-  kidImg,
-  larryWilliamsImg,
-  maxImg,
-
+  { src: img1, alt: "IMG_5687" },
+  { src: judygroup, alt: "Judy Group" },
+  { src: img2, alt: "IMG_5689" },
+  { src: img3, alt: "IMG_5690" },
+  { src: img4, alt: "IMG_5694" },
+  { src: vibesImg, alt: "Vibes" },
+  { src: ad1953Img, alt: "1953 Ad" },
+  { src: adrianChiaImg, alt: "Adrian Chia" },
+  { src: alanJamieImg, alt: "Alan Jamie" },
+  { src: alexHanImg, alt: "Alex Han" },
+  { src: anthonyTerryBwImg, alt: "Anthony Terry BW" },
+  { src: betterSaxImg, alt: "Better Sax" },
+  { src: billBergmanJimImg, alt: "Bill Bergman Jim" },
+  { src: blondGuyImg, alt: "Blond Guy" },
+  { src: charlesImg, alt: "Charles" },
+  { src: charlesMcNealImg, alt: "Charles McNeal" },
+  { src: dHayesMMillerImg, alt: "D Hayes M Miller" },
+  { src: docWhiteImg, alt: "Doc White" },
+  { src: donaldHayes2Img, alt: "Donald Hayes 2" },
+  { src: everetteImg, alt: "Everette" },
+  { src: franckJimImg, alt: "Franck Jim" },
+  { src: fridaHidalgoImg, alt: "Frida Hidalgo" },
+  { src: funJimImg, alt: "Fun Jim" },
+  { src: ikechiOnyenakaImg, alt: "Ikechi Onyenaka" },
+  { src: joeNunezImg, alt: "Joe Nunez" },
+  { src: johnDoeImg, alt: "John Doe" },
+  { src: kellyMooreImg, alt: "Kelly Moore" },
+  { src: kunlePeaceOlusesiImg, alt: "Kunle Peace Olusesi" },
+  { src: lawrenceTamezImg, alt: "Lawrence Tamez" },
+  { src: loomisJimMcNealImg, alt: "Loomis Jim McNeal" },
+  { src: marcoMacissoImg, alt: "Marco Macisso" },
+  { src: maryWhiteImg, alt: "Mary White" },
+  { src: michaelPauloImg, alt: "Michael Paulo" },
+  { src: mikePotterImg, alt: "Mike Potter" },
+  { src: nelsonRangellImg, alt: "Nelson Rangell" },
+  { src: pabloOchoaImg, alt: "Pablo Ochoa" },
+  { src: roccoVentrellaImg, alt: "Rocco Ventrella" },
+  { src: saxMaxImg, alt: "Sax Max" },
+  { src: stabewilsonImg, alt: "Stabe Wilson" },
+  { src: stabewilson2Img, alt: "Stabe Wilson 2" },
+  { src: bwTrio1Img, alt: "BW Trio 1" },
+  { src: hands1Img, alt: "Hands 1" },
+  { src: hands2Img, alt: "Hands 2" },
+  { src: isaacImg, alt: "Isaac" },
+  { src: jimImg, alt: "Jim" },
+  { src: jim2Img, alt: "Jim 2" },
+  { src: kennyImg, alt: "Kenny G" },
+  { src: kidImg, alt: "Kid" },
+  { src: larryWilliamsImg, alt: "Larry Williams" },
+  { src: maxImg, alt: "Max" },
+  { src: namm2019Img, alt: "NAMM 2019" },
+  { src: judyAdrian, alt: "Judy Adrian" },
 ];
 
 const Gallery = () => {
-
   const masonryRef = useRef(null);
 
   useEffect(() => {
-    const images = masonryRef.current.querySelectorAll('img');
+    const images = masonryRef.current.querySelectorAll("img");
     images.forEach((img, index) => {
       setTimeout(() => {
-        img.classList.add('ready-to-animate');
+        img.classList.add("ready-to-animate");
       }, index * 200);
     });
   }, []);
 
-
   return (
-<Container>
+    <Container itemScope itemType="http://schema.org/ImageGallery">
       <Row className="gallery-title-card">
         <h1 className="gallery-title">
-          Serving musicians since 1942, <br /> Remle Musical Products is honored{" "}
-          <br /> to be part of your musical journey.
+          Serving musicians since 1942, <br />
+          Remle Musical Products is honored <br />
+          to be part of your musical journey.
         </h1>
       </Row>
       <Row>
@@ -149,13 +146,14 @@ const Gallery = () => {
             columnClassName="masonry-grid_column"
           >
             {masonryImages.map((image, index) => (
-              <img 
-                key={index} 
-                src={image} 
-                alt={`Image ${index + 1} in the gallery`}
+              <img
+                key={index}
+                src={image.src}
+                alt={image.alt}
                 className="swing-in-top-fwd"
-                style={{ '--animation-delay': `${index * 0.2}s` }}
+                style={{ "--animation-delay": `${index * 0.2}s` }}
                 loading="lazy"
+                itemProp="image"
               />
             ))}
           </Masonry>
@@ -164,7 +162,5 @@ const Gallery = () => {
     </Container>
   );
 };
-
-
 
 export default Gallery;

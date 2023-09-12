@@ -35,20 +35,22 @@ function HomeContact() {
         setSubmitted(true);
       }
     } catch (error) {
-      console.log('Error:', error);
+      console.error('Error:', error);
     }
   };
 
   return (
-    <div className="contact-container stripe-home-dealer" id="contact">
+    <div className="contact-container stripe-home-dealer" id="contact" role="region" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
       {submitted ? (
-        <div className="message-section">
-          <h2>Thank you for reaching out! <br/><br/> Someone from the team will get back to you soon.</h2>
+        <div className="message-section" role="alert">
+          <h3>Thank you for reaching out!</h3>
+          <p>Someone from the team will get back to you soon.</p>
         </div>
       ) : (
-        <Card className="contact-form" role="form">
-          <h2>Can't find what you're looking for?</h2>
-          <form onSubmit={handleFormSubmit}>
+        <Card className="contact-form" role="form" itemScope itemType="https://schema.org/ContactPage">
+          <h3 itemProp="headline">Can't find what you're looking for?</h3>
+          <form onSubmit={handleFormSubmit} aria-label="Contact Form">
             <label htmlFor="email">Email Address</label>
             <input
               id="email"
@@ -58,6 +60,7 @@ function HomeContact() {
               onChange={e => setEmail(e.target.value)}
               required
               aria-required="true"
+              itemProp="email"
             />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
             <br /><br />
@@ -69,6 +72,7 @@ function HomeContact() {
               onChange={e => setCategory(e.target.value)}
               required
               aria-required="true"
+              itemProp="category"
             >
               <option value="">Select a category</option>
               {Object.keys(categoryOptions).map((option, index) => (
@@ -84,6 +88,7 @@ function HomeContact() {
               onChange={e => setId(e.target.value)}
               required
               aria-required="true"
+              itemProp="productID"
             >
               <option value="">Select a category first</option>
               {category ? categoryOptions[category].map((option, index) => (
@@ -99,17 +104,19 @@ function HomeContact() {
               onChange={e => setMessage(e.target.value)}
               required
               aria-required="true"
+              itemProp="text"
             />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
-            <button type="submit" disabled={state.submitting}>
+            <button type="submit" disabled={state.submitting} itemProp="potentialAction">
               Contact Us
             </button>
-            <p className="disclaimer">We will never sell your personal information.</p>
+            <p className="disclaimer" itemProp="disclaimer">We will never sell your personal information.</p>
           </form>
         </Card>
       )}
     </div>
   );
 }
+
 
 export default HomeContact;

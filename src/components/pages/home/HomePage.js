@@ -9,7 +9,6 @@ import HomeDealer from "../home/HomeDealer.js";
 import HomeTestimonials from "../home/HomeTestimonials.js";
 import HomeContact from "../home/HomeContact.js";
 
-
 function HomePage() {
   useEffect(() => {
     const hash = window.location.hash;
@@ -24,8 +23,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="home-page">
-
+    <div className="home-page" role="main">
       <HomeCarousel />
       <HomeAbout />
       <HomeCategories />

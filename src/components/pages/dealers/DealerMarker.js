@@ -1,16 +1,19 @@
-// DealerMarker.js
 import React from 'react';
-import { Marker, Popup } from 'react-leaflet';
+import { Marker, Popup } from 'react-leaflet-universal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhoneAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const DealerMarker = ({ location, musicalNoteIcon, handleLocationClick, markerRefs }) => (
   <Marker
-    key={location.name}
     position={[location.latitude, location.longitude]}
     icon={musicalNoteIcon}
     ref={(ref) => {
+      if (ref) {
         markerRefs.current[location.name] = ref;
+      }
+    }}
+    eventHandlers={{
+      click: () => handleLocationClick(location),
     }}
     itemScope itemType="https://schema.org/GeoCoordinates"
   >

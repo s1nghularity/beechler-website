@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
-import { Card } from 'react-bootstrap';
+import { Card } from "react-bootstrap";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../../styles/HomeCarousel.css";
 
@@ -15,8 +15,7 @@ import PabloOchoa from "../../../assets/img/home/top-carousel/pablo-ochoa.webp";
 import TedNash from "../../../assets/img/home/top-carousel/ted-nash.webp";
 
 const HomeCarousel = () => {
-
-    const [centerSlidePercentage, setCenterSlidePercentage] = useState(40);
+  const [centerSlidePercentage, setCenterSlidePercentage] = useState(40);
 
   useEffect(() => {
     const updateCenterSlidePercentage = () => {
@@ -38,44 +37,55 @@ const HomeCarousel = () => {
     };
   }, []);
 
+  const renderCard = (src, alt) => (
+    <Card
+      className="home-top-carousel-slide"
+      itemScope
+      itemType="http://schema.org/ImageObject"
+    >
+      <Card.Img
+        variant="top"
+        src={src}
+        alt={alt}
+        className="home-top-carousel-image"
+        aria-label={`Image of ${alt}`}
+        itemProp="contentUrl"
+      />
+      <meta itemProp="name" content={alt} />
+    </Card>
+  );
 
-    const renderCard = (src, alt) => (
-        <Card className="home-top-carousel-slide">
-            <Card.Img variant="top" src={src} alt={alt} className="home-top-carousel-image" />
-        </Card>
-    );
+  return (
+    <div className="stripe-carousel">
+      <div className="carousel-fade"></div>
+      <div className="carousel-fade carousel-fade-right"></div>
 
-    return (
-        <div className="stripe-carousel">
-            <div className="carousel-fade"></div>
-            <div className="carousel-fade carousel-fade-right"></div>
-
-            <Carousel
-                showStatus={false}
-                showThumbs={false}
-                autoPlay={true}
-                interval={7000}
-                transitionTime={3000}
-                centerMode={true}
-                centerSlidePercentage={centerSlidePercentage}
-                infiniteLoop={true}
-                draggable={true}
-                swipeable={true}
-                emulateTouch={true}
-                className="home-top-carousel"
-            >
-                {renderCard(DaveKoz, 'Dave Koz')}
-                {renderCard(EveretteHarp, 'Everette Harp')}
-                {renderCard(GeraldAlbright, 'Gerald Albright')}
-                {renderCard(HarpPaulo, 'Everette Harp & Michael Paulo')}
-                {renderCard(IkechiOnyenaka, 'Ikechi Onyenaka')}
-                {renderCard(HanDurst, 'Alex Han & Craig Durst')}
-                {renderCard(JayBeckenstein, 'Jay Beckenstein')}
-                {renderCard(PabloOchoa, 'Pablo Ochoa')}
-                {renderCard(TedNash, 'Ted Nash')}
-            </Carousel>
-        </div>
-    );
+      <Carousel
+        showStatus={false}
+        showThumbs={false}
+        autoPlay={true}
+        interval={7000}
+        transitionTime={3000}
+        centerMode={true}
+        centerSlidePercentage={centerSlidePercentage}
+        infiniteLoop={true}
+        draggable={true}
+        swipeable={true}
+        emulateTouch={true}
+        className="home-top-carousel"
+      >
+        {renderCard(DaveKoz, "Dave Koz")}
+        {renderCard(EveretteHarp, "Everette Harp")}
+        {renderCard(GeraldAlbright, "Gerald Albright")}
+        {renderCard(HarpPaulo, "Everette Harp & Michael Paulo")}
+        {renderCard(IkechiOnyenaka, "Ikechi Onyenaka")}
+        {renderCard(HanDurst, "Alex Han & Craig Durst")}
+        {renderCard(JayBeckenstein, "Jay Beckenstein")}
+        {renderCard(PabloOchoa, "Pablo Ochoa")}
+        {renderCard(TedNash, "Ted Nash")}
+      </Carousel>
+    </div>
+  );
 };
 
 export default HomeCarousel;

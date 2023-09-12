@@ -1,9 +1,8 @@
 // DealersMap.js
-import React, { useState, useEffect, useMemo, useRef } from "react";
-import { MapContainer, TileLayer } from "react-leaflet";
+import React, { useState, useEffect, useRef } from "react";
+import { Map, TileLayer } from "react-leaflet-universal";
 import { Container } from "react-bootstrap";
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 import { locationData } from "./DealerData";
 import "../../../styles/DealersPage.css";
 import { library, icon } from "@fortawesome/fontawesome-svg-core";
@@ -47,10 +46,11 @@ const DealersMap = () => {
   const [search, setSearch] = useState("");
   const [filteredLocations, setFilteredLocations] = useState(locationData);
 
+  const mapRef = useRef(null);
+  const markerRefs = useRef({});
+
   library.add(faMusic);
-
   const musicIconSvg = icon({ prefix: "fas", iconName: "music" }).html;
-
   const musicalNoteIcon = L.divIcon({
     html: `<div class="musical-note-icon">${musicIconSvg}</div>`,
     iconSize: [25, 25],
@@ -73,8 +73,9 @@ const DealersMap = () => {
     });
     setFilteredLocations(result);
   }, [search]);
+  
 
-  const mapRef = useRef(null);
+
 
   const handleMouseEnter = () => {
     const map = mapRef.current;
@@ -104,7 +105,6 @@ const DealersMap = () => {
     }
   };
 
-  const markerRefs = useRef({});
 
   const handleLocationClick = (location) => {
     const map = mapRef.current;
@@ -175,7 +175,7 @@ const DealersMap = () => {
             handleLocationClick={handleLocationClick}
           />
         </div>
-      </MapContainer>
+      </Map>
     </Container>
   );
 };

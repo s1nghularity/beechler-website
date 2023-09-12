@@ -7,19 +7,32 @@ import "../../../styles/theme.css";
 import "../../../styles/HomeTestimonials.css";
 
 const HomeTestimonials = () => {
-    return (
-        <Container className="home-testimonials stripe-home-testimonials">
-          <Row className="justify-content-center align-items-center">
-        <Col md={3} className="testimonial-card">
+  return (
+    <Container
+      className="home-testimonials stripe-home-testimonials"
+      itemScope
+      itemType="http://schema.org/ItemList"
+    >
+      <Row className="justify-content-center align-items-center">
+        <Col
+          md={3}
+          className="testimonial-card"
+          itemScope
+          itemType="http://schema.org/Review"
+        >
           <blockquote>
-            <p>
+            <p itemProp="reviewBody">
               Beechler makes the best mouthpieces in the world. Achieve a warm,
               rich, and bright tone with just the right reed and ligature setup.
               Every note sings beautifully.
             </p>
-            <footer>- Edwin Tan</footer>
+            <footer itemProp="author">- Edwin Tan</footer>
           </blockquote>
-          <div className="stars">
+          <div
+            className="stars"
+            aria-label="5 out of 5 stars"
+            itemProp="reviewRating"
+          >
             <FontAwesomeIcon icon={faStar} color="gold" />
             <FontAwesomeIcon icon={faStar} color="gold" />
             <FontAwesomeIcon icon={faStar} color="gold" />
@@ -28,17 +41,26 @@ const HomeTestimonials = () => {
           </div>
         </Col>
 
-        <Col md={3} className="testimonial-card">
+        <Col
+          md={3}
+          className="testimonial-card"
+          itemScope
+          itemType="http://schema.org/Review"
+        >
           <blockquote>
-            <p>
+            <p itemProp="reviewBody">
               Beechler's rubber mouthpiece is a steal for its bright sound and
               amazing price. Comparable to expensive brands like SR Technologies
               and Jody Jazz. Used by popular saxophonists like Gerald Albright
               and Kenny G.
             </p>
-            <footer>- Michael</footer>
+            <footer itemProp="author">- Michael</footer>
           </blockquote>
-          <div className="stars">
+          <div
+            className="stars"
+            aria-label="5 out of 5 stars"
+            itemProp="reviewRating"
+          >
             <FontAwesomeIcon icon={faStar} color="gold" />
             <FontAwesomeIcon icon={faStar} color="gold" />
             <FontAwesomeIcon icon={faStar} color="gold" />
@@ -47,16 +69,25 @@ const HomeTestimonials = () => {
           </div>
         </Col>
 
-        <Col md={3} className="testimonial-card">
+        <Col
+          md={3}
+          className="testimonial-card"
+          itemScope
+          itemType="http://schema.org/Review"
+        >
           <blockquote>
-            <p>
+            <p itemProp="reviewBody">
               The 8m Beechler mouthpiece is perfect for those who want a big,
               bright sound or a powerful low sub tone. Gives everything a Lakey
               has with more excitement than metal.
             </p>
-            <footer>- Elliot Chavers</footer>
+            <footer itemProp="author">- Elliot Chavers</footer>
           </blockquote>
-          <div className="stars">
+          <div
+            className="stars"
+            aria-label="5 out of 5 stars"
+            itemProp="reviewRating"
+          >
             <FontAwesomeIcon icon={faStar} color="gold" />
             <FontAwesomeIcon icon={faStar} color="gold" />
             <FontAwesomeIcon icon={faStar} color="gold" />

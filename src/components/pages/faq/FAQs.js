@@ -45,64 +45,87 @@ function FAQs() {
 
   return (
 
-<Container className="root">
-  <h1 className="title">Frequently Asked Questions</h1>
-
-  {faqs.map((faq, index) => (
-    <motion.div
-      key={index}
-      className="accordion"
-      initial={false}
-      positiontransition
+<Container 
+      className="root" 
+      role="region" 
+      aria-labelledby="faq-heading"
+      itemScope
+      itemType="https://schema.org/FAQPage"
     >
-      <motion.header
-        initial={false}
-        className="accordionSummary"
-        onClick={() => setExpanded(expanded === index ? null : index)}
-        style={{
-          position: "relative",
-          zIndex: 1,
-        }}
-      >
-        <h2 className="heading">{faq.question}</h2>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: expanded === index ? 1 : 0 }}
-          transition={{ duration: .5 }}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: "linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)",
-            zIndex: -1,
-            borderRadius: ".75rem",
-          }}
-        />
-      </motion.header>
+      <h1 id="faq-heading" className="title" itemProp="name">Frequently Asked Questions</h1>
 
-      <AnimatePresence initial={false}>
-        {expanded === index && (
-          <motion.section
-            key="content"
-            initial="collapsed"
-            animate="open"
-            exit="collapsed"
-            variants={{
-              open: { opacity: 1, height: "auto" },
-              collapsed: { opacity: 0, height: 0 },
+      {faqs.map((faq, index) => (
+        <motion.div
+          key={index}
+          className="accordion"
+          initial={false}
+          positionTransition
+          role="button"
+          tabIndex={0}
+          aria-expanded={expanded === index}
+          aria-controls={`faq-content-${index}`}
+          itemScope
+          itemType="https://schema.org/Question"
+        >
+          <motion.header
+            initial={false}
+            className="accordionSummary"
+            onClick={() => setExpanded(expanded === index ? null : index)}
+            style={{
+              position: "relative",
+              zIndex: 1,
             }}
-            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98], when: "afterChildren" }}
-            className="accordionDetails"
           >
-            <h5 className="answer">{faq.answer}</h5>
-          </motion.section>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  ))}
-</Container>
+            <h2 
+              id={`faq-question-${index}`} 
+              className="heading" 
+              itemProp="name"
+            >
+              {faq.question}
+            </h2>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: expanded === index ? 1 : 0 }}
+              transition={{ duration: .5 }}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                background: "linear-gradient(315deg, #fbb034 0%, #ffdd00 74%)",
+                zIndex: -1,
+                borderRadius: ".75rem",
+              }}
+            />
+          </motion.header>
+
+          <AnimatePresence initial={false}>
+            {expanded === index && (
+              <motion.section
+                key="content"
+                id={`faq-content-${index}`}
+                aria-labelledby={`faq-question-${index}`}
+                initial="collapsed"
+                animate="open"
+                exit="collapsed"
+                variants={{
+                  open: { opacity: 1, height: "auto" },
+                  collapsed: { opacity: 0, height: 0 },
+                }}
+                transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98], when: "afterChildren" }}
+                className="accordionDetails"
+                itemProp="acceptedAnswer"
+                itemScope
+                itemType="https://schema.org/Answer"
+              >
+                <h5 className="answer" itemProp="text">{faq.answer}</h5>
+              </motion.section>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      ))}
+    </Container>
 
 
   );
