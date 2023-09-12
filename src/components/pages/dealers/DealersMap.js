@@ -138,7 +138,7 @@ const DealersMap = () => {
       <h1 className="dealer-map-title" itemProp="headline">
         Making Music All Over The World
       </h1>
-      <MapContainer
+      <Map
         center={[38, -95]}
         zoom={4}
         style={{ height: "80vh", width: "100%" }}
