@@ -1,5 +1,5 @@
 import React from 'react';
-import { Marker, Popup } from 'react-leaflet-universal';
+import { Marker, Popup } from 'react-leaflet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhoneAlt, faGlobe } from "@fortawesome/free-solid-svg-icons";
 

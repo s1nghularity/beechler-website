@@ -1,6 +1,6 @@
 // DealersMap.js
 import React, { useState, useEffect, useRef } from "react";
-import { Map, TileLayer } from "react-leaflet-universal";
+import { MapContainer, TileLayer } from "react-leaflet";
 import { Container } from "react-bootstrap";
 import L from "leaflet";
 import { locationData } from "./DealerData";
@@ -138,7 +138,7 @@ const DealersMap = () => {
       <h1 className="dealer-map-title" itemProp="headline">
         Making Music All Over The World
       </h1>
-      <Map
+      <MapContainer
         center={[38, -95]}
         zoom={4}
         style={{ height: "80vh", width: "100%" }}
@@ -175,7 +175,7 @@ const DealersMap = () => {
             handleLocationClick={handleLocationClick}
           />
         </div>
-      </Map>
+      </MapContainer>
     </Container>
   );
 };
