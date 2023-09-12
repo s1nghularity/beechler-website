@@ -26,24 +26,24 @@ const AboutCarousel = () => {
   };
 
   return (
-    <div className="carousel-container">
-      <Slider {...settings}>
-        {data.map((slide, index) => (
-          <div key={index} className="carousel-slide">
-            <Container>
-              <Row>
-                <Col md={12}>
-                  <img src={slide.image} alt={`slide-${index}`} className="about-carousel-img img-fluid" />
-                </Col>
-                <Col md={12}>
-                  <p className="about-carousel-text">{slide.text}</p>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <div className="carousel-container" role="region" aria-label="About Us Carousel"> 
+    <Slider {...settings}>
+      {data.map((slide, index) => (
+        <div key={index} className="carousel-slide">
+          <Container>
+            <Row>
+              <Col md={12}>
+                <img src={slide.image} alt={`slide-${index}`} className="about-carousel-img img-fluid" />
+              </Col>
+              <Col md={12}>
+                <p className="about-carousel-text">{slide.text}</p>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      ))}
+    </Slider>
+  </div>
   );
 };
 

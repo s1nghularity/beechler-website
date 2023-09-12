@@ -22,26 +22,26 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App" itemScope itemType="https://schema.org/WebPage">
       <Router>
         <AutoScrollToTop />
         <ScrollToTop />
-        <TopBar />
-        <NavBar />
-        <Container>
+        <TopBar itemScope itemType="https://schema.org/SiteNavigationElement" />
+        <NavBar itemScope itemType="https://schema.org/SiteNavigationElement" />
+        <Container itemScope itemType="https://schema.org/ItemList">
           <Routes>
-            <Route path="/" element={<HomePage className="home-page"/>} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/tip-openings" element={<TipOpenings />} />
-            <Route path="/dealers" element={<DealersPage />} />
-            <Route path="/artists" element={<ArtistsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/faq" element={<FAQs />} />
-            <Route path="/commitment" element={<OurCommitment />} />
+            <Route path="/" element={<HomePage className="home-page" itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/products" element={<ProductsPage itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/tip-openings" element={<TipOpenings itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/dealers" element={<DealersPage itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/artists" element={<ArtistsPage itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/about" element={<AboutPage itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/gallery" element={<Gallery itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/faq" element={<FAQs itemScope itemType="https://schema.org/WebPageElement" />} />
+            <Route path="/commitment" element={<OurCommitment itemScope itemType="https://schema.org/WebPageElement" />} />
           </Routes>
         </Container>
-        <Footer />
+        <Footer itemScope itemType="https://schema.org/WPFooter" />
       </Router>
     </div>
   );

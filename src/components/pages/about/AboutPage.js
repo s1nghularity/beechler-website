@@ -9,7 +9,7 @@ import Wave from "./Wave";
 
 const AboutPage = () => {
   return (
-    <Container className="about-page">
+    <Container className="about-page" role="main">
       <Row className="about-header">
         <Col xs={12}>
           <h1>Remlé Musical Products</h1>
@@ -61,7 +61,7 @@ const AboutPage = () => {
 
       <Wave />
 
-      <div>
+      <div itemScope itemType="http://schema.org/Organization">
         <AboutCarousel />
       </div>
 

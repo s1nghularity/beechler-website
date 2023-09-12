@@ -56,7 +56,7 @@ export default function Wave() {
   }, []);
 
   return (
-    <svg viewBox="0 0 1440 600" width="1440" height="600" className="wave-about">
+    <svg viewBox="0 0 1440 600" width="1440" height="600" className="wave-about" role="img" aria-label="Wave Animation">
       {Array.from(Array(5), (_, i) => (
         <motion.path
           key={i}
@@ -68,7 +68,7 @@ export default function Wave() {
         />
       ))}
 
-      <image href={treble2} x="5rem" y="4.75rem" width="100" height="100" className="treble2" />
+      <image href={treble2} x="5rem" y="4.75rem" width="100" height="100" className="treble2" alt="Treble Clef" />
     </svg>
   );
 }

@@ -62,6 +62,7 @@ function NavBar() {
       expanded={expanded}
       expand="md"
       className={`navbar ${expanded ? "expanded" : ""}`}
+      role="navigation"
     >
       <div className="navbar-header">
         {!isDesktop && (
@@ -69,6 +70,7 @@ function NavBar() {
             aria-controls="basic-navbar-nav"
             onClick={handleToggleClick}
             className={`hamburger ${togglerToggled ? "toggled" : ""}`}
+            aria-label="Toggle navigation"
           >
             <span
               className={`icon-bar top-bar ${togglerToggled ? "toggled" : ""}`}

@@ -12,11 +12,12 @@ const DealerMarker = ({ location, musicalNoteIcon, handleLocationClick, markerRe
     ref={(ref) => {
         markerRefs.current[location.name] = ref;
     }}
+    itemScope itemType="https://schema.org/GeoCoordinates"
   >
     <Popup className="dealer-map-popup">
-      <div className="popup-content">
-        <strong>{location.name}</strong>
-        <div className="popup-detail">
+      <div className="popup-content" itemScope itemType="https://schema.org/Store">
+        <strong itemProp="name">{location.name}</strong>
+        <div className="popup-detail" itemProp="address">
           <FontAwesomeIcon
             icon={faMapMarkerAlt}
             className="dealer-popup-icon"
@@ -25,14 +26,14 @@ const DealerMarker = ({ location, musicalNoteIcon, handleLocationClick, markerRe
           {location.address}, {location.city}, {location.state}{" "}
           {location.zip}, {location.country}
         </div>
-        <div className="popup-detail">
+        <div className="popup-detail" itemProp="telephone">
           <FontAwesomeIcon
             icon={faPhoneAlt}
             className="dealer-popup-icon"
           />
           {location.phone}
         </div>
-        <div className="popup-detail">
+        <div className="popup-detail" itemProp="url">
           <FontAwesomeIcon
             icon={faGlobe}
             className="dealer-popup-icon"

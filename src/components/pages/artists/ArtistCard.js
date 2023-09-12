@@ -33,13 +33,13 @@ const variants = {
 
 const ArtistCard = ({ artist }) => {
   return (
-    <motion.div initial="hidden" animate="visible" variants={variants}>
+    <motion.div initial="hidden" animate="visible" variants={variants} itemScope itemType="https://schema.org/MusicGroup">
       <Card className="artist-card">
         <Card.Body>
-          <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }}>
+          <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }} aria-label={`Artist name: ${artist.name}`} itemProp="name">
             {artist.name}
           </Card.Title>
-          <Card.Text className="mouthpiece-container">
+          <Card.Text className="mouthpiece-container" itemProp="instrument">
             {artist.mouthpieces.slice(0, 3).map((mouthpiece, index) => (
               <div key={index} className="mouthpiece">
                 {mouthpiece}

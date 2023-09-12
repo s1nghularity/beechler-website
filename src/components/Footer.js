@@ -56,7 +56,7 @@ function Footer() {
 
   return (
     <div className="stripe-footer">
-      <footer className="footer">
+      <footer className="footer" role="contentinfo">
         <Container>
           <Row>
             {sections.map((section) => (

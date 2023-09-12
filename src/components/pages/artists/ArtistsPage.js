@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import KeyboardDoubleArrowRightTwoToneIcon from '@mui/icons-material/KeyboardDoubleArrowRightTwoTone';
-import KeyboardDoubleArrowLeftTwoToneIcon from '@mui/icons-material/KeyboardDoubleArrowLeftTwoTone';
+import KeyboardDoubleArrowRightTwoToneIcon from "@mui/icons-material/KeyboardDoubleArrowRightTwoTone";
+import KeyboardDoubleArrowLeftTwoToneIcon from "@mui/icons-material/KeyboardDoubleArrowLeftTwoTone";
 
 import "../../../styles/ArtistsPage.css";
 import artistsData from "./ArtistData";
 import ArtistCard from "./ArtistCard";
+
+const generateJSONLD = (artists) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: artists.map((artist, index) => ({
+      "@type": "MusicGroup",
+      name: artist.name,
+      instrument: artist.mouthpieces,
+      position: index + 1,
+    })),
+  };
+};
 
 const Grid = ({ currentArtists }) => {
   return (
@@ -42,32 +55,47 @@ const ArtistsPage = () => {
     }
   };
 
+  useEffect(() => {
+    const jsonld = generateJSONLD(artistsData);
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify(jsonld);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
-    <Container className="artist-page">
+    <Container
+      className="artist-page"
+      itemType="https://schema.org/MusicGroup"
+      itemScope
+    >
       <Col className="artist-page-header">
-        <h1 className="text-center artist-title-header">
+        <h1 className="text-center artist-title-header" itemProp="name">
           The Musicians Choice
         </h1>
         <div className="pagination-buttons">
-  <button
-    onClick={prevPage}
-    disabled={currentPage === 1}
-    className="artist-chevron"
-    aria-label="Previous Page"
-  >
-    <KeyboardDoubleArrowLeftTwoToneIcon />
-  </button>
-  <div className="music-note">&#9835;</div>
-  <button
-    onClick={nextPage}
-    disabled={currentPage === totalPages}
-    className="artist-chevron"
-    aria-label="Next Page"
-  >
-    <KeyboardDoubleArrowRightTwoToneIcon />
-  </button>
-</div>
-
+          <button
+            onClick={prevPage}
+            disabled={currentPage === 1}
+            className="artist-chevron"
+            aria-label="Previous Page"
+          >
+            <KeyboardDoubleArrowLeftTwoToneIcon />
+          </button>
+          <div className="music-note">&#9835;</div>
+          <button
+            onClick={nextPage}
+            disabled={currentPage === totalPages}
+            className="artist-chevron"
+            aria-label="Next Page"
+          >
+            <KeyboardDoubleArrowRightTwoToneIcon />
+          </button>
+        </div>
       </Col>
 
       <Grid currentArtists={currentArtists} />

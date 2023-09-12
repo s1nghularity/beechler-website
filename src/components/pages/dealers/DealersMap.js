@@ -12,6 +12,37 @@ import DealerSearch from "./DealerSearch";
 import DealerList from "./DealerList";
 import DealerMarker from "./DealerMarker";
 
+const generateDealerJSONLD = (locations) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": locations.map((location, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Store",
+        "name": location.name,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": location.address,
+          "addressLocality": location.city,
+          "addressRegion": location.state,
+          "postalCode": location.zip,
+          "addressCountry": location.country
+        },
+        "telephone": location.phone,
+        "url": location.website,
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": location.latitude,
+          "longitude": location.longitude
+        }
+      }
+    }))
+  };
+};
+
+
 const DealersMap = () => {
   const [search, setSearch] = useState("");
   const [filteredLocations, setFilteredLocations] = useState(locationData);
@@ -65,14 +96,13 @@ const DealersMap = () => {
       map.scrollWheelZoom.disable(); // Disable scroll wheel zoom on touch start
     }
   };
-  
+
   const handleTouchEnd = () => {
     const map = mapRef.current;
     if (map) {
       map.scrollWheelZoom.enable(); // Enable scroll wheel zoom on touch end
     }
   };
-  
 
   const markerRefs = useRef({});
 
@@ -90,9 +120,24 @@ const DealersMap = () => {
     }
   };
 
+  useEffect(() => {
+    const jsonld = generateDealerJSONLD(filteredLocations);
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify(jsonld);
+    document.head.appendChild(script);
+  
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [filteredLocations]);
+  
+
   return (
-    <Container fluid>
-      <h1 className="dealer-map-title">Making Music All Over The World</h1>
+    <Container fluid itemScope itemType="https://schema.org/Map">
+      <h1 className="dealer-map-title" itemProp="headline">
+        Making Music All Over The World
+      </h1>
       <MapContainer
         center={[38, -95]}
         zoom={4}
@@ -102,6 +147,7 @@ const DealersMap = () => {
         tap={false}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        aria-label="Interactive map showing dealer locations"
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -121,6 +167,7 @@ const DealersMap = () => {
           className="dealer-search-container"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          aria-label="Dealer search and list section"
         >
           <DealerSearch search={search} setSearch={setSearch} />
           <DealerList
