@@ -35,6 +35,9 @@ const ProductDescription = ({ product }) => {
     <Card className="product-card-description" itemScope itemType="http://schema.org/Product">
       <meta itemProp="name" content={name} />
       <meta itemProp="category" content={category} />
+      <meta itemProp="price" content={price} />
+      <meta itemProp="priceCurrency" content="USD" />
+      <meta itemProp="availability" content="InStock" />
       <Row className="product-icon-row">
         <ProductIconRow product={product} />
       </Row>
@@ -70,8 +73,8 @@ const ProductCard = ({ product }) => (
   <Col xs={12} md={4} key={product.id}>
     <Card className="product-card" itemScope itemType="http://schema.org/Product">
       <div className="product-card-container">
-        <div className="product-image" itemProp="image">
-          <img src={product.image} alt={`Product ${product.name}`} />
+        <div className="product-image">
+          <img src={product.image} alt={`Product ${product.name}`} itemProp="image" />
         </div>
         <ProductDescription product={product} />
       </div>
