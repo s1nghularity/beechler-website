@@ -14,25 +14,7 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
-const generateProductJSONLD = (products, selectedCategory, selectedSubtype) => {
-  const itemList = products.map((product, index) => ({
-    "@type": selectedSubtype ? "IndividualProduct" : "ProductGroup",
-    name: product.id,
-    category: selectedCategory ? "product.category" : undefined,
-    additionalType: product.subtype,
-    price: product.price,
-  }));
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    itemListElement: itemList,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-    },
-  };
-};
+
 
 const ProductsPage = ({ product }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -92,21 +74,7 @@ const ProductsPage = ({ product }) => {
     }
   }, [filteredProducts, filterApplied]);
 
-  useEffect(() => {
-    const jsonld = generateProductJSONLD(
-      filteredProducts,
-      selectedCategory,
-      selectedSubtype
-    );
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.innerHTML = JSON.stringify(jsonld);
-    document.head.appendChild(script);
 
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [filteredProducts, selectedCategory, selectedSubtype]);
 
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();

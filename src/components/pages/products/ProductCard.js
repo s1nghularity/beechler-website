@@ -32,22 +32,17 @@ const ProductDescription = ({ product }) => {
   };
 
   return (
-    <Card className="product-card-description" itemScope itemType="http://schema.org/Product">
-      <meta itemProp="name" content={name} />
-      <meta itemProp="category" content={category} />
-      <meta itemProp="price" content={price} />
-      <meta itemProp="priceCurrency" content="USD" />
-      <meta itemProp="availability" content="InStock" />
+    <Card className="product-card-description">
       <Row className="product-icon-row">
         <ProductIconRow product={product} />
       </Row>
 
       <Row className="product-info-row">
-        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} itemProp="additionalProperty" />}
-        {finish && <FinishSection finish={finish} itemProp="additionalProperty" />}
-        {accessories && <AccessoriesSection accessories={accessories} itemProp="additionalProperty" />}
-        {model && <ModelSection model={model} itemProp="model" />}
-        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} itemProp="additionalProperty" />}
+        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} />}
+        {finish && <FinishSection finish={finish} />}
+        {accessories && <AccessoriesSection accessories={accessories} />}
+        {model && <ModelSection model={model} />}
+        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} />}
       </Row>
 
       {isCustomModel(id) && (
@@ -60,7 +55,6 @@ const ProductDescription = ({ product }) => {
         <Card.Text 
           className="price" 
           aria-label={`Product price: ${price}`}
-          itemProp="price"
         >
           MSRP ${price}
         </Card.Text>
@@ -69,17 +63,70 @@ const ProductDescription = ({ product }) => {
   );
 };
 
-const ProductCard = ({ product }) => (
-  <Col xs={12} md={4} key={product.id}>
-    <Card className="product-card" itemScope itemType="http://schema.org/Product">
-      <div className="product-card-container">
-        <div className="product-image">
-          <img src={product.image} alt={`Product ${product.name}`} itemProp="image" />
+const ProductCard = ({ product }) => {
+  const productJsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": product.image,
+    "description": product.description,
+    "sku": product.id,
+    "brand": {
+      "@type": "Brand",
+      "name": product.category // Using category as brand name
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": product.image,
+      "priceCurrency": "USD",
+      "price": product.price,
+      "availability": "https://schema.org/InStock"
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Instrument",
+        "value": product.instrument
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Subtype",
+        "value": product.subtype
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Accessories",
+        "value": product.accessories
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Model",
+        "value": product.model
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Bore",
+        "value": product.bore
+      }
+    ]
+  };
+
+  return (
+    <Col xs={12} md={4} key={product.id}>
+      <Card className="product-card">
+        <div className="product-card-container">
+          <div className="product-image">
+            <img src={product.image} alt={`Product ${product.name}`} />
+          </div>
+          <ProductDescription product={product} />
         </div>
-        <ProductDescription product={product} />
-      </div>
-    </Card>
-  </Col>
-);
+
+        <script type="application/ld+json">
+          {JSON.stringify(productJsonLd)}
+        </script>
+      </Card>
+    </Col>
+  );
+};
 
 export default ProductCard;
