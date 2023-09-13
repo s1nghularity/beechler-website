@@ -21,7 +21,7 @@ import belliteBaritone from "../../../assets/img/products/bellite/bellite-barito
 import customBelliteS from "../../../assets/img/products/bellite/custom-bellite-soprano.webp";
 import customBelliteB from "../../../assets/img/products/bellite/custom-bellite-baritone.webp";
 
-//TODO:HARD RUBBER
+//HARD RUBBER
 import b22 from "../../../assets/img/products/hard-rubber/b22.webp";
 import b25 from "../../../assets/img/products/hard-rubber/b25.webp";
 import b25c from "../../../assets/img/products/hard-rubber/b25c.webp";

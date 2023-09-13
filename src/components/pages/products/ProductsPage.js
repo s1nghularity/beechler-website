@@ -15,16 +15,19 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
-const generateProductJSONLD = (products) => {
+const generateProductJSONLD = (products, selectedCategory, selectedSubtype) => {
+  const itemList = products.map((product, index) => ({
+    "@type": selectedSubtype ? "IndividualProduct" : "ProductGroup",
+    "name": product.id,
+    "category": product.category,
+    "subtype": product.subtype,
+    "price": product.price,
+    
+  }));
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": products.map((product, index) => ({
-      "@type": "Product",
-      "name": product.name,
-      "category": product.category,
-
-    }))
+    "itemListElement": itemList,
   };
 };
 
@@ -36,7 +39,6 @@ const ProductsPage = () => {
   const [filterApplied, setFilterApplied] = useState(false);
 
 
-  
 
   //HANDLES PRODUCTNAV FILTERS//
   const handleCategorySelect = (category) => {
@@ -91,6 +93,19 @@ const ProductsPage = () => {
     }
   }, [filteredProducts, filterApplied]);
 
+  useEffect(() => {
+    const jsonld = generateProductJSONLD(filteredProducts, selectedCategory, selectedSubtype); // Added selectedSubtype
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify(jsonld);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [filteredProducts, selectedCategory, selectedSubtype]);
+  
+
 
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
@@ -110,17 +125,7 @@ const ProductsPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    const jsonld = generateProductJSONLD(products);
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify(jsonld);
-    document.head.appendChild(script);
 
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
 
   return (
     <AnimatePresence>

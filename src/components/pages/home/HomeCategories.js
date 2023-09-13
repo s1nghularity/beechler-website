@@ -45,7 +45,7 @@ function HomeCategories() {
                   <Card
                     className="category-card"
                     itemScope
-                    itemType="http://schema.org/Product"
+                    itemType="http://schema.org/ProductGroup"
                   >
                     <Card.Body>
                       <div className="category-content">
