@@ -14,8 +14,6 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
-
-
 const ProductsPage = ({ product }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubtype, setSelectedSubtype] = useState(null);
@@ -28,7 +26,7 @@ const ProductsPage = ({ product }) => {
       (!selectedSubtype || product.subtype === selectedSubtype)
   );
 
-  //HANDLES PRODUCTNAV FILTERS//
+  // HANDLES PRODUCTNAV FILTERS//
   const handleCategorySelect = (category) => {
     console.log(`Selected category: ${category}`);
     setSelectedCategory(category);
@@ -74,9 +72,7 @@ const ProductsPage = ({ product }) => {
     }
   }, [filteredProducts, filterApplied]);
 
-
-
-  //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
+  // HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEGORY//
   const location = useLocation();
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -94,6 +90,12 @@ const ProductsPage = ({ product }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const itemListElements = previousProducts.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `/product/${product.id}`,
+  }));
+
   return (
     <AnimatePresence>
       <Container
@@ -104,13 +106,7 @@ const ProductsPage = ({ product }) => {
       >
         <meta
           itemProp="itemListElement"
-          content={JSON.stringify(
-            products.map((product, index) => ({
-              "@type": "ListItem",
-              position: index + 1,
-              url: `/product/${product.id}`,
-            }))
-          )}
+          content={JSON.stringify(itemListElements)}
         />
 
         <Row>
@@ -151,4 +147,5 @@ const ProductsPage = ({ product }) => {
     </AnimatePresence>
   );
 };
+
 export default ProductsPage;
