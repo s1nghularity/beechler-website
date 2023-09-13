@@ -14,6 +14,20 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
+const generateJSONLD = (previousProducts) => {
+  const itemListElements = previousProducts.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `/product/${product.id}`,
+  }));
+
+  return {
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    itemListElement: itemListElements,
+  };
+};
+
 const ProductsPage = ({ product }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubtype, setSelectedSubtype] = useState(null);
@@ -90,24 +104,12 @@ const ProductsPage = ({ product }) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const itemListElements = previousProducts.map((product, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    url: `/product/${product.id}`,
-  }));
+  const jsonLd = generateJSONLD(previousProducts);
 
   return (
     <AnimatePresence>
-      <Container
-        fluid
-        className="products-page"
-        itemScope
-        itemType="http://schema.org/ItemList"
-      >
-        <meta
-          itemProp="itemListElement"
-          content={JSON.stringify(itemListElements)}
-        />
+      <Container fluid className="products-page">
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
         <Row>
           <Col sm={12} md={12} lg={4} xl={4}>
