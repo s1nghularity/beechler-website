@@ -14,17 +14,37 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
-const generateJSONLD = (previousProducts) => {
-  const itemListElements = previousProducts.map((product, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    url: `/product/${product.id}`,
-  }));
-
+const generateProductJSONLD = (products) => {
   return {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: itemListElements,
+    "itemListElement": products.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": product.name,
+        "description": product.description,
+        "url": `/product/${product.id}`,
+        "image": product.image,
+        "sku": product.id,
+        "mpn": product.id,
+        "brand": {
+          "@type": "Brand",
+          "name": "Beechler"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": `/product/${product.id}`,
+          "priceCurrency": "USD",
+          "price": product.price,
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        }
+
+        
+      }
+    }))
   };
 };
 
@@ -39,6 +59,18 @@ const ProductsPage = ({ product }) => {
       (!selectedCategory || product.category === selectedCategory) &&
       (!selectedSubtype || product.subtype === selectedSubtype)
   );
+
+  useEffect(() => {
+    const jsonld = generateProductJSONLD(filteredProducts);
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify(jsonld);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [filteredProducts]);
 
   // HANDLES PRODUCTNAV FILTERS//
   const handleCategorySelect = (category) => {
@@ -104,12 +136,12 @@ const ProductsPage = ({ product }) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const jsonLd = generateJSONLD(previousProducts);
+
 
   return (
     <AnimatePresence>
       <Container fluid className="products-page">
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+
 
         <Row>
           <Col sm={12} md={12} lg={4} xl={4}>
