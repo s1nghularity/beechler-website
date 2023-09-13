@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-// import ProductNav from "./ProductNav";
+
 import ProductsNav2 from "./ProductsNav2";
 import DynamicInfo from "./DynamicInfo";
 import ProductsGrid from "./ProductsGrid.js";
@@ -19,25 +19,35 @@ const generateProductJSONLD = (products, selectedCategory, selectedSubtype) => {
   const itemList = products.map((product, index) => ({
     "@type": selectedSubtype ? "IndividualProduct" : "ProductGroup",
     "name": product.id,
-    "category": product.category,
+    "category": selectedCategory ? "product.category" : undefined,
     "additionalType": product.subtype,
     "price": product.price,
     
   }));
   return {
     "@context": "https://schema.org",
-    "@type": "ItemList",
+    "@type": "Product",
     "itemListElement": itemList,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
   };
 };
 
 
-const ProductsPage = () => {
+const ProductsPage = ({product}) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubtype, setSelectedSubtype] = useState(null);
   const [previousProducts, setPreviousProducts] = useState(products);
   const [filterApplied, setFilterApplied] = useState(false);
 
+  const filteredProducts = products.filter(
+    (product) =>
+      (!selectedCategory || product.category === selectedCategory) &&
+      (!selectedSubtype || product.subtype === selectedSubtype)
+  );
 
 
   //HANDLES PRODUCTNAV FILTERS//
@@ -73,20 +83,14 @@ const ProductsPage = () => {
     });
   };
 
-  const filteredProducts = products.filter(
-    (product) =>
-      (!selectedCategory || product.category === selectedCategory) &&
-      (!selectedSubtype || product.subtype === selectedSubtype)
-  );
+
   useEffect(() => {
     if (filterApplied) {
       if (filteredProducts.length === 0) {
-        console.log("No products available for the selected filters.");
         showToast();
         setSelectedCategory(null); // reset selectedCategory
         setFilterApplied(false);
       } else {
-        console.log(`Filtered products: ${JSON.stringify(filteredProducts)}`);
         setPreviousProducts(filteredProducts);
         setFilterApplied(false);
       }
@@ -94,7 +98,7 @@ const ProductsPage = () => {
   }, [filteredProducts, filterApplied]);
 
   useEffect(() => {
-    const jsonld = generateProductJSONLD(filteredProducts, selectedCategory, selectedSubtype); // Added selectedSubtype
+    const jsonld = generateProductJSONLD(filteredProducts, selectedCategory, selectedSubtype);
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.innerHTML = JSON.stringify(jsonld);

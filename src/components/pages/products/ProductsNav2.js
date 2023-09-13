@@ -28,9 +28,40 @@ const ProductsNav2 = ({
     if (animateSelection) {
       setTimeout(() => {
         setAnimateSelection(false);
-      }, 1000); // Reset after 1 second (or the duration of your animation)
+      }, 1000);
     }
   }, [animateSelection]);
+
+  let badgeColor;
+  switch (selectedType) {
+    case "Soprano":
+      badgeColor = "tomato";
+      break;
+    case "Alto":
+      badgeColor = "gold";
+      break;
+    case "Tenor":
+      badgeColor = "green";
+      break;
+    case "Baritone":
+      badgeColor = "rebeccapurple";
+      break;
+    default:
+      badgeColor = "All"; // Default case
+  }
+
+  const categoryOptions = [
+    "Beechler Diamond",
+    "Beechler Tonalex",
+    "Beechler Bellite",
+    "Beechler Hard Rubber",
+    "Beechler Customized",
+    "ARB Metal",
+    "ARB Great Neck Originals",
+    "Accessories & Services",
+  ];
+
+  const subtypeOptions = ["Soprano", "Alto", "Tenor", "Baritone"];
   
 
   const handleButtonClick = (selectedMenu) => {
@@ -84,47 +115,16 @@ const ProductsNav2 = ({
     setSelectedType(null);
   };
 
-  let badgeColor;
-  switch (selectedType) {
-    case "Soprano":
-      badgeColor = "tomato";
-      break;
-    case "Alto":
-      badgeColor = "gold";
-      break;
-    case "Tenor":
-      badgeColor = "green";
-      break;
-    case "Baritone":
-      badgeColor = "rebeccapurple";
-      break;
-    default:
-      badgeColor = "All"; // Default case
-  }
 
-  const categoryOptions = [
-    "Beechler Diamond",
-    "Beechler Tonalex",
-    "Beechler Bellite",
-    "Beechler Hard Rubber",
-    "Beechler Customized",
-    "ARB Metal",
-    "ARB Great Neck Originals",
-    "Accessories & Services",
-  ];
-
-  const subtypeOptions = ["Soprano", "Alto", "Tenor", "Baritone"];
 
   
 
   return (
     <AnimatePresence>
-    {/* Added 'role' and 'aria-label' attributes for accessibility */}
     <nav role="navigation" aria-label="Product Navigation" className="products-nav-container">
-      {/* Added 'role' attribute for accessibility */}
       <div role="menu" className="products-nav-menu">
         <div className="menu-wrapper">
-          {/* Added 'aria-haspopup' and 'aria-expanded' attributes for accessibility */}
+
           <MenuButton
             aria-haspopup="true"
             aria-expanded={isMouthpiecesOpen}
@@ -141,7 +141,7 @@ const ProductsNav2 = ({
         </div>
 
         <div className="menu-wrapper">
-          {/* Added 'aria-haspopup' and 'aria-expanded' attributes for accessibility */}
+
           <MenuButton
             aria-haspopup="true"
             aria-expanded={isTypeOpen}
@@ -158,7 +158,7 @@ const ProductsNav2 = ({
           />
         </div>
 
-        {/* Added 'aria-label' attribute for accessibility */}
+
         <button aria-label="Reset Filters" className="reset-filters" onClick={handleResetFilters}>
           Reset Filters
         </button>

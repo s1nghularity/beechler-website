@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useState, } from "react";
 import { Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard.js";
 
@@ -30,7 +30,7 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
   };
 
   return (
-    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`} itemscope itemtype="http://schema.org/Product">
+    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`} itemscope itemtype="http://schema.org/ProductGroup">
       {hasProducts ? (
         <>
           {Object.entries(productsByCategory).map(
@@ -41,7 +41,7 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
                 </Col>
                 <Row className={`product-row animate__animated ${getProductRowAnimation(category, selectedSubtype)}`} role="list">
                   {categoryProducts.map((product) => (
-                    <ProductCard key={product.id} product={product} />
+                    <ProductCard key={product.id} product={product} itemscope itemtype="http://schema.org/IndividualProduct" />
                   ))}
                 </Row>
               </React.Fragment>
