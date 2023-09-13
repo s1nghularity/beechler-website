@@ -20,7 +20,7 @@ const generateProductJSONLD = (products, selectedCategory, selectedSubtype) => {
     "@type": selectedSubtype ? "IndividualProduct" : "ProductGroup",
     "name": product.id,
     "category": product.category,
-    "subtype": product.subtype,
+    "additionalType": product.subtype,
     "price": product.price,
     
   }));
