@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 import ProductsNav2 from "./ProductsNav2";
 import DynamicInfo from "./DynamicInfo";
 import ProductsGrid from "./ProductsGrid.js";
@@ -18,26 +17,24 @@ import "../../../styles/ProductsNav2.css";
 const generateProductJSONLD = (products, selectedCategory, selectedSubtype) => {
   const itemList = products.map((product, index) => ({
     "@type": selectedSubtype ? "IndividualProduct" : "ProductGroup",
-    "name": product.id,
-    "category": selectedCategory ? "product.category" : undefined,
-    "additionalType": product.subtype,
-    "price": product.price,
-    
+    name: product.id,
+    category: selectedCategory ? "product.category" : undefined,
+    additionalType: product.subtype,
+    price: product.price,
   }));
   return {
     "@context": "https://schema.org",
     "@type": "Product",
-    "itemListElement": itemList,
-    "offers": {
+    itemListElement: itemList,
+    offers: {
       "@type": "Offer",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
   };
 };
 
-
-const ProductsPage = ({product}) => {
+const ProductsPage = ({ product }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubtype, setSelectedSubtype] = useState(null);
   const [previousProducts, setPreviousProducts] = useState(products);
@@ -48,7 +45,6 @@ const ProductsPage = ({product}) => {
       (!selectedCategory || product.category === selectedCategory) &&
       (!selectedSubtype || product.subtype === selectedSubtype)
   );
-
 
   //HANDLES PRODUCTNAV FILTERS//
   const handleCategorySelect = (category) => {
@@ -83,7 +79,6 @@ const ProductsPage = ({product}) => {
     });
   };
 
-
   useEffect(() => {
     if (filterApplied) {
       if (filteredProducts.length === 0) {
@@ -98,9 +93,13 @@ const ProductsPage = ({product}) => {
   }, [filteredProducts, filterApplied]);
 
   useEffect(() => {
-    const jsonld = generateProductJSONLD(filteredProducts, selectedCategory, selectedSubtype);
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const jsonld = generateProductJSONLD(
+      filteredProducts,
+      selectedCategory,
+      selectedSubtype
+    );
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.innerHTML = JSON.stringify(jsonld);
     document.head.appendChild(script);
 
@@ -108,8 +107,6 @@ const ProductsPage = ({product}) => {
       document.head.removeChild(script);
     };
   }, [filteredProducts, selectedCategory, selectedSubtype]);
-  
-
 
   //HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEEGORY//
   const location = useLocation();
@@ -129,51 +126,60 @@ const ProductsPage = ({product}) => {
     window.scrollTo(0, 0);
   }, []);
 
-
-
   return (
     <AnimatePresence>
-          <Container fluid className="products-page" itemScope itemType="http://schema.org/ItemList">
-        {/* Add itemListElement for schema.org */}
-        <meta itemProp="itemListElement" content={JSON.stringify(products.map((product, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "url": `/product/${product.id}`
-        })))} />
+      <Container
+        fluid
+        className="products-page"
+        itemScope
+        itemType="http://schema.org/ItemList"
+      >
+        <meta
+          itemProp="itemListElement"
+          content={JSON.stringify(
+            products.map((product, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              url: `/product/${product.id}`,
+            }))
+          )}
+        />
 
-      <Row>
-        <Col sm={12} md={12} lg={4} xl={4}>
-          <ProductsNav2
-            handleCategorySelect={handleCategorySelect}
-            handleSubtypeSelect={handleSubtypeSelect}
-            resetFilters={resetFilters}
-          />
-        </Col>
-        <Col sm={12} md={12} lg={8} xl={8}>
-        <ProductsGrid products={previousProducts} selectedCategory={selectedCategory} selectedSubtype={selectedSubtype} />
+        <Row>
+          <Col sm={12} md={12} lg={4} xl={4}>
+            <ProductsNav2
+              handleCategorySelect={handleCategorySelect}
+              handleSubtypeSelect={handleSubtypeSelect}
+              resetFilters={resetFilters}
+            />
+          </Col>
+          <Col sm={12} md={12} lg={8} xl={8}>
+            <ProductsGrid
+              products={previousProducts}
+              selectedCategory={selectedCategory}
+              selectedSubtype={selectedSubtype}
+            />
+          </Col>
 
-        </Col>
+          <DynamicInfo infoContent={selectedCategory} />
 
-        <DynamicInfo infoContent={selectedCategory} />
-
-        <Row sm={12} md={12} lg={12} xl={12}>
-          <div className="product-email-signup">
-            <Button href="/dealers" className="find-dealer">
-              Find a store near you!
-            </Button>
-            <Col sm={6} md={6} lg={6} xl={6}>
-              <div className="email-signup-form">
-                <EmailSignup />
-              </div>
-            </Col>
-          </div>
+          <Row sm={12} md={12} lg={12} xl={12}>
+            <div className="product-email-signup">
+              <Button href="/dealers" className="find-dealer">
+                Find a store near you!
+              </Button>
+              <Col sm={6} md={6} lg={6} xl={6}>
+                <div className="email-signup-form">
+                  <EmailSignup />
+                </div>
+              </Col>
+            </div>
+          </Row>
         </Row>
 
-      </Row>
-
-      <ScrollToTop />
-      <ToastContainer />
-    </Container>
+        <ScrollToTop />
+        <ToastContainer />
+      </Container>
     </AnimatePresence>
   );
 };
