@@ -9,10 +9,19 @@ import {
   LigatureTypeSection,
   FinishSection,
   BoreSection,
-  CustomBubble
+  CustomBubble,
 } from "../products/ProductCardSpecs";
 
-const selectedProductIds = ["B10", "B11", "B12", "B14", "B19", "B18", "B20", "B21"];
+const selectedProductIds = [
+  "B10",
+  "B11",
+  "B12",
+  "B14",
+  "B19",
+  "B18",
+  "B20",
+  "B21",
+];
 
 const ProductDescription = ({ product }) => {
   const {
@@ -32,7 +41,11 @@ const ProductDescription = ({ product }) => {
   };
 
   return (
-    <Card className="product-card-description" itemScope itemType="http://schema.org/Product">
+    <Card
+      className="product-card-description"
+      itemScope
+      itemType="http://schema.org/Product"
+    >
       <meta itemProp="name" content={name} />
       <meta itemProp="category" content={category} />
       <meta itemProp="price" content={price} />
@@ -43,11 +56,30 @@ const ProductDescription = ({ product }) => {
       </Row>
 
       <Row className="product-info-row">
-        {ligatureType && <LigatureTypeSection ligatureType={ligatureType} itemProp="additionalProperty" />}
-        {finish && <FinishSection finish={finish} itemProp="additionalProperty" />}
-        {accessories && <AccessoriesSection accessories={accessories} itemProp="additionalProperty" />}
+        
+        {ligatureType && (
+          <LigatureTypeSection
+            ligatureType={ligatureType}
+            itemProp="additionalProperty"
+          />
+        )}
+
+        {finish && (
+          <FinishSection finish={finish} itemProp="additionalProperty" />
+        )}
+
+        {accessories && (
+          <AccessoriesSection
+            accessories={accessories}
+            itemProp="additionalProperty"
+          />
+        )}
+
         {model && <ModelSection model={model} itemProp="model" />}
-        {selectedProductIds.includes(id) && bore && <BoreSection bore={bore} itemProp="additionalProperty" />}
+        {selectedProductIds.includes(id) && bore && (
+          <BoreSection bore={bore} itemProp="additionalProperty" />
+        )}
+
       </Row>
 
       {isCustomModel(id) && (
@@ -57,8 +89,8 @@ const ProductDescription = ({ product }) => {
       )}
 
       <Row className="price-row">
-        <Card.Text 
-          className="price" 
+        <Card.Text
+          className="price"
           aria-label={`Product price: ${price}`}
           itemProp="price"
         >
@@ -71,10 +103,18 @@ const ProductDescription = ({ product }) => {
 
 const ProductCard = ({ product }) => (
   <Col xs={12} md={4} key={product.id}>
-    <Card className="product-card" itemScope itemType="http://schema.org/Product">
+    <Card
+      className="product-card"
+      itemScope
+      itemType="http://schema.org/Product"
+    >
       <div className="product-card-container">
         <div className="product-image">
-          <img src={product.image} alt={`Product ${product.name}`} itemProp="image" />
+          <img
+            src={product.image}
+            alt={`Product ${product.name}`}
+            itemProp="image"
+          />
         </div>
         <ProductDescription product={product} />
       </div>

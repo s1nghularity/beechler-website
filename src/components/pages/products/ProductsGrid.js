@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useState, useEffect} from "react";
 import { Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard.js";
 
@@ -28,6 +28,10 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
     }
     return "animate__flipInUp"; // Default animation for product rows
   };
+
+  useEffect(() => {
+    console.log("Current Products: ", products);
+  }, [products]);
 
   return (
     <Row className={`products-grid ${isLoaded ? "loaded" : ""}`} itemscope itemtype="http://schema.org/ProductGroup">
@@ -61,3 +65,4 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
 };
 
 export default ProductsGrid;
+

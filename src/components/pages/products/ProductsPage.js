@@ -18,33 +18,31 @@ const generateProductJSONLD = (products) => {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": products.map((product, index) => ({
+    itemListElement: products.map((product, index) => ({
       "@type": "ListItem",
-      "position": index + 1,
-      "item": {
+      position: index + 1,
+      item: {
         "@type": "Product",
-        "name": product.name,
-        "description": product.description,
-        "url": `/product/${product.id}`,
-        "image": product.image,
-        "sku": product.id,
-        "mpn": product.id,
-        "brand": {
+        name: product.name,
+        description: product.description,
+        url: `/product/${product.id}`,
+        image: product.image,
+        sku: product.id,
+        mpn: product.id,
+        brand: {
           "@type": "Brand",
-          "name": "Beechler"
+          name: "Beechler",
         },
-        "offers": {
+        offers: {
           "@type": "Offer",
-          "url": `/product/${product.id}`,
-          "priceCurrency": "USD",
-          "price": product.price,
-          "itemCondition": "https://schema.org/NewCondition",
-          "availability": "https://schema.org/InStock"
-        }
-
-        
-      }
-    }))
+          url: `/product/${product.id}`,
+          priceCurrency: "USD",
+          price: product.price,
+          itemCondition: "https://schema.org/NewCondition",
+          availability: "https://schema.org/InStock",
+        },
+      },
+    })),
   };
 };
 
@@ -118,6 +116,10 @@ const ProductsPage = ({ product }) => {
     }
   }, [filteredProducts, filterApplied]);
 
+  useEffect(() => {
+    console.log("Current Products: ", products);
+  }, [products]);
+
   // HOMEPAGE CATEGORY SELECTION FILTER INTO PRODUCT CATEGORY//
   const location = useLocation();
   useEffect(() => {
@@ -136,13 +138,9 @@ const ProductsPage = ({ product }) => {
     window.scrollTo(0, 0);
   }, []);
 
-
-
   return (
     <AnimatePresence>
       <Container fluid className="products-page">
-
-
         <Row>
           <Col sm={12} md={12} lg={4} xl={4}>
             <ProductsNav2
