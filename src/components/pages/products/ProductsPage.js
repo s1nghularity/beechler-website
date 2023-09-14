@@ -15,22 +15,27 @@ import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
 
-const generateProductSchema = (products) => ({
-  '@context': 'https://schema.org/',
-  '@type': 'Product',
-  'name': products.id, 
-  'image': products.image,
-  'brand': {
-    '@type': 'Thing',
-    'name': products.category
-  },
-  'offers': {
-    '@type': 'Offer',
-    'priceCurrency': 'USD',
-    'price': products.price,
-    'availability': 'https://schema.org/InStock'
-  }
-});
+const generateProductJSONLD = (products) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: products.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: product.name,
+        image: product.image,
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "USD",
+          price: product.price,
+          availability: "https://schema.org/InStock",
+        },
+      },
+    })),
+  };
+};
 
 
 const ProductsPage = ({ product }) => {
@@ -46,16 +51,17 @@ const ProductsPage = ({ product }) => {
   );
 
   useEffect(() => {
-    const schema = generateProductSchema(product);
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify(schema);
+    const jsonld = generateProductJSONLD(filteredProducts);
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = JSON.stringify(jsonld);
     document.head.appendChild(script);
-
+  
     return () => {
       document.head.removeChild(script);
     };
-  }, [product]);
+  }, [filteredProducts]);
+
   
 
   // HANDLES PRODUCTNAV FILTERS//

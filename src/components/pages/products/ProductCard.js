@@ -12,6 +12,7 @@ import {
   CustomBubble,
 } from "../products/ProductCardSpecs";
 
+
 const selectedProductIds = [
   "B10",
   "B11",
@@ -56,7 +57,7 @@ const ProductDescription = ({ product }) => {
       </Row>
 
       <Row className="product-info-row">
-        
+
         {ligatureType && (
           <LigatureTypeSection
             ligatureType={ligatureType}
