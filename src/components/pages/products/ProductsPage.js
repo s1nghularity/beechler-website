@@ -14,51 +14,26 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
-const generateIndividualProductJSONLD = (product) => {
-  return {
-    "@type": "Product",
-    "name": product.id,
-    "description": product.category,
-    "url": `/product/${product.id}`,
-    "image": product.image,
-    "sku": product.id,
-    "mpn": product.id,
-    "brand": {
-      "@type": "Brand",
-      "name": "Beechler"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": `/product/${product.id}`,
-      "priceCurrency": "USD",
-      "price": product.price,
-      "itemCondition": "https://schema.org/NewCondition",
-      "availability": "https://schema.org/InStock"
-    }
-  };
-};
 
 const generateProductJSONLD = (products) => {
-  const productsByCategory = products.reduce((acc, product) => {
-    if (!acc[product.category]) {
-      acc[product.category] = [];
-    }
-    acc[product.category].push(product);
-    return acc;
-  }, {});
-
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": Object.keys(productsByCategory).map((category, index) => ({
-      "@type": "ItemList",
-      "name": category,
-      "itemListElement": productsByCategory[category].map((product, position) => ({
-        "@type": "ListItem",
-        "position": position + 1,
-        "item": generateIndividualProductJSONLD(product)
-      }))
-    }))
+    itemListElement: products.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: product.id, // Using id as the name
+        category: product.category,
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "USD",
+          price: product.price,
+          availability: "https://schema.org/InStock",
+        },
+      },
+    })),
   };
 };
 
