@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import KeyboardDoubleArrowRightTwoToneIcon from "@mui/icons-material/KeyboardDoubleArrowRightTwoTone";
 import KeyboardDoubleArrowLeftTwoToneIcon from "@mui/icons-material/KeyboardDoubleArrowLeftTwoTone";
 
@@ -13,13 +12,22 @@ const generateJSONLD = (artists) => {
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListElement: artists.map((artist, index) => ({
-      "@type": "MusicGroup",
-      name: artist.name,
-      instrument: artist.mouthpieces,
+      "@type": "ListItem",
       position: index + 1,
+      item: {
+        "@type": "Person",
+        "@id": `/artist/${artist.id}`,
+        name: artist.name,
+        jobTitle: "Musician",
+        instrument: artist.mouthpieces.map((mouthpiece) => ({
+          "@type": "Product",
+          name: mouthpiece.name,
+        })),
+      },
     })),
   };
 };
+
 
 const Grid = ({ currentArtists }) => {
   return (
@@ -61,11 +69,13 @@ const ArtistsPage = () => {
     script.type = "application/ld+json";
     script.innerHTML = JSON.stringify(jsonld);
     document.head.appendChild(script);
-
+  
     return () => {
       document.head.removeChild(script);
     };
   }, []);
+  
+  
 
   return (
     <Container
