@@ -53,15 +53,17 @@ const ProductsPage = ({ product }) => {
 
   useEffect(() => {
     const jsonld = generateProductJSONLD(filteredProducts);
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
+    let script = document.querySelector('script[type="application/ld+json"]');
+    
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      document.head.appendChild(script);
+    }
+    
     script.innerHTML = JSON.stringify(jsonld);
-    document.head.appendChild(script);
-  
-    return () => {
-      document.head.removeChild(script);
-    };
   }, [filteredProducts]);
+  
 
   
 
