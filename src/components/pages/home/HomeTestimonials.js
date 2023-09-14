@@ -18,17 +18,23 @@ const HomeTestimonials = () => {
           {
             reviewBody: "Beechler makes the best mouthpieces in the world. Achieve a warm, rich, and bright tone with just the right reed and ligature setup. Every note sings beautifully.",
             author: "- Edwin Tan",
-            itemReviewed: "Beechler Mouthpiece"
+            itemReviewed: "Beechler Mouthpiece",
+            price: 150,
+            priceCurrency: "USD"
           },
           {
             reviewBody: "Beechler's rubber mouthpiece is a steal for its bright sound and amazing price. Comparable to expensive brands like SR Technologies and Jody Jazz. Used by popular saxophonists like Gerald Albright and Kenny G.",
             author: "- Michael",
-            itemReviewed: "Beechler Mouthpiece"
+            itemReviewed: "Beechler Mouthpiece",
+            price: 150,
+            priceCurrency: "USD"
           },
           {
             reviewBody: "The 8m Beechler mouthpiece is perfect for those who want a big, bright sound or a powerful low sub tone. Gives everything a Lakey has with more excitement than metal.",
             author: "- Elliot Chavers",
-            itemReviewed: "Beechler Mouthpiece"
+            itemReviewed: "Beechler Mouthpiece",
+            price: 150,
+            priceCurrency: "USD"
           }
         ].map((testimonial, index) => (
           <Col
@@ -55,6 +61,11 @@ const HomeTestimonials = () => {
             </div>
             <div itemProp="itemReviewed" itemScope itemType="http://schema.org/Product">
               <meta itemProp="name" content={testimonial.itemReviewed} />
+              <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
+                <meta itemProp="price" content={testimonial.price} />
+                <meta itemProp="priceCurrency" content={testimonial.priceCurrency} />
+                <meta itemProp="availability" content="http://schema.org/InStock" />
+              </div>
             </div>
           </Col>
         ))}
