@@ -16,6 +16,7 @@ import "../../../styles/ProductsNav2.css";
 
 
 const generateProductJSONLD = (products) => {
+  const fullImageUrl = `${window.location.origin}${products.image}`;
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -25,7 +26,7 @@ const generateProductJSONLD = (products) => {
       item: {
         "@type": "Product",
         name: product.name,
-        image: product.image,
+        image: fullImageUrl,
         offers: {
           "@type": "Offer",
           priceCurrency: "USD",
