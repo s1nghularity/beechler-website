@@ -23,12 +23,12 @@ const HomeTestimonials = () => {
           {
             reviewBody: "Beechler's rubber mouthpiece is a steal for its bright sound and amazing price. Comparable to expensive brands like SR Technologies and Jody Jazz. Used by popular saxophonists like Gerald Albright and Kenny G.",
             author: "- Michael",
-            itemReviewed: "Beechler Rubber Mouthpiece"
+            itemReviewed: "Beechler Mouthpiece"
           },
           {
             reviewBody: "The 8m Beechler mouthpiece is perfect for those who want a big, bright sound or a powerful low sub tone. Gives everything a Lakey has with more excitement than metal.",
             author: "- Elliot Chavers",
-            itemReviewed: "8m Beechler Mouthpiece"
+            itemReviewed: "Beechler Mouthpiece"
           }
         ].map((testimonial, index) => (
           <Col

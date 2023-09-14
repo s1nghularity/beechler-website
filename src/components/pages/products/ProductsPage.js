@@ -24,7 +24,7 @@ const generateProductJSONLD = (products) => {
       position: index + 1,
       item: {
         "@type": "Product",
-        name: product.id, // Using id as the name
+        name: product.id, 
         category: product.category,
         offers: {
           "@type": "Offer",
@@ -53,6 +53,7 @@ const ProductsPage = ({ product }) => {
 
   useEffect(() => {
     const jsonld = generateProductJSONLD(filteredProducts);
+
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.innerHTML = JSON.stringify(jsonld);
