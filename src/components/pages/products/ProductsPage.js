@@ -14,49 +14,29 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
-const generateIndividualProductJSONLD = (products) => {
-  return products.map((product, index) => ({
-    "@type": "IndividualProduct", // Changed from "Product"
-    name: product.id,
-    description: product.category,
-    url: `/product/${product.id}`,
-    image: product.image,
-    sku: product.id,
-    mpn: product.id,
-    brand: {
+const generateIndividualProductJSONLD = (product) => {
+  return {
+    "@type": "Product",
+    "name": product.id,
+    "description": product.category,
+    "url": `/product/${product.id}`,
+    "image": product.image,
+    "sku": product.id,
+    "mpn": product.id,
+    "brand": {
       "@type": "Brand",
-      name: "Beechler",
+      "name": "Beechler"
     },
-    offers: {
+    "offers": {
       "@type": "Offer",
-      url: `/product/${product.id}`,
-      priceCurrency: "USD",
-      price: product.price,
-      itemCondition: "https://schema.org/NewCondition",
-      availability: "https://schema.org/InStock",
-    },
-  }));
-};
-
-const generateProductGroupJSONLD = (productsByCategory) => {
-  return Object.keys(productsByCategory).map((category, index) => ({
-    '@type': 'ProductGroup',
-    name: category,
-    hasOfferCatalog: {
-      '@type': 'ItemList',
-      itemListElement: generateIndividualProductJSONLD(productsByCategory[category]).map((product, position) => ({
-        '@type': 'ListItem',
-        position: position + 1,
-        item: {
-          '@type': 'IndividualProduct',
-          ...product
-        }
-      }))
+      "url": `/product/${product.id}`,
+      "priceCurrency": "USD",
+      "price": product.price,
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock"
     }
-  }));
+  };
 };
-
-
 
 const generateProductJSONLD = (products) => {
   const productsByCategory = products.reduce((acc, product) => {
@@ -70,9 +50,18 @@ const generateProductJSONLD = (products) => {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: generateProductGroupJSONLD(productsByCategory),
+    "itemListElement": Object.keys(productsByCategory).map((category, index) => ({
+      "@type": "ItemList",
+      "name": category,
+      "itemListElement": productsByCategory[category].map((product, position) => ({
+        "@type": "ListItem",
+        "position": position + 1,
+        "item": generateIndividualProductJSONLD(product)
+      }))
+    }))
   };
 };
+
 
 
 const ProductsPage = ({ product }) => {
@@ -98,6 +87,7 @@ const ProductsPage = ({ product }) => {
       document.head.removeChild(script);
     };
   }, [filteredProducts]);
+  
   
 
   // HANDLES PRODUCTNAV FILTERS//
