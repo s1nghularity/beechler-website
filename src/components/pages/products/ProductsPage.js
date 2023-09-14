@@ -14,37 +14,54 @@ import ScrollToTop from "../../ScrollToTop.js";
 import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
+const generateIndividualProductJSONLD = (products) => {
+  return products.map((product, index) => ({
+    "@type": "IndividualProduct", // Changed from "Product"
+    name: product.name,
+    description: product.description,
+    url: `/product/${product.id}`,
+    image: product.image,
+    sku: product.id,
+    mpn: product.id,
+    brand: {
+      "@type": "Brand",
+      name: "Beechler",
+    },
+    offers: {
+      "@type": "Offer",
+      url: `/product/${product.id}`,
+      priceCurrency: "USD",
+      price: product.price,
+      itemCondition: "https://schema.org/NewCondition",
+      availability: "https://schema.org/InStock",
+    },
+  }));
+};
+
+const generateProductGroupJSONLD = (productsByCategory) => {
+  return Object.keys(productsByCategory).map((category, index) => ({
+    "@type": "ProductGroup",
+    name: category,
+    itemListElement: generateIndividualProductJSONLD(productsByCategory[category]),
+  }));
+};
+
 const generateProductJSONLD = (products) => {
+  const productsByCategory = products.reduce((acc, product) => {
+    if (!acc[product.category]) {
+      acc[product.category] = [];
+    }
+    acc[product.category].push(product);
+    return acc;
+  }, {});
+
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: products.map((product, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        name: product.name,
-        description: product.description,
-        url: `/product/${product.id}`,
-        image: product.image,
-        sku: product.id,
-        mpn: product.id,
-        brand: {
-          "@type": "Brand",
-          name: "Beechler",
-        },
-        offers: {
-          "@type": "Offer",
-          url: `/product/${product.id}`,
-          priceCurrency: "USD",
-          price: product.price,
-          itemCondition: "https://schema.org/NewCondition",
-          availability: "https://schema.org/InStock",
-        },
-      },
-    })),
+    itemListElement: generateProductGroupJSONLD(productsByCategory),
   };
 };
+
 
 const ProductsPage = ({ product }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -64,11 +81,12 @@ const ProductsPage = ({ product }) => {
     script.type = "application/ld+json";
     script.innerHTML = JSON.stringify(jsonld);
     document.head.appendChild(script);
-
+  
     return () => {
       document.head.removeChild(script);
     };
   }, [filteredProducts]);
+  
 
   // HANDLES PRODUCTNAV FILTERS//
   const handleCategorySelect = (category) => {
