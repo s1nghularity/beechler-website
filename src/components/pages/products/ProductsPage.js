@@ -40,17 +40,22 @@ const generateIndividualProductJSONLD = (products) => {
 
 const generateProductGroupJSONLD = (productsByCategory) => {
   return Object.keys(productsByCategory).map((category, index) => ({
-    "@type": "ItemList",
-    "@id": `/product-group/${index}`,
+    '@type': 'ProductGroup',
     name: category,
-    itemListOrder: "http://schema.org/ItemListOrderDescending",
-    itemListElement: generateIndividualProductJSONLD(productsByCategory[category]).map((product, position) => ({
-      "@type": "ListItem",
-      position: position + 1,
-      item: product,
-    })),
+    hasOfferCatalog: {
+      '@type': 'ItemList',
+      itemListElement: generateIndividualProductJSONLD(productsByCategory[category]).map((product, position) => ({
+        '@type': 'ListItem',
+        position: position + 1,
+        item: {
+          '@type': 'IndividualProduct',
+          ...product
+        }
+      }))
+    }
   }));
 };
+
 
 
 const generateProductJSONLD = (products) => {

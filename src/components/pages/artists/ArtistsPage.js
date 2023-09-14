@@ -16,17 +16,24 @@ const generateJSONLD = (artists) => {
       position: index + 1,
       item: {
         "@type": "Person",
-        "@id": `/artist/${artist.id}`,
         name: artist.name,
-        jobTitle: "Musician",
-        instrument: artist.mouthpieces.map((mouthpiece) => ({
-          "@type": "Product",
-          name: mouthpiece.name,
-        })),
+        instrument: {
+          "@type": "ItemList",
+          itemListElement: artist.mouthpieces.map((mouthpiece, idx) => ({
+            "@type": "ListItem",
+            position: idx + 1,
+            item: {
+              "@type": "Product",
+              name: mouthpiece,
+            },
+          })),
+        },
       },
     })),
   };
 };
+
+
 
 
 const Grid = ({ currentArtists }) => {

@@ -33,8 +33,8 @@ const variants = {
 
 const ArtistCard = ({ artist }) => {
   return (
-    <motion.div initial="hidden" animate="visible" variants={variants} itemScope itemType="https://schema.org/Person">
-      <Card className="artist-card">
+    <motion.div initial="hidden" animate="visible" variants={variants}>
+      <Card className="artist-card" itemScope itemType="https://schema.org/Person">
         <Card.Body>
           <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }} aria-label={`Artist name: ${artist.name}`} itemProp="name">
             {artist.name}
