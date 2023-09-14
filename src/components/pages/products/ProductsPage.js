@@ -15,19 +15,19 @@ import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
 
-const generateProductSchema = (product) => ({
+const generateProductSchema = (products) => ({
   '@context': 'https://schema.org/',
   '@type': 'Product',
-  'name': product.id, 
-  'image': product.image,
+  'name': products.id, 
+  'image': products.image,
   'brand': {
     '@type': 'Thing',
-    'name': product.category
+    'name': products.category
   },
   'offers': {
     '@type': 'Offer',
     'priceCurrency': 'USD',
-    'price': product.price,
+    'price': products.price,
     'availability': 'https://schema.org/InStock'
   }
 });
