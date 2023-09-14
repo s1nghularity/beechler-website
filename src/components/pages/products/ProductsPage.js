@@ -17,8 +17,8 @@ import "../../../styles/ProductsNav2.css";
 const generateIndividualProductJSONLD = (products) => {
   return products.map((product, index) => ({
     "@type": "IndividualProduct", // Changed from "Product"
-    name: product.name,
-    description: product.description,
+    name: product.id,
+    description: product.category,
     url: `/product/${product.id}`,
     image: product.image,
     sku: product.id,
@@ -40,11 +40,18 @@ const generateIndividualProductJSONLD = (products) => {
 
 const generateProductGroupJSONLD = (productsByCategory) => {
   return Object.keys(productsByCategory).map((category, index) => ({
-    "@type": "ProductGroup",
+    "@type": "ItemList",
+    "@id": `/product-group/${index}`,
     name: category,
-    itemListElement: generateIndividualProductJSONLD(productsByCategory[category]),
+    itemListOrder: "http://schema.org/ItemListOrderDescending",
+    itemListElement: generateIndividualProductJSONLD(productsByCategory[category]).map((product, position) => ({
+      "@type": "ListItem",
+      position: position + 1,
+      item: product,
+    })),
   }));
 };
+
 
 const generateProductJSONLD = (products) => {
   const productsByCategory = products.reduce((acc, product) => {
