@@ -38,20 +38,14 @@ const HomeCarousel = () => {
   }, []);
 
   const renderCard = (src, alt) => (
-    <Card
-      className="home-top-carousel-slide"
-      itemScope
-      itemType="http://schema.org/ImageObject"
-    >
+    <Card className="home-top-carousel-slide">
       <Card.Img
         variant="top"
         src={src}
         alt={alt}
         className="home-top-carousel-image"
         aria-label={`Image of ${alt}`}
-        itemProp="contentUrl"
       />
-      <meta itemProp="name" content={alt} />
     </Card>
   );
 

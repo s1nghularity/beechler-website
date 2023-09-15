@@ -14,7 +14,7 @@ import ig11 from "../../../assets/img/ig/ig11.webp";
 import ig12 from "../../../assets/img/ig/ig12.webp";
 
 const images = [ig1, ig7, ig2, ig3, ig4, ig5, ig9, ig10, ig11, ig12, ig6, ig8];
-const infiniteImages = [...images, ...images]; // duplicate the images array
+const infiniteImages = [...images, ...images]; 
 
 const TipOpeningCarousel = () => {
   const carouselRef = useRef(null);
@@ -36,10 +36,10 @@ const TipOpeningCarousel = () => {
   }, []);
 
   return (
-    <div ref={carouselRef} className="tip-opening-carousel" itemScope itemType="https://schema.org/ImageGallery">
+    <div ref={carouselRef} className="tip-opening-carousel">
       {infiniteImages.map((img, idx) => (
         <div key={idx} className={`tip-opening-carousel-item carousel-item-${idx}`}>
-          <img src={img} alt={`Artist Instagram Image ${idx + 1}`} className="tip-opening-carousel-image" itemProp="image" />
+          <img src={img} alt={`Artist Instagram Image ${idx + 1}`} className="tip-opening-carousel-image"/>
         </div>
       ))}
     </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard.js";
 
@@ -26,26 +26,23 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
     if (category === selectedCategory || subtype === selectedSubtype) {
       return "animate__fadeIn";
     }
-    return "animate__flipInUp"; // Default animation for product rows
+    return "animate__flipInUp";
   };
 
-  useEffect(() => {
-    console.log("Current Products: ", products);
-  }, [products]);
 
   return (
-    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`} itemScope itemType="http://schema.org/ProductGroup">
+    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`}>
       {hasProducts ? (
         <>
           {Object.entries(productsByCategory).map(
             ([category, categoryProducts], categoryIndex) => (
               <React.Fragment key={`category-${categoryIndex}`}>
                 <Col>
-                  <h2 className={`category-title animate__animated ${getCategoryTitleAnimation(category)}`} itemprop="name">{category}</h2>
+                  <h2 className={`category-title animate__animated ${getCategoryTitleAnimation(category)}`}>{category}</h2>
                 </Col>
                 <Row className={`product-row animate__animated ${getProductRowAnimation(category, selectedSubtype)}`} role="list">
                   {categoryProducts.map((product) => (
-                    <ProductCard key={product.id} product={product} itemScope itemType="http://schema.org/IndividualProduct" />
+                    <ProductCard key={product.id} product={product}/>
                   ))}
                 </Row>
               </React.Fragment>

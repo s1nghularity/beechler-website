@@ -48,7 +48,7 @@ function HomeContact() {
           <p>Someone from the team will get back to you soon.</p>
         </div>
       ) : (
-        <Card className="contact-form" role="form" itemScope itemType="https://schema.org/ContactPage">
+        <Card className="contact-form" role="form">
           <h3 itemProp="headline">Can't find what you're looking for?</h3>
           <form onSubmit={handleFormSubmit} aria-label="Contact Form">
             <label htmlFor="email">Email Address</label>
@@ -60,7 +60,6 @@ function HomeContact() {
               onChange={e => setEmail(e.target.value)}
               required
               aria-required="true"
-              itemProp="email"
             />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
             <br /><br />
@@ -72,7 +71,6 @@ function HomeContact() {
               onChange={e => setCategory(e.target.value)}
               required
               aria-required="true"
-              itemProp="category"
             >
               <option value="">Select a category</option>
               {Object.keys(categoryOptions).map((option, index) => (
@@ -88,7 +86,6 @@ function HomeContact() {
               onChange={e => setId(e.target.value)}
               required
               aria-required="true"
-              itemProp="productID"
             >
               <option value="">Select a category first</option>
               {category ? categoryOptions[category].map((option, index) => (
@@ -104,13 +101,12 @@ function HomeContact() {
               onChange={e => setMessage(e.target.value)}
               required
               aria-required="true"
-              itemProp="text"
             />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
-            <button type="submit" disabled={state.submitting} itemProp="potentialAction">
+            <button type="submit" disabled={state.submitting}>
               Contact Us
             </button>
-            <p className="disclaimer" itemProp="disclaimer">We will never sell your personal information.</p>
+            <p className="disclaimer">We will never sell your personal information.</p>
           </form>
         </Card>
       )}

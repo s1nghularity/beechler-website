@@ -130,7 +130,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <Container itemScope itemType="http://schema.org/ImageGallery">
+    <Container>
       <Row className="gallery-title-card">
         <h1 className="gallery-title">
           Serving musicians since 1942, <br />
@@ -153,7 +153,6 @@ const Gallery = () => {
                 className="swing-in-top-fwd"
                 style={{ "--animation-delay": `${index * 0.2}s` }}
                 loading="lazy"
-                itemProp="image"
               />
             ))}
           </Masonry>

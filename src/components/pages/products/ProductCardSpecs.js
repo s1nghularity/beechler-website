@@ -4,31 +4,27 @@ import { styled } from "@mui/system";
 import "../../../styles/ProductsPage.css";
 
 export const AccessoriesSection = ({ accessories }) => (
-  <Col className="accessories" itemProp="additionalProperty">
+  <Col className="accessories">
     <p>{accessories} included!</p>
   </Col>
 );
 
-export const ModelSection = ({ model }) => (
-  <Col className="model" itemProp="model">
-    {model}
-  </Col>
-);
+export const ModelSection = ({ model }) => <Col className="model">{model}</Col>;
 
 export const LigatureTypeSection = ({ ligatureType }) => (
-  <Col className="ligature-type" itemProp="additionalProperty">
+  <Col className="ligature-type">
     <p>{ligatureType}</p>
   </Col>
 );
 
 export const FinishSection = ({ finish }) => (
-  <Col className="finish" itemProp="additionalProperty">
+  <Col className="finish">
     <p className="finish-text">{finish} Finish</p>
   </Col>
 );
 
 export const BoreSection = ({ bore }) => (
-  <Col className="bore-section" itemProp="additionalProperty">
+  <Col className="bore-section">
     <Card.Text className="spec">{bore} Bore</Card.Text>
   </Col>
 );
@@ -63,12 +59,7 @@ const StyledChip = styled(Chip)(({ theme, subtype }) => {
 });
 
 export const CustomChip = ({ subtype, ...rest }) => (
-  <StyledChip
-    role="listitem"
-    subtype={subtype}
-    {...rest}
-    itemProp="additionalProperty"
-  />
+  <StyledChip role="listitem" subtype={subtype} {...rest} />
 );
 
 export const ProductIconRow = ({ product }) => {
@@ -101,7 +92,7 @@ export const ProductIconRow = ({ product }) => {
 };
 
 export const CustomBubble = () => (
-  <div className="custom-bubble" itemProp="additionalProperty">
+  <div className="custom-bubble">
     <p>Custom</p>
   </div>
 );

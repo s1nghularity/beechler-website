@@ -6,8 +6,6 @@ import { useLocation } from "react-router-dom";
 
 import { MenuButton, Badge, MenuOptions } from "./MenuOptions.js";
 
-
-
 const ProductsNav2 = ({
   handleCategorySelect,
   handleSubtypeSelect,
@@ -20,7 +18,6 @@ const ProductsNav2 = ({
   const [isMouthpiecesOpen, setIsMouthpiecesOpen] = useState(false);
   const [isTypeOpen, setIsTypeOpen] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
-  const isSubmenuOpen = isMouthpiecesOpen || isTypeOpen;
   const badgeIsSelected = !!selectedCategory || !!selectedType;
   const [animateSelection, setAnimateSelection] = useState(false);
 
@@ -62,7 +59,6 @@ const ProductsNav2 = ({
   ];
 
   const subtypeOptions = ["Soprano", "Alto", "Tenor", "Baritone"];
-  
 
   const handleButtonClick = (selectedMenu) => {
     if (selectedMenu === "mouthpieces") {
@@ -115,54 +111,55 @@ const ProductsNav2 = ({
     setSelectedType(null);
   };
 
-
-
-  
-
   return (
     <AnimatePresence>
-    <nav role="navigation" aria-label="Product Navigation" className="products-nav-container">
-      <div role="menu" className="products-nav-menu">
-        <div className="menu-wrapper">
+      <nav
+        role="navigation"
+        aria-label="Product Navigation"
+        className="products-nav-container"
+      >
+        <div role="menu" className="products-nav-menu">
+          <div className="menu-wrapper">
+            <MenuButton
+              aria-haspopup="true"
+              aria-expanded={isMouthpiecesOpen}
+              isOpen={isMouthpiecesOpen}
+              onClick={() => handleButtonClick("mouthpieces")}
+            >
+              Mouthpieces
+            </MenuButton>
+            <MenuOptions
+              options={categoryOptions}
+              isOpen={isMouthpiecesOpen}
+              onOptionSelect={handleCategorySelection}
+            />
+          </div>
 
-          <MenuButton
-            aria-haspopup="true"
-            aria-expanded={isMouthpiecesOpen}
-            isOpen={isMouthpiecesOpen}
-            onClick={() => handleButtonClick("mouthpieces")}
+          <div className="menu-wrapper">
+            <MenuButton
+              aria-haspopup="true"
+              aria-expanded={isTypeOpen}
+              isOpen={isTypeOpen}
+              onClick={() => handleButtonClick("type")}
+              disabled={selectedCategory === "Accessories & Services"}
+            >
+              Type
+            </MenuButton>
+            <MenuOptions
+              options={subtypeOptions}
+              isOpen={isTypeOpen}
+              onOptionSelect={handleSubtypeSelection}
+            />
+          </div>
+
+          <button
+            aria-label="Reset Filters"
+            className="reset-filters"
+            onClick={handleResetFilters}
           >
-            Mouthpieces
-          </MenuButton>
-          <MenuOptions
-            options={categoryOptions}
-            isOpen={isMouthpiecesOpen}
-            onOptionSelect={handleCategorySelection}
-          />
+            Reset Filters
+          </button>
         </div>
-
-        <div className="menu-wrapper">
-
-          <MenuButton
-            aria-haspopup="true"
-            aria-expanded={isTypeOpen}
-            isOpen={isTypeOpen}
-            onClick={() => handleButtonClick("type")}
-            disabled={selectedCategory === "Accessories & Services"}
-          >
-            Type
-          </MenuButton>
-          <MenuOptions
-            options={subtypeOptions}
-            isOpen={isTypeOpen}
-            onOptionSelect={handleSubtypeSelection}
-          />
-        </div>
-
-
-        <button aria-label="Reset Filters" className="reset-filters" onClick={handleResetFilters}>
-          Reset Filters
-        </button>
-      </div>
 
         <div className="submenu-badges-sticker-container">
           {" "}
@@ -181,17 +178,13 @@ const ProductsNav2 = ({
               </React.Fragment>
             )}
           </motion.div>
-          <motion.div
-            className="golden-sticker"
-            initial="closed"
-            animate={isSubmenuOpen ? "open" : "closed"}
-          >
+          <div className="golden-sticker">
             <p>
               All Beechler and ARB mouthpieces have been lab tested and proven
               safe for all long and short term human contact according to Reach
               compliance standards.
             </p>
-          </motion.div>
+          </div>
         </div>
       </nav>
     </AnimatePresence>

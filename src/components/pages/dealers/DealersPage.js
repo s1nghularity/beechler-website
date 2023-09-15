@@ -3,7 +3,7 @@ import { locationData } from "./DealerData";
 
 const DealersPage = () => {
   return (
-    <div itemScope itemType="https://schema.org/Store">
+    <div>
       <DealerMap locations={locationData} className='dealers-page' />
     </div>
   );

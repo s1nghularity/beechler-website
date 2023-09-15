@@ -4,7 +4,7 @@ import TipOpeningCarousel from './TipOpeningCarousel.js';
 
 function TipOpenings () {
     return (
-        <main itemScope itemType="https://schema.org/WebPage">
+        <main>
             <section>
                 <TipOpeningsTable />
             </section>

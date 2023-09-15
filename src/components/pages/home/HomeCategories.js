@@ -25,11 +25,7 @@ const categories = [
 
 function HomeCategories() {
   return (
-    <div
-      className="stripe-categories"
-      itemScope
-      itemType="http://schema.org/ItemList"
-    >
+    <div className="stripe-categories">
       <div className="home-categories">
         <h2>OUR MOUTHPIECES</h2>
         <Container>
@@ -42,11 +38,7 @@ function HomeCategories() {
                   className="category-link"
                   aria-label={`View products in ${category.name} category`}
                 >
-                  <Card
-                    className="category-card"
-                    itemScope
-                    itemType="http://schema.org/ProductGroup"
-                  >
+                  <Card className="category-card">
                     <Card.Body>
                       <div className="category-content">
                         <img
@@ -55,11 +47,8 @@ function HomeCategories() {
                           className={`category-image ${
                             category.className || ""
                           }`}
-                          itemProp="image"
                         />
-                        <div className="category-text" itemProp="name">
-                          {category.name}
-                        </div>
+                        <div className="category-text">{category.name}</div>
                       </div>
                     </Card.Body>
                   </Card>

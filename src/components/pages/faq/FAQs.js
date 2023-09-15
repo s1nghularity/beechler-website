@@ -14,7 +14,8 @@ function FAQs() {
     },
     {
       question: "What materials are used for Beechler and ARB caps?",
-      answer: "Metal/Bellite caps are made of spun aluminum then powder coated. Ebonite Alto, Tenor and Baritone caps are lacquered brass. Ebonite Clarinet and Soprano caps are silver."
+      answer:
+        "Metal/Bellite caps are made of spun aluminum then powder coated. Ebonite Alto, Tenor and Baritone caps are lacquered brass. Ebonite Clarinet and Soprano caps are silver.",
     },
     {
       question:
@@ -39,20 +40,16 @@ function FAQs() {
     },
     {
       question: "Exactly how customized can I make it?",
-      answer: "Facing, Bore Size, Tip Openings, and Engravings are fully customizable, the materials we use are not. In over 75 years of serving musicians, we believe we have found the most natural combination of materials for artists and do not compromise on the quality of those materials."
-    }
+      answer:
+        "Facing, Bore Size, Tip Openings, and Engravings are fully customizable, the materials we use are not. In over 75 years of serving musicians, we believe we have found the most natural combination of materials for artists and do not compromise on the quality of those materials.",
+    },
   ];
 
   return (
-
-<Container 
-      className="root" 
-      role="region" 
-      aria-labelledby="faq-heading"
-      itemScope
-      itemType="https://schema.org/FAQPage"
-    >
-      <h1 id="faq-heading" className="title" itemProp="name">Frequently Asked Questions</h1>
+    <Container className="root" role="region" aria-labelledby="faq-heading">
+      <h1 id="faq-heading" className="title">
+        Frequently Asked Questions
+      </h1>
 
       {faqs.map((faq, index) => (
         <motion.div
@@ -64,8 +61,6 @@ function FAQs() {
           tabIndex={0}
           aria-expanded={expanded === index}
           aria-controls={`faq-content-${index}`}
-          itemScope
-          itemType="https://schema.org/Question"
         >
           <motion.header
             initial={false}
@@ -76,9 +71,9 @@ function FAQs() {
               zIndex: 1,
             }}
           >
-            <h2 
-              id={`faq-question-${index}`} 
-              className="heading" 
+            <h2
+              id={`faq-question-${index}`}
+              className="heading"
               itemProp="name"
             >
               {faq.question}
@@ -86,7 +81,7 @@ function FAQs() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: expanded === index ? 1 : 0 }}
-              transition={{ duration: .5 }}
+              transition={{ duration: 0.5 }}
               style={{
                 position: "absolute",
                 top: 0,
@@ -113,21 +108,20 @@ function FAQs() {
                   open: { opacity: 1, height: "auto" },
                   collapsed: { opacity: 0, height: 0 },
                 }}
-                transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98], when: "afterChildren" }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.04, 0.62, 0.23, 0.98],
+                  when: "afterChildren",
+                }}
                 className="accordionDetails"
-                itemProp="acceptedAnswer"
-                itemScope
-                itemType="https://schema.org/Answer"
               >
-                <h5 className="answer" itemProp="text">{faq.answer}</h5>
+                <h5 className="answer">{faq.answer}</h5>
               </motion.section>
             )}
           </AnimatePresence>
         </motion.div>
       ))}
     </Container>
-
-
   );
 }
 

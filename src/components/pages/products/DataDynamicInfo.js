@@ -47,6 +47,7 @@ export const productInfo = {
     category: "Accessories & Services",
     description:
       "All customizations are done by hand. We offer a variety of services to customize and provide the best playing experience as well as accessories to help you maintain your mouthpiece. Our mouthpieces are handcrafted with extraordinary attention to detail, allowing for an almost infinite choice of fine mouthpieces to suit varying embouchures, reed preferences, choice of materials, playing styles, and situations. And if you're looking for something truly unique, we can even create a custom mouthpiece just for you.",
-    material: "Please specify Beechler or ARB for any of the L50 series ligatures.",
+    material:
+      "Please specify Beechler or ARB for any of the L50 series ligatures.",
   },
 };

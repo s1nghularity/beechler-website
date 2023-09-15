@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   ComposableMap,
   Geographies,
@@ -58,7 +58,6 @@ const HomeDealerMap = () => {
         style={{ width: "95vw", maxWidth: "75rem", height: "auto" }}
         projectionConfig={{ rotate: [-10, 0, 0], scale: 147 }}
         aria-label="World map showing dealer locations"
-        itemScope itemType="http://schema.org/Map"
       >
         <defs>
           <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
