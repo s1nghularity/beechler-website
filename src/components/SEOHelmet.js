@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { preloadedProductSchemas, preloadedDealerSchema } from '../components/preloadSchemaData';
+import { preloadedProductSchemas, preloadedDealerSchema, preloadedHomeDealerSchema } from '../components/preloadSchemaData';
 
 const SEOHelmet = () => {
   return (
@@ -11,6 +11,10 @@ const SEOHelmet = () => {
       <script type="application/ld+json">
         {JSON.stringify(preloadedDealerSchema)}
       </script>
+        <script type="application/ld+json">
+            {JSON.stringify(preloadedHomeDealerSchema)}
+        </script>
+
     </Helmet>
   );
 };
