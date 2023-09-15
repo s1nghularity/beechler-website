@@ -27,8 +27,8 @@ const DealerMarker = ({
   >
     <Popup className="dealer-map-popup">
       <div className="popup-content">
-        <strong itemProp="name">{location.name}</strong>
-        <div className="popup-detail" itemProp="address">
+        <strong>{location.name}</strong>
+        <div className="popup-detail">
           <FontAwesomeIcon
             icon={faMapMarkerAlt}
             className="dealer-popup-icon"
@@ -37,11 +37,11 @@ const DealerMarker = ({
           {location.address}, {location.city}, {location.state} {location.zip},{" "}
           {location.country}
         </div>
-        <div className="popup-detail" itemProp="telephone">
+        <div className="popup-detail">
           <FontAwesomeIcon icon={faPhoneAlt} className="dealer-popup-icon" />
           {location.phone}
         </div>
-        <div className="popup-detail" itemProp="url">
+        <div className="popup-detail">
           <FontAwesomeIcon icon={faGlobe} className="dealer-popup-icon" />
           <a href={location.website} target="_blank" rel="noreferrer">
             {location.website}

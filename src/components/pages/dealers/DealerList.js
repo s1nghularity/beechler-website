@@ -4,8 +4,7 @@ import React from "react";
 const DealerList = ({ filteredLocations, handleLocationClick }) => (
   <div
     className="dealer-list-container"
-    itemScope
-    itemType="https://schema.org/ItemList"
+
   >
     {filteredLocations.length > 0 ? (
       filteredLocations.map((location, index) => (
@@ -13,13 +12,12 @@ const DealerList = ({ filteredLocations, handleLocationClick }) => (
           key={index}
           className="dealer-info-container"
           onClick={() => handleLocationClick(location)}
-          itemScope
-          itemType="https://schema.org/Store"
+
         >
-          <strong className="dealer-name" itemProp="name">
+          <strong className="dealer-name">
             {location.name}
           </strong>
-          <p className="dealer-info" itemProp="address">
+          <p className="dealer-info">
             {location.address}, {location.city}, {location.state} {location.zip}
             , {location.country}
           </p>

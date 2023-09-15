@@ -49,7 +49,7 @@ function HomeContact() {
         </div>
       ) : (
         <Card className="contact-form" role="form">
-          <h3 itemProp="headline">Can't find what you're looking for?</h3>
+          <h3>Can't find what you're looking for?</h3>
           <form onSubmit={handleFormSubmit} aria-label="Contact Form">
             <label htmlFor="email">Email Address</label>
             <input

@@ -61,7 +61,7 @@ const DynamicInfo = ({ infoContent }) => {
   return (
     <Container className="dynamic-info">
       <Row>
-        <h3 itemProp="name">{infoContent || "Select a Category"}</h3>
+        <h3>{infoContent || "Select a Category"}</h3>
       </Row>
 
       {currentProduct.description && (

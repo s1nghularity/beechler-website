@@ -7,35 +7,6 @@ import "../../../styles/ArtistsPage.css";
 import artistsData from "./ArtistData";
 import ArtistCard from "./ArtistCard";
 
-const generateJSONLD = (artists) => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: artists.map((artist, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Person",
-        name: artist.name,
-        instrument: {
-          "@type": "ItemList",
-          itemListElement: artist.mouthpieces.map((mouthpiece, idx) => ({
-            "@type": "ListItem",
-            position: idx + 1,
-            item: {
-              "@type": "Product",
-              name: mouthpiece,
-            },
-          })),
-        },
-      },
-    })),
-  };
-};
-
-
-
-
 const Grid = ({ currentArtists }) => {
   return (
     <Row xs={1} sm={2} md={2} lg={3} xl={5} className="g-3">
@@ -70,28 +41,10 @@ const ArtistsPage = () => {
     }
   };
 
-  useEffect(() => {
-    const jsonld = generateJSONLD(artistsData);
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.innerHTML = JSON.stringify(jsonld);
-    document.head.appendChild(script);
-  
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-  
-  
-
   return (
-    <Container
-      className="artist-page"
-      itemType="https://schema.org/MusicGroup"
-      itemScope
-    >
+    <Container className="artist-page">
       <Col className="artist-page-header">
-        <h1 className="text-center artist-title-header" itemProp="name">
+        <h1 className="text-center artist-title-header">
           The Musicians Choice
         </h1>
         <div className="pagination-buttons">

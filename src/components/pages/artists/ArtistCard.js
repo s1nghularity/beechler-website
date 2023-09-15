@@ -34,15 +34,15 @@ const variants = {
 const ArtistCard = ({ artist }) => {
   return (
     <motion.div initial="hidden" animate="visible" variants={variants}>
-      <Card className="artist-card" itemScope itemType="https://schema.org/Person">
+      <Card className="artist-card">
         <Card.Body>
-          <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }} aria-label={`Artist name: ${artist.name}`} itemProp="name">
+          <Card.Title className="artist-name" style={{ color: getDynamicColor(artist.name) }} aria-label={`Artist name: ${artist.name}`}>
             {artist.name}
           </Card.Title>
-          <Card.Text className="mouthpiece-container" itemProp="instrument">
+          <Card.Text className="mouthpiece-container">
             {artist.mouthpieces.slice(0, 3).map((mouthpiece, index) => (
-              <div key={index} className="mouthpiece" itemScope itemType="https://schema.org/Product">
-                <span itemProp="name">{mouthpiece}</span>
+              <div key={index} className="mouthpiece">
+                <span >{mouthpiece}</span>
               </div>
             ))}
           </Card.Text>

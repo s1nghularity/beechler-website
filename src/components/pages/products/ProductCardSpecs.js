@@ -70,7 +70,7 @@ export const ProductIconRow = ({ product }) => {
   return (
     <Row className="product-icon-row" role="list">
       <Col xs="auto">
-        <div className="product-id" itemProp="sku">
+        <div className="product-id">
           {product.id}
         </div>
       </Col>

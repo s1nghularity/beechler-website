@@ -74,7 +74,7 @@ function FAQs() {
             <h2
               id={`faq-question-${index}`}
               className="heading"
-              itemProp="name"
+              
             >
               {faq.question}
             </h2>

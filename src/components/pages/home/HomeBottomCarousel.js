@@ -43,7 +43,7 @@ function HomeBottomCarousel() {
   }
 
   return (
-    <Container fluid className="home-about stripe-home-about" itemScope itemType="http://schema.org/ImageGallery">
+    <Container fluid className="home-about stripe-home-about">
       <Row className="home-about-row">
         <Col md={12} lg={12} className="home-about-right">
           <Carousel
@@ -62,7 +62,7 @@ function HomeBottomCarousel() {
           >
             {carouselImages.map((image, index) => (
               <div className="our-story-slide" key={index}>
-                <img src={image.src} alt={image.alt} itemProp="image" />
+                <img src={image.src} alt={image.alt}/>
                 <p className="our-story-tag" aria-label={image.tag}>{image.tag}</p>
               </div>
             ))}

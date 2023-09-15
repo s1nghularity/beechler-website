@@ -61,7 +61,7 @@ const AboutPage = () => {
 
       <Wave />
 
-      <div itemScope itemType="http://schema.org/Organization">
+      <div>
         <AboutCarousel />
       </div>
 
