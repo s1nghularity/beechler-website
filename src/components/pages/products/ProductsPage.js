@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import ProductsNav2 from "./ProductsNav2";
 import DynamicInfo from "./DynamicInfo";
+import { productInfo } from './DataDynamicInfo.js';
+
 import ProductsGrid from "./ProductsGrid.js";
 import { products } from "./ProductsData.js";
 import EmailSignup from "./EmailSignup.js";
@@ -15,26 +17,30 @@ import "../../../styles/ProductsPage.css";
 import "../../../styles/ProductsNav2.css";
 
 
-const generateProductJSONLD = (products) => {
-  const fullImageUrl = `${window.location.origin}${products.image}`;
+const ProductSchema = (product, productInfo) => {
+ 
   return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: products.map((product, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Product",
-        name: product.name,
-        image: fullImageUrl,
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "USD",
-          price: product.price,
-          availability: "https://schema.org/InStock",
-        },
-      },
-    })),
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": `${product.category} - ${product.id}`,
+    "description": productInfo[product.category].description,
+    "sku": product.id,
+    "gtin14": product.gtin14,
+    "brand": {
+      "@type": "Brand",
+      "name": "Beechler"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": product.price,
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "contentUrl": product.image
+    },
   };
 };
 
@@ -44,15 +50,19 @@ const ProductsPage = ({ product }) => {
   const [selectedSubtype, setSelectedSubtype] = useState(null);
   const [previousProducts, setPreviousProducts] = useState(products);
   const [filterApplied, setFilterApplied] = useState(false);
-
-  const filteredProducts = products.filter(
-    (product) =>
-      (!selectedCategory || product.category === selectedCategory) &&
-      (!selectedSubtype || product.subtype === selectedSubtype)
-  );
+  const [productSchemas, setProductSchemas] = useState([]);
 
   useEffect(() => {
-    const jsonld = generateProductJSONLD(filteredProducts);
+    const schemas = products.map(product => ProductSchema(product, productInfo));
+    setProductSchemas(schemas);
+  }, []);
+
+  useEffect(() => {
+    const jsonld = {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": productSchemas
+    };
     let script = document.querySelector('script[type="application/ld+json"]');
     
     if (!script) {
@@ -62,8 +72,13 @@ const ProductsPage = ({ product }) => {
     }
     
     script.innerHTML = JSON.stringify(jsonld);
-  }, [filteredProducts]);
-  
+  }, [productSchemas]);
+
+  const filteredProducts = products.filter(
+    (product) =>
+      (!selectedCategory || product.category === selectedCategory) &&
+      (!selectedSubtype || product.subtype === selectedSubtype)
+  );
 
   
 

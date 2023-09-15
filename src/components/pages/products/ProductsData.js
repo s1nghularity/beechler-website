@@ -93,6 +93,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdClarinet,
     price: 199.38,
+    gtin14: "00879281003334",
   },
   {
     category: "Beechler Diamond",
@@ -104,6 +105,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
+    gtin14: "00879281003440"
   },
   {
     category: "Beechler Diamond",
@@ -115,6 +117,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
+    gtin14: "00879281005543"
   },
   {
     category: "Beechler Diamond",
@@ -126,6 +129,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
+    gtin14: "00879281005680"
   },
   {
     category: "Beechler Diamond",
