@@ -63,48 +63,48 @@ export const generateDealerJSONLD = (locations) => {
 };
 
 export const generateHomeDealerJSONLD = (homeDealerCountryData) => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Beechler Dealers Global Presence",
-    description: "Country list of dealers and their statistics worldwide.",
-    numberOfItems: 3,
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        item: {
-          "@type": "Thing",
-          name: "Countries",
-          description: "Dealers are present in 28 countries.",
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Beechler Dealers Global Presence",
+      description: "Interactive map data layer for Beechler dealers worldwide.",
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@type": "Thing",
+            name: "Countries",
+            description: "Dealers are present in 28 countries.",
+          },
         },
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        item: {
-          "@type": "Thing",
-          name: "U.S. States",
-          description: "Dealers are present in 26 U.S. states.",
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@type": "Thing",
+            name: "U.S. States",
+            description: "Dealers are present in 26 U.S. states.",
+          },
         },
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        item: {
-          "@type": "Thing",
-          name: "Total Dealers",
-          description: "147 Beechler/Arb dealers worldwide.",
+        {
+          "@type": "ListItem",
+          position: 3,
+          item: {
+            "@type": "Thing",
+            name: "Total Dealers",
+            description: "147 Beechler/Arb dealers worldwide.",
+          },
         },
-      },
-    ],
-    additionalProperty: {
-      "@type": "PropertyValue",
-      name: "Number of Dealers per Country",
-      value: homeDealerCountryData.reduce((acc, item) => {
-        acc[item.country] = item.value;
-        return acc;
-      }, {}),
-    },
+      ],
+      additionalProperty: homeDealerCountryData.map((data, index) => ({
+        "@type": "PropertyValue",
+        "propertyID": `country-${index + 1}`,
+        "name": data.name,
+        "description": `Number of dealers in ${data.name}`,
+        "value": data.value
+      }))
+    };
   };
-};
+  
