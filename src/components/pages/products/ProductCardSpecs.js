@@ -4,31 +4,31 @@ import { styled } from "@mui/system";
 import "../../../styles/ProductsPage.css";
 
 export const AccessoriesSection = ({ accessories }) => (
-  <Col className="accessories" itemprop="additionalProperty">
+  <Col className="accessories" itemProp="additionalProperty">
     <p>{accessories} included!</p>
   </Col>
 );
 
 export const ModelSection = ({ model }) => (
-  <Col className="model" itemprop="model">
+  <Col className="model" itemProp="model">
     {model}
   </Col>
 );
 
 export const LigatureTypeSection = ({ ligatureType }) => (
-  <Col className="ligature-type" itemprop="additionalProperty">
+  <Col className="ligature-type" itemProp="additionalProperty">
     <p>{ligatureType}</p>
   </Col>
 );
 
 export const FinishSection = ({ finish }) => (
-  <Col className="finish" itemprop="additionalProperty">
+  <Col className="finish" itemProp="additionalProperty">
     <p className="finish-text">{finish} Finish</p>
   </Col>
 );
 
 export const BoreSection = ({ bore }) => (
-  <Col className="bore-section" itemprop="additionalProperty">
+  <Col className="bore-section" itemProp="additionalProperty">
     <Card.Text className="spec">{bore} Bore</Card.Text>
   </Col>
 );
@@ -67,7 +67,7 @@ export const CustomChip = ({ subtype, ...rest }) => (
     role="listitem"
     subtype={subtype}
     {...rest}
-    itemprop="additionalProperty"
+    itemProp="additionalProperty"
   />
 );
 
@@ -79,7 +79,7 @@ export const ProductIconRow = ({ product }) => {
   return (
     <Row className="product-icon-row" role="list">
       <Col xs="auto">
-        <div className="product-id" itemprop="sku">
+        <div className="product-id" itemProp="sku">
           {product.id}
         </div>
       </Col>
@@ -101,7 +101,7 @@ export const ProductIconRow = ({ product }) => {
 };
 
 export const CustomBubble = () => (
-  <div className="custom-bubble" itemprop="additionalProperty">
+  <div className="custom-bubble" itemProp="additionalProperty">
     <p>Custom</p>
   </div>
 );

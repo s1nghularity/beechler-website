@@ -34,7 +34,7 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
   }, [products]);
 
   return (
-    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`} itemscope itemtype="http://schema.org/ProductGroup">
+    <Row className={`products-grid ${isLoaded ? "loaded" : ""}`} itemScope itemType="http://schema.org/ProductGroup">
       {hasProducts ? (
         <>
           {Object.entries(productsByCategory).map(
@@ -45,7 +45,7 @@ const ProductsGrid = ({ products, selectedCategory, selectedSubtype }) => {
                 </Col>
                 <Row className={`product-row animate__animated ${getProductRowAnimation(category, selectedSubtype)}`} role="list">
                   {categoryProducts.map((product) => (
-                    <ProductCard key={product.id} product={product} itemscope itemtype="http://schema.org/IndividualProduct" />
+                    <ProductCard key={product.id} product={product} itemScope itemType="http://schema.org/IndividualProduct" />
                   ))}
                 </Row>
               </React.Fragment>
