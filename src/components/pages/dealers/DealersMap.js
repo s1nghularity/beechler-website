@@ -121,7 +121,7 @@ const DealersMap = () => {
   };
 
   useEffect(() => {
-    const jsonld = generateDealerJSONLD(filteredLocations);
+    const jsonld = generateDealerJSONLD(locationData);
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.innerHTML = JSON.stringify(jsonld);
@@ -130,7 +130,7 @@ const DealersMap = () => {
     return () => {
       document.head.removeChild(script);
     };
-  }, [filteredLocations]);
+  }, [locationData]);
   
 
   return (
