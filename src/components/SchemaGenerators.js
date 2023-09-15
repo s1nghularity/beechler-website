@@ -133,26 +133,29 @@ export const generateHomeDealerJSONLD = (homeDealerCountryData) => {
   
 export const generateContactPageJSONLD = () => {
     return {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      name: "Contact Us",
-      description: "Contact form for inquiries about Beechler Mouthpieces.",
-      url: "https://beecher.com/#contact",
-      contactType: "customer support",
-      contactOption: [
-        {
-          "@type": "ContactPointOption",
-          name: "TollFree",
-          description: "We offer toll-free customer support."
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        name: "Contact Us",
+        description: "Contact form for inquiries about Beechler Mouthpieces.",
+        url: "https://beecher.com/#contact",
+        contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            telephone: "+1-800-555-5555",
+            availableLanguage: "en",
+            areaServed: "Global",
+            contactOption: [
+                {
+                    "@type": "ContactPointOption",
+                    name: "TollFree",
+                    value: "Toll-free customer support is available.",
+                },
+                {
+                    "@type": "ContactPointOption",
+                    name: "HearingImpairedSupported",
+                    value: "We offer support for the hearing impaired.",
+                },
+            ],
         },
-        {
-          "@type": "ContactPointOption",
-          name: "HearingImpairedSupported",
-          description: "We offer support for the hearing impaired."
-        }
-      ],
-      availableLanguage: ["English"],
-      areaServed: "Worldwide"
     };
-  };
-  
+};
