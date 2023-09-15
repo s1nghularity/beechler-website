@@ -62,6 +62,30 @@ export const generateDealerJSONLD = (locations) => {
   };
 };
 
+
+export const generateHomeCategoriesJSONLD = (categories) => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Beechler Mouthpieces Categories",
+      description: "List of mouthpiece categories offered by Beechler.",
+      numberOfItems: categories.length,
+      itemListElement: categories.map((category, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "ProductGroup",  // Changed from "Product" to "ProductGroup"
+          name: category.name,
+          image: category.image,
+          additionalType: category.type,
+          description: `Explore ${category.name} mouthpieces by Beechler.`,
+        },
+      })),
+    };
+  };
+  
+
+
 export const generateHomeDealerJSONLD = (homeDealerCountryData) => {
     return {
       "@context": "https://schema.org",

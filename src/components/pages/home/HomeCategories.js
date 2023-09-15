@@ -12,7 +12,7 @@ import arb from "../../../assets/img/products/arb-metal/arb-metal-family.webp";
 import gnog from "../../../assets/img/products/greatneck/og-family.webp";
 import accessories from "../../../assets/img/home/categories/accessories.webp";
 
-const categories = [
+export const categories = [
   { name: "Beechler Diamond", type: "beechler", image: diamond },
   { name: "Beechler Tonalex", type: "beechler", image: tonalex },
   { name: "Beechler Bellite", type: "beechler", image: bellite },
@@ -22,6 +22,7 @@ const categories = [
   { name: "ARB Great Neck Originals", type: "arb", image: gnog },
   { name: "Accessories & Services", type: "both", image: accessories },
 ];
+
 
 function HomeCategories() {
   return (
