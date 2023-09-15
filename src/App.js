@@ -26,26 +26,26 @@ export default function App() {
     <div className="App">
       <HelmetProvider>
         <SEOHelmet />
-      <Router>
-        <AutoScrollToTop />
-        <ScrollToTop />
-        <TopBar/>
-        <NavBar/>
-        <Container>
-          <Routes>
-            <Route path="/" element={<HomePage className="home-page"/>} />
-            <Route path="/products" element={<ProductsPage/>} />
-            <Route path="/tip-openings" element={<TipOpenings/>} />
-            <Route path="/dealers" element={<DealersPage/>} />
-            <Route path="/artists" element={<ArtistsPage/>} />
-            <Route path="/about" element={<AboutPage/>} />
-            <Route path="/gallery" element={<Gallery/>} />
-            <Route path="/faq" element={<FAQs/>} />
-            <Route path="/commitment" element={<OurCommitment/>} />
-          </Routes>
-        </Container>
-        <Footer/>
-      </Router>
+        <Router>
+          <AutoScrollToTop />
+          <ScrollToTop />
+          <TopBar />
+          <NavBar />
+          <Container>
+            <Routes>
+              <Route path="/" element={<HomePage className="home-page" />} />
+              <Route path="/products" element={<ProductsPage />} />
+              <Route path="/tip-openings" element={<TipOpenings />} />
+              <Route path="/dealers" element={<DealersPage />} />
+              <Route path="/artists" element={<ArtistsPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/faq" element={<FAQs />} />
+              <Route path="/commitment" element={<OurCommitment />} />
+            </Routes>
+          </Container>
+          <Footer />
+        </Router>
       </HelmetProvider>
     </div>
   );

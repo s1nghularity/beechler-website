@@ -16,21 +16,27 @@ const generateBrandSchema = (name) => ({
     "contentUrl": contentUrl,
   });
 
-export const generateProductJSONLD = ({ category, id, gtin14, price, image }, productInfo) => {
-    const description = productInfo[category].description;
-  
+  export const generateProductJSONLD = (productArray, productInfo) => {
     return {
       "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": `${category} - ${id}`,
-      description,
-      "sku": id,
-      "gtin14": gtin14,
-      "brand": generateBrandSchema("Beechler"),
-      "offers": generateOfferSchema({ price, priceCurrency: "USD" }),
-      "image": generateImageSchema(image),
+      "@type": "ItemList",
+      itemListElement: productArray.map((product, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Product",
+          "name": `${product.category} - ${product.id}`,
+          "description": productInfo[product.category].description,
+          "sku": product.id,
+          "gtin14": product.gtin14,
+          "brand": generateBrandSchema("Beechler"),
+          "offers": generateOfferSchema({ price: product.price, priceCurrency: "USD" }),
+          "image": generateImageSchema(product.image),
+        }
+      }))
     };
   };
+  
   
 
   
