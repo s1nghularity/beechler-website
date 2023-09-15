@@ -6,6 +6,27 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../../../styles/theme.css";
 import "../../../styles/HomeTestimonials.css";
 
+export const testimonials = [
+  {
+    reviewBody:
+      "Beechler makes the best mouthpieces in the world. Achieve a warm, rich, and bright tone with just the right reed and ligature setup. Every note sings beautifully.",
+    author: "- Edwin Tan",
+    itemReviewed: "Beechler Mouthpiece",
+  },
+  {
+    reviewBody:
+      "Beechler's rubber mouthpiece is a steal for its bright sound and amazing price. Comparable to expensive brands like SR Technologies and Jody Jazz. Used by popular saxophonists like Gerald Albright and Kenny G.",
+    author: "- Michael",
+    itemReviewed: "Beechler Mouthpiece",
+  },
+  {
+    reviewBody:
+      "The 8m Beechler mouthpiece is perfect for those who want a big, bright sound or a powerful low sub tone. Gives everything a Lakey has with more excitement than metal.",
+    author: "- Elliot Chavers",
+    itemReviewed: "Beechler Mouthpiece",
+  },
+]
+
 const HomeTestimonials = () => {
   return (
     <Container

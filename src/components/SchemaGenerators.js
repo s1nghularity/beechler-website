@@ -159,3 +159,43 @@ export const generateContactPageJSONLD = () => {
         },
     };
 };
+
+
+
+export const generateTestimonialsJSONLD = (testimonials) => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Customer Testimonials",
+      description: "Testimonials from Beechler customers.",
+      numberOfItems: testimonials.length,
+      itemListElement: testimonials.map((testimonial, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Review",
+          reviewBody: testimonial.reviewBody,
+          author: {
+            "@type": "Person",
+            name: testimonial.author.replace(/^- /, ""), 
+          },
+          itemReviewed: {
+            "@type": "Product",
+            name: testimonial.itemReviewed,
+            image: "NA",
+            offers: {
+              "@type": "Offer",
+              price: "NA",
+              priceCurrency: "USD",
+            },
+          },
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: 5,
+            bestRating: 5,
+          },
+        },
+      })),
+    };
+  };
+  
