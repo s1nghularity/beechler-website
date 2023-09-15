@@ -102,9 +102,9 @@ export const generateHomeDealerJSONLD = (homeDealerCountryData) => {
         "@type": "PropertyValue",
         "propertyID": `country-${index + 1}`,
         "name": data.name,
-        "description": `Number of dealers in ${data.name}`,
-        "value": data.value
+        "value": `${data.value} dealer${data.value > 1 ? 's' : ''} in ${data.name}`
       }))
     };
   };
+  
   
