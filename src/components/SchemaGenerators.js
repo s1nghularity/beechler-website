@@ -62,12 +62,12 @@ export const generateDealerJSONLD = (locations) => {
   };
 };
 
-export const generateHomeDealerJSONLD = (data) => {
+export const generateHomeDealerJSONLD = (homeDealerCountryData) => {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Home Dealer Information",
-    description: "List of dealers and their statistics worldwide.",
+    name: "Beechler Dealers Global Presence",
+    description: "Country list of dealers and their statistics worldwide.",
     numberOfItems: 3,
     itemListElement: [
       {
@@ -94,14 +94,14 @@ export const generateHomeDealerJSONLD = (data) => {
         item: {
           "@type": "Thing",
           name: "Total Dealers",
-          description: "There are 147 dealers worldwide.",
+          description: "147 Beechler/Arb dealers worldwide.",
         },
       },
     ],
     additionalProperty: {
       "@type": "PropertyValue",
       name: "Number of Dealers per Country",
-      value: data.reduce((acc, item) => {
+      value: homeDealerCountryData.reduce((acc, item) => {
         acc[item.country] = item.value;
         return acc;
       }, {}),
