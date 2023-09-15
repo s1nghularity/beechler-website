@@ -5,6 +5,7 @@ import {
   preloadedDealerSchema,
   preloadedHomeCategoriesSchema,
   preloadedHomeDealerSchema,
+  preloadedContactPageSchema,
 } from "../components/preloadSchemaData";
 
 const SEOHelmet = () => {
@@ -24,6 +25,10 @@ const SEOHelmet = () => {
       <script type="application/ld+json">
         {JSON.stringify(preloadedHomeDealerSchema)}
       </script>
+
+        <script type="application/ld+json">
+        {JSON.stringify(preloadedContactPageSchema)}
+        </script>
     </Helmet>
   );
 };
