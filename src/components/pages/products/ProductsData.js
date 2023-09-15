@@ -30,7 +30,6 @@ import b26c from "../../../assets/img/products/hard-rubber/b26c.webp";
 import b27 from "../../../assets/img/products/hard-rubber/b27.webp";
 import b29 from "../../../assets/img/products/hard-rubber/b29.webp";
 
-
 //CUSTOMIZED
 import beechlerDAlto from "../../../assets/img/products/beechler-custom/beechler-custom-d.webp";
 import beechlerJazzAlto from "../../../assets/img/products/beechler-custom/beechler-custom-jazz-alto.webp";
@@ -80,7 +79,6 @@ import tuffbite from "../../../assets/img/products/accessories-services/tuffbite
 const saxTipOpening = true;
 const clarinetTipOpening = true;
 
-
 export const products = [
   //DIAMOND
   {
@@ -105,7 +103,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
-    gtin14: "00879281003440"
+    gtin14: "00879281003440",
   },
   {
     category: "Beechler Diamond",
@@ -117,7 +115,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
-    gtin14: "00879281005543"
+    gtin14: "00879281005543",
   },
   {
     category: "Beechler Diamond",
@@ -129,7 +127,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdAlto,
     price: 182.76,
-    gtin14: "00879281005680"
+    gtin14: "00879281005680",
   },
   {
     category: "Beechler Diamond",
@@ -141,7 +139,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdTenor,
     price: 182.76,
-    gtin14: "00879281003686"
+    gtin14: "00879281003686",
   },
   {
     category: "Beechler Diamond",
@@ -154,7 +152,7 @@ export const products = [
     accessories: "Cap & Ligature",
     image: wdBaritone,
     price: 231.56,
-    gtin14: "00879281003754"
+    gtin14: "00879281003754",
   },
 
   //TONALEX//
@@ -302,7 +300,7 @@ export const products = [
     gtin14: "00879281003273",
   },
 
-//Beechler Hard Rubber
+  //Beechler Hard Rubber
 
   {
     category: "Beechler Hard Rubber",
@@ -374,7 +372,6 @@ export const products = [
     image: b29,
     gtin14: "00879281001071",
   },
-
 
   //CUSTOMIZED
 
@@ -568,7 +565,7 @@ export const products = [
     price: 28.5,
     gtin14: "00879281002108",
   },
-//Pegs
+  //Pegs
   {
     category: "Accessories & Services",
     id: "P01",
@@ -597,7 +594,7 @@ export const products = [
     price: 11.88,
     gtin14: "00879281004522",
   },
-//Ligatures
+  //Ligatures
   {
     category: "Accessories & Services",
     id: "L01/A",
@@ -723,4 +720,3 @@ export const products = [
     gtin14: "00879281004032",
   },
 ];
-
