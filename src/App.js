@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import * as React from "react";
 import TopBar from "./components/TopBar.js";
 import NavBar from "./components/NavBar.js";
+import SEOHelmet from "./components/SEOHelmet.js";
 import HomePage from "./components/pages/home/HomePage.js";
 import ProductsPage from "./components/pages/products/ProductsPage.js";
 import TipOpenings from "./components/pages/tipopenings/TipOpenings.js";
@@ -15,7 +16,7 @@ import Footer from "./components/Footer.js";
 import ScrollToTop from "./components/ScrollToTop.js";
 import AutoScrollToTop from "./components/AutoScrollToTop.js";
 import { Container } from "react-bootstrap";
-
+import { HelmetProvider } from "react-helmet-async";
 import "leaflet/dist/leaflet.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -23,6 +24,8 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
+      <HelmetProvider>
+        <SEOHelmet />
       <Router>
         <AutoScrollToTop />
         <ScrollToTop />
@@ -43,6 +46,7 @@ export default function App() {
         </Container>
         <Footer/>
       </Router>
+      </HelmetProvider>
     </div>
   );
 }
