@@ -1,9 +1,4 @@
-const generateBrandSchema = (name) => ({
-    "@type": "Brand",
-    "name": name,
-  });
-  
-  const generateOfferSchema = ({ price, priceCurrency }) => ({
+const generateOfferSchema = ({ price, priceCurrency }) => ({
     "@type": "Offer",
     "priceCurrency": priceCurrency,
     "price": price,
@@ -11,24 +6,36 @@ const generateBrandSchema = (name) => ({
     "itemCondition": "https://schema.org/NewCondition",
   });
   
-  const generateImageSchema = (contentUrl) => ({
-    "@type": "ImageObject",
-    "contentUrl": contentUrl,
-  });
-
-export const generateProductJSONLD = ({ category, id, gtin14, price, image }, productInfo) => {
-    const description = productInfo[category].description;
-  
+  export const generateProductJSONLD = (products, productInfo) => {
     return {
       "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": `${category} - ${id}`,
-      description,
-      "sku": id,
-      "gtin14": gtin14,
-      "brand": generateBrandSchema("Beechler"),
-      "offers": generateOfferSchema({ price, priceCurrency: "USD" }),
-      "image": generateImageSchema(image),
+      "@type": "ItemList",
+      "itemListElement": products.map((product, index) => {
+        const { category, id, gtin14, price, image } = product;
+        const description = productInfo[category].description;
+  
+        return {
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": `${category} - ${id}`,
+            description,
+            "sku": id,
+            "gtin14": gtin14,
+            "brand": {
+              "@type": "Brand",
+              "name": "Beechler",
+            },
+            "offers": generateOfferSchema({ price, priceCurrency: "USD" }),
+            "image": {
+              "@type": "ImageObject",
+              "contentUrl": image,
+            },
+          },
+        };
+      }),
     };
   };
   

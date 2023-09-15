@@ -141,6 +141,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: wdTenor,
     price: 182.76,
+    gtin14: "00879281003686"
   },
   {
     category: "Beechler Diamond",
@@ -153,6 +154,7 @@ export const products = [
     accessories: "Cap & Ligature",
     image: wdBaritone,
     price: 231.56,
+    gtin14: "00879281003754"
   },
 
   //TONALEX//
@@ -166,6 +168,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taClarinet,
     price: 210.54,
+    gtin14: "00879281003822",
   },
   {
     category: "Beechler Tonalex",
@@ -177,6 +180,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
+    gtin14: "00879281003907",
   },
   {
     category: "Beechler Tonalex",
@@ -188,6 +192,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
+    gtin14: "00879281004676",
   },
   {
     category: "Beechler Tonalex",
@@ -199,6 +204,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taAlto,
     price: 189.17,
+    gtin14: "00879281004744",
   },
   {
     category: "Beechler Tonalex",
@@ -210,6 +216,7 @@ export const products = [
     facing: ["Standard", "Medium", "Long"],
     image: taTenor,
     price: 189.17,
+    gtin14: "00879281003976",
   },
 
   //BELLITE
@@ -222,6 +229,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 439.97,
     image: b80,
+    gtin14: "00879281001217",
   },
   {
     category: "Beechler Bellite",
@@ -231,6 +239,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 498.28,
     image: b81,
+    gtin14: "00879281001286",
   },
   {
     category: "Beechler Bellite",
@@ -240,6 +249,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 499.94,
     image: b82,
+    gtin14: "00879281001354",
   },
   {
     category: "Beechler Bellite",
@@ -249,6 +259,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 502.31,
     image: belliteBaritone,
+    gtin14: "00879281001422",
   },
   {
     category: "Beechler Bellite",
@@ -258,6 +269,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 451.84,
     image: customBelliteS,
+    gtin14: "00879281003068",
   },
   {
     category: "Beechler Bellite",
@@ -267,6 +279,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 554.09,
     image: c32,
+    gtin14: "00879281003136",
   },
   {
     category: "Beechler Bellite",
@@ -276,6 +289,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 552.19,
     image: c33,
+    gtin14: "00879281003204",
   },
   {
     category: "Beechler Bellite",
@@ -285,6 +299,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 533.19,
     image: customBelliteB,
+    gtin14: "00879281003273",
   },
 
 //Beechler Hard Rubber
@@ -296,6 +311,7 @@ export const products = [
     subtype: "Soprano",
     price: 219.25,
     image: b25c,
+    gtin14: "00879281000791",
   },
 
   {
@@ -305,6 +321,7 @@ export const products = [
     subtype: "Soprano",
     price: 226.58,
     image: b25,
+    gtin14: "00879281007097",
   },
 
   {
@@ -314,6 +331,7 @@ export const products = [
     subtype: "Alto",
     price: 219.09,
     image: b26,
+    gtin14: "00879281000869",
   },
 
   {
@@ -323,6 +341,7 @@ export const products = [
     subtype: "Alto",
     price: 219.09,
     image: b26c,
+    gtin14: "00879281005116",
   },
 
   {
@@ -332,6 +351,7 @@ export const products = [
     subtype: "Bb",
     price: 216.36,
     image: b22,
+    gtin14: "00879281004812",
   },
 
   {
@@ -341,6 +361,7 @@ export const products = [
     subtype: "Tenor",
     price: 232.87,
     image: b27,
+    gtin14: "00879281001002",
   },
 
   {
@@ -351,6 +372,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 275.03,
     image: b29,
+    gtin14: "00879281001071",
   },
 
 
@@ -366,6 +388,7 @@ export const products = [
     facing: ["Medium"],
     price: 210.19,
     image: beechlerDAlto,
+    gtin14: "00879281002672",
   },
   {
     category: "Beechler Customized",
@@ -376,6 +399,7 @@ export const products = [
     settings: "Professional",
     price: 210.19,
     image: beechlerJazzAlto,
+    gtin14: "00879281002740",
   },
   {
     category: "Beechler Customized",
@@ -386,6 +410,7 @@ export const products = [
     bore: "Medium",
     price: 241.06,
     image: beechlerJazzTenor,
+    gtin14: "00879281002887",
   },
   {
     category: "Beechler Customized",
@@ -396,6 +421,7 @@ export const products = [
     tipOpenings: "4 to 9",
     price: 241.06,
     image: beechlerPell,
+    gtin14: "00879281004935",
   },
   {
     category: "Beechler Customized",
@@ -405,6 +431,7 @@ export const products = [
     model: "110+ Model",
     price: 241.06,
     image: beechler110,
+    gtin14: "00879281002993",
   },
 
   //ARB METAL
@@ -417,6 +444,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 498.28,
     image: arbAlto,
+    gtin14: "00879281000067",
   },
   {
     category: "ARB Metal",
@@ -426,6 +454,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 499.94,
     image: arbTenor,
+    gtin14: "00879281000135",
   },
   {
     category: "ARB Metal",
@@ -435,6 +464,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 502.31,
     image: arbBaritone,
+    gtin14: "00879281000203",
   },
   {
     category: "ARB Metal",
@@ -444,6 +474,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 554.09,
     image: arbCustomAlto,
+    gtin14: "00879281002191",
   },
   {
     category: "ARB Metal",
@@ -453,6 +484,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 552.19,
     image: arbCustomTenor,
+    gtin14: "00879281002269",
   },
   {
     category: "ARB Metal",
@@ -462,6 +494,7 @@ export const products = [
     accessories: "Cap & Ligature",
     price: 533.19,
     image: arbCustomBaritone,
+    gtin14: "00879281002337",
   },
 
   //GREAT NECK ORIGINALS
@@ -473,6 +506,7 @@ export const products = [
     subtype: "Bb",
     price: 180.5,
     image: A29,
+    gtin14: "00879281000654",
   },
   {
     category: "ARB Great Neck Originals",
@@ -482,6 +516,7 @@ export const products = [
     bore: "Large",
     price: 180.5,
     image: A30,
+    gtin14: "00879281000722",
   },
   {
     category: "ARB Great Neck Originals",
@@ -490,6 +525,7 @@ export const products = [
     subtype: "Bb",
     price: 180.5,
     image: C15,
+    gtin14: "00879281004874",
   },
   {
     category: "ARB Great Neck Originals",
@@ -498,6 +534,7 @@ export const products = [
     subtype: "Alto",
     price: 280,
     image: C16,
+    gtin14: "00879281004843",
   },
 
   //ACCESSORIES & SERVICES
@@ -509,6 +546,7 @@ export const products = [
     finish: "Black Powder Coat",
     price: 27.91,
     image: T01A,
+    gtin14: "00879281005123",
   },
 
   {
@@ -518,6 +556,7 @@ export const products = [
     finish: "Black Powder Coat",
     image: T01B,
     price: 28.5,
+    gtin14: "00879281005130",
   },
 
   {
@@ -527,6 +566,7 @@ export const products = [
     finish: "Lacquered Brass",
     image: eboniteT02,
     price: 28.5,
+    gtin14: "00879281002108",
   },
 //Pegs
   {
@@ -536,6 +576,7 @@ export const products = [
     finish: "Styrene/Rubber",
     image: P01,
     price: 11.88,
+    gtin14: "00879281004485",
   },
 
   {
@@ -545,6 +586,7 @@ export const products = [
     finish: "Styrene/Rubber",
     image: P02,
     price: 11.88,
+    gtin14: "00879281004508",
   },
   {
     category: "Accessories & Services",
@@ -553,6 +595,7 @@ export const products = [
     finish: "Styrene/Rubber",
     image: P03,
     price: 11.88,
+    gtin14: "00879281004522",
   },
 //Ligatures
   {
@@ -563,6 +606,7 @@ export const products = [
     ligatureType: "Ebonite Inverted",
     price: 63.53,
     image: ligAntique,
+    gtin14: "00879281004195",
   },
   {
     category: "Accessories & Services",
@@ -573,6 +617,7 @@ export const products = [
     ligatureType: "Ebonite Inverted",
     price: 63.53,
     image: ligBlack,
+    gtin14: "00879281004201",
   },
   {
     category: "Accessories & Services",
@@ -582,6 +627,7 @@ export const products = [
     ligatureType: "Prismatic Inverted",
     price: 63.53,
     image: ligPrismatic,
+    gtin14: "00879281004225",
   },
   {
     category: "Accessories & Services",
@@ -591,6 +637,7 @@ export const products = [
     ligatureType: "Metal/Bellite Inverted",
     price: 63.53,
     image: ligMetal,
+    gtin14: "00879281004270",
   },
   {
     category: "Accessories & Services",
@@ -600,6 +647,7 @@ export const products = [
     ligatureType: "Metal/Bellite Inverted",
     price: 67.69,
     image: ligChrome,
+    gtin14: "00879281004317",
   },
   {
     category: "Accessories & Services",
@@ -609,6 +657,7 @@ export const products = [
     ligatureType: "Metal/Bellite Inverted",
     price: 73.63,
     image: ligGold,
+    gtin14: "00879281006960",
   },
   {
     category: "Accessories & Services",
@@ -617,6 +666,7 @@ export const products = [
     ligatureType: "Chrome",
     price: 4.75,
     image: L52,
+    gtin14: "00879281004379",
   },
   {
     category: "Accessories & Services",
@@ -625,6 +675,7 @@ export const products = [
     ligatureType: "Brass",
     price: 4.75,
     image: L53,
+    gtin14: "00879281004386",
   },
   {
     category: "Accessories & Services",
@@ -633,6 +684,7 @@ export const products = [
     subtype: ["Service"],
     price: 35.0,
     image: BP,
+    gtin14: "00879281004001",
   },
   {
     category: "Accessories & Services",
@@ -641,6 +693,7 @@ export const products = [
     subtype: ["Service"],
     price: 10.0,
     image: CE,
+    gtin14: "00879281004018",
   },
   {
     category: "Accessories & Services",
@@ -649,6 +702,7 @@ export const products = [
     subtype: ["Service"],
     price: 6.0,
     image: LC,
+    gtin14: "00879281004025",
   },
   {
     category: "Accessories & Services",
@@ -657,6 +711,7 @@ export const products = [
     subtype: ["Service"],
     price: 5.0,
     image: tuffbite,
+    gtin14: "00879281004591",
   },
   {
     category: "Accessories & Services",
@@ -665,6 +720,7 @@ export const products = [
     subtype: ["Service"],
     price: 50.0,
     image: RE,
+    gtin14: "00879281004032",
   },
 ];
 
