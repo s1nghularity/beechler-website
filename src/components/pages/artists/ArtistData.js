@@ -1,4 +1,4 @@
-const ArtistData = [
+export const ArtistData = [
   {
     name: "Albert Wing",
     mouthpieces: ["Bellite Tenor #110"],

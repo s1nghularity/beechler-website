@@ -199,3 +199,32 @@ export const generateTestimonialsJSONLD = (testimonials) => {
         };
     };
   
+
+
+export const generateArtistsJSONLD = (artists) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Beechler Artists",
+    description: "List of musicians and the Beechler mouthpieces they use.",
+    numberOfItems: artists.length,
+    itemListElement: artists.map((artist, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Person",
+        name: artist.name,
+        makesUseOf: artist.mouthpieces.map((mouthpiece) => ({
+          "@type": "Product",
+          name: mouthpiece,
+          image: "src/assets/img/home/beechler-logo-b.webp",
+          offers: {
+            "@type": "Offer",
+            price: "300",
+            priceCurrency: "USD",
+          },
+        })),
+      },
+    })),
+  };
+};
