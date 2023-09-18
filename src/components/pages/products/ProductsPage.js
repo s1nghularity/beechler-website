@@ -117,10 +117,10 @@ const ProductsPage = ({ product }) => {
               <Button href="/dealers" className="find-dealer">
                 Find a store near you!
               </Button>
+              <Button href="/#contact" className="product-contact-us">
+                Have questions? Contact us.
+              </Button>
               <Col sm={6} md={6} lg={6} xl={6}>
-                <div className="email-signup-form">
-                  <EmailSignup />
-                </div>
               </Col>
             </div>
           </Row>

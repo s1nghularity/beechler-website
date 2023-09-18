@@ -36,7 +36,7 @@ const walkDir = async (srcDir, destDir) => {
 
 // Start the optimization
 (async () => {
-  const srcRootDir = '../src/assets/img';  // Replace with your source directory
-  const destRootDir = '../src/assets/img2'; // Replace with your destination directory
+  const srcRootDir = '../../../../../vpsin/Downloads/anthony/';  // Replace with your source directory
+  const destRootDir = '../../../../../vpsin/Downloads/anthony/webp/optimized'; // Replace with your destination directory
   await walkDir(srcRootDir, destRootDir);
 })();

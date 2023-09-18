@@ -16,7 +16,7 @@ export const productInfo = {
   "Beechler Bellite": {
     category: "Beechler Bellite",
     description:
-      "Beechler Bellite Metal Mouthpiece is cast from the finest surgical stainless steel. This material is averse to corrosion, breakage, or change in playing characteristics. They are cast by the time-honored lost wax method, at a temperature of 2000 degrees, and will maintain consistent durability. The hardness of this metal provides an ultra-fast response time to bring out the brilliance of the overtone series. The Bellite alto and Tenor models feature a medium-high baffle and open chamber which supports a brilliant contemporary sound as well as a subdued ballad sound. The Bellite Soprano and Baritone have an open baffle. Ligatures and caps are provided with all Beechler Bellite mouthpieces.",
+      "Beechler Bellite Metal Mouthpieces are cast from the finest surgical stainless steel. This material is averse to corrosion, breakage, or change in playing characteristics. They are cast by the time-honored lost wax method, at a temperature of 2000 degrees, and will maintain consistent durability. The hardness of this metal provides an ultra-fast response time to bring out the brilliance of the overtone series. The Bellite Alto and Tenor models feature a medium-high baffle and open chamber which supports a brilliant contemporary sound as well as a subdued ballad sound. The Bellite Soprano and Baritone have an open baffle. Ligatures and caps are provided with all Beechler Bellite mouthpieces.",
   },
 
   "Beechler Hard Rubber": {

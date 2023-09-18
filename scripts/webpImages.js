@@ -31,7 +31,7 @@ const walkDir = async (srcDir, destDir) => {
 };
 
 (async () => {
-  const srcRootDir = '../src/assets/img';  // Replace with your source directory
-  const destRootDir = '../src/assets/webp'; // Replace with your destination directory
+  const srcRootDir = '../../../../../vpsin/Downloads/anthony/';  // Replace with your source directory
+  const destRootDir = '../../../../../vpsin/Downloads/anthony/webp/'; // Replace with your destination directory
   await walkDir(srcRootDir, destRootDir);
 })();

@@ -206,6 +206,17 @@
   border: 0;  
 }
 
+.product-contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0;  
+  font-family: Josefin Sans;
+  font-weight: 700;
+}
+
 .product-email-signup {
   display: flex;
   flex-direction: column;

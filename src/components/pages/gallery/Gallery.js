@@ -61,8 +61,10 @@ import namm2019Img from "../../../assets/img/gallery/NAMM-2019.webp";
 /*import judy group*/
 import judygroup from "../../../assets/img/about/judy-group.webp";
 import judyAdrian from "../../../assets/img/gallery/judy-adrian.webp";
+import anthonyTerryNew from "../../../assets/img/gallery/anthony-terry-new.webp";
 
 const masonryImages = [
+  
   { src: img1, alt: "IMG_5687" },
   { src: judygroup, alt: "Judy Group" },
   { src: img2, alt: "IMG_5689" },
@@ -78,6 +80,7 @@ const masonryImages = [
   { src: billBergmanJimImg, alt: "Bill Bergman Jim" },
   { src: blondGuyImg, alt: "Blond Guy" },
   { src: charlesImg, alt: "Charles" },
+  { src: judyAdrian, alt: "Judy & Adrian" },
   { src: charlesMcNealImg, alt: "Charles McNeal" },
   { src: dHayesMMillerImg, alt: "D Hayes M Miller" },
   { src: docWhiteImg, alt: "Doc White" },
@@ -114,7 +117,7 @@ const masonryImages = [
   { src: larryWilliamsImg, alt: "Larry Williams" },
   { src: maxImg, alt: "Max" },
   { src: namm2019Img, alt: "NAMM 2019" },
-  { src: judyAdrian, alt: "Judy Adrian" },
+  { src: anthonyTerryNew, alt: "Anthony Terry" },
 ];
 
 const Gallery = () => {
