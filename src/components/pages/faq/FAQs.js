@@ -3,6 +3,46 @@ import { Container } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import "../../../styles/FAQs.css";
 
+
+export const faqsData = [
+  {
+    question: "What materials are used in Beechler mouthpieces?",
+    answer:
+      "All Beechler and ARB mouthpieces have been lab tested and proven safe for all long and short term human contact according to Reach compliance standards. Bellite & Metal mouthpieces are cast by the Lost Wax method in surgical stainless steel. All bite plates on metal mouthpieces are inlaid using rubber and are not applied with epoxy. Beechler Black mouthpieces are available on request.",
+  },
+  {
+    question: "What materials are used for Beechler and ARB caps?",
+    answer:
+      "Metal/Bellite caps are made of spun aluminum then powder coated. Ebonite Alto, Tenor and Baritone caps are lacquered brass. Ebonite Clarinet and Soprano caps are silver.",
+  },
+  {
+    question:
+      "What are the tip openings for saxophone and clarinet mouthpieces?",
+    answer:
+      "Saxophone tip openings range from 4-10. Clarinet tip openings range from 1-12.",
+  },
+  {
+    question: "Can I use Legere reeds with Beechler mouthpieces?",
+    answer:
+      "Yes, you can use Legere reeds with our mouthpieces. However, this requires a different facing length. Please specify if you are using Legere reeds when ordering.",
+  },
+  {
+    question: "What is the warranty on Beechler mouthpieces and accessories?",
+    answer:
+      "Our mouthpieces, accessories, and services come with a 1-year warranty.",
+  },
+  {
+    question: "Can I get a custom mouthpiece made?",
+    answer:
+      "Yes! We offer the service of creating a custom mouthpiece just for you. Please contact us for more details.",
+  },
+  {
+    question: "Exactly how customized can I make it?",
+    answer:
+      "Facing, Bore Size, Tip Openings, and Engravings are fully customizable, the materials we use are not. In over 75 years of serving musicians, we believe we have found the most natural combination of materials for artists and do not compromise on the quality of those materials.",
+  },
+];
+
 function FAQs() {
   const [expanded, setExpanded] = useState(null);
 

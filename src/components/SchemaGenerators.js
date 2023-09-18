@@ -214,7 +214,7 @@ export const generateArtistsJSONLD = (artists) => {
       item: {
         "@type": "Person",
         name: artist.name,
-        makesUseOf: artist.mouthpieces.map((mouthpiece) => ({
+        instrument: artist.mouthpieces.map((mouthpiece) => ({
           "@type": "Product",
           name: mouthpiece,
           image: "src/assets/img/home/beechler-logo-b.webp",
@@ -228,3 +228,18 @@ export const generateArtistsJSONLD = (artists) => {
     })),
   };
 };
+
+export const generateFAQsJSONLD = (faqsData) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqsData.map((faq, index) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}

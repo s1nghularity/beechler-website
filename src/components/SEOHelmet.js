@@ -7,7 +7,8 @@ import {
   preloadedHomeDealerSchema,
   preloadedContactPageSchema,
     preloadedTestimonialsSchema,
-    preloadedArtistsSchema
+    preloadedArtistsSchema,
+    preloadedFAQsSchema
 } from "../components/preloadSchemaData";
 
 const SEOHelmet = () => {
@@ -35,9 +36,15 @@ const SEOHelmet = () => {
         <script type="application/ld+json">
         {JSON.stringify(preloadedTestimonialsSchema)}
         </script>
+        
         <script type="application/ld+json">
         {JSON.stringify(preloadedArtistsSchema)}
         </script>
+
+        <script type="application/ld+json">
+        {JSON.stringify(preloadedFAQsSchema)}
+        </script>
+
     </Helmet>
   );
 };
