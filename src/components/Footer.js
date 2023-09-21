@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -48,10 +47,15 @@ function Footer() {
     {
       title: "Legal",
       links: [
-        { path: "/ca-transparency", label: "CA Transparency Act" },
-        { path: "/sitemap", label: "Sitemap" },
+        { 
+          path: "/sitemap.xml",
+          label: "Sitemap",
+          external: true,
+          title: "View sitemap in new tab"
+        },
       ],
-    },
+    }
+    
   ];
 
   return (
@@ -71,6 +75,7 @@ function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-link"
+                        title={link.title}
                       >
                         {link.label}
                       </a>
@@ -81,6 +86,7 @@ function Footer() {
                           location.pathname === link.path ? "active-link" : ""
                         }`}
                         onClick={() => handleFooterLinkClick(link.path)}
+                        title={link.title}
                       >
                         {link.label}
                       </Link>
@@ -103,7 +109,9 @@ function Footer() {
             </div>
           </Col>
           <div className="footer-bottom">
-            <p>Accessibility Statement</p>
+            <Link to="/accessibility" title="View accessibility statement">
+              Accessibility Statement
+            </Link>
             <p>
               ©2023 All rights reserved. | Saxophone Mouthpieces, Clarinet
               Mouthpieces | beechler.com
