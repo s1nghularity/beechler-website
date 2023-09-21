@@ -25,9 +25,9 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <HelmetProvider>
-        <SEOHelmet />
+      <HelmetProvider>     
         <Router>
+          <SEOHelmet />
           <AutoScrollToTop />
           <ScrollToTop />
           <TopBar />

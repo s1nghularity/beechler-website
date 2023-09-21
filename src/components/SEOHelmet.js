@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import {
   preloadedProductSchemas,
   preloadedDealerSchema,
@@ -12,8 +13,12 @@ import {
 } from "../components/preloadSchemaData";
 
 const SEOHelmet = () => {
+  const location = useLocation();
+  const canonicalUrl = `https://www.beechler.com${location.pathname}`;
+
   return (
     <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
       <script type="application/ld+json">
         {JSON.stringify(preloadedProductSchemas)}
       </script>
