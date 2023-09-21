@@ -736,7 +736,7 @@ export const locationData = [
     zip: "11746",
     country: "USA",
     phone: "(631) 421-9333",
-    website: "whttps://locations.samash.com/ny/huntington-station/2/",
+    website: "https://locations.samash.com/ny/huntington-station/2/",
     latitude: 40.81992989101077,
     longitude: -73.41276288911082,
   },
