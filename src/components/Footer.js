@@ -109,9 +109,7 @@ function Footer() {
             </div>
           </Col>
           <div className="footer-bottom">
-            <Link to="/accessibility" title="View accessibility statement">
-              Accessibility Statement
-            </Link>
+
             <p>
               ©2023 All rights reserved. | Saxophone Mouthpieces, Clarinet
               Mouthpieces | beechler.com
