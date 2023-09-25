@@ -25,11 +25,15 @@ function HomeContact() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (email.trim() === '' || message.trim() === '' || category.trim() === '' || id.trim() === '') {
       return;
     }
-
+  
+    if (state.submitting) {
+      return;
+    }
+  
     try {
       await handleSubmit(e);
       if (state.succeeded) {
@@ -39,7 +43,7 @@ function HomeContact() {
       console.error('Error:', error);
     }
   };
-
+  
   return (
     <div className="contact-container stripe-home-dealer" id="contact" role="region" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact Us</h2>

@@ -165,10 +165,7 @@ div .no-results-placeholder {
 .dealer-info-container {
   touch-action: auto;
 }
-.leaflet-container {
-  min-height: 50vh;
-  max-height: 50vh;
-}
+
 
 @media (max-width: 500px) {
   .dealer-search-container {
@@ -194,10 +191,6 @@ div .no-results-placeholder {
 }
 
 @media (max-width: 768px) {
-  .leaflet-container {
-    min-height: 60vh;
-    max-height: 60vh;
-  }
 
   .dealer-search-container {
     width: 100%;

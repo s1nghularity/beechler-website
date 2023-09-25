@@ -1,9 +1,9 @@
+/* Global styles */
 .about-page {
   font-family: "Josefin Sans", sans-serif;
-  margin: auto;
 }
 
-/*TOP SECTION*/
+/* Top section */
 .about-header {
   padding: 4rem;
 }
@@ -51,9 +51,7 @@
   z-index: -1;
 }
 
-
-/*HORIZONTAL SCROLLING TIMELINE*/
-
+/* Horizontal scrolling timeline */
 .carousel-container {
   text-align: center;
 }
@@ -93,7 +91,7 @@ p.about-carousel-text {
   color: #000000;
 }
 
-/*FOOTER TEXT AND VIDEO*/
+/* Footer text and video */
 .about-footer {
   margin-top: 2rem;
   text-align: center;
@@ -127,8 +125,9 @@ div .about-video {
   margin-top: 3rem;
 }
 
-
+/* Media queries */
 @media only screen and (max-width: 400px) {
+  /* Top section */
   .about-header h1 {
     margin-top: -2rem;
     letter-spacing: .5px;
@@ -143,6 +142,7 @@ div .about-video {
     margin-left: 0;
     margin-top: .5rem;
   }
+
   .intro-letter {
     text-align: center;
     width: 175%;
@@ -150,14 +150,19 @@ div .about-video {
   }
 
   .wave-about {
-    width: 250%; 
+    width: 100%; 
     height: auto; 
     margin-top: -5rem;
     margin-bottom: -15rem;
     margin-left: -2rem;
     z-index: -1;
   }
- 
+
+  .treble2 {
+    z-index: 1;  
+  }
+
+  /* Footer text and video */
   .about-footer h1 {
     font-size: 2rem;
     letter-spacing: .5px;
@@ -176,14 +181,13 @@ div .about-video {
   }
 }
 
-
 @media only screen and (max-width: 768px) {
+  /* Top section */
   .about-header,
   .elmer-about-container,
   .about-footer {
     text-align: center;
     margin: auto;
-    
   }
 
   .about-header h1,
@@ -204,13 +208,11 @@ div .about-video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
 
   div.elmer-about-container.float-right > figure > img {
     width: 15rem;
   }
-
 
   .intro-letter {
     text-align: center;
@@ -218,7 +220,6 @@ div .about-video {
     margin-left: -32.5%;
   }
 
-  
   .wave-about {
     width: 250%; 
     height: auto; 
@@ -227,7 +228,6 @@ div .about-video {
     margin-left: -5rem;
     z-index: -1;
   }
-
 
   img.about-carousel-img {
     width: 100%;
@@ -245,6 +245,7 @@ div .about-video {
 }
 
 @media only screen and (min-width: 730px) and (max-width: 900px) {
+  /* Top section */
   .about-header-text,
   .elmer-about-container {
     margin-left: 2rem;

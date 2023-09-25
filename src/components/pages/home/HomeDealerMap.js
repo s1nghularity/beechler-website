@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   ComposableMap,
   Geographies,
@@ -85,7 +86,7 @@ const HomeDealerMap = () => {
     .range(["#fbb034", "#ffdd00"]);
 
   return (
-    <>
+    <Link to="/dealers">
       <ComposableMap
         className="home-dealer-map-container"
         style={{ width: "95vw", maxWidth: "75rem", height: "auto" }}
@@ -138,7 +139,7 @@ const HomeDealerMap = () => {
         )}
       </ComposableMap>
       <Tooltip id="map-tooltip" effect="float" />
-    </>
+    </Link>
   );
 };
 

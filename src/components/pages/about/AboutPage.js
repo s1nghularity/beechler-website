@@ -14,6 +14,7 @@ const AboutPage = () => {
         <Col xs={12}>
           <h1>Remlé Musical Products</h1>
         </Col>
+
         <Row>
           <Col xs={12} md={8}>
             <div className="elmer-about-container float-right">
@@ -59,7 +60,9 @@ const AboutPage = () => {
         </Row>
       </Row>
 
-      <Wave />
+      <div>
+        <Wave />
+      </div>
 
       <div>
         <AboutCarousel />

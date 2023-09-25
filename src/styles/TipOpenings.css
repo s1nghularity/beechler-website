@@ -5,12 +5,13 @@
 }
 
 .tip-openings table {
-  margin-top: 1rem;
+  margin: 1rem auto;
+  width: auto;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px!important;
-  border-collapse: collapse!important;
+  border-radius: 10px;
+  border-collapse: collapse;
   overflow-x: auto;
 }
 
@@ -53,6 +54,12 @@
   color: var(--nav-accent);
 }
 
+.big-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 @media (max-width: 440px) {
   .tip-openings {
     font-size: 0.875rem;  
@@ -68,10 +75,13 @@
   }
 
 
-  table.big-table.table.table-striped.table-hover {
-    font-size: 0.875rem;  
-    margin-left: -.5rem;
+  .big-table {
+    font-size: 0.875rem;
+    margin-left: -1.25rem!important;;  
+    
+    
   }
+
 
 
 }
