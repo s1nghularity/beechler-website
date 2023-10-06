@@ -9,6 +9,7 @@ import {
 } from "react-simple-maps";
 import { scaleLinear } from "d3-scale";
 import { Tooltip } from "react-tooltip";
+import worldCountries from './world-countries.json';
 
 import "../../../styles/HomeDealer.css";
 
@@ -44,9 +45,6 @@ export const homeDealerCountryData = [
   { name: "United States", value: 34 },
 ];
 
-
-const geoUrl =
-  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 const HomeDealerMap = () => {
   const data = [
@@ -111,7 +109,7 @@ const HomeDealerMap = () => {
         <Sphere stroke="url(#grad1)" strokeWidth={0.5} />
         <Graticule stroke="url(#grad1)" strokeWidth={0.5} />
         {data.length > 0 && (
-          <Geographies geography={geoUrl}>
+          <Geographies geography={worldCountries}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 const d = data.find(

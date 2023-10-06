@@ -107,7 +107,6 @@
       "last 1 safari version"
     ]
   },
-
   "devDependencies": {
     "dependency-cruiser": "^13.1.5"
   },
