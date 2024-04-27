@@ -4,6 +4,7 @@ import { Card } from 'react-bootstrap';
 
 function HomeContact() {
   const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [category, setCategory] = useState('');
@@ -25,15 +26,15 @@ function HomeContact() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-  
-    if (email.trim() === '' || message.trim() === '' || category.trim() === '' || id.trim() === '') {
+
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '' || category.trim() === '' || id.trim() === '') {
       return;
     }
-  
+
     if (state.submitting) {
       return;
     }
-  
+
     try {
       await handleSubmit(e);
       if (state.succeeded) {
@@ -43,7 +44,7 @@ function HomeContact() {
       console.error('Error:', error);
     }
   };
-  
+
   return (
     <div className="contact-container stripe-home-dealer" id="contact" role="region" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact Us</h2>
@@ -56,6 +57,18 @@ function HomeContact() {
         <Card className="contact-form" role="form">
           <h3>Can't find what you're looking for?</h3>
           <form onSubmit={handleFormSubmit} aria-label="Contact Form">
+            <label htmlFor="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+              aria-required="true"
+            />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+            <br /><br />
             <label htmlFor="email">Email Address</label>
             <input
               id="email"
@@ -118,6 +131,5 @@ function HomeContact() {
     </div>
   );
 }
-
 
 export default HomeContact;

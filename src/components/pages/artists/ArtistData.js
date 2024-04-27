@@ -44,6 +44,13 @@ export const ArtistData = [
     ],
   },
   {
+    name: "Ayo Brame",
+    mouthpieces: [
+      "Bellite Soprano B80-7",
+      "Bellite Tenor B82-7",
+    ],
+  },
+  {
     name: "Bobby Rangell",
     mouthpieces: [
       "Custom Bellite Alto #5",
@@ -72,6 +79,10 @@ export const ArtistData = [
       "Tenor Tonalex #6S",
       "Tenor Diamond #8",
     ],
+  },
+  {
+    name: "Bruce Brackman",
+    mouthpieces: ["White Diamond Clarinet B07-12"],
   },
   {
     name: "Caz Macino",
